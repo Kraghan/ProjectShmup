@@ -49,11 +49,11 @@ public class PlayerController : MonoBehaviour
     {
         if(BPM_Manager.IsOnBeat(m_errorWindow))
         {
-            Instantiate(m_goodShot);
+            Instantiate(m_goodShot, transform.position, transform.rotation);
         }
         else
         {
-            Instantiate(m_badShot);
+            Instantiate(m_badShot, transform.position, transform.rotation);
         }
     }
 
