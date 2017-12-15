@@ -23,12 +23,12 @@ public class BPM_Manager : MonoBehaviour
 	[SerializeField, Range(100,200)]
 	int m_BPM = 128;
 
-	float m_beatDuration;
-	float m_timeSinceLastBeat = 0;
+	static double m_beatDuration;
+	static float m_timeSinceLastBeat = 0;
 
 	void Start ()
 	{
-		m_beatDuration = 60f / m_BPM;
+		m_beatDuration = 60d / m_BPM;
 		print(m_beatDuration);
 	}
 	
@@ -42,5 +42,15 @@ public class BPM_Manager : MonoBehaviour
 			m_timeSinceLastBeat = 0;
 			m_syncList.Invoke();
 		}
+	}
+
+	public static bool IsOnBeat(float error)
+	{
+		if(m_timeSinceLastBeat < error)
+			return true;
+		else if(m_timeSinceLastBeat > (m_beatDuration - error))
+			return true;
+		else
+			return false;
 	}
 }

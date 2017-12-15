@@ -16,40 +16,46 @@
 			<ShortName>Test1</ShortName>
 			<Path>Test1.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2886421657" Name="Play_Random_Percussion" ObjectPath="\Events\Default Work Unit\Play_Random_Percussion"/>
+				<Event Id="1560528335" Name="Play_Bass" ObjectPath="\Events\Default Work Unit\Play_Bass"/>
+				<Event Id="1653871456" Name="Play_Flute" ObjectPath="\Events\Default Work Unit\Play_Flute"/>
+				<Event Id="3445610055" Name="Play_Main_Layer" ObjectPath="\Events\Default Work Unit\Play_Main_Layer"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="7795850" Language="SFX">
-					<ShortName>Glass-F3.wav</ShortName>
-					<Path>SFX\Glass-F3_1C9C67B2.wem</Path>
+				<File Id="222856504" Language="SFX">
+					<ShortName>Main Layer.wav</ShortName>
+					<Path>SFX\Main Layer_1C9C67B2.wem</Path>
 				</File>
-				<File Id="135341983" Language="SFX">
-					<ShortName>SD.wav</ShortName>
-					<Path>SFX\SD_1C9C67B2.wem</Path>
+				<File Id="368353584" Language="SFX">
+					<ShortName>bass-i.wav</ShortName>
+					<Path>SFX\bass-i_1C9C67B2.wem</Path>
 				</File>
-				<File Id="138090768" Language="SFX">
-					<ShortName>HH.wav</ShortName>
-					<Path>SFX\HH_1C9C67B2.wem</Path>
+				<File Id="479764891" Language="SFX">
+					<ShortName>bass-iv.wav</ShortName>
+					<Path>SFX\bass-iv_1C9C67B2.wem</Path>
 				</File>
-				<File Id="191626728" Language="SFX">
-					<ShortName>Cymbal.wav</ShortName>
-					<Path>SFX\Cymbal_1C9C67B2.wem</Path>
+				<File Id="674227912" Language="SFX">
+					<ShortName>flute-i-2.wav</ShortName>
+					<Path>SFX\flute-i-2_1C9C67B2.wem</Path>
 				</File>
-				<File Id="369327849" Language="SFX">
-					<ShortName>Kick.wav</ShortName>
-					<Path>SFX\Kick_1C9C67B2.wem</Path>
+				<File Id="819755057" Language="SFX">
+					<ShortName>flute-i-1.wav</ShortName>
+					<Path>SFX\flute-i-1_1C9C67B2.wem</Path>
 				</File>
-				<File Id="500021581" Language="SFX">
-					<ShortName>HHO.wav</ShortName>
-					<Path>SFX\HHO_1C9C67B2.wem</Path>
+				<File Id="901168371" Language="SFX">
+					<ShortName>bass-vi.wav</ShortName>
+					<Path>SFX\bass-vi_1C9C67B2.wem</Path>
 				</File>
-				<File Id="653663201" Language="SFX">
-					<ShortName>Kalimba-.wav</ShortName>
-					<Path>SFX\Kalimba-_1C9C67B2.wem</Path>
+				<File Id="935815181" Language="SFX">
+					<ShortName>bass-v.wav</ShortName>
+					<Path>SFX\bass-v_1C9C67B2.wem</Path>
 				</File>
-				<File Id="781082992" Language="SFX">
-					<ShortName>Perc-1.wav</ShortName>
-					<Path>SFX\Perc-1_1C9C67B2.wem</Path>
+				<File Id="938382390" Language="SFX">
+					<ShortName>flute-i-4.wav</ShortName>
+					<Path>SFX\flute-i-4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="976616531" Language="SFX">
+					<ShortName>flute-i-3.wav</ShortName>
+					<Path>SFX\flute-i-3_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float verticalSpeed;
 
+    [Header("Shoot")]
+    [SerializeField]
+    float m_errorWindow;
+
     private Player player;
     private Rigidbody2D rgbd2D;
     #endregion
@@ -27,6 +31,9 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
         ManageSpeed();
+
+        if(Input.GetButtonDown("Fire1"))
+            Fire();
 	}
     #endregion
 
@@ -34,6 +41,18 @@ public class PlayerController : MonoBehaviour
     private void ManageSpeed()
     {
         rgbd2D.velocity = new Vector2(Time.deltaTime * horizontalSpeed * Input.GetAxis("Horizontal"), Time.deltaTime * verticalSpeed * Input.GetAxis("Vertical"));
+    }
+
+    void Fire()
+    {
+        if(BPM_Manager.IsOnBeat(m_errorWindow))
+        {
+            print("good");
+        }
+        else
+        {
+            print("bad");
+        }
     }
 
     #region ColliderHit

@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SyncTest : MonoBehaviour
 {
     [SerializeField]
-    Renderer m_renderer;
+    RawImage m_renderer;
 
     void Start()
     {
