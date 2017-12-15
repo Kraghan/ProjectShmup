@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0935138423c2c3046bc725f0c2dd6061, type: 3}
+  m_Name: Burst_3_45degrees_150speed_left
+  m_EditorClassIdentifier: 
+  shoots:
+  - speed: -150
+    acceleration: 0
+    direction: 0
+    rotation: 0
+  - speed: -150
+    acceleration: 0
+    direction: 45
+    rotation: 0
+  - speed: -150
+    acceleration: 0
+    direction: -45
+    rotation: 0

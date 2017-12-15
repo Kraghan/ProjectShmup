@@ -9,8 +9,8 @@ public class Bullet : MonoBehaviour
     #region Attributes
     private float speed;
     private float acceleration;
+    private float direction;
     private float rotation;
-    private float rotationAcceleration;
     private Rigidbody2D rgbd2D;
     #endregion
 
@@ -24,21 +24,23 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rgbd2D.velocity = gameObject.transform.forward * speed * Time.deltaTime;
-        rgbd2D.rotation = rotation * Time.deltaTime;
-        speed += acceleration * Time.deltaTime;
-        rotation += rotationAcceleration * Time.deltaTime;
+        Vector3 directionVector = gameObject.transform.right;
+
+        rgbd2D.velocity = directionVector * speed * Time.deltaTime;
+        speed += (acceleration * Time.deltaTime);
+
+        rgbd2D.rotation = direction;
+        direction += (rotation * Time.deltaTime);
     }
     #endregion
 
     #region Methods
-    public void Fire(string tagName, float _speed, float _acceleration, float _rotation, float _rotationAcceleration)
+    public void Fire(float _speed, float _acceleration, float _direction, float _rotation)
     {
-        gameObject.tag = tagName;
         speed = _speed;
         acceleration = _acceleration;
+        direction = _direction;
         rotation = _rotation;
-        rotationAcceleration = _rotationAcceleration;
     }
     #endregion
 }
