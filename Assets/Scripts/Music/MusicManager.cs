@@ -25,7 +25,7 @@ public class MusicManager : MonoBehaviour
 			m_mesureBeat = 0;
 			m_mesure++;
 
-			if(m_mesure % 8 == 0)
+			if(m_mesure % 4 == 0)
 				AkSoundEngine.PostEvent(m_nameBaseLoop, gameObject);
 		}
 	}

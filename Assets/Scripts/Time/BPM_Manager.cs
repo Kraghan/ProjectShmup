@@ -23,23 +23,26 @@ public class BPM_Manager : MonoBehaviour
 	[SerializeField, Range(100,200)]
 	int m_BPM = 128;
 
-	static double m_beatDuration;
+	static float m_beatDuration;
+	static float m_timeLastBeat = 0;
 	static float m_timeSinceLastBeat = 0;
 
 	void Start ()
 	{
-		m_beatDuration = 60d / m_BPM;
+		m_beatDuration = 60f / m_BPM;
 		print(m_beatDuration);
+
+		m_timeLastBeat = Time.time;
 	}
 	
 	void Update ()
 	{
-		m_timeSinceLastBeat += Time.deltaTime;
+		m_timeSinceLastBeat = Time.time - m_timeLastBeat;
 
 		// Beat
 		if(m_timeSinceLastBeat > m_beatDuration)
 		{
-			m_timeSinceLastBeat = 0;
+			m_timeLastBeat = Time.time - (m_timeSinceLastBeat - m_beatDuration);
 			m_syncList.Invoke();
 		}
 	}

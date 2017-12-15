@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\</ProjectRoot>
-		<SourceFilesRoot>D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>/Users/marcenciso/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/ProjectSchmup/Wwise_ProjectSchmup/</ProjectRoot>
+		<SourceFilesRoot>/Users/marcenciso/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/ProjectSchmup/Wwise_ProjectSchmup/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/marcenciso/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/ProjectSchmup/Wwise_ProjectSchmup/GeneratedSoundBanks/Mac/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\GeneratedSoundBanks\Mac\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/marcenciso/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/ProjectSchmup/Wwise_ProjectSchmup/GeneratedSoundBanks/Mac/</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -21,41 +21,41 @@
 				<Event Id="3445610055" Name="Play_Main_Layer" ObjectPath="\Events\Default Work Unit\Play_Main_Layer"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="222856504" Language="SFX">
-					<ShortName>Main Layer.wav</ShortName>
-					<Path>SFX\Main Layer_1C9C67B2.wem</Path>
-				</File>
 				<File Id="368353584" Language="SFX">
 					<ShortName>bass-i.wav</ShortName>
-					<Path>SFX\bass-i_1C9C67B2.wem</Path>
+					<Path>SFX/bass-i_1C9C67B2.wem</Path>
 				</File>
 				<File Id="479764891" Language="SFX">
 					<ShortName>bass-iv.wav</ShortName>
-					<Path>SFX\bass-iv_1C9C67B2.wem</Path>
+					<Path>SFX/bass-iv_1C9C67B2.wem</Path>
+				</File>
+				<File Id="628452622" Language="SFX">
+					<ShortName>Main Layer.wav</ShortName>
+					<Path>SFX/Main Layer_1C9C67B2.wem</Path>
 				</File>
 				<File Id="674227912" Language="SFX">
 					<ShortName>flute-i-2.wav</ShortName>
-					<Path>SFX\flute-i-2_1C9C67B2.wem</Path>
+					<Path>SFX/flute-i-2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="819755057" Language="SFX">
 					<ShortName>flute-i-1.wav</ShortName>
-					<Path>SFX\flute-i-1_1C9C67B2.wem</Path>
+					<Path>SFX/flute-i-1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="901168371" Language="SFX">
 					<ShortName>bass-vi.wav</ShortName>
-					<Path>SFX\bass-vi_1C9C67B2.wem</Path>
+					<Path>SFX/bass-vi_1C9C67B2.wem</Path>
 				</File>
 				<File Id="935815181" Language="SFX">
 					<ShortName>bass-v.wav</ShortName>
-					<Path>SFX\bass-v_1C9C67B2.wem</Path>
+					<Path>SFX/bass-v_1C9C67B2.wem</Path>
 				</File>
 				<File Id="938382390" Language="SFX">
 					<ShortName>flute-i-4.wav</ShortName>
-					<Path>SFX\flute-i-4_1C9C67B2.wem</Path>
+					<Path>SFX/flute-i-4_1C9C67B2.wem</Path>
 				</File>
 				<File Id="976616531" Language="SFX">
 					<ShortName>flute-i-3.wav</ShortName>
-					<Path>SFX\flute-i-3_1C9C67B2.wem</Path>
+					<Path>SFX/flute-i-3_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
