@@ -14,7 +14,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float verticalSpeed;
 
+<<<<<<< HEAD
     private Killable killable;
+=======
+    [Header("Shoot")]
+    [SerializeField]
+    float m_errorWindow;
+    [SerializeField]
+    GameObject m_goodShot, m_badShot;
+
+>>>>>>> refs/remotes/origin/feature/InteSonsMarc
     private Player player;
     private Rigidbody2D rgbd2D;
     #endregion
@@ -29,6 +38,9 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
         ManageSpeed();
+
+        if(Input.GetButtonDown("Fire1"))
+            Fire();
 	}
     #endregion
 
@@ -40,7 +52,24 @@ public class PlayerController : MonoBehaviour
         rgbd2D.velocity = new Vector2(Time.deltaTime * horizontalSpeed * Input.GetAxis("Horizontal"), Time.deltaTime * verticalSpeed * Input.GetAxis("Vertical"));
     }
 
+<<<<<<< HEAD
     private void PickUp(GameObject pickup)
+=======
+    void Fire()
+    {
+        if(BPM_Manager.IsOnBeat(m_errorWindow))
+        {
+            Instantiate(m_goodShot, transform.position, transform.rotation);
+        }
+        else
+        {
+            Instantiate(m_badShot, transform.position, transform.rotation);
+        }
+    }
+
+    #region ColliderHit
+    private void CheckColliderHit(Collider2D collider)
+>>>>>>> refs/remotes/origin/feature/InteSonsMarc
     {
 
     }
