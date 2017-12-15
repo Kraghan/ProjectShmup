@@ -13,6 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoots:
   - speed: -150
-    acceleration: 0
+    acceleration: 30
     direction: 0
     rotation: 0

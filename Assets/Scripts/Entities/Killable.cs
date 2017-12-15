@@ -35,7 +35,7 @@ public class Killable : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
         if (currentInvulnerabilityTime > 0)
-            currentInvulnerabilityTime--;
+            currentInvulnerabilityTime -= Time.deltaTime;
         Utility.Cap(ref currentInvulnerabilityTime, 0, invulnerabilityTime);
         if (health > 0)
             alive = true;
