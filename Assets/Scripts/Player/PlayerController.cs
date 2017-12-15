@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     [Header("Shoot")]
     [SerializeField]
     float m_errorWindow;
+    [SerializeField]
+    GameObject m_goodShot, m_badShot;
 
     private Player player;
     private Rigidbody2D rgbd2D;
@@ -47,11 +49,11 @@ public class PlayerController : MonoBehaviour
     {
         if(BPM_Manager.IsOnBeat(m_errorWindow))
         {
-            print("good");
+            Instantiate(m_goodShot);
         }
         else
         {
-            print("bad");
+            Instantiate(m_badShot);
         }
     }
 
