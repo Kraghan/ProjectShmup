@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2886421657	Play_Random_Percussion			\Default Work Unit\Play_Random_Percussion	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	7795850	Glass-F3	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Glass-F3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\Glass-F3		176544
+	135341983	SD	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\SD_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\SD		132444
+	138090768	HH	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\HH_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\HH		132444
+	191626728	Cymbal	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Cymbal_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\Cymbal		352944
+	369327849	Kick	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Kick_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\Kick		132444
+	500021581	HHO	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\HHO_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\HHO		132444
+	653663201	Kalimba-	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Kalimba-_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\Kalimba-		529344
+	781082992	Perc-1	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Perc-1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\Perc-1		352944
+

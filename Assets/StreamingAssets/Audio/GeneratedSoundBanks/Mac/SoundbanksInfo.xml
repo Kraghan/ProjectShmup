@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\</ProjectRoot>
+		<SourceFilesRoot>D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\GeneratedSoundBanks\Mac\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="576110586" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Test1</ObjectPath>
+			<ShortName>Test1</ShortName>
+			<Path>Test1.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2886421657" Name="Play_Random_Percussion" ObjectPath="\Events\Default Work Unit\Play_Random_Percussion"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="7795850" Language="SFX">
+					<ShortName>Glass-F3.wav</ShortName>
+					<Path>SFX\Glass-F3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="135341983" Language="SFX">
+					<ShortName>SD.wav</ShortName>
+					<Path>SFX\SD_1C9C67B2.wem</Path>
+				</File>
+				<File Id="138090768" Language="SFX">
+					<ShortName>HH.wav</ShortName>
+					<Path>SFX\HH_1C9C67B2.wem</Path>
+				</File>
+				<File Id="191626728" Language="SFX">
+					<ShortName>Cymbal.wav</ShortName>
+					<Path>SFX\Cymbal_1C9C67B2.wem</Path>
+				</File>
+				<File Id="369327849" Language="SFX">
+					<ShortName>Kick.wav</ShortName>
+					<Path>SFX\Kick_1C9C67B2.wem</Path>
+				</File>
+				<File Id="500021581" Language="SFX">
+					<ShortName>HHO.wav</ShortName>
+					<Path>SFX\HHO_1C9C67B2.wem</Path>
+				</File>
+				<File Id="653663201" Language="SFX">
+					<ShortName>Kalimba-.wav</ShortName>
+					<Path>SFX\Kalimba-_1C9C67B2.wem</Path>
+				</File>
+				<File Id="781082992" Language="SFX">
+					<ShortName>Perc-1.wav</ShortName>
+					<Path>SFX\Perc-1_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
