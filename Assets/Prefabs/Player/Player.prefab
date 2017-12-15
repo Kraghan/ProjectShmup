@@ -353,7 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 2
   invulnerabilityTime: 2
-  deathAnimation: 1
+  deathAnimation: 0
 --- !u!114 &114663199428631472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -367,6 +367,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalSpeed: 350
   verticalSpeed: 350
+  m_errorWindow: 0
+  m_goodShot: {fileID: 1804521257431638, guid: 5d2a05a39b615644c864133a5f596ba0, type: 2}
+  m_badShot: {fileID: 1438211116033504, guid: 19c93b33efe83a648b40853c9d4f5b5f, type: 2}
 --- !u!114 &114745645448778924
 MonoBehaviour:
   m_ObjectHideFlags: 1

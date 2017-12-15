@@ -52,8 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1413998544695282, guid: bbe2cb8a05ad713469b838827ca8ffdf, type: 2}
-  duration: 0.1
-  repetitions: -1
+  duration: 0
+  repetitions: 0
   bursts:
   - timing: 0
     burst: {fileID: 11400000, guid: f69c87096ea01a445ab883ad173f0647, type: 2}
