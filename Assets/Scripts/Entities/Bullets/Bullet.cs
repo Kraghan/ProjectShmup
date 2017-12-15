@@ -7,6 +7,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     #region Attributes
+    [SerializeField]
+    private float damages = 1;
     private float speed;
     private float acceleration;
     private float direction;
