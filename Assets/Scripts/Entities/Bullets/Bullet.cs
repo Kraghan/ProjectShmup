@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum DestroyAnimation
+{
+    NoAnimation
+}
+
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour
@@ -9,6 +14,10 @@ public class Bullet : MonoBehaviour
     #region Attributes
     [SerializeField]
     private float damages = 1;
+    [SerializeField]
+    private bool destroyOnHit = true;
+    [SerializeField]
+    private DestroyAnimation destroyAnimation = DestroyAnimation.NoAnimation;
     private float speed;
     private float acceleration;
     private float direction;
@@ -43,6 +52,29 @@ public class Bullet : MonoBehaviour
         acceleration = _acceleration;
         direction = _direction;
         rotation = _rotation;
+    }
+
+    public void Hit()
+    {
+        if (destroyOnHit)
+        {
+            switch(destroyAnimation)
+            {
+                case DestroyAnimation.NoAnimation:
+                    Destroy(gameObject);
+                    break;
+                default:
+                    Destroy(gameObject);
+                    break;
+            }
+        }
+    }
+    #endregion
+
+    #region Getters
+    public float GetDamages()
+    {
+        return damages;
     }
     #endregion
 }

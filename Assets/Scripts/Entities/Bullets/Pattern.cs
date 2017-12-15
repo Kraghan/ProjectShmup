@@ -10,9 +10,9 @@ public class Pattern : MonoBehaviour
     [Tooltip("Duration of the pattern (in seconds)")]
     [SerializeField]
     private float duration = 1;
-    [Tooltip("Number of repetitions of the pattern (-1 = infinite)")]
+    [Tooltip("Number of repetitions of the pattern (-1 = infinite | 0 = one cycle | 1 = two cycles (one repetition) | etc...)")]
     [SerializeField]
-    private float cycles = -1;
+    private float repetitions = -1;
     [Tooltip("Bursts timings")]
     [SerializeField]
     private BurstTiming[] bursts;
@@ -42,12 +42,12 @@ public class Pattern : MonoBehaviour
         }
         if(time == duration)
         {
-            if (cycles == 0)
+            if (repetitions == 0)
                 Destroy(gameObject);
             else
             {
-                if (cycles > 0)
-                    cycles--;
+                if (repetitions > 0)
+                    repetitions--;
                 foreach (BurstTiming burstTiming in bursts)
                     burstTiming.Reset();
                 time = 0;
