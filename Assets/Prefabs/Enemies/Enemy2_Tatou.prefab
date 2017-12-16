@@ -613,6 +613,10 @@ MonoBehaviour:
     type: 2}
   m_sound: Enemy_2
   dieOnPlayerHit: 1
+  comboVariable: {fileID: 0}
+  scoreVariable: {fileID: 11400000, guid: e7917fdd94d198547a00de3f9330aefe, type: 2}
+  scoreOnHit: 0
+  scoreOnKill: 100
 --- !u!212 &212856253548690200
 SpriteRenderer:
   m_ObjectHideFlags: 1

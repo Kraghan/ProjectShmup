@@ -30,6 +30,17 @@ public class Killable : MonoBehaviour
 
     [SerializeField]
     private string m_sound;
+
+    [Header("Score")]
+    [SerializeField]
+    private FloatVariable comboVariable;
+    [SerializeField]
+    private FloatVariable scoreVariable;
+    [SerializeField]
+    private int scoreOnHit = 0;
+    [SerializeField]
+    private int scoreOnKill = 100;
+
     #endregion
 
     #region MonoBehaviour main methods
@@ -86,6 +97,15 @@ public class Killable : MonoBehaviour
 
             if(m_sound.Length > 0)
                 AkSoundEngine.PostEvent(m_sound, gameObject);
+
+            if (enemyDmg)
+            {
+                scoreVariable.value += scoreOnHit;
+
+                if (IsAlive())
+                    scoreVariable.value += scoreOnKill;
+            }
+
             return true;
         }
         else
