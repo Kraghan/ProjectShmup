@@ -15,7 +15,7 @@ public class Burst : ScriptableObject
     {
         foreach(Shoot shoot in shoots)
         {
-            Bullet bullet = Instantiate(bulletPrefab, patternTransform.position, Quaternion.identity, null).GetComponent<Bullet>();
+            Bullet bullet = Instantiate(bulletPrefab, patternTransform.position, Quaternion.identity, patternTransform.parent).GetComponent<Bullet>();
             bullet.Fire(shoot.speed, shoot.acceleration, shoot.direction, shoot.rotation);
         }
     }
