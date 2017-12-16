@@ -54,13 +54,13 @@ public abstract class Killable : MonoBehaviour
                 OnHit(collidedBullet.isOnBeat);
 
                 if (health <= 0)
-                    Die();
+                    Die(collidedBullet.isOnBeat);
                 else // is alive
                 {
                     currentInvulnerabilityTime = invulnerabilityTime;
 
-                    if(m_sound.Length > 0)
-                        AkSoundEngine.PostEvent(m_sound, gameObject);
+                    /*if(m_sound.Length > 0)
+                        AkSoundEngine.PostEvent(m_sound, gameObject);*/
                 }
             }
         }
