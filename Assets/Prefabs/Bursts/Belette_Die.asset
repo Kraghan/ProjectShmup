@@ -18,11 +18,11 @@ MonoBehaviour:
     rotation: 80
   - speed: 100
     acceleration: 0
-    direction: 22.5
+    direction: -22.5
     rotation: 80
   - speed: 100
     acceleration: 0
-    direction: -22.5
+    direction: 22.5
     rotation: 80
   - speed: -100
     acceleration: 0

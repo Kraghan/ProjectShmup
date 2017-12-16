@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class BurstTiming : ScriptableObject
+public class BurstTiming
 {
     #region Attributes
     public float timing;

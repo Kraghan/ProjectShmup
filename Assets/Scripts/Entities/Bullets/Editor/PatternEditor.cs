@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditorInternal;
 
-
-
 [CustomEditor(typeof(Pattern), true)]
 public class PatternEditor : Editor
 {
@@ -24,6 +22,7 @@ public class PatternEditor : Editor
     private float handlersWidth;
     private float timingsWidth;
     private float burstsWidth;
+    private float bulletsWidth;
 
     public override void OnInspectorGUI()
     {
@@ -39,11 +38,14 @@ public class PatternEditor : Editor
         list = new ReorderableList(serializedObject, serializedObject.FindProperty("bursts"), true, true, true, true);
 
         list.drawHeaderCallback = (Rect rect) => {
-            handlersWidth = (rect.width / 10 * 2);
-            timingsWidth = (rect.width / 10 * 2);
+            handlersWidth = (rect.width / 10 * 0.5f);
+            timingsWidth = (rect.width / 10 * 1.5f);
             burstsWidth = (rect.width / 10 * 6);
+            bulletsWidth = (rect.width / 10 * 1.5f);
+
             EditorGUI.LabelField(new Rect(rect.x + handlersWidth, rect.y, timingsWidth, rect.height), "Timings");
             EditorGUI.LabelField(new Rect(rect.x + handlersWidth + timingsWidth, rect.y, burstsWidth, rect.height), "Bursts");
+            EditorGUI.LabelField(new Rect(rect.x + handlersWidth + timingsWidth + burstsWidth, rect.y, bulletsWidth, rect.height), "Bullets");
         };
 
 
@@ -57,9 +59,11 @@ public class PatternEditor : Editor
             {
                 burstTiming = new BurstTiming(0, null);
             }
-            
-            burstTiming.timing = EditorGUI.FloatField(new Rect(rect.x + handlersWidth*0.7f, rect.y, timingsWidth, EditorGUIUtility.singleLineHeight), burstTiming.timing);
-            burstTiming.burst = EditorGUI.ObjectField(new Rect(rect.x + handlersWidth*0.7f + timingsWidth, rect.y, burstsWidth, EditorGUIUtility.singleLineHeight), burstTiming.burst, typeof(Burst), false) as Burst;
+            //EditorGUI.PropertyField(new Rect(rect.x + handlersWidth / 7, rect.y, timingsWidth, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("timing"), GUIContent.none);
+            //EditorGUI.PropertyField(new Rect(rect.x + handlersWidth / 7 + timingsWidth, rect.y, burstsWidth, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("burst"), GUIContent.none);
+            EditorGUI.FloatField(new Rect(rect.x + handlersWidth / 7, rect.y, timingsWidth, EditorGUIUtility.singleLineHeight), burstTiming.timing);
+            burstTiming.burst = EditorGUI.ObjectField(new Rect(rect.x + handlersWidth/7 + timingsWidth, rect.y, burstsWidth, EditorGUIUtility.singleLineHeight), burstTiming.burst, typeof(Burst), false) as Burst;
+            //burstTiming.bullet = EditorGUI.ObjectField(new Rect(rect.x + handlersWidth + timingsWidth + burstsWidth, rect.y, bulletsWidth, EditorGUIUtility.singleLineHeight), burstTiming.bullet, typeof(GameObject), false) as GameObject;
             ((Pattern)target).bursts[index] = burstTiming;
         };
             
@@ -69,32 +73,22 @@ public class PatternEditor : Editor
         };
     }
 
-    
-
-    
-
     public void drawGUI()
     {
         GUILayout.BeginVertical("ShurikenEffectBg", new GUILayoutOption[0]);
         EditorGUILayout.BeginVertical();
-        GUIContent content = new GUIContent();
         Rect rect;
         rect = GUILayoutUtility.GetRect(0, 0);
         GUIStyle style;
         style = (GUIStyle)"ShurikenEmitterTitle";
         style.clipping = TextClipping.Clip;
         style.padding.right = 0;
-
         modulePadding.padding = new RectOffset(0, 0, 0, 0);
         Rect position = EditorGUILayout.BeginVertical(modulePadding, new GUILayoutOption[0]);
-        //position.y -= 4f;
-        //position.height += 1f;
-
         GUI.Label(position, GUIContent.none, "ShurikenModuleBg");
 
         // Label style
         int labelWidthInPixels = 100;
-        // Field style
 
         // Display stuff here
         
