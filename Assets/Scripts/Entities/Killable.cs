@@ -102,8 +102,8 @@ public class Killable : MonoBehaviour
             {
                 scoreVariable.value += scoreOnHit;
 
-                if (IsAlive())
-                    scoreVariable.value += scoreOnKill;
+                if (!IsAlive())
+                    scoreVariable.value += scoreOnKill; 
             }
 
             return true;
