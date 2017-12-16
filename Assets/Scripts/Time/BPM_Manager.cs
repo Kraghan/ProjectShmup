@@ -7,7 +7,7 @@ public class BPM_Manager : MonoBehaviour
 {
 	static UnityAction m_syncList;
 
-	public static UnityAction SyncedAction
+    public static UnityAction SyncedAction
 	{
 		set
 		{
@@ -56,4 +56,5 @@ public class BPM_Manager : MonoBehaviour
 		else
 			return false;
 	}
+
 }

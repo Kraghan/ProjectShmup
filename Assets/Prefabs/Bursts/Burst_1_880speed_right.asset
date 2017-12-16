@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0935138423c2c3046bc725f0c2dd6061, type: 3}
-  m_Name: Burst_1_150speed_left
+  m_Name: Burst_1_880speed_right
   m_EditorClassIdentifier: 
   shoots:
-  - speed: -150
-    acceleration: 30
+  - speed: 880
+    acceleration: 0
     direction: 0
     rotation: 0

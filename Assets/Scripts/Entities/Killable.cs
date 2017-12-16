@@ -5,7 +5,8 @@ using UnityEngine;
 public enum DeathAnimation
 {
     NoDeath,
-    NoAnimation
+    NoAnimation,
+    InstantiatePrefab
 }
 
 [RequireComponent(typeof(Collider2D))]
@@ -22,6 +23,8 @@ public class Killable : MonoBehaviour
     [Tooltip("Comportement to adopt when health = 0")]
     [SerializeField]
     private DeathAnimation deathAnimation = DeathAnimation.NoAnimation;
+    [SerializeField]
+    private GameObject deathAnimationPrefabToInstantiate;
     private float health;
     private bool alive = true;
     #endregion
@@ -52,6 +55,11 @@ public class Killable : MonoBehaviour
             case DeathAnimation.NoDeath:
                 break;
             case DeathAnimation.NoAnimation:
+                Destroy(gameObject);
+                break;
+            case DeathAnimation.InstantiatePrefab:
+                if (deathAnimationPrefabToInstantiate != null)
+                    Instantiate(deathAnimationPrefabToInstantiate, transform.position, Quaternion.identity, null);
                 Destroy(gameObject);
                 break;
             default:

@@ -18,10 +18,14 @@ public class Bullet : MonoBehaviour
     private bool destroyOnHit = true;
     [SerializeField]
     private DestroyAnimation destroyAnimation = DestroyAnimation.NoAnimation;
+
+    private float destroyInXSeconds = 20;
+
     private float speed;
     private float acceleration;
     private float direction;
     private float rotation;
+
     private Rigidbody2D rgbd2D;
     #endregion
 
@@ -42,6 +46,10 @@ public class Bullet : MonoBehaviour
 
         rgbd2D.rotation = direction;
         direction += (rotation * Time.deltaTime);
+
+        destroyInXSeconds -= Time.deltaTime;
+        if (destroyInXSeconds <= 0)
+            Destroy(gameObject);
     }
     #endregion
 

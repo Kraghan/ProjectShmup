@@ -4,20 +4,22 @@ using UnityEngine;
 
 public enum PulseMode
 {
-    Scale
+    Scale,
+    CircleLine
 }
 
 public class Pulser : MonoBehaviour
 {
     #region Attributes
     [SerializeField]
-    private FloatVariable pulseTimer;
-    [SerializeField]
-    private FloatVariable pulseTimerMax;
-    [SerializeField]
     private PulseMode pulseMode;
     [SerializeField]
     private float scaleIncrease = 1.3f;
+    [SerializeField]
+    private float timingPulse = 0.5f;
+    [SerializeField]
+    private float circleMaxSize = 30;
+    private float currentTime;
 
     private Vector3 baseScale;
     #endregion
@@ -30,18 +32,43 @@ public class Pulser : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-        if (pulseTimer.value <= 0)
+        if (currentTime > 0)
+            currentTime -= Time.deltaTime;
+        Utility.Cap(ref currentTime, 0, timingPulse);
+        if (currentTime == 0)
+            Pulse();
+        float percent = currentTime / timingPulse;
+        switch (pulseMode)
         {
-            transform.localScale = new Vector3(baseScale.x * scaleIncrease, baseScale.y * scaleIncrease, 1);
+            case PulseMode.Scale:
+                transform.localScale = new Vector3(baseScale.x + (((baseScale.x * scaleIncrease) - baseScale.x) * percent), baseScale.y + (((baseScale.y * scaleIncrease) - baseScale.y) * percent), 1);
+                break;
+            case PulseMode.CircleLine:
+                float circleSize = percent * circleMaxSize;
+                transform.localScale = new Vector3(circleSize, circleSize, 1);
+                break;
+            default:
+                break;
         }
-        else
-        {
-            float percent = pulseTimer.value / pulseTimerMax.value;
-            transform.localScale = new Vector3(baseScale.x + (((baseScale.x * scaleIncrease) - baseScale.x) * (percent/2)), baseScale.y + (((baseScale.y * scaleIncrease) - baseScale.y) * (percent/2)), 1);
-        }
+        
     }
     #endregion
 
     #region Methods
+    public void Pulse()
+    {
+        switch (pulseMode)
+        {
+            case PulseMode.Scale:
+                transform.localScale = new Vector3(baseScale.x * scaleIncrease, baseScale.y * scaleIncrease, 1);
+                break;
+            case PulseMode.CircleLine:
+                transform.localScale = new Vector3(circleMaxSize, circleMaxSize, 1);
+                break;
+            default:
+                break;
+        }
+        currentTime = timingPulse;
+    }
     #endregion
 }

@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private float horizontalSpeed;
     [SerializeField]
     private float verticalSpeed;
+    [SerializeField]
+    private float focusSpeedMultiplicator;
 
     [Header("Shoot")]
     [SerializeField]
@@ -46,7 +48,8 @@ public class PlayerController : MonoBehaviour
     {
         killable = GetComponent<Killable>();
         player = GetComponent<Player>();
-        rgbd2D.velocity = new Vector2(Time.deltaTime * horizontalSpeed * Input.GetAxis("Horizontal"), Time.deltaTime * verticalSpeed * Input.GetAxis("Vertical"));
+        bool focus = (Input.GetButton("Focus"));
+        rgbd2D.velocity = new Vector2(Time.deltaTime * horizontalSpeed * (focus ? focusSpeedMultiplicator : 1) * Input.GetAxis("Horizontal"), Time.deltaTime * verticalSpeed * (focus ? focusSpeedMultiplicator : 1) * Input.GetAxis("Vertical"));
     }
     
     private void PickUp(GameObject pickup)
