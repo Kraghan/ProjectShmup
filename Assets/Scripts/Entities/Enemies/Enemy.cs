@@ -44,10 +44,15 @@ public class Enemy : Killable
             killable.ClearHealth();
     }
 
-    public override void OnDeath()
+    public override void OnDeath(bool onBeat)
     {
-        if(m_sound.Length > 0)
-            AkSoundEngine.PostEvent(m_sound, gameObject);
+        if(onBeat)
+        {
+            if(m_sound.Length > 0)
+                AkSoundEngine.PostEvent(m_sound, gameObject);
+        }
+        else
+            AkSoundEngine.PostEvent("Enemy_destroy", gameObject);
     }
 
     public override void OnHit(bool onBeat)

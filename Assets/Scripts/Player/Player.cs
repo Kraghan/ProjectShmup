@@ -15,7 +15,7 @@ public class Player : Killable
 		
 	}
 
-    public override void OnDeath()
+    public override void OnDeath(bool onBeat)
     {
     }
 

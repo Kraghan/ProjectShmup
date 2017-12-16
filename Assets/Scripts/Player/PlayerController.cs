@@ -85,10 +85,12 @@ public class PlayerController : MonoBehaviour
 
         if(BPM_Manager.IsOnBeat(m_errorWindow))
         {
+            AkSoundEngine.PostEvent("Bullet", gameObject);
             newProj = Instantiate(m_goodShot, transform.position, transform.rotation);
         }
         else
         {
+            AkSoundEngine.PostEvent("Bullet_fail", gameObject);
             m_combosCounter.value = 0;
             newProj = Instantiate(m_badShot, transform.position, transform.rotation);
         }

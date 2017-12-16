@@ -48,7 +48,7 @@ public abstract class Killable : MonoBehaviour
                 health -= collidedBullet.GetDamages();
                 
                 if(health <= 0)
-                    Die();
+                    Die(collidedBullet.isOnBeat);
                 else // is alive
                 {
                     currentInvulnerabilityTime = invulnerabilityTime;
@@ -69,7 +69,7 @@ public abstract class Killable : MonoBehaviour
         return health > 0;
     }
 
-    void Die()
+    void Die(bool onBeat)
     {
         switch(deathAnimation)
         {
@@ -88,7 +88,7 @@ public abstract class Killable : MonoBehaviour
                 break;
         }
 
-        OnDeath();
+        OnDeath(onBeat);
     }
 
     public void ClearHealth()
@@ -98,6 +98,6 @@ public abstract class Killable : MonoBehaviour
         health = 0;
     }
 
-    public abstract void OnDeath();
+    public abstract void OnDeath(bool onBeat);
     public abstract void OnHit(bool onBeat);
 }
