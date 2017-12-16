@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Project="Wwise_ProjectSchmup" Platform="Windows" BasePlatform="Windows">
-	<Plugins/>
+	<Plugins>
+		<Plugin Name="Wwise Meter" ID="8454147" DLL="AkSoundEngineDLL"/>
+	</Plugins>
 </PluginInfo>
