@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     float m_errorWindow;
     [SerializeField]
     GameObject m_goodShot, m_badShot;
+    [SerializeField]
+    Transform m_shotPool;
 
     private Killable killable;
     private Player player;
@@ -28,18 +30,20 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region MonoBehaviour main methods
-    // Use this for initialization
-    void Start () {
+    
+    void Start ()
+    {
         player = GetComponent<Player>();
         rgbd2D = GetComponent<Rigidbody2D>();
 	}
 	
-	// Update is called once per frame
 	void Update () {
         ManageSpeed();
 
         if(Input.GetButtonDown("Fire1"))
+        {
             Fire();
+        }
 	}
     #endregion
 
@@ -59,14 +63,18 @@ public class PlayerController : MonoBehaviour
 
     void Fire()
     {
+        GameObject newProj;
+
         if(BPM_Manager.IsOnBeat(m_errorWindow))
         {
-            Instantiate(m_goodShot, transform.position, transform.rotation);
+            newProj = Instantiate(m_goodShot, transform.position, transform.rotation);
         }
         else
         {
-            Instantiate(m_badShot, transform.position, transform.rotation);
+            newProj = Instantiate(m_badShot, transform.position, transform.rotation);
         }
+
+        newProj.transform.SetParent(m_shotPool);
     }
 
     #region ColliderHit
