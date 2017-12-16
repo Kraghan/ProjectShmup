@@ -10,6 +10,7 @@ TagManager:
   - EnemyBullet
   - PlayerBullet
   - PickUp
+  - ScreenWall
   layers:
   - Default
   - TransparentFX
@@ -23,11 +24,11 @@ TagManager:
   - Entities
   - Enemies
   - Player
+  - PlayerBullet
+  - EnemiesBullet
   - Solid
   - Decoration
   - CamForeground
-  - 
-  - 
   - 
   - 
   - 
