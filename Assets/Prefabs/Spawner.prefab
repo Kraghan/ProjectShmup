@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1649266222053996, guid: 2561ee94b6e4fa245b26ff111d0a3a3d, type: 2}
-  pattern: {fileID: 114296908321499180, guid: 4be2d7904f704ef45b2a1973793cb116, type: 2}
+  pattern: {fileID: 0}
   enemyPool: {fileID: 0}
   numberOfSpawn: 3
   timeBetweenSpawn: 0.5

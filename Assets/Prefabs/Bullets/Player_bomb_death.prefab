@@ -92,9 +92,10 @@ MonoBehaviour:
   damages: 1
   destroyOnHit: 1
   destroyAnimation: 0
+  isOnBeat: 0
   minRadius: 1
-  maxRadius: 5
-  speedSpread: 0.5
+  maxRadius: 7
+  speedSpread: 21
 --- !u!212 &212924572430658660
 SpriteRenderer:
   m_ObjectHideFlags: 1

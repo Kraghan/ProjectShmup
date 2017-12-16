@@ -610,11 +610,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6359cf09c3adef4ca433945c4ca5c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
   invulnerabilityTime: 0
   deathAnimation: 2
   deathAnimationPrefabToInstantiate: {fileID: 1804348000379606, guid: bef11b4605ff9d84abcc45b3ca289880,
     type: 2}
+  health: 0
   m_sound: Enemy_2
   comboVariable: {fileID: 0}
   scoreVariable: {fileID: 11400000, guid: e7917fdd94d198547a00de3f9330aefe, type: 2}

@@ -35,6 +35,7 @@ public abstract class Killable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (!isInvincible())
         {
             bool playerDmg = (gameObject.tag == "Player" && collision.gameObject.tag == "EnemyBullet");
@@ -45,15 +46,19 @@ public abstract class Killable : MonoBehaviour
                 Bullet collidedBullet = collision.gameObject.GetComponent<Bullet>();
 
                 collidedBullet.Hit();
-                health -= collidedBullet.GetDamages();
-                
-                if(health <= 0)
+
+                if (collidedBullet.GetDamages() == -1)
+                    health = 0;
+                else
+                    health -= collidedBullet.GetDamages();
+
+                OnHit(collidedBullet.isOnBeat);
+
+                if (health <= 0)
                     Die(collidedBullet.isOnBeat);
                 else // is alive
                 {
                     currentInvulnerabilityTime = invulnerabilityTime;
-
-                    OnHit(collidedBullet.isOnBeat);
                 }
             }
         }
@@ -80,7 +85,11 @@ public abstract class Killable : MonoBehaviour
                 break;
             case DeathAnimation.InstantiatePrefab:
                 if (deathAnimationPrefabToInstantiate != null)
-                    Instantiate(deathAnimationPrefabToInstantiate, transform.position, Quaternion.identity, null);
+                {
+                    GameObject obj = Instantiate(deathAnimationPrefabToInstantiate, transform.position, Quaternion.identity, null);
+                    obj.transform.parent = transform.parent;
+                }
+                    
                 Destroy(gameObject);
                 break;
             default:

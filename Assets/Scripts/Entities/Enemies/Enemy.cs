@@ -53,13 +53,16 @@ public class Enemy : Killable
         }
         else
             AkSoundEngine.PostEvent("Enemy_destroy", gameObject);
+        scoreVariable.value += scoreOnKill;
     }
 
     public override void OnHit(bool onBeat)
     {
-        m_combosCounter.value++;
+        if (onBeat)
+            m_combosCounter.value++;
+        else
+            m_combosCounter.value = 0;
 
         scoreVariable.value += scoreOnHit;
-        scoreVariable.value += scoreOnKill;
     }
 }

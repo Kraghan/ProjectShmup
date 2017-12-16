@@ -59,6 +59,10 @@ public class Pattern : MonoBehaviour
     #endregion
 
     #region Methods
+    public void ResetCooldown()
+    {
+        time = 0;
+    }
     #endregion
 
     #region Getters
