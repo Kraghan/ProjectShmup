@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{9C753FF6-5968-4AA4-B319-418A1F50D202}'
-    m_lastTimePsrt1: -2088118528
-    m_lastTimePart2: -1999289181
+    m_lastTimePsrt1: 2002600960
+    m_lastTimePart2: -1999289158
     List:
     - Name: Bass_mute
       Path: Default Work Unit\Interactive Music\Main 1\Bass_mute
@@ -47,6 +47,34 @@ MonoBehaviour:
       ID: -1519322703
       Guid: fb3a8159fcc75746843e85911f31c1ed
       maxAttenuation: 0
+    - Name: Bullet
+      Path: Default Work Unit\SFX\Player\Bullet
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: Bullet
+        ObjectType: 3
+      ID: 1256513485
+      Guid: c4a4d0410c50a54f9dc0a2e5c1d4d26f
+      maxAttenuation: 0
+    - Name: Bullet_fail
+      Path: Default Work Unit\SFX\Player\Bullet_fail
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: Bullet_fail
+        ObjectType: 3
+      ID: -1913702188
+      Guid: 2969b22364cef84fbccedd9f78677985
+      maxAttenuation: 0
     - Name: Enemy_1
       Path: Default Work Unit\Interactive Music\Main 1\Enemy_1
       PathAndIcons:
@@ -74,6 +102,20 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1870714580
       Guid: 771c4ce273fd0449b8675ca71c16ba4e
+      maxAttenuation: 0
+    - Name: Enemy_destroy
+      Path: Default Work Unit\SFX\Enemy\Enemy_destroy
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Enemy
+        ObjectType: 4
+      - ElementName: Enemy_destroy
+        ObjectType: 3
+      ID: -555011160
+      Guid: b3b85b8dbac0b546839f81352f468e8f
       maxAttenuation: 0
     - Name: Kick_SC
       Path: Default Work Unit\Interactive Music\Main 1\Kick_SC
@@ -128,8 +170,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{96C14579-6E85-47EE-8A66-6174EFA288CB}'
-    m_lastTimePsrt1: -1688118528
-    m_lastTimePart2: -1999289181
+    m_lastTimePsrt1: 2002600960
+    m_lastTimePart2: -1999289158
     List:
     - Name: Test1
       Path: Default Work Unit\Test1
@@ -265,6 +307,9 @@ MonoBehaviour:
   - /Wwise_ProjectSchmup/Events/Default Work Unit
   - /Wwise_ProjectSchmup/Events/Default Work Unit/Interactive Music
   - /Wwise_ProjectSchmup/Events/Default Work Unit/Interactive Music/Main 1
+  - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX
+  - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/Enemy
+  - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/Player
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
