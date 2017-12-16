@@ -8,14 +8,11 @@ public class Pattern : MonoBehaviour
     [Tooltip("Prefab of the bullets fired")]
     public GameObject bullet;
     [Tooltip("Duration of the pattern (in seconds)")]
-    [SerializeField]
-    private float duration = 1;
+    public float duration = 1;
     [Tooltip("Number of repetitions of the pattern (-1 = infinite | 0 = one cycle | 1 = two cycles (one repetition) | etc...)")]
-    [SerializeField]
-    private float repetitions = -1;
+    public float repetitions = -1;
     [Tooltip("Bursts timings")]
-    [SerializeField]
-    private BurstTiming[] bursts;
+    public List<BurstTiming> bursts;
 
     private Transform bulletRepository;
     private float time = 0;

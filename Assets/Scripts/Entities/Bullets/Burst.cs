@@ -7,6 +7,7 @@ using UnityEngine;
 public class Burst : ScriptableObject
 {
     #region Attributes
+    public string nameTest = "ololo";
     public Shoot[] shoots;
     #endregion
 
