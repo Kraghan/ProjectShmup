@@ -11,11 +11,11 @@ public class Burst : ScriptableObject
     #endregion
 
     #region Methods
-    public void Fire(GameObject bulletPrefab, Transform patternTransform)
+    public void Fire(GameObject bulletPrefab, Vector3 patternPosition, Transform bulletRepository)
     {
         foreach(Shoot shoot in shoots)
         {
-            Bullet bullet = Instantiate(bulletPrefab, patternTransform.position, Quaternion.identity, patternTransform.parent).GetComponent<Bullet>();
+            Bullet bullet = Instantiate(bulletPrefab, patternPosition, Quaternion.identity, bulletRepository).GetComponent<Bullet>();
             bullet.Fire(shoot.speed, shoot.acceleration, shoot.direction, shoot.rotation);
         }
     }
