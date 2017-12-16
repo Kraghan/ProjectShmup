@@ -5,10 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerController))]
 public class Player : Killable
 {
-    #region Attributes
-    #endregion
-
-    #region MonoBehaviour main methods
     // Use this for initialization
     void Start () {
 		
@@ -18,9 +14,13 @@ public class Player : Killable
 	void Update () {
 		
 	}
-    #endregion
 
-    #region Methods
-    #endregion
+    public override void OnDeath()
+    {
+    }
+
+    public override void OnHit(bool onBeat)
+    {
+    }
 }
   

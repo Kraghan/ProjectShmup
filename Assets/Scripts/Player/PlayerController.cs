@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
     #region ColliderHit
     private void CheckColliderHit(Collider2D collider)
     {
-        if (killable.GetCurrentInvulnerabilityTime() > 0)
+        if (killable.isInvincible())
             return;
         if (collider.gameObject.tag == "Enemy")
         {

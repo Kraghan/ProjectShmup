@@ -620,18 +620,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6359cf09c3adef4ca433945c4ca5c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 1
   invulnerabilityTime: 0
   deathAnimation: 2
-  deathAnimationPrefabToInstantiate: {fileID: 1574800465314016, guid: 362fbbcbfb1d28c4ca46a27934e06316,
+  deathAnimationPrefabToInstantiate: {fileID: 1804348000379606, guid: bef11b4605ff9d84abcc45b3ca289880,
     type: 2}
   m_sound: Enemy_1
-  dieOnPlayerHit: 1
-  m_combosCounter: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
   comboVariable: {fileID: 0}
   scoreVariable: {fileID: 11400000, guid: e7917fdd94d198547a00de3f9330aefe, type: 2}
   scoreOnHit: 0
   scoreOnKill: 100
+  m_combosCounter: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
+  dieOnPlayerHit: 1
 --- !u!114 &114672366818746608
 MonoBehaviour:
   m_ObjectHideFlags: 1

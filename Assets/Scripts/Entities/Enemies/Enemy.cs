@@ -6,15 +6,24 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Enemy : Killable
 {
-    #region Attributes
+    [Header("Score")]
+    [SerializeField]
+    private FloatVariable comboVariable;
+    [SerializeField]
+    private FloatVariable scoreVariable;
+    [SerializeField]
+    private int scoreOnHit = 0;
+    [SerializeField]
+    private int scoreOnKill = 100;
+    [SerializeField]
+    IntVariable m_combosCounter;
+
     [Tooltip("If true, the enemy dies when the player touch him")]
     [SerializeField]
     private bool dieOnPlayerHit = true;
 
     private Killable killable;
-    #endregion
-
-    #region MonoBehaviour main methods
+    
     // Use this for initialization
     void Start()
     {
@@ -26,13 +35,22 @@ public class Enemy : Killable
     {
 
     }
-    #endregion
 
-    #region Methods
     public void HitPlayer()
     {
         if (dieOnPlayerHit)
             killable.ClearHealth();
     }
-    #endregion
+
+    public override void OnDeath()
+    {
+    }
+
+    public override void OnHit(bool onBeat)
+    {
+        m_combosCounter.value++;
+
+        scoreVariable.value += scoreOnHit;
+        scoreVariable.value += scoreOnKill;
+    }
 }
