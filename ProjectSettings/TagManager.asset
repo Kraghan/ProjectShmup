@@ -10,7 +10,7 @@ TagManager:
   - EnemyBullet
   - PlayerBullet
   - PickUp
-  - ScreenWall
+  - BulletRepository
   layers:
   - Default
   - TransparentFX

@@ -17,6 +17,7 @@ public class Pattern : MonoBehaviour
     [SerializeField]
     private BurstTiming[] bursts;
 
+    private Transform bulletRepository;
     private float time = 0;
     #endregion
 
@@ -24,7 +25,7 @@ public class Pattern : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        bulletRepository = GameObject.FindGameObjectWithTag("BulletRepository").transform;
     }
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class Pattern : MonoBehaviour
         {
             if (burstTiming.timing <= time && !burstTiming.IsDone())
             {
-                burstTiming.burst.Fire(bullet, transform);
+                burstTiming.burst.Fire(bullet, transform.position, bulletRepository.transform);
                 burstTiming.Done();
             }
         }
