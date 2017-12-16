@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1399035820954374}
   m_IsPrefabParent: 1
+--- !u!1 &1018804823608614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4164082063364610}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: BulletRepository
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1032602301162188
 GameObject:
   m_ObjectHideFlags: 1
@@ -129,8 +144,22 @@ Transform:
   - {fileID: 4182379530028946}
   - {fileID: 4168370439794016}
   - {fileID: 4383003281243086}
+  - {fileID: 4164082063364610}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4164082063364610
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1018804823608614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4056202253507844}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4168370439794016
 Transform:
@@ -394,6 +423,7 @@ MonoBehaviour:
   m_goodShot: {fileID: 1804521257431638, guid: 5d2a05a39b615644c864133a5f596ba0, type: 2}
   m_badShot: {fileID: 1438211116033504, guid: 19c93b33efe83a648b40853c9d4f5b5f, type: 2}
   m_shotPool: {fileID: 0}
+  m_combosCounter: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
 --- !u!114 &114499795317775692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -441,6 +471,8 @@ MonoBehaviour:
   invulnerabilityTime: 2
   deathAnimation: 0
   deathAnimationPrefabToInstantiate: {fileID: 0}
+  m_sound: 
+  m_combosCounter: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
 --- !u!114 &114959620912102798
 MonoBehaviour:
   m_ObjectHideFlags: 1

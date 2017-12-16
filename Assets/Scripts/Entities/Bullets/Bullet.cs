@@ -19,6 +19,8 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     private DestroyAnimation destroyAnimation = DestroyAnimation.NoAnimation;
 
+    public bool isOnBeat = false;
+
     private float destroyInXSeconds = 20;
 
     private float speed;

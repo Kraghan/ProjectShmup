@@ -10,6 +10,7 @@ public class Enemy : Killable
     [Tooltip("If true, the enemy dies when the player touch him")]
     [SerializeField]
     private bool dieOnPlayerHit = true;
+
     private Killable killable;
     #endregion
 

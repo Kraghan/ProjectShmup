@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     GameObject m_goodShot, m_badShot;
     [SerializeField]
     Transform m_shotPool;
+    [SerializeField]
+    IntVariable m_combosCounter;
 
     private Killable killable;
     private Player player;
@@ -38,6 +40,7 @@ public class PlayerController : MonoBehaviour
     {
         player = GetComponent<Player>();
         rgbd2D = GetComponent<Rigidbody2D>();
+        m_combosCounter.value = 0;
     }
 	
 	void Update () {
@@ -86,6 +89,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            m_combosCounter.value = 0;
             newProj = Instantiate(m_badShot, transform.position, transform.rotation);
         }
 
