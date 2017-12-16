@@ -1448,9 +1448,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseMode: 0
-  scaleIncrease: 1.3
   timingPulse: 1
+  scaleIncrease: 1.3
   circleMaxSize: 30
+  increase: 1
+  modifyOpacity: 0
+  opacityStart: 0
+  opacityEnd: 0
 --- !u!1001 &457385629
 Prefab:
   m_ObjectHideFlags: 0
@@ -1780,9 +1784,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseMode: 0
-  scaleIncrease: 1.3
   timingPulse: 1
+  scaleIncrease: 1.3
   circleMaxSize: 30
+  increase: 1
+  modifyOpacity: 0
+  opacityStart: 0
+  opacityEnd: 0
 --- !u!4 &542818898 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4460198057662352, guid: f8d50854964cbf341a7695d82192c8d8,
@@ -2125,6 +2133,34 @@ Transform:
   m_PrefabParentObject: {fileID: 4460198057662352, guid: f8d50854964cbf341a7695d82192c8d8,
     type: 2}
   m_PrefabInternal: {fileID: 671236484}
+--- !u!1 &700746795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 700746796}
+  m_Layer: 0
+  m_Name: BulletRepository
+  m_TagString: BulletRepository
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &700746796
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 700746795}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &701823598
 Prefab:
   m_ObjectHideFlags: 0
@@ -2268,9 +2304,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseMode: 0
-  scaleIncrease: 1.3
   timingPulse: 1
+  scaleIncrease: 1.3
   circleMaxSize: 30
+  increase: 1
+  modifyOpacity: 0
+  opacityStart: 0
+  opacityEnd: 0
 --- !u!1 &718370001
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,9 +2882,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseMode: 0
-  scaleIncrease: 1.3
   timingPulse: 1
+  scaleIncrease: 1.3
   circleMaxSize: 30
+  increase: 1
+  modifyOpacity: 0
+  opacityStart: 0
+  opacityEnd: 0
 --- !u!1 &838545032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2916,7 +2960,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 838545032}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.0099993, y: -7.63, z: 11.14}
+  m_LocalPosition: {x: -5.0099993, y: -10.35, z: 11.14}
   m_LocalScale: {x: 7.57, y: 15.09, z: 1}
   m_Children: []
   m_Father: {fileID: 75089565}
@@ -2934,9 +2978,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseMode: 0
-  scaleIncrease: 1.3
   timingPulse: 1
+  scaleIncrease: 1.3
   circleMaxSize: 30
+  increase: 1
+  modifyOpacity: 0
+  opacityStart: 0
+  opacityEnd: 0
 --- !u!1001 &851134368
 Prefab:
   m_ObjectHideFlags: 0
@@ -2975,6 +3023,31 @@ Prefab:
     - target: {fileID: 4594701934896364, guid: 26a7ef117e5bd4a4ca461f777da2f36b, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114663780766514836, guid: 26a7ef117e5bd4a4ca461f777da2f36b,
+        type: 2}
+      propertyPath: opacityEnd
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114663780766514836, guid: 26a7ef117e5bd4a4ca461f777da2f36b,
+        type: 2}
+      propertyPath: increase
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114663780766514836, guid: 26a7ef117e5bd4a4ca461f777da2f36b,
+        type: 2}
+      propertyPath: modifyOpacity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114663780766514836, guid: 26a7ef117e5bd4a4ca461f777da2f36b,
+        type: 2}
+      propertyPath: opacityStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114663780766514836, guid: 26a7ef117e5bd4a4ca461f777da2f36b,
+        type: 2}
+      propertyPath: scaleIncrease
+      value: 1.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26a7ef117e5bd4a4ca461f777da2f36b, type: 2}
@@ -3870,9 +3943,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseMode: 0
-  scaleIncrease: 1.3
   timingPulse: 1
+  scaleIncrease: 1.3
   circleMaxSize: 30
+  increase: 1
+  modifyOpacity: 0
+  opacityStart: 0
+  opacityEnd: 0
 --- !u!1001 &1113265447
 Prefab:
   m_ObjectHideFlags: 0
@@ -4383,9 +4460,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseMode: 0
-  scaleIncrease: 1.3
   timingPulse: 1
+  scaleIncrease: 1.3
   circleMaxSize: 30
+  increase: 1
+  modifyOpacity: 0
+  opacityStart: 0
+  opacityEnd: 0
 --- !u!212 &1243634347
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4871,9 +4952,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseMode: 0
-  scaleIncrease: 1.3
   timingPulse: 1
+  scaleIncrease: 1.3
   circleMaxSize: 30
+  increase: 1
+  modifyOpacity: 0
+  opacityStart: 0
+  opacityEnd: 0
 --- !u!4 &1410348661 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4460198057662352, guid: f8d50854964cbf341a7695d82192c8d8,
@@ -5149,9 +5234,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseMode: 0
-  scaleIncrease: 1.3
   timingPulse: 1
+  scaleIncrease: 1.3
   circleMaxSize: 30
+  increase: 1
+  modifyOpacity: 0
+  opacityStart: 0
+  opacityEnd: 0
 --- !u!1001 &1500390184
 Prefab:
   m_ObjectHideFlags: 0
@@ -6317,9 +6406,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseMode: 0
-  scaleIncrease: 1.3
   timingPulse: 1
+  scaleIncrease: 1.3
   circleMaxSize: 30
+  increase: 1
+  modifyOpacity: 0
+  opacityStart: 0
+  opacityEnd: 0
 --- !u!1001 &1831996126
 Prefab:
   m_ObjectHideFlags: 0
@@ -6908,9 +7001,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseMode: 0
-  scaleIncrease: 1.3
   timingPulse: 1
+  scaleIncrease: 1.3
   circleMaxSize: 30
+  increase: 1
+  modifyOpacity: 0
+  opacityStart: 0
+  opacityEnd: 0
 --- !u!4 &1989198031 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4460198057662352, guid: f8d50854964cbf341a7695d82192c8d8,
