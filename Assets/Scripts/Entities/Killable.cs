@@ -41,6 +41,8 @@ public class Killable : MonoBehaviour
     [SerializeField]
     private int scoreOnKill = 100;
 
+    [SerializeField]
+    IntVariable m_combosCounter;
     #endregion
 
     #region MonoBehaviour main methods
@@ -91,9 +93,14 @@ public class Killable : MonoBehaviour
         bool enemyDmg = (gameObject.tag == "Enemy" && potentialBullet.gameObject.tag == "PlayerBullet");
         if(playerDmg || enemyDmg)
         {
-            potentialBullet.gameObject.GetComponent<Bullet>().Hit();
-            AddHealth(-potentialBullet.GetComponent<Bullet>().GetDamages());
+            Bullet collidedBullet = potentialBullet.gameObject.GetComponent<Bullet>();
+
+            collidedBullet.Hit();
+            AddHealth(-collidedBullet.GetDamages());
             currentInvulnerabilityTime = invulnerabilityTime;
+
+            if(collidedBullet.isOnBeat)
+                m_combosCounter.value++;
 
             if(m_sound.Length > 0)
                 AkSoundEngine.PostEvent(m_sound, gameObject);

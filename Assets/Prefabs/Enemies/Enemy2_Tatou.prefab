@@ -560,9 +560,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseMode: 0
-  scaleIncrease: 1.2
   timingPulse: 1
+  scaleIncrease: 1.2
   circleMaxSize: 30
+  increase: 1
+  modifyOpacity: 0
+  opacityStart: 0
+  opacityEnd: 0
 --- !u!114 &114473248133283858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -617,6 +621,7 @@ MonoBehaviour:
   scoreVariable: {fileID: 11400000, guid: e7917fdd94d198547a00de3f9330aefe, type: 2}
   scoreOnHit: 0
   scoreOnKill: 100
+  m_combosCounter: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
 --- !u!212 &212856253548690200
 SpriteRenderer:
   m_ObjectHideFlags: 1
