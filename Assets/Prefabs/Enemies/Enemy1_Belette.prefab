@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4014431814903694}
   - component: {fileID: 114219666420989712}
   - component: {fileID: 50535383386330696}
-  - component: {fileID: 114538431434670054}
   - component: {fileID: 114260407865485438}
   - component: {fileID: 212111028846615586}
   - component: {fileID: 60671670104438404}
@@ -617,23 +616,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6359cf09c3adef4ca433945c4ca5c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dieOnPlayerHit: 1
---- !u!114 &114538431434670054
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1437600440487434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32d04e52157002b4690aaee542a79065, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   maxHealth: 10
   invulnerabilityTime: 0
   deathAnimation: 2
   deathAnimationPrefabToInstantiate: {fileID: 1574800465314016, guid: 362fbbcbfb1d28c4ca46a27934e06316,
     type: 2}
+  m_sound: Enemy_1
+  dieOnPlayerHit: 1
 --- !u!114 &114672366818746608
 MonoBehaviour:
   m_ObjectHideFlags: 1

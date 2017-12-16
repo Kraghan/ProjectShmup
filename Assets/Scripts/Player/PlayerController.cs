@@ -25,8 +25,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     GameObject m_goodShot, m_badShot;
     [SerializeField]
-    string m_goodShotSound, m_badShotSound;
-    [SerializeField]
     Transform m_shotPool;
 
     private Killable killable;
@@ -85,12 +83,10 @@ public class PlayerController : MonoBehaviour
         if(BPM_Manager.IsOnBeat(m_errorWindow))
         {
             newProj = Instantiate(m_goodShot, transform.position, transform.rotation);
-            AkSoundEngine.PostEvent(m_goodShotSound, gameObject);
         }
         else
         {
             newProj = Instantiate(m_badShot, transform.position, transform.rotation);
-            AkSoundEngine.PostEvent(m_badShotSound, gameObject);
         }
 
         newProj.transform.SetParent(m_shotPool);

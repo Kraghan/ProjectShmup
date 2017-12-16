@@ -27,6 +27,9 @@ public class Killable : MonoBehaviour
     private GameObject deathAnimationPrefabToInstantiate;
     private float health;
     private bool alive = true;
+
+    [SerializeField]
+    private string m_sound;
     #endregion
 
     #region MonoBehaviour main methods
@@ -80,6 +83,9 @@ public class Killable : MonoBehaviour
             potentialBullet.gameObject.GetComponent<Bullet>().Hit();
             AddHealth(-potentialBullet.GetComponent<Bullet>().GetDamages());
             currentInvulnerabilityTime = invulnerabilityTime;
+
+            if(m_sound.Length > 0)
+                AkSoundEngine.PostEvent(m_sound, gameObject);
             return true;
         }
         else

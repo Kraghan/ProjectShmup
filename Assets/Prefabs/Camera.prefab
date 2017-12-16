@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 124142565424628772}
   - component: {fileID: 114959620912102798}
   - component: {fileID: 114499795317775692}
+  - component: {fileID: 114152830052895684}
   - component: {fileID: 114670482183380948}
   m_Layer: 0
   m_Name: Camera
@@ -206,8 +207,8 @@ Camera:
   m_GameObject: {fileID: 1399035820954374}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 4
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -222,7 +223,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294950655
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -355,6 +356,25 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114152830052895684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1399035820954374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80ee07fd12fff3240bb727fa1a3320fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  valueGuid: e661e5f73edf844b87d70db2ff9700fb
+  bankName: Test1
+  loadAsynchronous: 0
+  decodeBank: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
 --- !u!114 &114348363927732298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -373,8 +393,6 @@ MonoBehaviour:
   m_errorWindow: 0.1
   m_goodShot: {fileID: 1804521257431638, guid: 5d2a05a39b615644c864133a5f596ba0, type: 2}
   m_badShot: {fileID: 1438211116033504, guid: 19c93b33efe83a648b40853c9d4f5b5f, type: 2}
-  m_goodShotSound: 
-  m_badShotSound: 
   m_shotPool: {fileID: 0}
 --- !u!114 &114499795317775692
 MonoBehaviour:
