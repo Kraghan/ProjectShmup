@@ -16,18 +16,38 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{9C753FF6-5968-4AA4-B319-418A1F50D202}'
-    m_lastTimePsrt1: -1910673152
-    m_lastTimePart2: -1999289412
+    m_lastTimePsrt1: 530635008
+    m_lastTimePart2: -1999289371
     List:
-    - Name: Play_Random_Percussion
-      Path: Default Work Unit\Play_Random_Percussion
+    - Name: Play_Bass
+      Path: Default Work Unit\Play_Bass
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Random_Percussion
+      - ElementName: Play_Bass
         ObjectType: 3
-      ID: -1408545639
-      Guid: 363f34db77d21b439371a107b5266c98
+      ID: 1560528335
+      Guid: 6ca3fa17a343c84ea1506d8acb83b60a
+      maxAttenuation: 0
+    - Name: Play_Flute
+      Path: Default Work Unit\Play_Flute
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Flute
+        ObjectType: 3
+      ID: 1653871456
+      Guid: d13f9c97c76e544b93378c2f7dc26ba0
+      maxAttenuation: 0
+    - Name: Play_Main_Layer
+      Path: Default Work Unit\Play_Main_Layer
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Main_Layer
+        ObjectType: 3
+      ID: -849357241
+      Guid: 953585ce696ed0409816f04307ace07a
       maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -54,8 +74,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{96C14579-6E85-47EE-8A66-6174EFA288CB}'
-    m_lastTimePsrt1: -752378006
-    m_lastTimePart2: -1999289396
+    m_lastTimePsrt1: 530635008
+    m_lastTimePart2: -1999289371
     List:
     - Name: Test1
       Path: Default Work Unit\Test1

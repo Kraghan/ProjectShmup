@@ -15,32 +15,32 @@ MonoBehaviour:
   - speed: 150
     acceleration: 0
     direction: 0
-    rotation: 0
+    rotation: 80
   - speed: 150
     acceleration: 0
     direction: 45
-    rotation: 0
+    rotation: 80
   - speed: 150
     acceleration: 0
     direction: -45
-    rotation: 0
+    rotation: 80
   - speed: -150
     acceleration: 0
     direction: 0
-    rotation: 0
+    rotation: 80
   - speed: -150
     acceleration: 0
     direction: 45
-    rotation: 0
+    rotation: 80
   - speed: -150
     acceleration: 0
     direction: -45
-    rotation: 0
+    rotation: 80
   - speed: 150
     acceleration: 0
     direction: 90
-    rotation: 0
+    rotation: 80
   - speed: 150
     acceleration: 0
     direction: -90
-    rotation: 0
+    rotation: 80

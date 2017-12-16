@@ -1,13 +1,16 @@
 Event	ID	Name			Wwise Object Path	Notes
-	2886421657	Play_Random_Percussion			\Default Work Unit\Play_Random_Percussion	
+	1560528335	Play_Bass			\Default Work Unit\Play_Bass	
+	1653871456	Play_Flute			\Default Work Unit\Play_Flute	
+	3445610055	Play_Main_Layer			\Default Work Unit\Play_Main_Layer	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	7795850	Glass-F3	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Glass-F3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\Glass-F3		176544
-	135341983	SD	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\SD_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\SD		132444
-	138090768	HH	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\HH_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\HH		132444
-	191626728	Cymbal	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Cymbal_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\Cymbal		352944
-	369327849	Kick	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Kick_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\Kick		132444
-	500021581	HHO	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\HHO_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\HHO		132444
-	653663201	Kalimba-	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Kalimba-_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\Kalimba-		529344
-	781082992	Perc-1	D:\Bibliotheques\Projets\Unity\ENJMIN\ProjectShmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Perc-1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Random Percussions\Perc-1		352944
+	368353584	bass-i	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\bass-i_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Layers\Bass\bass-i		165520
+	479764891	bass-iv	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\bass-iv_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Layers\Bass\bass-iv		165518
+	628452622	Main Layer	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Main Layer_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Layer\Main Layer		1323144
+	674227912	flute-i-2	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\flute-i-2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Layers\Flute\flute-i-2		496268
+	819755057	flute-i-1	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\flute-i-1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Layers\Flute\flute-i-1		578956
+	901168371	bass-vi	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\bass-vi_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Layers\Bass\bass-vi		165520
+	935815181	bass-v	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\bass-v_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Layers\Bass\bass-v		165518
+	938382390	flute-i-4	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\flute-i-4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Layers\Flute\flute-i-4		496268
+	976616531	flute-i-3	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\flute-i-3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Layers\Flute\flute-i-3		496268
 

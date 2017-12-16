@@ -91,5 +91,10 @@ public class WaypointDeplacement : MonoBehaviour
     {
         stop = stop_state;
     }
+
+    public void SetPattern(WaypointCircuit circuit)
+    {
+        wc = circuit;
+    }
     #endregion
 }
