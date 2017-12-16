@@ -13,9 +13,9 @@ public class Bullet : MonoBehaviour
 {
     #region Attributes
     [SerializeField]
-    private float damages = 1;
+    protected float damages = 1;
     [SerializeField]
-    private bool destroyOnHit = true;
+    protected bool destroyOnHit = true;
     [SerializeField]
     private DestroyAnimation destroyAnimation = DestroyAnimation.NoAnimation;
 

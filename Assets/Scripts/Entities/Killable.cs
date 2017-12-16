@@ -92,7 +92,10 @@ public class Killable : MonoBehaviour
         if(playerDmg || enemyDmg)
         {
             potentialBullet.gameObject.GetComponent<Bullet>().Hit();
-            AddHealth(-potentialBullet.GetComponent<Bullet>().GetDamages());
+            float damages = potentialBullet.GetComponent<Bullet>().GetDamages();
+            if (damages == -1)
+                damages = health;
+            AddHealth(-damages);
             currentInvulnerabilityTime = invulnerabilityTime;
 
             if(m_sound.Length > 0)
