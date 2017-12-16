@@ -16,19 +16,3 @@ MonoBehaviour:
     acceleration: 0
     direction: 0
     rotation: 0
-  - speed: 2000
-    acceleration: 0
-    direction: 0.75
-    rotation: 0
-  - speed: 2000
-    acceleration: 0
-    direction: 1.5
-    rotation: 0
-  - speed: 2000
-    acceleration: 0
-    direction: -0.75
-    rotation: 0
-  - speed: 2000
-    acceleration: 0
-    direction: -1.5
-    rotation: 0
