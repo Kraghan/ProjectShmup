@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4252372416738472}
   - component: {fileID: 114298266438991874}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: EnemyPattern2_Tatou1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4111798659977266}
   - component: {fileID: 114473248133283858}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: EnemyPattern2_Tatou2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,11 +53,11 @@ GameObject:
   - component: {fileID: 4273006851230858}
   - component: {fileID: 114433011123390850}
   - component: {fileID: 50242013591101772}
-  - component: {fileID: 114961234618686498}
   - component: {fileID: 114745877140135172}
   - component: {fileID: 212856253548690200}
   - component: {fileID: 60019635806012722}
-  m_Layer: 9
+  - component: {fileID: 114544210634704098}
+  m_Layer: 10
   m_Name: Enemy2_Tatou
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -580,6 +580,21 @@ MonoBehaviour:
   bursts:
   - timing: 0
     burst: {fileID: 11400000, guid: 61d7b1bedd422404fa7eaa3304bc39b7, type: 2}
+--- !u!114 &114544210634704098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1437107116075968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0fdee26bcdfa84e88f42db0a5cc87f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWaypointIndex: 0
+  reachRadius: 0.2
+  wc: {fileID: 0}
+  destroyAtTheEnd: 1
 --- !u!114 &114745877140135172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -591,23 +606,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6359cf09c3adef4ca433945c4ca5c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dieOnPlayerHit: 1
---- !u!114 &114961234618686498
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1437107116075968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32d04e52157002b4690aaee542a79065, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   maxHealth: 10
   invulnerabilityTime: 0
   deathAnimation: 2
   deathAnimationPrefabToInstantiate: {fileID: 1107778991391678, guid: f9723f2f908532b4181814cc77fe1760,
     type: 2}
+  m_sound: Enemy_2
+  dieOnPlayerHit: 1
 --- !u!212 &212856253548690200
 SpriteRenderer:
   m_ObjectHideFlags: 1

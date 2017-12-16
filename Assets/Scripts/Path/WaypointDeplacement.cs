@@ -14,7 +14,7 @@ public class WaypointDeplacement : MonoBehaviour
     [SerializeField]
     private WaypointCircuit wc;
     [SerializeField]
-    private bool teleportToBeginningWhenFinished = false;
+    private bool destroyAtTheEnd = false;
 
     private float currentTimeToStop;
     private bool stop = false;
@@ -41,17 +41,15 @@ public class WaypointDeplacement : MonoBehaviour
                 if (currentWaypointIndex + 1 < wc.Waypoints.Length)
                     currentWaypointIndex++;
                 else
-                    currentWaypointIndex = 0;
-                /*if (teleportToBeginningWhenFinished)
                 {
-                    gameObject.SetActive(false);
-                    transform.position = wc.Waypoints[currentWaypointIndex].position;
-                    if (currentWaypointIndex + 1 < wc.Waypoints.Length)
-                        currentWaypointIndex++;
-                    else
-                        currentWaypointIndex = 0;
-                    gameObject.SetActive(true);
-                }*/
+                    if (destroyAtTheEnd)
+                    {
+                        Destroy(gameObject);
+                        return;
+                    }
+                    currentWaypointIndex = 0;
+                }
+                
                 currentTimeToStop = (float)wc.Waypoints[currentWaypointIndex - 1 >= 0 ? currentWaypointIndex - 1 : wc.Waypoints.Length - 1].gameObject.GetComponent<WaypointCaracteristics>().GetTimeToStop();
             }
         }

@@ -24,11 +24,11 @@ TagManager:
   - Entities
   - Enemies
   - Player
+  - PlayerBullet
+  - EnemiesBullet
   - Solid
   - Decoration
   - CamForeground
-  - 
-  - 
   - 
   - 
   - 

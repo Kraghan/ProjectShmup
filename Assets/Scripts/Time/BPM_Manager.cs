@@ -30,7 +30,6 @@ public class BPM_Manager : MonoBehaviour
 	void Start ()
 	{
 		m_beatDuration = 60f / m_BPM;
-		print(m_beatDuration);
 
 		m_timeLastBeat = Time.time;
 	}

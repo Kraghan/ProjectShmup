@@ -39,6 +39,8 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector2 positionOnScreen = Camera.main.WorldToScreenPoint(transform.position);
+
         Vector3 directionVector = gameObject.transform.right;
 
         rgbd2D.velocity = directionVector * speed * Time.deltaTime;
@@ -47,9 +49,21 @@ public class Bullet : MonoBehaviour
         rgbd2D.rotation = direction;
         direction += (rotation * Time.deltaTime);
 
+        if (positionOnScreen.x > Screen.width || 0 > positionOnScreen.x)
+            Destroy(gameObject);
+
+        if (positionOnScreen.y > Screen.height || 0 > positionOnScreen.y)
+            Destroy(gameObject);
+
         destroyInXSeconds -= Time.deltaTime;
         if (destroyInXSeconds <= 0)
             Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("ScreenWall"))
+            Destroy(this);
     }
     #endregion
 

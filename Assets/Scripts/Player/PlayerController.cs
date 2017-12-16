@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float verticalSpeed;
     [SerializeField]
+    private Vector2 borderOffset;
+
+    [SerializeField]
     private float focusSpeedMultiplicator;
 
     [Header("Shoot")]
@@ -35,7 +38,7 @@ public class PlayerController : MonoBehaviour
     {
         player = GetComponent<Player>();
         rgbd2D = GetComponent<Rigidbody2D>();
-	}
+    }
 	
 	void Update () {
         ManageSpeed();
@@ -53,8 +56,20 @@ public class PlayerController : MonoBehaviour
         killable = GetComponent<Killable>();
         player = GetComponent<Player>();
         bool focus = (Input.GetButton("Focus"));
-        rgbd2D.velocity = new Vector2(Time.deltaTime * horizontalSpeed * (focus ? focusSpeedMultiplicator : 1) * Input.GetAxis("Horizontal"), Time.deltaTime * verticalSpeed * (focus ? focusSpeedMultiplicator : 1) * Input.GetAxis("Vertical"));
+
+        Vector2 positionOnScreen = Camera.main.WorldToScreenPoint(transform.position);
+
+        rgbd2D.velocity = new Vector2(Time.deltaTime * horizontalSpeed * (focus ? focusSpeedMultiplicator : 1) * Input.GetAxis("Horizontal"), rgbd2D.velocity.y);
+        rgbd2D.velocity = new Vector2(rgbd2D.velocity.x, Time.deltaTime * verticalSpeed * (focus ? focusSpeedMultiplicator : 1) * Input.GetAxis("Vertical"));
+
+        if (positionOnScreen.x + borderOffset.x > Screen.width && rgbd2D.velocity.x > 0 || 0 > positionOnScreen.x - borderOffset.x && rgbd2D.velocity.x < 0)
+            rgbd2D.velocity = new Vector2(0, rgbd2D.velocity.y);
+
+        if (positionOnScreen.y + borderOffset.y > Screen.height && rgbd2D.velocity.y > 0 || 0 > positionOnScreen.y - borderOffset.y && rgbd2D.velocity.y < 0)
+            rgbd2D.velocity = new Vector2(rgbd2D.velocity.x, 0);
     }
+
+
     
     private void PickUp(GameObject pickup)
     {
