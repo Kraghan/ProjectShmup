@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_nameBaseLoop: Main_1
+  m_nameBaseKick: Kick_SC
 --- !u!114 &509745979
 MonoBehaviour:
   m_ObjectHideFlags: 0

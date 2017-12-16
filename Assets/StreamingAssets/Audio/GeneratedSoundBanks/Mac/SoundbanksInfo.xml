@@ -16,8 +16,11 @@
 			<ShortName>Test1</ShortName>
 			<Path>Test1.bnk</Path>
 			<IncludedEvents>
+				<Event Id="969310468" Name="Bass_mute" ObjectPath="\Events\Default Work Unit\Interactive Music\Main 1\Bass_mute"/>
+				<Event Id="2775644593" Name="Bass_Unmute" ObjectPath="\Events\Default Work Unit\Interactive Music\Main 1\Bass_Unmute"/>
 				<Event Id="1870714583" Name="Enemy_1" ObjectPath="\Events\Default Work Unit\Interactive Music\Main 1\Enemy_1"/>
 				<Event Id="1870714580" Name="Enemy_2" ObjectPath="\Events\Default Work Unit\Interactive Music\Main 1\Enemy_2"/>
+				<Event Id="4039101868" Name="Kick_SC" ObjectPath="\Events\Default Work Unit\Interactive Music\Main 1\Kick_SC"/>
 				<Event Id="590145138" Name="Main_1" ObjectPath="\Events\Default Work Unit\Interactive Music\Main 1\Main_1"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -41,13 +44,21 @@
 					<ShortName>flute-i-3.wav</ShortName>
 					<Path>SFX/flute-i-3_F17FB28C.wem</Path>
 				</File>
+				<File Id="648350543" Language="SFX">
+					<ShortName>Bass SC.wav</ShortName>
+					<Path>SFX/Bass SC_F17FB28C.wem</Path>
+				</File>
 				<File Id="673387404" Language="SFX">
 					<ShortName>flute-i-4.wav</ShortName>
 					<Path>SFX/flute-i-4_F17FB28C.wem</Path>
 				</File>
-				<File Id="720878913" Language="SFX">
-					<ShortName>Main Layer.wav</ShortName>
-					<Path>SFX/Main Layer_F17FB28C.wem</Path>
+				<File Id="711992930" Language="SFX">
+					<ShortName>Main 1.wav</ShortName>
+					<Path>SFX/Main 1_F17FB28C.wem</Path>
+				</File>
+				<File Id="825325802" Language="SFX">
+					<ShortName>Kick SC.wav</ShortName>
+					<Path>SFX/Kick SC_F17FB28C.wem</Path>
 				</File>
 				<File Id="955817369" Language="SFX">
 					<ShortName>flute-i-1.wav</ShortName>
