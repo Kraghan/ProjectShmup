@@ -27,6 +27,17 @@ public class Killable : MonoBehaviour
     private GameObject deathAnimationPrefabToInstantiate;
     private float health;
     private bool alive = true;
+
+    [Header("Score")]
+    [SerializeField]
+    private FloatVariable comboVariable;
+    [SerializeField]
+    private FloatVariable scoreVariable;
+    [SerializeField]
+    private int scoreOnHit = 0;
+    [SerializeField]
+    private int scoreOnKill = 100;
+
     #endregion
 
     #region MonoBehaviour main methods
@@ -80,6 +91,15 @@ public class Killable : MonoBehaviour
             potentialBullet.gameObject.GetComponent<Bullet>().Hit();
             AddHealth(-potentialBullet.GetComponent<Bullet>().GetDamages());
             currentInvulnerabilityTime = invulnerabilityTime;
+
+            if (enemyDmg)
+            {
+                scoreVariable.value += scoreOnHit;
+
+                if (IsAlive())
+                    scoreVariable.value += scoreOnKill;
+            }
+
             return true;
         }
         else

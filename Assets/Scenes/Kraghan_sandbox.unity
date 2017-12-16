@@ -1266,6 +1266,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4460198057662352, guid: f8d50854964cbf341a7695d82192c8d8,
     type: 2}
   m_PrefabInternal: {fileID: 430289258}
+--- !u!1 &430504720 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1123513022342666, guid: 29a4773762767494ca1aaea3f319dabe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1372069210}
+--- !u!114 &430504724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 430504720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa487baea36098c4989cd4c554d4afa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: {fileID: 11400000, guid: 04c5e69a304e09a409f70586114675c2, type: 2}
 --- !u!1001 &447462199
 Prefab:
   m_ObjectHideFlags: 0
@@ -3158,6 +3175,10 @@ MonoBehaviour:
   invulnerabilityTime: 0
   deathAnimation: 1
   deathAnimationPrefabToInstantiate: {fileID: 0}
+  comboVariable: {fileID: 0}
+  scoreVariable: {fileID: 0}
+  scoreOnHit: 0
+  scoreOnKill: 100
 --- !u!114 &836040221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3173,6 +3194,10 @@ MonoBehaviour:
   invulnerabilityTime: 0
   deathAnimation: 1
   deathAnimationPrefabToInstantiate: {fileID: 0}
+  comboVariable: {fileID: 0}
+  scoreVariable: {fileID: 0}
+  scoreOnHit: 0
+  scoreOnKill: 0
 --- !u!1 &838545032
 GameObject:
   m_ObjectHideFlags: 0
@@ -4978,11 +5003,6 @@ Prefab:
     m_Modifications:
     - target: {fileID: 224895387775100224, guid: 29a4773762767494ca1aaea3f319dabe,
         type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 224895387775100224, guid: 29a4773762767494ca1aaea3f319dabe,
-        type: 2}
       propertyPath: m_LocalPosition.x
       value: 462.81
       objectReference: {fileID: 0}
@@ -5071,75 +5091,37 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 224960789275913144, guid: 29a4773762767494ca1aaea3f319dabe,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -134
+      objectReference: {fileID: 0}
+    - target: {fileID: 224378498936105942, guid: 29a4773762767494ca1aaea3f319dabe,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 104.74164
+      objectReference: {fileID: 0}
+    - target: {fileID: 224378498936105942, guid: 29a4773762767494ca1aaea3f319dabe,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 475
+      objectReference: {fileID: 0}
     - target: {fileID: 224273694907573016, guid: 29a4773762767494ca1aaea3f319dabe,
         type: 2}
       propertyPath: m_LocalPosition.y
       value: 490
       objectReference: {fileID: 0}
-    - target: {fileID: 224895387775100224, guid: 29a4773762767494ca1aaea3f319dabe,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
+    - target: {fileID: 1555692670398568, guid: 29a4773762767494ca1aaea3f319dabe, type: 2}
+      propertyPath: m_Name
+      value: Life
       objectReference: {fileID: 0}
-    - target: {fileID: 224895387775100224, guid: 29a4773762767494ca1aaea3f319dabe,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
+    - target: {fileID: 1200356277144852, guid: 29a4773762767494ca1aaea3f319dabe, type: 2}
+      propertyPath: m_Name
+      value: Life
       objectReference: {fileID: 0}
-    - target: {fileID: 224895387775100224, guid: 29a4773762767494ca1aaea3f319dabe,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273694907573016, guid: 29a4773762767494ca1aaea3f319dabe,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273694907573016, guid: 29a4773762767494ca1aaea3f319dabe,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273694907573016, guid: 29a4773762767494ca1aaea3f319dabe,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 114459210457474924, guid: 29a4773762767494ca1aaea3f319dabe,
-        type: 2}
-      propertyPath: m_Text
-      value: 00000000000
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273694907573016, guid: 29a4773762767494ca1aaea3f319dabe,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273694907573016, guid: 29a4773762767494ca1aaea3f319dabe,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273694907573016, guid: 29a4773762767494ca1aaea3f319dabe,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -50
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273694907573016, guid: 29a4773762767494ca1aaea3f319dabe,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273694907573016, guid: 29a4773762767494ca1aaea3f319dabe,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114459210457474924, guid: 29a4773762767494ca1aaea3f319dabe,
-        type: 2}
-      propertyPath: m_FontData.m_Alignment
-      value: 1
+    - target: {fileID: 1595527657286860, guid: 29a4773762767494ca1aaea3f319dabe, type: 2}
+      propertyPath: m_Name
+      value: Life
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29a4773762767494ca1aaea3f319dabe, type: 2}
