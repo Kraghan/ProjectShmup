@@ -21,6 +21,8 @@ public class Enemy : Killable
     [Tooltip("If true, the enemy dies when the player touch him")]
     [SerializeField]
     private bool dieOnPlayerHit = true;
+    [SerializeField]
+    private string m_sound;
 
     private Killable killable;
     
@@ -44,6 +46,8 @@ public class Enemy : Killable
 
     public override void OnDeath()
     {
+        if(m_sound.Length > 0)
+            AkSoundEngine.PostEvent(m_sound, gameObject);
     }
 
     public override void OnHit(bool onBeat)

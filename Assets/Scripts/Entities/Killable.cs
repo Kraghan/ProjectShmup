@@ -24,8 +24,7 @@ public abstract class Killable : MonoBehaviour
     [SerializeField]
     private float health;
 
-    [SerializeField]
-    private string m_sound;
+    
 	
 	// Update is called once per frame
 	void Update ()
@@ -55,9 +54,6 @@ public abstract class Killable : MonoBehaviour
                     currentInvulnerabilityTime = invulnerabilityTime;
 
                     OnHit(collidedBullet.isOnBeat);
-
-                    if(m_sound.Length > 0)
-                        AkSoundEngine.PostEvent(m_sound, gameObject);
                 }
             }
         }
