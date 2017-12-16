@@ -16,38 +16,50 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{9C753FF6-5968-4AA4-B319-418A1F50D202}'
-    m_lastTimePsrt1: 530635008
-    m_lastTimePart2: -1999289371
+    m_lastTimePsrt1: -1748772608
+    m_lastTimePart2: -1999289201
     List:
-    - Name: Play_Bass
-      Path: Default Work Unit\Play_Bass
+    - Name: Enemy_1
+      Path: Default Work Unit\Interactive Music\Main 1\Enemy_1
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Bass
+      - ElementName: Interactive Music
+        ObjectType: 4
+      - ElementName: Main 1
+        ObjectType: 4
+      - ElementName: Enemy_1
         ObjectType: 3
-      ID: 1560528335
-      Guid: 6ca3fa17a343c84ea1506d8acb83b60a
+      ID: 1870714583
+      Guid: 049dfdfd9fb3cd449e5665d02c6f73ad
       maxAttenuation: 0
-    - Name: Play_Flute
-      Path: Default Work Unit\Play_Flute
+    - Name: Enemy_2
+      Path: Default Work Unit\Interactive Music\Main 1\Enemy_2
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Flute
+      - ElementName: Interactive Music
+        ObjectType: 4
+      - ElementName: Main 1
+        ObjectType: 4
+      - ElementName: Enemy_2
         ObjectType: 3
-      ID: 1653871456
-      Guid: d13f9c97c76e544b93378c2f7dc26ba0
+      ID: 1870714580
+      Guid: 771c4ce273fd0449b8675ca71c16ba4e
       maxAttenuation: 0
-    - Name: Play_Main_Layer
-      Path: Default Work Unit\Play_Main_Layer
+    - Name: Main_1
+      Path: Default Work Unit\Interactive Music\Main 1\Main_1
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Main_Layer
+      - ElementName: Interactive Music
+        ObjectType: 4
+      - ElementName: Main 1
+        ObjectType: 4
+      - ElementName: Main_1
         ObjectType: 3
-      ID: -849357241
-      Guid: 953585ce696ed0409816f04307ace07a
+      ID: 590145138
+      Guid: 3c390538ee78df429d12445be2610598
       maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -74,8 +86,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{96C14579-6E85-47EE-8A66-6174EFA288CB}'
-    m_lastTimePsrt1: 530635008
-    m_lastTimePart2: -1999289371
+    m_lastTimePsrt1: -1748772608
+    m_lastTimePart2: -1999289201
     List:
     - Name: Test1
       Path: Default Work Unit\Test1
@@ -200,7 +212,8 @@ MonoBehaviour:
   - /Wwise_ProjectSchmup
   - /Wwise_ProjectSchmup/Events
   - /Wwise_ProjectSchmup/Events/Default Work Unit
-  - /Wwise_ProjectSchmup/SoundBanks
+  - /Wwise_ProjectSchmup/Events/Default Work Unit/Interactive Music
+  - /Wwise_ProjectSchmup/Events/Default Work Unit/Interactive Music/Main 1
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

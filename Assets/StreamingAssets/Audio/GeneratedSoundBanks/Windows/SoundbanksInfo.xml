@@ -16,46 +16,46 @@
 			<ShortName>Test1</ShortName>
 			<Path>Test1.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1560528335" Name="Play_Bass" ObjectPath="\Events\Default Work Unit\Play_Bass"/>
-				<Event Id="1653871456" Name="Play_Flute" ObjectPath="\Events\Default Work Unit\Play_Flute"/>
-				<Event Id="3445610055" Name="Play_Main_Layer" ObjectPath="\Events\Default Work Unit\Play_Main_Layer"/>
+				<Event Id="1870714583" Name="Enemy_1" ObjectPath="\Events\Default Work Unit\Interactive Music\Main 1\Enemy_1"/>
+				<Event Id="1870714580" Name="Enemy_2" ObjectPath="\Events\Default Work Unit\Interactive Music\Main 1\Enemy_2"/>
+				<Event Id="590145138" Name="Main_1" ObjectPath="\Events\Default Work Unit\Interactive Music\Main 1\Main_1"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="368353584" Language="SFX">
-					<ShortName>bass-i.wav</ShortName>
-					<Path>SFX/bass-i_1C9C67B2.wem</Path>
+				<File Id="85419198" Language="SFX">
+					<ShortName>perc-i-3.wav</ShortName>
+					<Path>SFX/perc-i-3_F17FB28C.wem</Path>
 				</File>
-				<File Id="479764891" Language="SFX">
-					<ShortName>bass-iv.wav</ShortName>
-					<Path>SFX/bass-iv_1C9C67B2.wem</Path>
+				<File Id="536112713" Language="SFX">
+					<ShortName>perc-i-1.wav</ShortName>
+					<Path>SFX/perc-i-1_F17FB28C.wem</Path>
 				</File>
-				<File Id="628452622" Language="SFX">
-					<ShortName>Main Layer.wav</ShortName>
-					<Path>SFX/Main Layer_1C9C67B2.wem</Path>
-				</File>
-				<File Id="674227912" Language="SFX">
+				<File Id="538845947" Language="SFX">
 					<ShortName>flute-i-2.wav</ShortName>
-					<Path>SFX/flute-i-2_1C9C67B2.wem</Path>
+					<Path>SFX/flute-i-2_F17FB28C.wem</Path>
 				</File>
-				<File Id="819755057" Language="SFX">
-					<ShortName>flute-i-1.wav</ShortName>
-					<Path>SFX/flute-i-1_1C9C67B2.wem</Path>
+				<File Id="576576450" Language="SFX">
+					<ShortName>perc-i-2.wav</ShortName>
+					<Path>SFX/perc-i-2_F17FB28C.wem</Path>
 				</File>
-				<File Id="901168371" Language="SFX">
-					<ShortName>bass-vi.wav</ShortName>
-					<Path>SFX/bass-vi_1C9C67B2.wem</Path>
-				</File>
-				<File Id="935815181" Language="SFX">
-					<ShortName>bass-v.wav</ShortName>
-					<Path>SFX/bass-v_1C9C67B2.wem</Path>
-				</File>
-				<File Id="938382390" Language="SFX">
-					<ShortName>flute-i-4.wav</ShortName>
-					<Path>SFX/flute-i-4_1C9C67B2.wem</Path>
-				</File>
-				<File Id="976616531" Language="SFX">
+				<File Id="582456123" Language="SFX">
 					<ShortName>flute-i-3.wav</ShortName>
-					<Path>SFX/flute-i-3_1C9C67B2.wem</Path>
+					<Path>SFX/flute-i-3_F17FB28C.wem</Path>
+				</File>
+				<File Id="673387404" Language="SFX">
+					<ShortName>flute-i-4.wav</ShortName>
+					<Path>SFX/flute-i-4_F17FB28C.wem</Path>
+				</File>
+				<File Id="720878913" Language="SFX">
+					<ShortName>Main Layer.wav</ShortName>
+					<Path>SFX/Main Layer_F17FB28C.wem</Path>
+				</File>
+				<File Id="955817369" Language="SFX">
+					<ShortName>flute-i-1.wav</ShortName>
+					<Path>SFX/flute-i-1_F17FB28C.wem</Path>
+				</File>
+				<File Id="1018771546" Language="SFX">
+					<ShortName>perc-i-4.wav</ShortName>
+					<Path>SFX/perc-i-4_F17FB28C.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
