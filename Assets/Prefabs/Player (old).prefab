@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 50275032702142332}
   - component: {fileID: 58865365890150746}
   m_Layer: 11
-  m_Name: Player
+  m_Name: Player (old)
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,6 +307,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalSpeed: 500
   verticalSpeed: 500
+  focusSpeedMultiplicator: 0
+  m_errorWindow: 0
+  m_goodShot: {fileID: 0}
+  m_badShot: {fileID: 0}
 --- !u!124 &124939727459340552
 Behaviour:
   m_ObjectHideFlags: 1

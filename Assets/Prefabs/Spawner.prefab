@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114239582465841066}
   - component: {fileID: 61343465313812926}
   m_Layer: 0
-  m_Name: SpawnStep
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
