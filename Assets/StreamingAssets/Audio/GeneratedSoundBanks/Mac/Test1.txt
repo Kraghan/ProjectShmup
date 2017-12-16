@@ -8,13 +8,13 @@ Event	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	85419198	perc-i-1	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\perc-i-3_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Generative Music\Main 1\Enemy 2\perc-i-1		330944
+	160500451	Main Layer	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Main 1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Generative Music\Main 1\Main 1\Main Layer		1323184
 	536112713	perc-i-1	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\perc-i-1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Generative Music\Main 1\Enemy 2\perc-i-1		238100
 	538845947	flute-i-1	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\flute-i-2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Generative Music\Main 1\Enemy 1\flute-i-1		263628
 	576576450	perc-i-1	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\perc-i-2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Generative Music\Main 1\Enemy 2\perc-i-1		250064
 	582456123	flute-i-1	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\flute-i-3_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Generative Music\Main 1\Enemy 1\flute-i-1		282952
 	648350543	Bass SC	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Bass SC_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Generative Music\Main 1\Bass SC\Bass SC		1323184
 	673387404	flute-i-1	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\flute-i-4_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Generative Music\Main 1\Enemy 1\flute-i-1		288068
-	711992930	Main Layer	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Main 1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Generative Music\Main 1\Main 1\Main Layer		2646144
 	825325802	Kick SC	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Kick SC_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Generative Music\Main 1\Kick SC\Kick SC		1323184
 	955817369	flute-i-1	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\flute-i-1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Generative Music\Main 1\Enemy 1\flute-i-1		268732
 	1018771546	perc-i-1	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\perc-i-4_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Generative Music\Main 1\Enemy 2\perc-i-1		248260

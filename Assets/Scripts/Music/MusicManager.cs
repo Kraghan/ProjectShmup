@@ -37,10 +37,10 @@ public class MusicManager : MonoBehaviour
 
 				if(m_mesure % 4 == 0)
 				{
-					// AkSoundEngine.PostEvent(m_nameBaseLoop, gameObject);
-					// AkSoundEngine.PostEvent(m_nameBaseKick, gameObject);
-					// AkSoundEngine.PostEvent("Bass_Unmute", gameObject);
-										
+					AkSoundEngine.PostEvent(m_nameBaseLoop, gameObject);
+					AkSoundEngine.PostEvent(m_nameBaseKick, gameObject);
+					AkSoundEngine.PostEvent("Bass_mute", gameObject);
+					AkSoundEngine.PostEvent("Bass_Unmute", gameObject);
 				}
 			}
 		}

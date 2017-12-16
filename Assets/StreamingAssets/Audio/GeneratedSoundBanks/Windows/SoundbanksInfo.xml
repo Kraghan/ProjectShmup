@@ -28,6 +28,10 @@
 					<ShortName>perc-i-3.wav</ShortName>
 					<Path>SFX/perc-i-3_F17FB28C.wem</Path>
 				</File>
+				<File Id="160500451" Language="SFX">
+					<ShortName>Main 1.wav</ShortName>
+					<Path>SFX/Main 1_F17FB28C.wem</Path>
+				</File>
 				<File Id="536112713" Language="SFX">
 					<ShortName>perc-i-1.wav</ShortName>
 					<Path>SFX/perc-i-1_F17FB28C.wem</Path>
@@ -51,10 +55,6 @@
 				<File Id="673387404" Language="SFX">
 					<ShortName>flute-i-4.wav</ShortName>
 					<Path>SFX/flute-i-4_F17FB28C.wem</Path>
-				</File>
-				<File Id="711992930" Language="SFX">
-					<ShortName>Main 1.wav</ShortName>
-					<Path>SFX/Main 1_F17FB28C.wem</Path>
 				</File>
 				<File Id="825325802" Language="SFX">
 					<ShortName>Kick SC.wav</ShortName>
