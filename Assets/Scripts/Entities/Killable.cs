@@ -46,7 +46,6 @@ public abstract class Killable : MonoBehaviour
                 Bullet collidedBullet = collision.gameObject.GetComponent<Bullet>();
 
                 collidedBullet.Hit();
-
                 if (collidedBullet.GetDamages() == -1)
                     health = 0;
                 else
@@ -55,10 +54,13 @@ public abstract class Killable : MonoBehaviour
                 OnHit(collidedBullet.isOnBeat);
 
                 if (health <= 0)
-                    Die(collidedBullet.isOnBeat);
+                    Die();
                 else // is alive
                 {
                     currentInvulnerabilityTime = invulnerabilityTime;
+
+                    if(m_sound.Length > 0)
+                        AkSoundEngine.PostEvent(m_sound, gameObject);
                 }
             }
         }
