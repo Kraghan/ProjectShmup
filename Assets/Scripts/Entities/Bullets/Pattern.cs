@@ -5,12 +5,10 @@ using UnityEngine;
 public class Pattern : MonoBehaviour
 {
     #region Attributes
-    [Tooltip("Prefab of the bullets fired")]
-    public GameObject bullet;
     [Tooltip("Duration of the pattern (in seconds)")]
     public float duration = 1;
     [Tooltip("Number of repetitions of the pattern (-1 = infinite | 0 = one cycle | 1 = two cycles (one repetition) | etc...)")]
-    public float repetitions = -1;
+    public int cycles = -1;
     [Tooltip("Bursts timings")]
     public List<BurstTiming> bursts;
 
@@ -34,18 +32,21 @@ public class Pattern : MonoBehaviour
         {
             if (burstTiming.timing <= time && !burstTiming.IsDone())
             {
-                burstTiming.burst.Fire(bullet, transform.position, bulletRepository.transform);
-                burstTiming.Done();
+                if(burstTiming.bullet != null)
+                {
+                    burstTiming.burst.Fire(burstTiming.bullet, transform.position, bulletRepository.transform);
+                    burstTiming.Done();
+                }
             }
         }
         if(time == duration)
         {
-            if (repetitions == 0)
+            if (cycles == 0)
                 Destroy(gameObject);
             else
             {
-                if (repetitions > 0)
-                    repetitions--;
+                if (cycles > 0)
+                    cycles--;
                 foreach (BurstTiming burstTiming in bursts)
                     burstTiming.Reset();
                 time = 0;

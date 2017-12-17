@@ -12,31 +12,38 @@ MonoBehaviour:
   m_Name: Burst_1_880speed_right
   m_EditorClassIdentifier: 
   shoots:
-  - speed: 880
+  - largerDisplayInEditor: 0
+    speed: 880
     acceleration: 0
     direction: 0
     rotation: 0
-  - speed: 880
+  - largerDisplayInEditor: 0
+    speed: 880
     acceleration: 0
     direction: 0
     rotation: 0
-  - speed: 880
+  - largerDisplayInEditor: 0
+    speed: 880
     acceleration: 0
     direction: 0
     rotation: 0
-  - speed: 880
+  - largerDisplayInEditor: 0
+    speed: 880
     acceleration: 0
     direction: 0
     rotation: 0
-  - speed: 100
+  - largerDisplayInEditor: 0
+    speed: 100
     acceleration: 0
     direction: 0
     rotation: 0
-  - speed: 100
+  - largerDisplayInEditor: 0
+    speed: 100
     acceleration: 0
     direction: 0
     rotation: 0
-  - speed: 100
+  - largerDisplayInEditor: 0
+    speed: 100
     acceleration: 0
     direction: 0
     rotation: 0

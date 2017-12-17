@@ -1979,6 +1979,10 @@ Prefab:
       value: 
       objectReference: {fileID: 1107778991391678, guid: f9723f2f908532b4181814cc77fe1760,
         type: 2}
+    - target: {fileID: 1437107116075968, guid: b22075d85679d5040a7621dcb8f3b953, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114544210634704098, guid: b22075d85679d5040a7621dcb8f3b953, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b22075d85679d5040a7621dcb8f3b953, type: 2}
@@ -4828,6 +4832,10 @@ Prefab:
       value: 
       objectReference: {fileID: 1107778991391678, guid: f9723f2f908532b4181814cc77fe1760,
         type: 2}
+    - target: {fileID: 1437107116075968, guid: b22075d85679d5040a7621dcb8f3b953, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114544210634704098, guid: b22075d85679d5040a7621dcb8f3b953, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b22075d85679d5040a7621dcb8f3b953, type: 2}
@@ -5372,6 +5380,10 @@ Prefab:
       propertyPath: bursts.Array.data[1].timing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1437107116075968, guid: b22075d85679d5040a7621dcb8f3b953, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114544210634704098, guid: b22075d85679d5040a7621dcb8f3b953, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b22075d85679d5040a7621dcb8f3b953, type: 2}
@@ -5663,7 +5675,7 @@ Prefab:
     - target: {fileID: 114923610725146796, guid: 7c19e9fe2d4638d44b4839886e3001dd,
         type: 2}
       propertyPath: bursts.Array.size
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4014431814903694, guid: 7c19e9fe2d4638d44b4839886e3001dd, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5704,7 +5716,7 @@ Prefab:
     - target: {fileID: 114923610725146796, guid: 7c19e9fe2d4638d44b4839886e3001dd,
         type: 2}
       propertyPath: duration
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114923610725146796, guid: 7c19e9fe2d4638d44b4839886e3001dd,
         type: 2}
@@ -5715,7 +5727,8 @@ Prefab:
         type: 2}
       propertyPath: bursts.Array.data[3].burst
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 02f85e1f87974ca45ae4416253130844,
+        type: 2}
     - target: {fileID: 114923610725146796, guid: 7c19e9fe2d4638d44b4839886e3001dd,
         type: 2}
       propertyPath: bursts.Array.data[4].timing
@@ -5725,7 +5738,8 @@ Prefab:
         type: 2}
       propertyPath: bursts.Array.data[4].burst
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 02f85e1f87974ca45ae4416253130844,
+        type: 2}
     - target: {fileID: 114923610725146796, guid: 7c19e9fe2d4638d44b4839886e3001dd,
         type: 2}
       propertyPath: bursts.Array.data[0]
@@ -5830,12 +5844,14 @@ Prefab:
         type: 2}
       propertyPath: bursts.Array.data[1].burst
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 23628fc7070034440abd9150241f79d5,
+        type: 2}
     - target: {fileID: 114923610725146796, guid: 7c19e9fe2d4638d44b4839886e3001dd,
         type: 2}
       propertyPath: bursts.Array.data[2].burst
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 02f85e1f87974ca45ae4416253130844,
+        type: 2}
     - target: {fileID: 114923610725146796, guid: 7c19e9fe2d4638d44b4839886e3001dd,
         type: 2}
       propertyPath: bursts.Array.data[5].burst
@@ -5846,6 +5862,11 @@ Prefab:
         type: 2}
       propertyPath: bursts.Array.data[0].burst
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114923610725146796, guid: 7c19e9fe2d4638d44b4839886e3001dd,
+        type: 2}
+      propertyPath: cycles
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114672366818746608, guid: 7c19e9fe2d4638d44b4839886e3001dd, type: 2}

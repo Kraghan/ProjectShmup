@@ -6,6 +6,7 @@ using UnityEngine;
 public class Shoot
 {
     #region Attributes
+    public bool largerDisplayInEditor = false;
     [Tooltip("Start speed")]
     public float speed;
     [Tooltip("Speed increase per second")]

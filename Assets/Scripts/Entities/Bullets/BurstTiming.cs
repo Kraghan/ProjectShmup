@@ -8,6 +8,7 @@ public class BurstTiming
     #region Attributes
     public float timing;
     public Burst burst;
+    public GameObject bullet;
 
     private bool done = false;
     #endregion

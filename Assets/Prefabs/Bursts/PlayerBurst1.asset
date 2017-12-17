@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: PlayerBurst1
   m_EditorClassIdentifier: 
   shoots:
-  - speed: 2000
+  - largerDisplayInEditor: 0
+    speed: 2000
     acceleration: 0
     direction: 0
     rotation: 0

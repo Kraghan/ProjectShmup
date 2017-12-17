@@ -12,35 +12,43 @@ MonoBehaviour:
   m_Name: Burst_8_150speed
   m_EditorClassIdentifier: 
   shoots:
-  - speed: 150
+  - largerDisplayInEditor: 0
+    speed: 150
     acceleration: 0
     direction: 45
     rotation: 80
-  - speed: 150
+  - largerDisplayInEditor: 0
+    speed: 150
     acceleration: 0
     direction: 0
     rotation: 80
-  - speed: 150
+  - largerDisplayInEditor: 0
+    speed: 150
     acceleration: 0
     direction: -45
     rotation: 80
-  - speed: -150
+  - largerDisplayInEditor: 0
+    speed: -150
     acceleration: 0
     direction: 0
     rotation: 80
-  - speed: -150
+  - largerDisplayInEditor: 0
+    speed: -150
     acceleration: 0
     direction: 45
     rotation: 80
-  - speed: -150
+  - largerDisplayInEditor: 0
+    speed: -150
     acceleration: 0
     direction: -45
     rotation: 80
-  - speed: 150
+  - largerDisplayInEditor: 0
+    speed: 150
     acceleration: 0
     direction: 90
     rotation: 80
-  - speed: 150
+  - largerDisplayInEditor: 0
+    speed: 150
     acceleration: 0
     direction: -90
     rotation: 80

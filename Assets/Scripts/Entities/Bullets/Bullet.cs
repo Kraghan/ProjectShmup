@@ -62,8 +62,8 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("ScreenWall"))
-            Destroy(this);
+        /*if (collision.gameObject.CompareTag("ScreenWall"))
+            Destroy(this);*/
     }
     #endregion
 

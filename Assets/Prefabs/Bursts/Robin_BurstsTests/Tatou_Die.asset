@@ -9,54 +9,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0935138423c2c3046bc725f0c2dd6061, type: 3}
-  m_Name: Belette_Die
+  m_Name: Tatou_Die
   m_EditorClassIdentifier: 
   shoots:
-  - speed: 100
+  - largerDisplayInEditor: 0
+    speed: 600
     acceleration: 0
     direction: 0
-    rotation: 80
-  - speed: 100
-    acceleration: 0
-    direction: -22.5
-    rotation: 80
-  - speed: 100
+    rotation: 10
+  - largerDisplayInEditor: 0
+    speed: 600
     acceleration: 0
     direction: 22.5
-    rotation: 80
-  - speed: -100
+    rotation: 10
+  - largerDisplayInEditor: 0
+    speed: 600
+    acceleration: 0
+    direction: -22.5
+    rotation: 10
+  - largerDisplayInEditor: 0
+    speed: -600
     acceleration: 0
     direction: 0
-    rotation: 80
-  - speed: -100
+    rotation: 10
+  - largerDisplayInEditor: 0
+    speed: -600
     acceleration: 0
     direction: 22.5
-    rotation: 80
-  - speed: -100
+    rotation: 10
+  - largerDisplayInEditor: 0
+    speed: -600
     acceleration: 0
     direction: -22.5
-    rotation: 80
-  - speed: 100
+    rotation: 10
+  - largerDisplayInEditor: 0
+    speed: 600
     acceleration: 0
     direction: 77.5
-    rotation: 80
-  - speed: 100
+    rotation: 10
+  - largerDisplayInEditor: 0
+    speed: 600
     acceleration: 0
     direction: -77.5
-    rotation: 80
-  - speed: 900
-    acceleration: 0
-    direction: 0
-    rotation: 0
-  - speed: 900
-    acceleration: 0
-    direction: 90
-    rotation: 0
-  - speed: 900
-    acceleration: 0
-    direction: 180
-    rotation: 0
-  - speed: 900
-    acceleration: 0
-    direction: 270
-    rotation: 0
+    rotation: 10
