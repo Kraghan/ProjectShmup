@@ -21,7 +21,10 @@ public class Combo : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        text.text = combo.value.ToString("F0");
+        if (combo.value != 0)
+            text.text = "x" + combo.value.ToString("F0");
+        else
+            text.text = "";
     }
     #endregion
 }

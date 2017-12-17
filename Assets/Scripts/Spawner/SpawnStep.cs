@@ -8,7 +8,7 @@ public class SpawnStep : MonoBehaviour {
     #region Attributes
 
     [SerializeField]
-    private GameObject enemy;
+    private Enemy enemy;
 
     [SerializeField]
     private WaypointCircuit pattern;
@@ -33,6 +33,14 @@ public class SpawnStep : MonoBehaviour {
             Debug.LogWarning("No enemy set in spawner step !");
         if (pattern == null)
             Debug.LogWarning("No patern set in spawner step !");
+        if(enemyPool == null)
+        {
+            GameObject g = GameObject.FindGameObjectWithTag("EnemyRepository");
+            if (g == null)
+                Debug.LogError("No object found with tag \"EnemyRepository\"");
+            else
+                enemyPool = g.transform;
+        }
 
         timeElapsed = 0.0f;
         triggered = false;
@@ -50,7 +58,7 @@ public class SpawnStep : MonoBehaviour {
         timeElapsed += Time.deltaTime;
         if(numberOfSpawn != 0 && timeElapsed >= timeBetweenSpawn)
         {
-            GameObject newEnemy = Instantiate(enemy, enemyPool);
+            GameObject newEnemy = Instantiate(enemy.gameObject, enemyPool);
             newEnemy.transform.position = pattern.Waypoints[0].position;
             newEnemy.GetComponent<WaypointDeplacement>().SetPattern(pattern);
 
