@@ -25,7 +25,7 @@ public class Player : Killable
     {
         if(bulletPool)
         {
-            for(int i = bulletPool.transform.childCount - 1; i != 0; --i)
+            for(int i = bulletPool.transform.childCount - 1; i >= 0; --i)
             {
                 Destroy(bulletPool.transform.GetChild(i).gameObject);
             }
