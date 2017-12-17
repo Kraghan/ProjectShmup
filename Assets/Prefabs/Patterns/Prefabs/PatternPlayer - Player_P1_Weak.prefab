@@ -9,51 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1901232523029940}
+  m_RootGameObject: {fileID: 1469831699398312}
   m_IsPrefabParent: 1
---- !u!1 &1901232523029940
+--- !u!1 &1469831699398312
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4798677490374330}
-  - component: {fileID: 114946918300318496}
-  m_Layer: 9
-  m_Name: EnemyPattern2_Tatou1
+  - component: {fileID: 4175363265199566}
+  - component: {fileID: 114157363540712750}
+  m_Layer: 0
+  m_Name: PatternPlayer - Player_P1_Weak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4798677490374330
+--- !u!4 &4175363265199566
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1901232523029940}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4, y: -0.73, z: 0}
+  m_GameObject: {fileID: 1469831699398312}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114946918300318496
+--- !u!114 &114157363540712750
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1901232523029940}
+  m_GameObject: {fileID: 1469831699398312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac6ad7f78c88c0e4da144641db08b573, type: 3}
+  m_Script: {fileID: 11500000, guid: f4a96a551550b6545a8d78d926c279db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1062305414702394, guid: e3192c1864d78534da3b257b0ab7d1a2, type: 2}
-  duration: 1.2
-  repetitions: -1
-  bursts:
-  - timing: 0
-    burst: {fileID: 11400000, guid: 23628fc7070034440abd9150241f79d5, type: 2}
+  pattern: {fileID: 11400000, guid: 7ab769b57dc472d448914980ebfe8ee0, type: 2}

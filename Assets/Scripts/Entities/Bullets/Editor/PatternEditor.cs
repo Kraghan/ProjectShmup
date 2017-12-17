@@ -1,21 +1,15 @@
-﻿using System.Collections;
+﻿#if UNITY_EDITOR
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEditorInternal;
+using UnityEditor.SceneManagement;
 
 [CustomEditor(typeof(Pattern), true)]
 public class PatternEditor : Editor
 {
-    private enum RepetitionsMode
-    {
-        Infinite,
-        Finite
-    }
-
     private GameObject genericBulletPrefab;
-
-    private RepetitionsMode selectedRepetitionsMode = RepetitionsMode.Infinite;
     private GUIStyle modulePadding = new GUIStyle();
     private ReorderableList list;
 
@@ -23,6 +17,9 @@ public class PatternEditor : Editor
     private float timingsWidth;
     private float burstsWidth;
     private float bulletsWidth;
+    
+    // Data
+    private Pattern pattern;
 
     public override void OnInspectorGUI()
     {
@@ -30,11 +27,24 @@ public class PatternEditor : Editor
 
         drawGUI();
 
+        if(!UnityEditor.EditorApplication.isPlaying)
+        {
+            EditorUtility.SetDirty((Pattern)target);
+        }
+
+        //serializedObject.FindProperty("bursts"). = ((Pattern)target).bursts;
         serializedObject.ApplyModifiedProperties();
+
+        if (!UnityEditor.EditorApplication.isPlaying)
+        {
+            EditorUtility.SetDirty((Pattern)target);
+        }
     }
 
     void OnEnable()
     {
+        pattern = (Pattern)target;
+
         list = new ReorderableList(serializedObject, serializedObject.FindProperty("bursts"), true, true, true, true);
 
         list.drawHeaderCallback = (Rect rect) => {
@@ -53,18 +63,13 @@ public class PatternEditor : Editor
         {
     
             rect.y += 2;
-            //EditorGUI.PropertyField(new Rect(rect.x, rect.y, 100, 300), element, GUIContent.none);
             BurstTiming burstTiming = ((Pattern)target).bursts[index];
-            /*
             if(burstTiming == null)
-            {
-                burstTiming = new BurstTiming(0, null);
-            }*/
-            //EditorGUI.PropertyField(new Rect(rect.x + handlersWidth / 7, rect.y, timingsWidth, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("timing"), GUIContent.none);
-            //EditorGUI.PropertyField(new Rect(rect.x + handlersWidth / 7 + timingsWidth, rect.y, burstsWidth, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("burst"), GUIContent.none);
-            EditorGUI.FloatField(new Rect(rect.x + handlersWidth / 7, rect.y, timingsWidth, EditorGUIUtility.singleLineHeight), burstTiming.timing);
+                burstTiming = new BurstTiming();
+            burstTiming.timing = EditorGUI.FloatField(new Rect(rect.x + handlersWidth / 7, rect.y, timingsWidth, EditorGUIUtility.singleLineHeight), burstTiming.timing);
             burstTiming.burst = EditorGUI.ObjectField(new Rect(rect.x + handlersWidth/7 + timingsWidth, rect.y, burstsWidth, EditorGUIUtility.singleLineHeight), burstTiming.burst, typeof(Burst), false) as Burst;
             burstTiming.bullet = EditorGUI.ObjectField(new Rect(rect.x + handlersWidth + timingsWidth + burstsWidth, rect.y, bulletsWidth, EditorGUIUtility.singleLineHeight), burstTiming.bullet, typeof(GameObject), false) as GameObject;
+
             ((Pattern)target).bursts[index] = burstTiming;
         };
             
@@ -101,15 +106,17 @@ public class PatternEditor : Editor
             foreach (BurstTiming burstTiming in ((Pattern)target).bursts)
                 burstTiming.bullet = genericBulletPrefab;
         EditorGUILayout.EndHorizontal();
+
         EditorGUILayout.BeginHorizontal();
         EditorGUILayout.LabelField(new GUIContent("Duration", "The duration (in seconds) that the pattern takes to complete"), GUILayout.Width(labelWidthInPixels));
         ((Pattern)target).duration = EditorGUILayout.FloatField(((Pattern)target).duration);
         EditorGUILayout.EndHorizontal();
+
         EditorGUILayout.BeginHorizontal();
         EditorGUILayout.LabelField("Cycles", GUILayout.Width(labelWidthInPixels));
-        selectedRepetitionsMode = (RepetitionsMode)EditorGUILayout.EnumPopup(selectedRepetitionsMode, GUILayout.ExpandWidth(true));
+        ((Pattern)target).selectedRepetitionsMode = (RepetitionsMode)EditorGUILayout.EnumPopup(((Pattern)target).selectedRepetitionsMode, GUILayout.ExpandWidth(true));
         EditorGUILayout.BeginVertical();
-        switch (selectedRepetitionsMode)
+        switch (((Pattern)target).selectedRepetitionsMode)
         {
             case RepetitionsMode.Infinite:
                 ((Pattern)target).cycles = -1;
@@ -137,3 +144,4 @@ public class PatternEditor : Editor
         GUILayout.EndVertical();
     }
 }
+#endif

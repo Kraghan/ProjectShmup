@@ -6,19 +6,14 @@ using UnityEngine;
 public class BurstTiming
 {
     #region Attributes
-    public float timing;
+    [SerializeField]
+    public float timing = 0;
+    [SerializeField]
     public Burst burst;
+    [SerializeField]
     public GameObject bullet;
 
     private bool done = false;
-    #endregion
-
-    #region Constructors
-    public BurstTiming(float _timing, Burst _burst)
-    {
-        this.timing = _timing;
-        this.burst = _burst;
-    }
     #endregion
 
     #region Methods

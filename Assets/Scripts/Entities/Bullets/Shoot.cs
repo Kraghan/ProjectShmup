@@ -6,25 +6,20 @@ using UnityEngine;
 public class Shoot
 {
     #region Attributes
+    [SerializeField]
     public bool largerDisplayInEditor = false;
     [Tooltip("Start speed")]
-    public float speed;
+    [SerializeField]
+    public float speed = 100;
     [Tooltip("Speed increase per second")]
-    public float acceleration;
+    [SerializeField]
+    public float acceleration = 0;
     [Tooltip("Starting direction")]
-    public float direction;
+    [SerializeField]
+    public float direction = 0;
     [Tooltip("Rotation modification per second")]
-    public float rotation;
-    #endregion
-
-    #region Constructors
-    public Shoot()
-    {
-        this.speed = 100;
-        this.acceleration = 0;
-        this.direction = 0;
-        this.rotation = 0;
-    }
+    [SerializeField]
+    public float rotation = 0;
     #endregion
 }
 

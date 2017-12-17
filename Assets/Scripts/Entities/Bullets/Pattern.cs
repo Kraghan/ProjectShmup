@@ -2,29 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pattern : MonoBehaviour
+public enum RepetitionsMode
+{
+    Infinite,
+    Finite
+}
+
+[CreateAssetMenu(fileName = "Pattern", menuName = "Shmup/Pattern")]
+[System.Serializable]
+public class Pattern : ScriptableObject
 {
     #region Attributes
+    [SerializeField]
+    public RepetitionsMode selectedRepetitionsMode = RepetitionsMode.Infinite;
     [Tooltip("Duration of the pattern (in seconds)")]
+    [SerializeField]
     public float duration = 1;
     [Tooltip("Number of repetitions of the pattern (-1 = infinite | 0 = one cycle | 1 = two cycles (one repetition) | etc...)")]
+    [SerializeField]
     public int cycles = -1;
     [Tooltip("Bursts timings")]
+    [SerializeField]
     public List<BurstTiming> bursts;
 
     private Transform bulletRepository;
     private float time = 0;
     #endregion
 
-    #region MonoBehaviour main methods
-    // Use this for initialization
-    void Start()
+    #region OldMonoBehaviour main methods
+    public void PatternSetup()
     {
         bulletRepository = GameObject.FindGameObjectWithTag("BulletRepository").transform;
     }
-
-    // Update is called once per frame
-    void Update()
+   
+    public void PatternUpdate(GameObject go)
     {
         time += Time.deltaTime;
         Utility.Cap(ref time, 0, duration);
@@ -34,7 +45,7 @@ public class Pattern : MonoBehaviour
             {
                 if(burstTiming.bullet != null)
                 {
-                    burstTiming.burst.Fire(burstTiming.bullet, transform.position, bulletRepository.transform);
+                    burstTiming.burst.Fire(burstTiming.bullet, go.transform.position, bulletRepository.transform);
                     burstTiming.Done();
                 }
             }
@@ -42,7 +53,7 @@ public class Pattern : MonoBehaviour
         if(time == duration)
         {
             if (cycles == 0)
-                Destroy(gameObject);
+                Destroy(go);
             else
             {
                 if (cycles > 0)

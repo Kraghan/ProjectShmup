@@ -7,7 +7,8 @@ using UnityEngine;
 public class Burst : ScriptableObject
 {
     #region Attributes
-    public Shoot[] shoots;
+    [SerializeField]
+    public List<Shoot> shoots = new List<Shoot>();
     #endregion
 
     #region Methods
