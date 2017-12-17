@@ -9,18 +9,8 @@ using System.Reflection;
 [CustomEditor(typeof(Burst), true)]
 public class BurstEditor : Editor
 {
-    public static T GetFieldByName<T>(string fieldName, BindingFlags bindingFlags, object obj)
-    {
-        FieldInfo fieldInfo = obj.GetType().GetField(fieldName, bindingFlags);
-
-        if (fieldInfo == null)
-            return default(T);
-
-        return (T)fieldInfo.GetValue(obj);
-    }
-
+    private ReorderableList list;
     private GameObject genericBulletPrefab;
-    public Vector2 scrool = Vector2.zero;
     private GUIStyle modulePadding = new GUIStyle();
 
     private bool displayGenericParameters = true;
@@ -59,308 +49,325 @@ public class BurstEditor : Editor
         }
     }
 
-    public Shoot DrawShoot(Shoot shoot, Rect rect)
+    void OnEnable()
     {
-        //Shoot shoot;
-        bool willBeDeleted = false;
+        list = new ReorderableList(serializedObject, serializedObject.FindProperty("shoots"), true, true, true, false);
 
-        // Initialization
-        float left = rect.x;
-        float fullWidth = rect.width;
-        float top = rect.y;
-        float fullHeight = rect.height;
-        float lineHeight = EditorGUIUtility.singleLineHeight;
-        Color greyUI = new Color(0.6f, 0.6f, 0.6f, 1);
-        float spaceWidth = 0;
-        float speedWidth = 0;
-        float accelerationWidth = 0;
-        float rotationWidth = 0;
+        list.drawHeaderCallback = (Rect rect) => {
+            EditorGUI.LabelField(new Rect(rect.x, rect.y, rect.width, rect.height), "Shoots");
+        };
 
-        float debug_requieredPixels = 4;
-        float debug_requieredLines = 0;
 
-        #region Draw DisplayModeButton
-        string displayModeButtonString = "";
-        #region Find Arrow
-        string arrow = "";
-        switch ((int)shoot.direction)
+        list.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) =>
         {
-            case 0:
-                arrow = arrow_5;
-                break;
-            case 45:
-                arrow = arrow_8;
-                break;
-            case 90:
-                arrow = arrow_7;
-                break;
-            case 135:
-                arrow = arrow_6;
-                break;
-            case 180:
-                arrow = arrow_4;
-                break;
-            case 225:
-                arrow = arrow_1;
-                break;
-            case 270:
-                arrow = arrow_2;
-                break;
-            case 315:
-                arrow = arrow_3;
-                break;
-            case 360:
-                arrow = arrow_5;
-                break;
-            default:
-                arrow = "(" + ((int)shoot.direction).ToString() + "°)";
-                break;
-        }
-        #endregion
-        displayModeButtonString += arrow + " - " + shoot.speed + " speed";
-        if (GUI.Button(new Rect(left, top + 2, fullWidth - 40, lineHeight * 2), displayModeButtonString)) { shoot.largerDisplayInEditor = !shoot.largerDisplayInEditor; }
-        if (GUI.Button(new Rect(left + (fullWidth - 24), top + 2 + (lineHeight / 2), 20, lineHeight), "X"))
-            willBeDeleted = true;
-        top += ((lineHeight * 2) + 4);
-        fullHeight -= ((lineHeight * 2) + 4);
-        debug_requieredLines += 2;
-        debug_requieredPixels += 4;
-        #endregion
+            // Get Shoot
+            Shoot shoot = ((Burst)target).shoots[index];
+            if (shoot == null)
+                shoot = new Shoot();
+            //Shoot shoot;
+            bool willBeDeleted = false;
 
-        if (shoot.largerDisplayInEditor)
-        {
-
-            #region Draw ShootBox
             // Initialization
-            Color shootBoxColorBackground = new Color(0.8f, 0.8f, 0.9f, 1);
-            float shootBoxMargin = 2;
+            float left = rect.x;
+            float fullWidth = rect.width;
+            float top = rect.y;
+            float fullHeight = rect.height;
+            float lineHeight = EditorGUIUtility.singleLineHeight;
+            Color greyUI = new Color(0.6f, 0.6f, 0.6f, 1);
+            float spaceWidth = 0;
+            float speedWidth = 0;
+            float accelerationWidth = 0;
+            float rotationWidth = 0;
 
-            // Reduce space
-            left += shootBoxMargin;
-            top += shootBoxMargin;
-            fullWidth -= shootBoxMargin * 2;
-            fullHeight -= shootBoxMargin * 2;
-            debug_requieredPixels += shootBoxMargin;
+            float debug_requieredPixels = 4;
+            float debug_requieredLines = 0;
 
-            // Draw outline
-            Rect shootBoxOutline = new Rect(left, top, fullWidth, fullHeight);
-            EditorGUI.DrawRect(shootBoxOutline, greyUI);
-
-            // Reduce space
-            left += shootBoxMargin;
-            top += shootBoxMargin;
-            fullWidth -= shootBoxMargin * 2;
-            fullHeight -= shootBoxMargin * 2;
-            debug_requieredPixels += shootBoxMargin;
-
-            // Draw background
-            Rect shootBox = new Rect(left, top, fullWidth, fullHeight);
-            EditorGUI.DrawRect(shootBox, shootBoxColorBackground);
-            #endregion
-
-            #region Draw Headers
-            // Set columns width
-            spaceWidth = ((fullWidth / 10 * 0.5f) / 7);
-            speedWidth = (fullWidth / 10 * 9.5f / 3);
-            accelerationWidth = (fullWidth / 10 * 9.5f / 3);
-            rotationWidth = (fullWidth / 10 * 9.5f / 3);
-
-            // Draw labels
-            Rect headerSpeed = new Rect(left + spaceWidth, top, speedWidth, lineHeight);
-            Rect headerAcceleration = new Rect(left + spaceWidth + speedWidth, top, accelerationWidth, lineHeight);
-            Rect headerRotation = new Rect(left + spaceWidth + speedWidth + accelerationWidth, top, rotationWidth, lineHeight);
-            EditorGUI.LabelField(headerSpeed, "Speed");
-            EditorGUI.LabelField(headerAcceleration, "Acceleration");
-            EditorGUI.LabelField(headerRotation, "Rotation");
-
-            // Reduce space
-            top += lineHeight;
-            fullHeight -= lineHeight;
-            debug_requieredLines++;
-
-            // Draw pics
-            Rect headerSpeedPic = new Rect(left + spaceWidth, top, speedWidth, lineHeight);
-            Rect headerAccelerationPic = new Rect(left + spaceWidth + speedWidth, top, accelerationWidth, lineHeight);
-            Rect headerRotationPic = new Rect(left + spaceWidth + speedWidth + accelerationWidth, top, rotationWidth, lineHeight);
-            EditorGUI.LabelField(headerSpeedPic, EditorGUIUtility.IconContent("Assets/Graphics/Sprites/Editor_Icons/CustomEditor_Icon_Speed.png", "Speed"));
-            EditorGUI.LabelField(headerAccelerationPic, EditorGUIUtility.IconContent("Assets/Graphics/Sprites/Editor_Icons/CustomEditor_Icon_Acceleration.png", "Acceleration"));
-            EditorGUI.LabelField(headerRotationPic, EditorGUIUtility.IconContent("Assets/Graphics/Sprites/Editor_Icons/CustomEditor_Icon_Rotation.png", "Rotation"));
-
-            // Reduce space
-            top += lineHeight;
-            fullHeight -= lineHeight;
-            debug_requieredLines++;
-
-            // Draw line
-            //EditorGUI.DrawRect(new Rect(left, top, fullWidth, 2), greyUI);
-            top += 4;
-            fullHeight -= 4;
-            debug_requieredPixels += 4;
-            #endregion
-
-            #region Draw FloatFields (Speed, Acceleration, Rotation)
-            // Initialization
-            float floatFieldsMargin = 5;
-
-            // Draw fields
-            shoot.speed = (int)(EditorGUI.FloatField(new Rect(left + floatFieldsMargin, top, speedWidth, lineHeight), shoot.speed));
-            if (shoot.speed < 0)
-                shoot.speed = 0;
-            shoot.acceleration = (int)(EditorGUI.FloatField(new Rect(left + floatFieldsMargin + speedWidth, top, speedWidth, lineHeight), shoot.acceleration));
-            shoot.rotation = (int)(EditorGUI.FloatField(new Rect(left + floatFieldsMargin + speedWidth + accelerationWidth, top, speedWidth, lineHeight), shoot.rotation));
-
-            // Reduce space
-            top += lineHeight + 2;
-            fullHeight -= lineHeight - 2;
-            debug_requieredLines++;
-            debug_requieredPixels += 2;
-            #endregion
-
-            #region Draw Direction Interface
-            // Initialization
-            Texture2D directionCircleTexture = (Texture2D)EditorGUIUtility.Load("Assets/Graphics/Sprites/Editor_Icons/DirectionBox2.png");
-            float directionCircleSize = 84;
-            float buttonSize = 20;
-            float directionCircleMargin = 2;
-
-            // Draw line
-            EditorGUI.DrawRect(new Rect(left, top, fullWidth, 2), greyUI);
-            top += 4;
-            fullHeight -= 4;
-            debug_requieredPixels += 4;
-
-            // Draw Direction header
-            EditorGUI.LabelField(new Rect(left, top, fullWidth, fullHeight), new GUIContent("Direction (angle de départ en degrés):", "Direction"));
-            top += lineHeight;
-            fullHeight -= lineHeight;
-            debug_requieredLines++;
-
-            // Initalization Part II
-            float dcLeft = left;
-            float dcFullWidth = fullWidth;
-            float dcTop = top;
-            float dcFullHeight = 84 + directionCircleMargin * 2;
-
-            #region Draw Direction Circle Fast Selector
-            // Initialization
-            float buttonMargin = 5;
-            float dcfsTop = dcTop + directionCircleMargin;
-            float dcfsFullHeight = dcFullHeight;
-            dcLeft += directionCircleMargin;
-            Rect directionCircleFastSelector = new Rect(dcLeft, top, directionCircleSize, directionCircleSize);
-            dcLeft += directionCircleMargin + buttonMargin;
-            dcFullWidth -= (directionCircleMargin * 2);
-            dcfsTop += directionCircleMargin + buttonMargin;
-            dcfsFullHeight -= (directionCircleMargin * 2 + buttonMargin);
-
-            // Draw Direction Circle
-            GUI.DrawTexture(directionCircleFastSelector, directionCircleTexture);
-
-            // Draw Buttons Line 1
-            if (GUI.Button(new Rect(dcLeft + 0 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_1)) { shoot.direction = 225; }
-            if (GUI.Button(new Rect(dcLeft + 1 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_2)) { shoot.direction = 270; }
-            if (GUI.Button(new Rect(dcLeft + 2 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_3)) { shoot.direction = 315; }
-            dcfsTop += buttonSize + buttonMargin;
-            dcfsFullHeight -= (buttonSize + buttonMargin);
-
-            // Draw Buttons Line 2
-            if (GUI.Button(new Rect(dcLeft + 0 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_4)) { shoot.direction = 180; }
-            if (GUI.Button(new Rect(dcLeft + 2 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_5)) { shoot.direction = 0; }
-            dcfsTop += buttonSize + buttonMargin;
-            dcfsFullHeight -= (buttonSize + buttonMargin);
-
-            // Draw Buttons Line 3
-            if (GUI.Button(new Rect(dcLeft + 0 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_6)) { shoot.direction = 135; }
-            if (GUI.Button(new Rect(dcLeft + 1 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_7)) { shoot.direction = 90; }
-            if (GUI.Button(new Rect(dcLeft + 2 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_8)) { shoot.direction = 45; }
-            dcfsTop += buttonSize + buttonMargin;
-            dcfsFullHeight -= (buttonSize + buttonMargin);
-
-            // Reduce space
-            dcLeft += directionCircleSize + directionCircleMargin * 2 - buttonMargin;
-            dcFullWidth -= (directionCircleSize + directionCircleMargin * 2);
-            #endregion
-
-            #region Draw Direction Selector
-            // Initialization
-            float dsTop = top;
-            float dsFullWidth = (dcFullWidth - (directionCircleSize - 2 * directionCircleMargin + 8));
-
-            // Draw Slider
-            Rect shootDirectionRect = new Rect(dcLeft, dsTop, dsFullWidth, lineHeight);
-            shoot.direction = (int)(GUI.HorizontalSlider(shootDirectionRect, shoot.direction, 0.0f, 360.0f));
-            dsTop += lineHeight + 2;
-
-            // Draw FloatField
-            Rect shootDirectionRect2 = new Rect(dcLeft, dsTop, dsFullWidth, lineHeight);
-            shoot.direction = (int)(EditorGUI.FloatField(shootDirectionRect2, shoot.direction));
-            Utility.Cap(ref shoot.direction, 0, 360);
-            dsTop += lineHeight + 2;
-
-            // Reduce space
-            dcLeft += dsFullWidth;
-            dcFullWidth -= dsFullWidth;
-            #endregion
-
-            #region Draw Direction Circle Indicator
-            // Initialization
-            float dciTop = dcTop + directionCircleMargin;
-            float dciFullHeight = dcFullHeight;
-            dcLeft += directionCircleMargin;
-            Rect directionCircleIndicator = new Rect(dcLeft, top, directionCircleSize, directionCircleSize);
-            dcLeft += directionCircleMargin;
-            dcFullWidth -= directionCircleMargin * 2;
-            dciTop += directionCircleMargin;
-            dciFullHeight -= directionCircleMargin * 2;
-
-            // Draw Direction Circle Indicator
-            GUI.DrawTexture(directionCircleIndicator, directionCircleTexture);
-
-            // Draw Direction Indicator Line
-            Handles.BeginGUI();
-            Handles.color = Color.red;
-            float angleRadian = shoot.direction * Mathf.PI / 180.0f;
-            float destinationX = Mathf.Cos(angleRadian) * (directionCircleSize / 2);
-            float destinationY = Mathf.Sin(angleRadian) * (directionCircleSize / 2);
-            Vector3 directionLineOrigin = new Vector3(directionCircleIndicator.x + (directionCircleIndicator.width / 2), directionCircleIndicator.y + (directionCircleIndicator.height / 2), 0);
-            Vector3 directionLineDestination = new Vector3(directionLineOrigin.x + destinationX, directionLineOrigin.y + destinationY, 0);
-            Handles.DrawLine(directionLineOrigin, directionLineDestination);
-            Handles.EndGUI();
-            #endregion
-
-            // Reduce space
-            top += directionCircleSize + 2 * directionCircleMargin;
-            fullHeight -= (directionCircleSize + (2 * directionCircleMargin));
-            debug_requieredPixels += directionCircleSize + 2 * directionCircleMargin;
-            #endregion
-
-        }
-        if (willBeDeleted)
-            return null;
-        else
-            return shoot;
-    }
-
-    public void DrawList(Rect rect)
-    {
-        Vector2 sizeSmall = new Vector2(400, 40);
-        Vector2 sizeBig = new Vector2(400, 208);
-        
-        float cumulatedSizesAndMargins = 0;
-        for (int i = 0; i < ((Burst)target).shoots.Count; i++)
-        {
-            Shoot returnShoot = DrawShoot(((Burst)target).shoots[i], new Rect(rect.x, rect.y + cumulatedSizesAndMargins, (((Burst)target).shoots[i].largerDisplayInEditor ? sizeBig.x : sizeSmall.x), (((Burst)target).shoots[i].largerDisplayInEditor ? sizeBig.y : sizeSmall.y)));
-            if (returnShoot == null)
+            #region Draw DisplayModeButton
+            string displayModeButtonString = "";// "[" + index + "] - " + (shoot.largerDisplayInEditor ? "Hide": "Display") + "\n";
+            #region Find Arrow
+            string arrow = "";
+            switch ((int)shoot.direction)
             {
-                ((Burst)target).shoots.RemoveAt(i);
-                i--;
+                case 0:
+                    arrow = arrow_5;
+                    break;
+                case 45:
+                    arrow = arrow_8;
+                    break;
+                case 90:
+                    arrow = arrow_7;
+                    break;
+                case 135:
+                    arrow = arrow_6;
+                    break;
+                case 180:
+                    arrow = arrow_4;
+                    break;
+                case 225:
+                    arrow = arrow_1;
+                    break;
+                case 270:
+                    arrow = arrow_2;
+                    break;
+                case 315:
+                    arrow = arrow_3;
+                    break;
+                case 360:
+                    arrow = arrow_5;
+                    break;
+                default:
+                    arrow = "(" + ((int)shoot.direction).ToString() + "°)";
+                    break;
+            }
+            #endregion
+            displayModeButtonString += arrow + " - " + shoot.speed + " speed";
+            if (GUI.Button(new Rect(left, top + 2, fullWidth - 40, lineHeight * 2), displayModeButtonString)) { shoot.largerDisplayInEditor = !shoot.largerDisplayInEditor; }
+            if (GUI.Button(new Rect(left + (fullWidth - 24), top + 2 + (lineHeight / 2), 20, lineHeight), "X"))
+                willBeDeleted = true;
+            top += ((lineHeight * 2) + 4);
+            fullHeight -= ((lineHeight * 2) + 4);
+            debug_requieredLines += 2;
+            debug_requieredPixels += 4;
+            #endregion
+
+            if (shoot.largerDisplayInEditor)
+            {
+
+                #region Draw ShootBox
+                // Initialization
+                Color shootBoxColorBackground = new Color(0.8f, 0.8f, 0.9f, 1);
+                float shootBoxMargin = 2;
+
+                // Reduce space
+                left += shootBoxMargin;
+                top += shootBoxMargin;
+                fullWidth -= shootBoxMargin * 2;
+                fullHeight -= shootBoxMargin * 2;
+                debug_requieredPixels += shootBoxMargin;
+
+                // Draw outline
+                Rect shootBoxOutline = new Rect(left, top, fullWidth, fullHeight);
+                EditorGUI.DrawRect(shootBoxOutline, greyUI);
+
+                // Reduce space
+                left += shootBoxMargin;
+                top += shootBoxMargin;
+                fullWidth -= shootBoxMargin * 2;
+                fullHeight -= shootBoxMargin * 2;
+                debug_requieredPixels += shootBoxMargin;
+
+                // Draw background
+                Rect shootBox = new Rect(left, top, fullWidth, fullHeight);
+                EditorGUI.DrawRect(shootBox, shootBoxColorBackground);
+                #endregion
+
+                #region Draw Headers
+                // Set columns width
+                spaceWidth = ((fullWidth / 10 * 0.5f) / 7);
+                speedWidth = (fullWidth / 10 * 9.5f / 3);
+                accelerationWidth = (fullWidth / 10 * 9.5f / 3);
+                rotationWidth = (fullWidth / 10 * 9.5f / 3);
+
+                // Draw labels
+                Rect headerSpeed = new Rect(left + spaceWidth, top, speedWidth, lineHeight);
+                Rect headerAcceleration = new Rect(left + spaceWidth + speedWidth, top, accelerationWidth, lineHeight);
+                Rect headerRotation = new Rect(left + spaceWidth + speedWidth + accelerationWidth, top, rotationWidth, lineHeight);
+                EditorGUI.LabelField(headerSpeed, "Speed");
+                EditorGUI.LabelField(headerAcceleration, "Acceleration");
+                EditorGUI.LabelField(headerRotation, "Rotation");
+
+                // Reduce space
+                top += lineHeight;
+                fullHeight -= lineHeight;
+                debug_requieredLines++;
+
+                // Draw pics
+                Rect headerSpeedPic = new Rect(left + spaceWidth, top, speedWidth, lineHeight);
+                Rect headerAccelerationPic = new Rect(left + spaceWidth + speedWidth, top, accelerationWidth, lineHeight);
+                Rect headerRotationPic = new Rect(left + spaceWidth + speedWidth + accelerationWidth, top, rotationWidth, lineHeight);
+                EditorGUI.LabelField(headerSpeedPic, EditorGUIUtility.IconContent("Assets/Graphics/Sprites/Editor_Icons/CustomEditor_Icon_Speed.png", "Speed"));
+                EditorGUI.LabelField(headerAccelerationPic, EditorGUIUtility.IconContent("Assets/Graphics/Sprites/Editor_Icons/CustomEditor_Icon_Acceleration.png", "Acceleration"));
+                EditorGUI.LabelField(headerRotationPic, EditorGUIUtility.IconContent("Assets/Graphics/Sprites/Editor_Icons/CustomEditor_Icon_Rotation.png", "Rotation"));
+
+                // Reduce space
+                top += lineHeight;
+                fullHeight -= lineHeight;
+                debug_requieredLines++;
+
+                // Draw line
+                //EditorGUI.DrawRect(new Rect(left, top, fullWidth, 2), greyUI);
+                top += 4;
+                fullHeight -= 4;
+                debug_requieredPixels += 4;
+                #endregion
+
+                #region Draw FloatFields (Speed, Acceleration, Rotation)
+                // Initialization
+                float floatFieldsMargin = 5;
+
+                // Draw fields
+                shoot.speed = (int)(EditorGUI.FloatField(new Rect(left + floatFieldsMargin, top, speedWidth, lineHeight), shoot.speed));
+                if (shoot.speed < 0)
+                    shoot.speed = 0;
+                shoot.acceleration = (int)(EditorGUI.FloatField(new Rect(left + floatFieldsMargin + speedWidth, top, speedWidth, lineHeight), shoot.acceleration));
+                shoot.rotation = (int)(EditorGUI.FloatField(new Rect(left + floatFieldsMargin + speedWidth + accelerationWidth, top, speedWidth, lineHeight), shoot.rotation));
+
+                // Reduce space
+                top += lineHeight + 2;
+                fullHeight -= lineHeight - 2;
+                debug_requieredLines++;
+                debug_requieredPixels += 2;
+                #endregion
+
+                #region Draw Direction Interface
+                // Initialization
+                Texture2D directionCircleTexture = (Texture2D)EditorGUIUtility.Load("Assets/Graphics/Sprites/Editor_Icons/DirectionBox2.png");
+                float directionCircleSize = 84;
+                float buttonSize = 20;
+                float directionCircleMargin = 2;
+
+                // Draw line
+                EditorGUI.DrawRect(new Rect(left, top, fullWidth, 2), greyUI);
+                top += 4;
+                fullHeight -= 4;
+                debug_requieredPixels += 4;
+
+                // Draw Direction header
+                EditorGUI.LabelField(new Rect(left, top, fullWidth, fullHeight), new GUIContent("Direction (angle de départ en degrés):", "Direction"));
+                top += lineHeight;
+                fullHeight -= lineHeight;
+                debug_requieredLines++;
+
+                // Initalization Part II
+                float dcLeft = left;
+                float dcFullWidth = fullWidth;
+                float dcTop = top;
+                float dcFullHeight = 84 + directionCircleMargin * 2;
+
+                #region Draw Direction Circle Fast Selector
+                // Initialization
+                float buttonMargin = 5;
+                float dcfsTop = dcTop + directionCircleMargin;
+                float dcfsFullHeight = dcFullHeight;
+                dcLeft += directionCircleMargin;
+                Rect directionCircleFastSelector = new Rect(dcLeft, top, directionCircleSize, directionCircleSize);
+                dcLeft += directionCircleMargin + buttonMargin;
+                dcFullWidth -= (directionCircleMargin * 2);
+                dcfsTop += directionCircleMargin + buttonMargin;
+                dcfsFullHeight -= (directionCircleMargin * 2 + buttonMargin);
+
+                // Draw Direction Circle
+                GUI.DrawTexture(directionCircleFastSelector, directionCircleTexture);
+
+                // Draw Buttons Line 1
+                if (GUI.Button(new Rect(dcLeft + 0 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_1)) { shoot.direction = 225; }
+                if (GUI.Button(new Rect(dcLeft + 1 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_2)) { shoot.direction = 270; }
+                if (GUI.Button(new Rect(dcLeft + 2 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_3)) { shoot.direction = 315; }
+                dcfsTop += buttonSize + buttonMargin;
+                dcfsFullHeight -= (buttonSize + buttonMargin);
+
+                // Draw Buttons Line 2
+                if (GUI.Button(new Rect(dcLeft + 0 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_4)) { shoot.direction = 180; }
+                if (GUI.Button(new Rect(dcLeft + 2 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_5)) { shoot.direction = 0; }
+                dcfsTop += buttonSize + buttonMargin;
+                dcfsFullHeight -= (buttonSize + buttonMargin);
+
+                // Draw Buttons Line 3
+                if (GUI.Button(new Rect(dcLeft + 0 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_6)) { shoot.direction = 135; }
+                if (GUI.Button(new Rect(dcLeft + 1 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_7)) { shoot.direction = 90; }
+                if (GUI.Button(new Rect(dcLeft + 2 * (buttonSize + buttonMargin), dcfsTop, buttonSize, buttonSize), arrow_8)) { shoot.direction = 45; }
+                dcfsTop += buttonSize + buttonMargin;
+                dcfsFullHeight -= (buttonSize + buttonMargin);
+
+                // Reduce space
+                dcLeft += directionCircleSize + directionCircleMargin * 2 - buttonMargin;
+                dcFullWidth -= (directionCircleSize + directionCircleMargin * 2);
+                #endregion
+
+                #region Draw Direction Selector
+                // Initialization
+                float dsTop = top;
+                float dsFullWidth = (dcFullWidth - (directionCircleSize - 2 * directionCircleMargin + 8));
+
+                // Draw Slider
+                Rect shootDirectionRect = new Rect(dcLeft, dsTop, dsFullWidth, lineHeight);
+                shoot.direction = (int)(GUI.HorizontalSlider(shootDirectionRect, shoot.direction, 0.0f, 360.0f));
+                dsTop += lineHeight + 2;
+
+                // Draw FloatField
+                Rect shootDirectionRect2 = new Rect(dcLeft, dsTop, dsFullWidth, lineHeight);
+                shoot.direction = (int)(EditorGUI.FloatField(shootDirectionRect2, shoot.direction));
+                Utility.Cap(ref shoot.direction, 0, 360);
+                dsTop += lineHeight + 2;
+
+                // Reduce space
+                dcLeft += dsFullWidth;
+                dcFullWidth -= dsFullWidth;
+                #endregion
+
+                #region Draw Direction Circle Indicator
+                // Initialization
+                float dciTop = dcTop + directionCircleMargin;
+                float dciFullHeight = dcFullHeight;
+                dcLeft += directionCircleMargin;
+                Rect directionCircleIndicator = new Rect(dcLeft, top, directionCircleSize, directionCircleSize);
+                dcLeft += directionCircleMargin;
+                dcFullWidth -= directionCircleMargin * 2;
+                dciTop += directionCircleMargin;
+                dciFullHeight -= directionCircleMargin * 2;
+
+                // Draw Direction Circle Indicator
+                GUI.DrawTexture(directionCircleIndicator, directionCircleTexture);
+
+                // Draw Direction Indicator Line
+                Handles.BeginGUI();
+                Handles.color = Color.red;
+                float angleRadian = shoot.direction * Mathf.PI / 180.0f;
+                float destinationX = Mathf.Cos(angleRadian) * (directionCircleSize / 2);
+                float destinationY = Mathf.Sin(angleRadian) * (directionCircleSize / 2);
+                Vector3 directionLineOrigin = new Vector3(directionCircleIndicator.x + (directionCircleIndicator.width / 2), directionCircleIndicator.y + (directionCircleIndicator.height / 2), 0);
+                Vector3 directionLineDestination = new Vector3(directionLineOrigin.x + destinationX, directionLineOrigin.y + destinationY, 0);
+                Handles.DrawLine(directionLineOrigin, directionLineDestination);
+                Handles.EndGUI();
+                #endregion
+
+                // Reduce space
+                top += directionCircleSize + 2 * directionCircleMargin;
+                fullHeight -= (directionCircleSize + (2 * directionCircleMargin));
+                debug_requieredPixels += directionCircleSize + 2 * directionCircleMargin;
+                #endregion
+
+            }
+
+            // Save modifications
+            if (((Burst)target).shoots != null)
+                if (((Burst)target).shoots.Count > index)
+                    ((Burst)target).shoots[index] = shoot;
+
+            if (willBeDeleted)
+                ((Burst)target).shoots.RemoveAt(index);
+        };
+
+        list.elementHeightCallback = (index) => {
+            bool largerDisplay = false;
+
+            // Get Shoot
+            if (((Burst)target).shoots != null)
+                if (((Burst)target).shoots.Count > index)
+                    if (((Burst)target).shoots[index] != null)
+                        largerDisplay = ((Burst)target).shoots[index].largerDisplayInEditor;
+
+            Repaint();
+            if (largerDisplay)
+            {
+                return (EditorGUIUtility.singleLineHeight * 6 + 106 + 2 + 8);
             }
             else
             {
-                ((Burst)target).shoots[i] = returnShoot;
-                cumulatedSizesAndMargins += (((Burst)target).shoots[i].largerDisplayInEditor ? sizeBig.y : sizeSmall.y) + 2;
+                return (EditorGUIUtility.singleLineHeight * 2 + 8);
             }
-        }
+        };
+
     }
     
     public void drawGUI()
@@ -563,6 +570,7 @@ public class BurstEditor : Editor
         EditorGUILayout.Space();
 
         // Shoots list
+        /*
         if(GUILayout.Button("Add Shoot"))
         {
             ((Burst)target).shoots.Add(new Shoot());
@@ -574,7 +582,8 @@ public class BurstEditor : Editor
             r = new Rect(4, 0, 200, 200);
         scrool = EditorGUILayout.BeginScrollView(scrool);
         DrawList(r);
-        EditorGUILayout.EndScrollView();
+        EditorGUILayout.EndScrollView();*/
+        list.DoLayoutList();
 
         // End display stuff
 
