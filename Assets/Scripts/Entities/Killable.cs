@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using ShmupPatternPackage;
 using UnityEngine;
 
 public enum DeathAnimation
@@ -12,6 +13,7 @@ public enum DeathAnimation
 [RequireComponent(typeof(Collider2D))]
 public abstract class Killable : MonoBehaviour
 {
+    [Header("Killable properties")]
     [Tooltip("Time in seconds during which the Killable can't be damaged after taking damages")]
     [SerializeField]
     private float invulnerabilityTime;
@@ -57,8 +59,7 @@ public abstract class Killable : MonoBehaviour
                     Die(collidedBullet.isOnBeat);
                 else // is alive
                 {
-                    currentInvulnerabilityTime = invulnerabilityTime;
-
+                    StartInvulnerabilityFrames();
                     /*if(m_sound.Length > 0)
                         AkSoundEngine.PostEvent(m_sound, gameObject);*/
                 }
@@ -66,9 +67,14 @@ public abstract class Killable : MonoBehaviour
         }
     }
 
+    public void StartInvulnerabilityFrames()
+    {
+        currentInvulnerabilityTime = invulnerabilityTime;
+    }
+
     public bool isInvincible()
     {
-        return currentInvulnerabilityTime > 0;
+        return (currentInvulnerabilityTime > 0);
     }
 
     public bool isAlive()
@@ -107,6 +113,7 @@ public abstract class Killable : MonoBehaviour
         if (currentInvulnerabilityTime > 0)
             return;
         health = 0;
+        StartInvulnerabilityFrames();
     }
 
     public abstract void OnDeath(bool onBeat);

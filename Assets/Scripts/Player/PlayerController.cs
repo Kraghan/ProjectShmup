@@ -21,9 +21,11 @@ public class PlayerController : MonoBehaviour
 
     [Header("Shoot")]
     [SerializeField]
-    float m_errorWindow;
+    private float m_errorWindow;
     [SerializeField]
-    GameObject m_goodShot, m_badShot;
+    private GameObject m_goodShot;
+    [SerializeField]
+    private GameObject m_badShot;
     [SerializeField]
     Transform m_shotPool;
     [SerializeField]
@@ -40,7 +42,15 @@ public class PlayerController : MonoBehaviour
     {
         player = GetComponent<Player>();
         rgbd2D = GetComponent<Rigidbody2D>();
+        killable = GetComponent<Killable>();
         m_combosCounter.value = 0;
+        if (m_shotPool == null)
+            m_shotPool = GameObject.FindGameObjectWithTag("BulletRepository").transform;
+        if (m_goodShot == null)
+            Debug.LogError("PlayerController - m_goodShot is not assigned ! You can't shoot on the beat ! Please assign a prefab that contains a PatterPlayer to be able to shoot.");
+        if (m_badShot == null)
+            Debug.LogError("PlayerController - m_badShot is not assigned ! You can't shoot off the beat ! Please assign a prefab that contains a PatterPlayer to be able to shoot.");
+        killable.StartInvulnerabilityFrames();
     }
 	
 	void Update () {
@@ -56,8 +66,6 @@ public class PlayerController : MonoBehaviour
     #region Methods
     private void ManageSpeed()
     {
-        killable = GetComponent<Killable>();
-        player = GetComponent<Player>();
         bool focus = (Input.GetButton("Focus"));
 
         Vector2 positionOnScreen = Camera.main.WorldToScreenPoint(transform.position);
@@ -101,13 +109,7 @@ public class PlayerController : MonoBehaviour
     #region ColliderHit
     private void CheckColliderHit(Collider2D collider)
     {
-        if (killable.isInvincible())
-            return;
-        if (collider.gameObject.tag == "Enemy")
-        {
-            collider.gameObject.GetComponent<Enemy>().HitPlayer();
-            killable.ClearHealth();
-        }
+
     }
     #endregion
 
@@ -116,6 +118,14 @@ public class PlayerController : MonoBehaviour
     {
         if (trigger.gameObject.tag == "PickUp")
             PickUp(trigger.gameObject);
+        else if (trigger.gameObject.tag == "Enemy")
+        {
+            if (!killable.isInvincible())
+            {
+                trigger.gameObject.GetComponent<Enemy>().HitPlayer();
+                killable.ClearHealth();
+            }
+        }
     }
     #endregion
     #endregion

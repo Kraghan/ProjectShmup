@@ -31,6 +31,10 @@ public class WaypointDeplacement : MonoBehaviour
     void Update()
     {
         //Debug.Log(currentTimeToStop);
+        if (wc == null)
+            return;
+        if (wc.Waypoints == null)
+            return;
         if (wc.Waypoints.Length == 0 || stop)
             return;
         if (currentTimeToStop <= 0)
