@@ -8,6 +8,10 @@ public class Burst : ScriptableObject
 {
     #region Attributes
     [SerializeField]
+    public float direction;
+    [SerializeField]
+    public float spread;
+    [SerializeField]
     public List<Shoot> shoots = new List<Shoot>();
     #endregion
 
@@ -17,7 +21,7 @@ public class Burst : ScriptableObject
         foreach(Shoot shoot in shoots)
         {
             Bullet bullet = Instantiate(bulletPrefab, patternPosition, Quaternion.identity, bulletRepository).GetComponent<Bullet>();
-            bullet.Fire(shoot.speed, shoot.acceleration, shoot.direction, shoot.rotation);
+            bullet.Fire(shoot.speed, shoot.acceleration, (shoot.direction + direction)%360, shoot.rotation);
         }
     }
     #endregion

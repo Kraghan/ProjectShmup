@@ -5855,7 +5855,7 @@ Prefab:
         type: 2}
       propertyPath: pattern
       value: 
-      objectReference: {fileID: 11400000, guid: fa107ea818987e44e9b658e4c6d77dab,
+      objectReference: {fileID: 11400000, guid: d095e1d2fb77b7f41853d28a0d0a6f0a,
         type: 2}
     - target: {fileID: 4175363265199566, guid: fc28234fb3893a34a9d4fb4dad4fa775, type: 2}
       propertyPath: m_LocalScale.x

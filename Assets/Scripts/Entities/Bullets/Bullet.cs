@@ -73,6 +73,10 @@ public class Bullet : MonoBehaviour
         speed = _speed;
         acceleration = _acceleration;
         direction = _direction;
+        if (direction < 180 && direction > 0)
+            direction = (direction - (2 * direction)) % 360;
+        else if (direction > 180 && direction < 360)
+            direction = (direction + 2 * (360 - direction))%360;
         rotation = _rotation;
     }
 

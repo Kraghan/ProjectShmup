@@ -12,12 +12,17 @@ public class BurstEditor : Editor
     private ReorderableList list;
     private GameObject genericBulletPrefab;
     private GUIStyle modulePadding = new GUIStyle();
+    private bool drawBulletsLines = true;
+    private bool drawSpreedLines = true;
 
     private bool displayGenericParameters = true;
     private float genericSpeed;
     private float genericAcceleration;
     private float genericDirection;
     private float genericRotation;
+
+    private float spreadangle_1;
+    private float spreadangle_2;
 
     private string arrow_1 = "↖";
     private string arrow_2 = "▲";
@@ -53,7 +58,8 @@ public class BurstEditor : Editor
     {
         list = new ReorderableList(serializedObject, serializedObject.FindProperty("shoots"), true, true, true, false);
 
-        list.drawHeaderCallback = (Rect rect) => {
+        list.drawHeaderCallback = (Rect rect) =>
+        {
             EditorGUI.LabelField(new Rect(rect.x, rect.y, rect.width, rect.height), "Shoots");
         };
 
@@ -83,7 +89,7 @@ public class BurstEditor : Editor
             float debug_requieredLines = 0;
 
             #region Draw DisplayModeButton
-            string displayModeButtonString = "";// "[" + index + "] - " + (shoot.largerDisplayInEditor ? "Hide": "Display") + "\n";
+            string displayModeButtonString = (shoot.largerDisplayInEditor ? "Hide" : "Display");// "[" + index + "] - " + (shoot.largerDisplayInEditor ? "Hide": "Display") + "\n";
             #region Find Arrow
             string arrow = "";
             switch ((int)shoot.direction)
@@ -348,7 +354,8 @@ public class BurstEditor : Editor
                 ((Burst)target).shoots.RemoveAt(index);
         };
 
-        list.elementHeightCallback = (index) => {
+        list.elementHeightCallback = (index) =>
+        {
             bool largerDisplay = false;
 
             // Get Shoot
@@ -369,7 +376,7 @@ public class BurstEditor : Editor
         };
 
     }
-    
+
     public void drawGUI()
     {
         GUILayout.BeginVertical("ShurikenEffectBg", new GUILayoutOption[0]);
@@ -385,20 +392,100 @@ public class BurstEditor : Editor
         // Initialization
         float burstPreview_directionCircleSize = 84;
         float burstPreview_directionCircleMargin = 2;
-        float burstPreview_dcfsLeft = position.x + 150;
+        float burstPreview_dcfsLeft = position.x + 100;
         float burstPreview_dcfsTop = position.y + 2;
         burstPreview_dcfsTop += burstPreview_directionCircleMargin;
         burstPreview_dcfsLeft += burstPreview_directionCircleMargin;
         Rect directionCircleIndicator = new Rect(burstPreview_dcfsLeft, burstPreview_dcfsTop, burstPreview_directionCircleSize, burstPreview_directionCircleSize);
 
         // Draw Label
-        EditorGUI.LabelField(new Rect(position.x + 4, position.y + 44, 130, EditorGUIUtility.singleLineHeight), "Burst Previsualization");
+        // Burst Preview
+        EditorGUI.LabelField(new Rect(position.x + 4, position.y + 44, 130, EditorGUIUtility.singleLineHeight), "Burst Preview");
+
+        // Burst Direction
+        EditorGUI.LabelField(new Rect(burstPreview_dcfsLeft + 10 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, position.y, 130, EditorGUIUtility.singleLineHeight), "Burst Direction: " + (((Burst)target).direction) + "°");
+        ((Burst)target).direction = (int)GUI.HorizontalSlider(new Rect(burstPreview_dcfsLeft + 10 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, position.y + EditorGUIUtility.singleLineHeight + 2, 120, EditorGUIUtility.singleLineHeight), ((Burst)target).direction, 0, 360);
+        if (GUI.Button(new Rect(burstPreview_dcfsLeft + 10 + 122 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, position.y + EditorGUIUtility.singleLineHeight + 2, 40, EditorGUIUtility.singleLineHeight), "+45°"))
+            ((Burst)target).direction += 45;
+        if (GUI.Button(new Rect(burstPreview_dcfsLeft + 10 + 164 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, position.y + EditorGUIUtility.singleLineHeight + 2, 40, EditorGUIUtility.singleLineHeight), "-45°"))
+            ((Burst)target).direction -= 45;
+        Utility.Cap(ref ((Burst)target).direction, 0, 360);
+
+        // Burst Spread
+        EditorGUI.LabelField(new Rect(burstPreview_dcfsLeft + 10 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, position.y + 4 + 2 * EditorGUIUtility.singleLineHeight, 130, EditorGUIUtility.singleLineHeight), "Burst Spread: " + (((Burst)target).spread) + "°");
+        ((Burst)target).spread = (int)GUI.HorizontalSlider(new Rect(burstPreview_dcfsLeft + 10 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, position.y + 3 * EditorGUIUtility.singleLineHeight + 6, 120, EditorGUIUtility.singleLineHeight), ((Burst)target).spread, 0, 360);
+        if (GUI.Button(new Rect(burstPreview_dcfsLeft + 10 + 122 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, position.y + 3 * EditorGUIUtility.singleLineHeight + 2, 40, EditorGUIUtility.singleLineHeight), "+45°"))
+            ((Burst)target).spread += 45;
+        if (GUI.Button(new Rect(burstPreview_dcfsLeft + 10 + 164 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, position.y + 3 * EditorGUIUtility.singleLineHeight + 2, 40, EditorGUIUtility.singleLineHeight), "-45°"))
+            ((Burst)target).spread -= 45;
+        Utility.Cap(ref ((Burst)target).spread, 0, 360);
+
+        // Modify Shoots by spread
+        if (GUI.Button(new Rect(burstPreview_dcfsLeft + 10 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, position.y + 4 * EditorGUIUtility.singleLineHeight + 8, 180, EditorGUIUtility.singleLineHeight), "Align all shoots on spread"))
+        {
+            // Draw Bullet Lines
+            if ((Burst)target != null)
+            {
+                if (((Burst)target).shoots != null)
+                {
+                    if (((Burst)target).shoots.Count > 0)
+                    {
+                        float resetSpreadAngle1 = 0;
+                        float resetSpreadAngle2 = 0;
+                        resetSpreadAngle1 = ((Burst)target).spread / 2;
+                        resetSpreadAngle2 = (-(((Burst)target).spread / 2));
+                        resetSpreadAngle1 %= 360;
+                        resetSpreadAngle2 = 360 + resetSpreadAngle2;
+                        resetSpreadAngle2 %= 360;
+                        resetSpreadAngle1 = (int)resetSpreadAngle1;
+                        resetSpreadAngle2 = (int)resetSpreadAngle2;
+
+                        int shootCount = ((Burst)target).shoots.Count;
+
+                        for (int shootID = 0; shootID < shootCount; shootID++)
+                        {
+                            Shoot currentShoot = ((Burst)target).shoots[shootID];
+                            //V1
+                            /*
+                            if ((currentShoot.direction > resetSpreadAngle1) && (currentShoot.direction < resetSpreadAngle2))
+                            {
+                                if (currentShoot.direction <= (resetSpreadAngle1 + (resetSpreadAngle2 - resetSpreadAngle1) / 2))
+                                    currentShoot.direction = resetSpreadAngle1;
+                                else
+                                    currentShoot.direction = resetSpreadAngle2;
+                            }*/
+                            //V2
+                            if (shootCount == 1)
+                                currentShoot.direction = 0;
+                            else if(shootCount % 2 == 0)
+                            {
+                                //float angleSize = (resetSpreadAngle1 + (resetSpreadAngle2 - resetSpreadAngle1) / 2) / shootCount;
+                                float angleSize = ((Burst)target).spread / shootCount;
+                                int a = (shootCount / 2) - 1;
+                                if(shootID <= a)
+                                {
+                                    currentShoot.direction = ((int)((angleSize + (angleSize * shootID))))%360;
+                                }
+                                else
+                                {
+                                    int esperance = (int)((- (angleSize * (shootID-a))));
+                                    while (esperance < 0)
+                                        esperance += 360;
+                                    currentShoot.direction = esperance%360;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
 
         // Draw Direction Circle
         Texture2D burstPreview_directionCircleTexture = (Texture2D)EditorGUIUtility.Load("Assets/Graphics/Sprites/Editor_Icons/DirectionBox2.png");
         GUI.DrawTexture(directionCircleIndicator, burstPreview_directionCircleTexture);
 
-        // Draw Lines
+        // Draw Bullet Lines
         if ((Burst)target != null)
         {
             if (((Burst)target).shoots != null)
@@ -411,7 +498,7 @@ public class BurstEditor : Editor
                     {
                         if (shoot == null)
                             break;
-                        float angleRadian = shoot.direction * Mathf.PI / 180.0f;
+                        float angleRadian = (((Burst)target).direction + shoot.direction) * Mathf.PI / 180.0f;
                         float destinationX = Mathf.Cos(angleRadian) * (burstPreview_directionCircleSize / 2);
                         float destinationY = Mathf.Sin(angleRadian) * (burstPreview_directionCircleSize / 2);
                         Vector3 directionLineOrigin = new Vector3(directionCircleIndicator.x + (directionCircleIndicator.width / 2), directionCircleIndicator.y + (directionCircleIndicator.height / 2), 0);
@@ -423,6 +510,42 @@ public class BurstEditor : Editor
             }
         }
 
+        // Draw Spread Lines
+        Handles.BeginGUI();
+        Handles.color = Color.yellow;
+        float burstDir_angleRadian = ((Burst)target).direction * Mathf.PI / 180.0f;
+        float burstDir_destinationX = Mathf.Cos(burstDir_angleRadian) * (burstPreview_directionCircleSize / 2);
+        float burstDir_destinationY = Mathf.Sin(burstDir_angleRadian) * (burstPreview_directionCircleSize / 2);
+        Vector3 burstDir_directionLineOrigin = new Vector3(directionCircleIndicator.x + (directionCircleIndicator.width / 2), directionCircleIndicator.y + (directionCircleIndicator.height / 2), 0);
+        Vector3 burstDir_directionLineDestination = new Vector3(burstDir_directionLineOrigin.x + burstDir_destinationX, burstDir_directionLineOrigin.y + burstDir_destinationY, 0);
+        Handles.DrawLine(burstDir_directionLineOrigin, burstDir_directionLineDestination);
+
+        Handles.color = Color.blue;
+        spreadangle_1 = (((Burst)target).direction + (((Burst)target).spread / 2));
+        spreadangle_2 = (((Burst)target).direction + (-(((Burst)target).spread / 2)));
+        float burstSpread1_angleRadian = spreadangle_1 * Mathf.PI / 180.0f;
+        float burstSpread1_destinationX = Mathf.Cos(burstSpread1_angleRadian) * (burstPreview_directionCircleSize / 2);
+        float burstSpread1_destinationY = Mathf.Sin(burstSpread1_angleRadian) * (burstPreview_directionCircleSize / 2);
+        Vector3 burstSpread1_directionLineOrigin = new Vector3(directionCircleIndicator.x + (directionCircleIndicator.width / 2), directionCircleIndicator.y + (directionCircleIndicator.height / 2), 0);
+        Vector3 burstSpread1_directionLineDestination = new Vector3(burstSpread1_directionLineOrigin.x + burstSpread1_destinationX, burstSpread1_directionLineOrigin.y + burstSpread1_destinationY, 0);
+        Handles.DrawLine(burstSpread1_directionLineOrigin, burstSpread1_directionLineDestination);
+        float burstSpread2_angleRadian = spreadangle_2 * Mathf.PI / 180.0f;
+        float burstSpread2_destinationX = Mathf.Cos(burstSpread2_angleRadian) * (burstPreview_directionCircleSize / 2);
+        float burstSpread2_destinationY = Mathf.Sin(burstSpread2_angleRadian) * (burstPreview_directionCircleSize / 2);
+        Vector3 burstSpread2_directionLineOrigin = new Vector3(directionCircleIndicator.x + (directionCircleIndicator.width / 2), directionCircleIndicator.y + (directionCircleIndicator.height / 2), 0);
+        Vector3 burstSpread2_directionLineDestination = new Vector3(burstSpread2_directionLineOrigin.x + burstSpread2_destinationX, burstSpread2_directionLineOrigin.y + burstSpread2_destinationY, 0);
+        Handles.DrawLine(burstSpread2_directionLineOrigin, burstSpread2_directionLineDestination);
+        Handles.EndGUI();
+
+        spreadangle_1 %= 360;
+        spreadangle_2 = 360 + spreadangle_2;
+        spreadangle_2 %= 360;
+        spreadangle_1 = (int)spreadangle_1;
+        spreadangle_2 = (int)spreadangle_2;
+
+        EditorGUILayout.Space();
+        EditorGUILayout.Space();
+        EditorGUILayout.Space();
         EditorGUILayout.Space();
         EditorGUILayout.Space();
         EditorGUILayout.Space();
@@ -589,7 +712,7 @@ public class BurstEditor : Editor
 
         EditorGUILayout.EndVertical();
         EditorGUILayout.EndVertical();
-        
+
         GUILayout.EndVertical();
     }
 
