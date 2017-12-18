@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212536435683893788}
   - component: {fileID: 60728148441028674}
   - component: {fileID: 50955785519405760}
-  - component: {fileID: 114807689469388454}
+  - component: {fileID: 114700452126105328}
   m_Layer: 12
   m_Name: Bullet_Player_Basic
   m_TagString: PlayerBullet
@@ -91,7 +91,7 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.000000021855694}
       - {x: 0.00000004371139, y: -0.5}
       - {x: 0.5, y: 0.0000000059624403}
---- !u!114 &114807689469388454
+--- !u!114 &114700452126105328
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -99,12 +99,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1413998544695282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0648d77f62a5bda4aa2910382c1875c4, type: 3}
+  m_Script: {fileID: 11500000, guid: ba11c932bc31e1e4181584a1ad6766fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damages: 1
   destroyOnHit: 1
   destroyAnimation: 0
+  destroyAnimationPrefabToInstantiate: {fileID: 0}
+  destroyInXSeconds: 20
+  isOnBeat: 0
 --- !u!212 &212536435683893788
 SpriteRenderer:
   m_ObjectHideFlags: 1
