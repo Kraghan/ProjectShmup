@@ -9,46 +9,56 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0935138423c2c3046bc725f0c2dd6061, type: 3}
-  m_Name: Tatou_Die
+  m_Name: Player Burst 2
   m_EditorClassIdentifier: 
+  direction: 0
+  spread: 6
   shoots:
   - largerDisplayInEditor: 0
-    speed: 600
+    speed: 2000
     acceleration: 0
     direction: 0
-    rotation: 10
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 600
+    speed: 2000
     acceleration: 0
-    direction: 22.5
-    rotation: 10
+    direction: 1
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 600
+    speed: 2000
     acceleration: 0
-    direction: -22.5
-    rotation: 10
+    direction: 2
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: -600
+    speed: 2000
+    acceleration: 0
+    direction: 3
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 2000
     acceleration: 0
     direction: 0
-    rotation: 10
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: -600
+    speed: 2000
     acceleration: 0
-    direction: 22.5
-    rotation: 10
+    direction: 359
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: -600
+    speed: 2000
     acceleration: 0
-    direction: -22.5
-    rotation: 10
+    direction: 358
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 600
+    speed: 2000
     acceleration: 0
-    direction: 77.5
-    rotation: 10
-  - largerDisplayInEditor: 0
-    speed: 600
-    acceleration: 0
-    direction: -77.5
-    rotation: 10
+    direction: 357
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}

@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     
     void Start ()
     {
+        killable = GetComponent<Killable>();
         player = GetComponent<Player>();
         rgbd2D = GetComponent<Rigidbody2D>();
     }
@@ -53,8 +54,6 @@ public class PlayerController : MonoBehaviour
     #region Methods
     private void ManageSpeed()
     {
-        killable = GetComponent<Killable>();
-        player = GetComponent<Player>();
         bool focus = (Input.GetButton("Focus"));
 
         Vector2 positionOnScreen = Camera.main.WorldToScreenPoint(transform.position);

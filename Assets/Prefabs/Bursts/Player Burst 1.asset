@@ -9,21 +9,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0935138423c2c3046bc725f0c2dd6061, type: 3}
-  m_Name: Burst_3_45degrees_150speed_right
+  m_Name: Player Burst 1
   m_EditorClassIdentifier: 
+  direction: 0
+  spread: 3
   shoots:
   - largerDisplayInEditor: 0
-    speed: 150
+    speed: 2000
     acceleration: 0
-    direction: 0
+    direction: 1
     rotation: 0
+    offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 150
+    speed: 2000
     acceleration: 0
-    direction: 45
+    direction: 359
     rotation: 0
-  - largerDisplayInEditor: 0
-    speed: 150
-    acceleration: 0
-    direction: -45
-    rotation: 0
+    offset: {x: 0, y: 0, z: 0}

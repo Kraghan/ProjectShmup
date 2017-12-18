@@ -2953,6 +2953,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1469831699398312, guid: fc28234fb3893a34a9d4fb4dad4fa775,
         type: 2}
+    - target: {fileID: 114995434821495254, guid: 26a7ef117e5bd4a4ca461f777da2f36b,
+        type: 2}
+      propertyPath: m_shotPool
+      value: 
+      objectReference: {fileID: 1394829692}
+    - target: {fileID: 114995434821495254, guid: 26a7ef117e5bd4a4ca461f777da2f36b,
+        type: 2}
+      propertyPath: m_errorWindow
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26a7ef117e5bd4a4ca461f777da2f36b, type: 2}
   m_IsPrefabParent: 0
@@ -5425,6 +5435,11 @@ MonoBehaviour:
   modifyOpacity: 0
   opacityStart: 0
   opacityEnd: 0
+--- !u!4 &1394829692 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4051369720496490, guid: 721311203137d424b9d617a76ac9cb78,
+    type: 2}
+  m_PrefabInternal: {fileID: 1586696177}
 --- !u!4 &1410348661 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4460198057662352, guid: f8d50854964cbf341a7695d82192c8d8,
