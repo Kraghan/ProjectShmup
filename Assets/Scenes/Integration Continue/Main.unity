@@ -450,7 +450,7 @@ Prefab:
     - target: {fileID: 114239582465841066, guid: 9749f7a9084a28c4682387e334183ba9,
         type: 2}
       propertyPath: numberOfSpawn
-      value: 1000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114239582465841066, guid: 9749f7a9084a28c4682387e334183ba9,
         type: 2}
@@ -576,7 +576,7 @@ Prefab:
     - target: {fileID: 224895387775100224, guid: 29a4773762767494ca1aaea3f319dabe,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 194
+      value: 192
       objectReference: {fileID: 0}
     - target: {fileID: 224895387775100224, guid: 29a4773762767494ca1aaea3f319dabe,
         type: 2}

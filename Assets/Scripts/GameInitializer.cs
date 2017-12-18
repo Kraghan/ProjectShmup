@@ -19,7 +19,7 @@ public class GameInitializer : MonoBehaviour {
     // Use this for initialization
     void Start () {
         scoreVariable.value = 0;
-        comboVariable.value = 0;
+        comboVariable.value = 1;
         lifeVariable.value = startNumberOfLife;
 	}
     #endregion

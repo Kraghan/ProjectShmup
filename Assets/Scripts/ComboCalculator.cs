@@ -29,7 +29,7 @@ public class ComboCalculator : MonoBehaviour {
 
             if (hitCountVariable.value == 0)
             {
-                comboVariable.value = 0;
+                comboVariable.value = 1;
                 return;
             }
 
