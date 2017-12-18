@@ -9,32 +9,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0935138423c2c3046bc725f0c2dd6061, type: 3}
-  m_Name: Pink Burst 3
+  m_Name: Orange Burst 1
   m_EditorClassIdentifier: 
-  direction: 135
-  spread: 9
+  spread: 45
   shoots:
-  - largerDisplayInEditor: 0
-    speed: 200
-    acceleration: 120
-    direction: 2
-    rotation: -30
+  - largerDisplayInEditor: 1
+    speed: 260
+    acceleration: -18
+    direction: 5
+    rotation: 0
     offset: {x: 0, y: 0, z: 0}
-  - largerDisplayInEditor: 0
-    speed: 200
-    acceleration: 120
-    direction: 4
-    rotation: -30
+  - largerDisplayInEditor: 1
+    speed: 260
+    acceleration: -18
+    direction: 22
+    rotation: 0
     offset: {x: 0, y: 0, z: 0}
-  - largerDisplayInEditor: 0
-    speed: 200
-    acceleration: 120
-    direction: 358
-    rotation: -30
+  - largerDisplayInEditor: 1
+    speed: 260
+    acceleration: -18
+    direction: 355
+    rotation: 0
     offset: {x: 0, y: 0, z: 0}
-  - largerDisplayInEditor: 0
-    speed: 200
-    acceleration: 120
-    direction: 356
-    rotation: -30
+  - largerDisplayInEditor: 1
+    speed: 260
+    acceleration: -18
+    direction: 338
+    rotation: 0
     offset: {x: 0, y: 0, z: 0}

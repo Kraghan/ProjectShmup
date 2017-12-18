@@ -11,7 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0935138423c2c3046bc725f0c2dd6061, type: 3}
   m_Name: Pink Burst 2
   m_EditorClassIdentifier: 
-  direction: 225
   spread: 9
   shoots:
   - largerDisplayInEditor: 0
