@@ -9,79 +9,92 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0935138423c2c3046bc725f0c2dd6061, type: 3}
-  m_Name: Burst 1
+  m_Name: Burst 7
   m_EditorClassIdentifier: 
-  spread: 105
+  direction: 182
+  spread: 208
   shoots:
   - largerDisplayInEditor: 0
-    speed: 150
+    speed: 400
     acceleration: 0
-    direction: 8
-    rotation: -25
+    direction: 14
+    rotation: 80
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 150
+    speed: 400
     acceleration: 0
-    direction: 17
-    rotation: -25
+    direction: 29
+    rotation: 80
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 150
+    speed: 400
     acceleration: 0
-    direction: 26
-    rotation: -25
+    direction: 44
+    rotation: 80
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 150
+    speed: 400
     acceleration: 0
-    direction: 35
-    rotation: -25
+    direction: 59
+    rotation: 80
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 150
+    speed: 400
     acceleration: 0
-    direction: 43
-    rotation: -25
+    direction: 74
+    rotation: 80
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 150
+    speed: 400
     acceleration: 0
-    direction: 52
-    rotation: -25
+    direction: 89
+    rotation: 80
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 150
+    speed: 400
     acceleration: 0
-    direction: 352
-    rotation: -25
+    direction: 103
+    rotation: 80
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 150
+    speed: 400
     acceleration: 0
-    direction: 343
-    rotation: -25
+    direction: 346
+    rotation: 80
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 150
+    speed: 400
     acceleration: 0
-    direction: 334
-    rotation: -25
+    direction: 331
+    rotation: 80
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 150
+    speed: 400
     acceleration: 0
-    direction: 325
-    rotation: -25
+    direction: 316
+    rotation: 80
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 150
+    speed: 400
     acceleration: 0
-    direction: 317
-    rotation: -25
+    direction: 301
+    rotation: 80
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 150
+    speed: 400
     acceleration: 0
-    direction: 308
-    rotation: -25
+    direction: 286
+    rotation: 80
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 400
+    acceleration: 0
+    direction: 271
+    rotation: 80
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 400
+    acceleration: 0
+    direction: 257
+    rotation: 80
     offset: {x: 0, y: 0, z: 0}

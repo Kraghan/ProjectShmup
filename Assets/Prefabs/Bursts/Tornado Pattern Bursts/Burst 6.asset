@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0935138423c2c3046bc725f0c2dd6061, type: 3}
+  m_Name: Burst 6
+  m_EditorClassIdentifier: 
+  direction: 180
+  spread: 128
+  shoots:
+  - largerDisplayInEditor: 0
+    speed: 300
+    acceleration: 0
+    direction: 21
+    rotation: 30
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 300
+    acceleration: 0
+    direction: 42
+    rotation: 30
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 300
+    acceleration: 0
+    direction: 64
+    rotation: 30
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 300
+    acceleration: 0
+    direction: 339
+    rotation: 30
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 300
+    acceleration: 0
+    direction: 318
+    rotation: 30
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 300
+    acceleration: 0
+    direction: 296
+    rotation: 30
+    offset: {x: 0, y: 0, z: 0}

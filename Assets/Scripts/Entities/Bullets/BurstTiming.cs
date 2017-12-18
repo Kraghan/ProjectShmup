@@ -12,6 +12,10 @@ public class BurstTiming
     public Burst burst;
     [SerializeField]
     public GameObject bullet;
+    [SerializeField]
+    public float direction;
+    [SerializeField]
+    public bool targetted;    
 
     private bool done = false;
     #endregion

@@ -18,15 +18,25 @@ MonoBehaviour:
   - timing: 0
     burst: {fileID: 11400000, guid: afc922ba9c0679f4eaa69a4524027af9, type: 2}
     bullet: {fileID: 1062305414702394, guid: 5c2c582c672f55947b46b00b9518368d, type: 2}
+    direction: 0
+    targetted: 0
   - timing: 0.4
     burst: {fileID: 11400000, guid: 4cfaa20b5a909aa488e386495087013b, type: 2}
     bullet: {fileID: 1062305414702394, guid: 3435d974a0dfb4e4aae7f21b5a615355, type: 2}
+    direction: 0
+    targetted: 0
   - timing: 0.8
     burst: {fileID: 11400000, guid: 44c87c51c486cc74786d419eeb39bb2b, type: 2}
     bullet: {fileID: 1062305414702394, guid: 9e033e2cb92ae7e48ac3893ff2ccd30c, type: 2}
+    direction: 0
+    targetted: 0
   - timing: 1.2
     burst: {fileID: 11400000, guid: a241c768f1378b0439d2418f0e5df7f5, type: 2}
     bullet: {fileID: 1062305414702394, guid: b6d2dde805d05444b82c3e4be381a2a3, type: 2}
+    direction: 0
+    targetted: 0
   - timing: 1.6
     burst: {fileID: 11400000, guid: 44c87c51c486cc74786d419eeb39bb2b, type: 2}
     bullet: {fileID: 1062305414702394, guid: 4d4c451a4035d5f4286045e4d6361fa2, type: 2}
+    direction: 0
+    targetted: 0

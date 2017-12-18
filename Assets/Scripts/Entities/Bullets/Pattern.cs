@@ -23,7 +23,7 @@ public class Pattern : ScriptableObject
     public int cycles = -1;
     [Tooltip("Bursts timings")]
     [SerializeField]
-    public List<BurstTiming> bursts;
+    public List<BurstTiming> bursts = new List<BurstTiming>();
 
     private Transform bulletRepository;
     private float time = 0;
@@ -33,6 +33,9 @@ public class Pattern : ScriptableObject
     public void PatternSetup()
     {
         bulletRepository = GameObject.FindGameObjectWithTag("BulletRepository").transform;
+        foreach (BurstTiming burstTiming in bursts)
+            burstTiming.Reset();
+        time = 0;
     }
    
     public void PatternUpdate(GameObject go)
@@ -45,7 +48,7 @@ public class Pattern : ScriptableObject
             {
                 if(burstTiming.bullet != null)
                 {
-                    burstTiming.burst.Fire(burstTiming.bullet, go.transform.position, bulletRepository.transform);
+                    burstTiming.burst.Fire(burstTiming.direction, burstTiming.bullet, go.transform.position, bulletRepository.transform);
                     burstTiming.Done();
                 }
             }
@@ -68,6 +71,12 @@ public class Pattern : ScriptableObject
     #endregion
 
     #region Methods
+    public void CopyProperties(Pattern p)
+    {
+        duration = p.duration;
+        cycles = p.cycles;
+        bursts = p.bursts;
+    }
     #endregion
 
     #region Getters

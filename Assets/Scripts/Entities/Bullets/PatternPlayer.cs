@@ -11,6 +11,9 @@ public class PatternPlayer : MonoBehaviour {
 	void Start () {
         if (pattern == null)
             Debug.LogError("Pattern not set !");
+        /*
+        pattern = (Pattern)ScriptableObject.CreateInstance(typeof(Pattern));
+        pattern.CopyProperties(pattern);*/
         pattern.PatternSetup();
 	}
 	
