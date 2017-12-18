@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     GameObject m_goodShot, m_badShot;
     [SerializeField]
     Transform m_shotPool;
+    [SerializeField]
+    IntVariable m_combosCounter;
 
     private Killable killable;
     private Player player;
@@ -39,6 +41,7 @@ public class PlayerController : MonoBehaviour
         killable = GetComponent<Killable>();
         player = GetComponent<Player>();
         rgbd2D = GetComponent<Rigidbody2D>();
+        m_combosCounter.value = 0;
     }
 	
 	void Update () {
@@ -81,10 +84,13 @@ public class PlayerController : MonoBehaviour
 
         if(BPM_Manager.IsOnBeat(m_errorWindow))
         {
+            AkSoundEngine.PostEvent("Bullet", gameObject);
             newProj = Instantiate(m_goodShot, transform.position, transform.rotation);
         }
         else
         {
+            AkSoundEngine.PostEvent("Bullet_fail", gameObject);
+            m_combosCounter.value = 0;
             newProj = Instantiate(m_badShot, transform.position, transform.rotation);
         }
 
@@ -94,7 +100,7 @@ public class PlayerController : MonoBehaviour
     #region ColliderHit
     private void CheckColliderHit(Collider2D collider)
     {
-        if (killable.GetCurrentInvulnerabilityTime() > 0)
+        if (killable.isInvincible())
             return;
         if (collider.gameObject.tag == "Enemy")
         {

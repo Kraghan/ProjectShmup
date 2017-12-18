@@ -10,12 +10,8 @@ public enum DeathAnimation
 }
 
 [RequireComponent(typeof(Collider2D))]
-public class Killable : MonoBehaviour
+public abstract class Killable : MonoBehaviour
 {
-    #region Attributes
-    [Tooltip("Maximum health amount and starting health amount of the Killable")]
-    [SerializeField]
-    private float maxHealth;
     [Tooltip("Time in seconds during which the Killable can't be damaged after taking damages")]
     [SerializeField]
     private float invulnerabilityTime;
@@ -25,33 +21,62 @@ public class Killable : MonoBehaviour
     private DeathAnimation deathAnimation = DeathAnimation.NoAnimation;
     [SerializeField]
     private GameObject deathAnimationPrefabToInstantiate;
-    private float health;
-    private bool alive = true;
-
     [SerializeField]
-    private string m_sound;
-    #endregion
+    private float health;
 
-    #region MonoBehaviour main methods
-    // Use this for initialization
-    void Start () {
-        health = maxHealth;
-	}
+    
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         if (currentInvulnerabilityTime > 0)
             currentInvulnerabilityTime -= Time.deltaTime;
-        Utility.Cap(ref currentInvulnerabilityTime, 0, invulnerabilityTime);
-        if (health > 0)
-            alive = true;
-        if(alive && health <= 0)
-            ProcDeathAnimation();
 	}
-    #endregion
 
-    #region Methods
-    public void ProcDeathAnimation()
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (!isInvincible())
+        {
+            bool playerDmg = (gameObject.tag == "Player" && collision.gameObject.tag == "EnemyBullet");
+            bool enemyDmg = (gameObject.tag == "Enemy" && collision.gameObject.tag == "PlayerBullet");
+
+            if(playerDmg || enemyDmg)
+            {
+                Bullet collidedBullet = collision.gameObject.GetComponent<Bullet>();
+
+                collidedBullet.Hit();
+                if (collidedBullet.GetDamages() == -1)
+                    health = 0;
+                else
+                    health -= collidedBullet.GetDamages();
+
+                OnHit(collidedBullet.isOnBeat);
+
+                if (health <= 0)
+                    Die(collidedBullet.isOnBeat);
+                else // is alive
+                {
+                    currentInvulnerabilityTime = invulnerabilityTime;
+
+                    /*if(m_sound.Length > 0)
+                        AkSoundEngine.PostEvent(m_sound, gameObject);*/
+                }
+            }
+        }
+    }
+
+    public bool isInvincible()
+    {
+        return currentInvulnerabilityTime > 0;
+    }
+
+    public bool isAlive()
+    {
+        return health > 0;
+    }
+
+    void Die(bool onBeat)
     {
         switch(deathAnimation)
         {
@@ -62,75 +87,19 @@ public class Killable : MonoBehaviour
                 break;
             case DeathAnimation.InstantiatePrefab:
                 if (deathAnimationPrefabToInstantiate != null)
-                    Instantiate(deathAnimationPrefabToInstantiate, transform.position, Quaternion.identity, null);
+                {
+                    GameObject obj = Instantiate(deathAnimationPrefabToInstantiate, transform.position, Quaternion.identity, null);
+                    obj.transform.parent = transform.parent;
+                }
+                    
                 Destroy(gameObject);
                 break;
             default:
                 Destroy(gameObject);
                 break;
         }
-        alive = false;
-    }
 
-    private bool CheckBulletHit(Collider2D potentialBullet)
-    {
-        if (currentInvulnerabilityTime > 0)
-            return false;
-        bool playerDmg = (gameObject.tag == "Player" && potentialBullet.gameObject.tag == "EnemyBullet");
-        bool enemyDmg = (gameObject.tag == "Enemy" && potentialBullet.gameObject.tag == "PlayerBullet");
-        if(playerDmg || enemyDmg)
-        {
-            potentialBullet.gameObject.GetComponent<Bullet>().Hit();
-            AddHealth(-potentialBullet.GetComponent<Bullet>().GetDamages());
-            currentInvulnerabilityTime = invulnerabilityTime;
-
-            if(m_sound.Length > 0)
-                AkSoundEngine.PostEvent(m_sound, gameObject);
-            return true;
-        }
-        else
-            return false;
-    }
-    #endregion
-
-    #region MonoBehaviour methods
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        CheckBulletHit(collision);
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        CheckBulletHit(collision);
-    }
-    #endregion
-
-    #region Getters
-    public bool IsAlive()
-    {
-        return alive;
-    }
-
-    public float GetMaxHealth()
-    {
-        return maxHealth;
-    }
-
-    public float GetHealth()
-    {
-        return health;
-    }
-
-    public float GetCurrentInvulnerabilityTime()
-    {
-        return currentInvulnerabilityTime;
-    }
-    #endregion
-
-    #region Setters
-    public void FillHealth()
-    {
-        health = maxHealth;
+        OnDeath(onBeat);
     }
 
     public void ClearHealth()
@@ -140,10 +109,6 @@ public class Killable : MonoBehaviour
         health = 0;
     }
 
-    public void AddHealth(float amount)
-    {
-        health += amount;
-        Utility.Cap(ref health, 0, maxHealth);
-    }
-    #endregion
+    public abstract void OnDeath(bool onBeat);
+    public abstract void OnHit(bool onBeat);
 }
