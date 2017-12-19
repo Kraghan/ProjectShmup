@@ -477,6 +477,26 @@ namespace ShmupPatternPackage
                                         currentShoot.direction = esperance % 360;
                                     }
                                 }
+                                else
+                                {
+                                    float angleSize = ((Burst)target).spread / (shootCount-1);
+                                    int a = (shootCount - 1) / 2;
+                                    if (shootID < a)
+                                    {
+                                        currentShoot.direction = ((int)((angleSize + (angleSize * shootID)))) % 360;
+                                    }
+                                    else if (shootID > a)
+                                    {
+                                        int esperance = (int)((-(angleSize * (shootID - a))));
+                                        while (esperance < 0)
+                                            esperance += 360;
+                                        currentShoot.direction = esperance % 360;
+                                    }
+                                    else
+                                    {
+                                        currentShoot.direction = 0;
+                                    }
+                                }
                             }
                         }
                     }
@@ -487,31 +507,6 @@ namespace ShmupPatternPackage
             // Draw Direction Circle
             Texture2D burstPreview_directionCircleTexture = (Texture2D)EditorGUIUtility.Load("Assets/ShmupPatternPackage/EditorSprites/Radar.png");
             GUI.DrawTexture(directionCircleIndicator, burstPreview_directionCircleTexture);
-
-            // Draw Bullet Lines
-            if ((Burst)target != null)
-            {
-                if (((Burst)target).shoots != null)
-                {
-                    if (((Burst)target).shoots.Count > 0)
-                    {
-                        Handles.BeginGUI();
-                        Handles.color = Color.red;
-                        foreach (Shoot shoot in ((Burst)target).shoots)
-                        {
-                            if (shoot == null)
-                                break;
-                            float angleRadian = (0 + shoot.direction) * Mathf.PI / 180.0f;
-                            float destinationX = Mathf.Cos(angleRadian) * (burstPreview_directionCircleSize / 2);
-                            float destinationY = Mathf.Sin(angleRadian) * (burstPreview_directionCircleSize / 2);
-                            Vector3 directionLineOrigin = new Vector3(directionCircleIndicator.x + (directionCircleIndicator.width / 2), directionCircleIndicator.y + (directionCircleIndicator.height / 2), 0);
-                            Vector3 directionLineDestination = new Vector3(directionLineOrigin.x + destinationX, directionLineOrigin.y + destinationY, 0);
-                            Handles.DrawLine(directionLineOrigin, directionLineDestination);
-                        }
-                        Handles.EndGUI();
-                    }
-                }
-            }
 
             // Draw Spread Lines
             Handles.BeginGUI();
@@ -545,6 +540,33 @@ namespace ShmupPatternPackage
             spreadangle_2 %= 360;
             spreadangle_1 = (int)spreadangle_1;
             spreadangle_2 = (int)spreadangle_2;
+
+            // Draw Bullet Lines
+            if ((Burst)target != null)
+            {
+                if (((Burst)target).shoots != null)
+                {
+                    if (((Burst)target).shoots.Count > 0)
+                    {
+                        Handles.BeginGUI();
+                        Handles.color = Color.red;
+                        foreach (Shoot shoot in ((Burst)target).shoots)
+                        {
+                            if (shoot == null)
+                                break;
+                            float angleRadian = (0 + shoot.direction) * Mathf.PI / 180.0f;
+                            float destinationX = Mathf.Cos(angleRadian) * (burstPreview_directionCircleSize / 2);
+                            float destinationY = Mathf.Sin(angleRadian) * (burstPreview_directionCircleSize / 2);
+                            Vector3 directionLineOrigin = new Vector3(directionCircleIndicator.x + (directionCircleIndicator.width / 2), directionCircleIndicator.y + (directionCircleIndicator.height / 2), 0);
+                            Vector3 directionLineDestination = new Vector3(directionLineOrigin.x + destinationX, directionLineOrigin.y + destinationY, 0);
+                            Handles.DrawLine(directionLineOrigin, directionLineDestination);
+                        }
+                        Handles.EndGUI();
+                    }
+                }
+            }
+
+            
 
             EditorGUILayout.Space();
             EditorGUILayout.Space();
