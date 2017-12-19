@@ -35,6 +35,11 @@ public class MainMenu : MonoBehaviour {
         titleScreen.GoTo_Tutorial();
     }
 
+    public void ButtonConfirm_Leaderboard()
+    {
+        titleScreen.GoTo_Leaderboard();
+    }
+
     public void ButtonConfirm_Options()
     {
         titleScreen.GoTo_Options();
