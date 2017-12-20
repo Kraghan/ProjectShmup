@@ -20,7 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4018872102148104}
   - component: {fileID: 212938624482873518}
-  - component: {fileID: 114369401320945582}
+  - component: {fileID: 114275002331143890}
+  - component: {fileID: 111105551911724878}
   m_Layer: 0
   m_Name: BeatLine
   m_TagString: Untagged
@@ -56,8 +57,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4418033986611528}
   - component: {fileID: 212313501150035978}
-  - component: {fileID: 111239704252199600}
-  - component: {fileID: 114165473076037000}
+  - component: {fileID: 95546512914716904}
   m_Layer: 11
   m_Name: Renderer
   m_TagString: Untagged
@@ -73,7 +73,7 @@ Transform:
   m_GameObject: {fileID: 1644554908645978}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 23.333332, y: 23.333332, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4124941454275436}
   m_RootOrder: 1
@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1660832071300586}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1215725, y: 1.8223351, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children:
   - {fileID: 4418033986611528}
@@ -141,12 +141,29 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.77
---- !u!111 &111239704252199600
-Animation:
+--- !u!95 &95546512914716904
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1680371893508456}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3d94fb904457b1a4c8b815d78a298600, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &111105551911724878
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644554908645978}
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 1575fe84bc3c2a4419c397df4110444f, type: 2}
@@ -156,12 +173,12 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &114165473076037000
+--- !u!114 &114275002331143890
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1680371893508456}
+  m_GameObject: {fileID: 1644554908645978}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab91771357fd73e438b5a325f029edb3, type: 3}
@@ -170,7 +187,7 @@ MonoBehaviour:
   m_OnBeat:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 111239704252199600}
+      - m_Target: {fileID: 0}
         m_MethodName: Rewind
         m_Mode: 1
         m_Arguments:
@@ -183,25 +200,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114369401320945582
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1644554908645978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13c62b21f05875345b26c82f3a6cfd9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pulseMode: 1
-  timingPulse: 1
-  scaleIncrease: 1.3
-  circleMaxSize: 7
-  increase: 0
-  modifyOpacity: 1
-  opacityStart: 0
-  opacityEnd: 1
 --- !u!114 &114806556992521054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -313,11 +311,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -986516649
-  m_SortingLayer: 7
+  m_SortingLayerID: 314496343
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 013096f0a981ebe4dbd95a5c7c68f601, type: 3}
-  m_Color: {r: 0.5588235, g: 0.67139953, b: 1, a: 1}
+  m_Color: {r: 0.5176471, g: 0.7686275, b: 0.8352942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private Killable killable;
     private Player player;
     private Rigidbody2D rgbd2D;
+    private Animator m_animator;
     #endregion
 
     #region MonoBehaviour main methods
@@ -43,6 +44,8 @@ public class PlayerController : MonoBehaviour
         player = GetComponent<Player>();
         rgbd2D = GetComponent<Rigidbody2D>();
         killable = GetComponent<Killable>();
+        m_animator = GetComponentInChildren<Animator>();
+
         m_combosCounter.value = 0;
         if (m_shotPool == null)
             m_shotPool = GameObject.FindGameObjectWithTag("BulletRepository").transform;
@@ -95,12 +98,15 @@ public class PlayerController : MonoBehaviour
         {
             AkSoundEngine.PostEvent("Bullet", gameObject);
             newProj = Instantiate(m_goodShot, transform.position, transform.rotation);
+
+            m_animator.SetTrigger("GoodShot");
         }
         else
         {
             AkSoundEngine.PostEvent("Bullet_fail", gameObject);
-            m_combosCounter.value = 0;
             newProj = Instantiate(m_badShot, transform.position, transform.rotation);
+
+            m_combosCounter.value = 0;
         }
 
         newProj.transform.SetParent(m_shotPool);
