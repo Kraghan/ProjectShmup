@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Integration Continue/Main.unity
     guid: 52e9d6767a15fdc44bfda2efda34f3a3
+  - enabled: 1
+    path: Assets/Scenes/Integration Continue/Holiday_level.unity
+    guid: 5ea5b2deba77ee544ab8d43cb717d469

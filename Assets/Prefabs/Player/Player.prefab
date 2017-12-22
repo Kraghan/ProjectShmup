@@ -263,11 +263,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8bd813d2079fed4497e717cc470fca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invulnerabilityTime: 0.5
+  invulnerabilityTime: 1.5
   deathAnimation: 2
   deathAnimationPrefabToInstantiate: {fileID: 1022418350037608, guid: 58bdcc4ede3eda54dafad743e8d1d52c,
     type: 2}
   health: 1
+  blinckingTime: 0.075
 --- !u!212 &212196027364621162
 SpriteRenderer:
   m_ObjectHideFlags: 1

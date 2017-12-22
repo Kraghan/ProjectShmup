@@ -40,13 +40,19 @@ public class PlayerSpawner : MonoBehaviour
                 else
                 {
                     // Todo : gameover
+
+                    #if UNITY_EDITOR
+                        UnityEditor.EditorApplication.isPlaying = false;
+                    #else
+                        Application.Quit();
+                    #endif
                 }
             }
         }
 	}
-    #endregion
+#endregion
 
-    #region Methods
+#region Methods
     public void createPlayer()
     {
         timeElapsed = 0;
@@ -54,9 +60,14 @@ public class PlayerSpawner : MonoBehaviour
         currentPlayer.transform.position = transform.position;
         lifeVariable.value--;
         if (!firstRespawn)
+        {
             currentPlayer.GetComponent<Player>().StartInvulnerabilityFrames();
+        }
         else
+        {
             firstRespawn = false;
+        }
+            
     }
-    #endregion
+#endregion
 }

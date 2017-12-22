@@ -29,6 +29,7 @@ public class Enemy : Killable
     // Use this for initialization
     public override void Start()
     {
+        base.Start();
         killable = GetComponent<Killable>();
     }
 

@@ -26,11 +26,18 @@ public abstract class Killable : MonoBehaviour
     [SerializeField]
     private float health;
 
+    [SerializeField]
+    private float blinckingTime = 0.25f;
+    private float timeElapsedSinceLastBlinkSwap;
     private bool isBlincking;
+    protected SpriteRenderer spriteRenderer;
 
     public virtual void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         isBlincking = false;
+        timeElapsedSinceLastBlinkSwap = 0;
+
     }
 
     // Update is called once per frame
@@ -39,19 +46,31 @@ public abstract class Killable : MonoBehaviour
         if (currentInvulnerabilityTime > 0)
         {
             currentInvulnerabilityTime -= Time.deltaTime;
-            if(isBlincking)
-            {
+            timeElapsedSinceLastBlinkSwap += Time.deltaTime;
 
-                isBlincking = false;
-            }
-            else
+            if(timeElapsedSinceLastBlinkSwap >= blinckingTime)
             {
-
-                isBlincking = true;
+                timeElapsedSinceLastBlinkSwap = 0;
+                if (isBlincking)
+                {
+                    spriteRenderer.enabled = false;
+                    isBlincking = false;
+                }
+                else
+                {
+                    spriteRenderer.enabled = true;
+                    isBlincking = true;
+                }
             }
-        }
             
-	}
+        }
+        else
+        {
+            spriteRenderer.enabled = true;
+            timeElapsedSinceLastBlinkSwap = 0;
+        }
+
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -153,7 +172,6 @@ public abstract class Killable : MonoBehaviour
         if (currentInvulnerabilityTime > 0)
             return;
         health = 0;
-        StartInvulnerabilityFrames();
     }
 
     public abstract void OnDeath(bool onBeat);

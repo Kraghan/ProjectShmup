@@ -40,6 +40,7 @@ namespace ShmupPatternPackage
         public virtual void Start()
         {
             rgbd2D = GetComponent<Rigidbody2D>();
+            isOnBeat = BPM_Manager.IsOnBeat(0.1f);
         }
 
         // Update is called once per frame

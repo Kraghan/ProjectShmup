@@ -13,7 +13,9 @@ public class Player : Killable
     // Use this for initialization
     public override void Start () {
         base.Start();
-		bulletPool = GameObject.FindGameObjectWithTag("BulletRepository");
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        bulletPool = GameObject.FindGameObjectWithTag("BulletRepository");
         enemyPool = GameObject.FindGameObjectWithTag("EnemyRepository");
     }
 
