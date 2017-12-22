@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50576761727891198}
   - component: {fileID: 114916002926746224}
   m_Layer: 13
-  m_Name: Bullet_Enemy_Basic
+  m_Name: Bullet_Enemy_Basic 2
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,8 +142,8 @@ SpriteRenderer:
   m_SortingLayerID: -1279682207
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6d9e8839cb51ce34f83b179a0d30efc7, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: dd839a97774f59046bf41dca54470164, type: 3}
+  m_Color: {r: 0.94320476, g: 0.41176468, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

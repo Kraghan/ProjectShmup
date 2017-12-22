@@ -14,62 +14,62 @@ MonoBehaviour:
   spread: 360
   shoots:
   - largerDisplayInEditor: 0
-    speed: 100
+    speed: 80
     acceleration: 0
     direction: 36
-    rotation: 0
+    rotation: 10
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 100
+    speed: 80
     acceleration: 0
     direction: 72
-    rotation: 0
+    rotation: 10
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 100
+    speed: 80
     acceleration: 0
     direction: 108
-    rotation: 0
+    rotation: 10
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 100
+    speed: 80
     acceleration: 0
     direction: 144
-    rotation: 0
+    rotation: 10
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 100
+    speed: 80
     acceleration: 0
     direction: 180
-    rotation: 0
+    rotation: 10
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 100
+    speed: 80
     acceleration: 0
     direction: 324
-    rotation: 0
+    rotation: 10
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 100
+    speed: 80
     acceleration: 0
     direction: 288
-    rotation: 0
+    rotation: 10
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 100
+    speed: 80
     acceleration: 0
     direction: 252
-    rotation: 0
+    rotation: 10
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 100
+    speed: 80
     acceleration: 0
     direction: 216
-    rotation: 0
+    rotation: 10
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 100
+    speed: 80
     acceleration: 0
     direction: 180
-    rotation: 0
+    rotation: 10
     offset: {x: 0, y: 0, z: 0}
