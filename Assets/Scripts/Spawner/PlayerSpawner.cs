@@ -11,9 +11,11 @@ public class PlayerSpawner : MonoBehaviour
     [SerializeField]
     private float timeBeforeRespawn = 1;
     private float timeElapsed;
+    
+    private bool firstRespawn;
 
     [SerializeField]
-    private GameObject player;
+    private Player player;
 
     private GameObject currentPlayer;
     #endregion
@@ -21,6 +23,7 @@ public class PlayerSpawner : MonoBehaviour
     #region Monobehaviour
     // Use this for initialization
     void Start () {
+        firstRespawn = true;
         createPlayer();
 	}
 	
@@ -47,9 +50,13 @@ public class PlayerSpawner : MonoBehaviour
     public void createPlayer()
     {
         timeElapsed = 0;
-        currentPlayer = Instantiate(player, transform.parent);
+        currentPlayer = Instantiate(player.gameObject, transform.parent);
         currentPlayer.transform.position = transform.position;
         lifeVariable.value--;
+        if (!firstRespawn)
+            currentPlayer.GetComponent<Player>().StartInvulnerabilityFrames();
+        else
+            firstRespawn = false;
     }
     #endregion
 }

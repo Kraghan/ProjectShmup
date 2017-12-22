@@ -53,9 +53,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4124941454275436}
   - component: {fileID: 50464118432023496}
-  - component: {fileID: 58891891540176898}
   - component: {fileID: 114919592762568002}
   - component: {fileID: 114806556992521054}
+  - component: {fileID: 70634336282424022}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -143,7 +143,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1660832071300586}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -156,8 +156,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58891891540176898
-CircleCollider2D:
+--- !u!70 &70634336282424022
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -168,9 +168,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.35, y: -0.03}
-  serializedVersion: 2
-  m_Radius: 0.51
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 10, y: 5}
+  m_Direction: 1
 --- !u!111 &111239704252199600
 Animation:
   m_ObjectHideFlags: 1
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8bd813d2079fed4497e717cc470fca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invulnerabilityTime: 0
+  invulnerabilityTime: 0.5
   deathAnimation: 2
   deathAnimationPrefabToInstantiate: {fileID: 1022418350037608, guid: 58bdcc4ede3eda54dafad743e8d1d52c,
     type: 2}

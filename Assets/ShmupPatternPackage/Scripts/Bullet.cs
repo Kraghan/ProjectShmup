@@ -37,13 +37,13 @@ namespace ShmupPatternPackage
 
         #region MonoBehaviour main methods
         // Use this for initialization
-        void Start()
+        public virtual void Start()
         {
             rgbd2D = GetComponent<Rigidbody2D>();
         }
 
         // Update is called once per frame
-        void Update()
+        public virtual void Update()
         {
             Move();
             CheckOutOfBounds();
