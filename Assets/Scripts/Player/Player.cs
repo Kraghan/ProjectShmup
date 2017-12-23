@@ -11,15 +11,13 @@ public class Player : Killable
     #endregion
 
     // Use this for initialization
-    void Start () {
-		bulletPool = GameObject.FindGameObjectWithTag("BulletRepository");
+    public override void Start () {
+        base.Start();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        bulletPool = GameObject.FindGameObjectWithTag("BulletRepository");
         enemyPool = GameObject.FindGameObjectWithTag("EnemyRepository");
     }
-	
-	// Update is called once per frame
-	void Update () {
-
-	}
 
     public override void OnDeath(bool onBeat)
     {

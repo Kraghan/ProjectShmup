@@ -12,26 +12,37 @@ public class Bomb : Bullet
     float maxRadius = 5.0f;
     [SerializeField]
     float speedSpread = 1.0f;
+
+    bool parentHasParticleEmitter;
     #endregion
 
     #region Monobehaviour
     // Use this for initialization
-    void Start () {
+    public override void Start () {
+        base.Start();
         destroyOnHit = false;
         damages = -1;
 
         transform.localScale = new Vector3(minRadius, minRadius, transform.localScale.z);
 
+        parentHasParticleEmitter = transform.parent.gameObject.GetComponent<ParticleSystem>() != null;
+
     }
 
-    private void Update()
+    public override void Update()
     {
+        base.Update();
         float scale = transform.localScale.x + speedSpread * Time.deltaTime;
 
         transform.localScale = new Vector3(scale,scale,transform.localScale.z);
 
         if (transform.localScale.x >= maxRadius)
-            Destroy(gameObject);
+        {
+            if (!parentHasParticleEmitter)
+                Destroy(gameObject);
+            else
+                Destroy(transform.parent.gameObject);
+        }
     }
     #endregion
 }

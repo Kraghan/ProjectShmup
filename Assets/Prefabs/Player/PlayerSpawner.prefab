@@ -52,5 +52,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeVariable: {fileID: 11400000, guid: 04c5e69a304e09a409f70586114675c2, type: 2}
-  timeBeforeRespawn: 3
-  player: {fileID: 1660832071300586, guid: e221621ea6083c7448b2f544c7038649, type: 2}
+  timeBeforeRespawn: 1.5
+  player: {fileID: 114919592762568002, guid: e221621ea6083c7448b2f544c7038649, type: 2}

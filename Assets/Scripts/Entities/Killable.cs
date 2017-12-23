@@ -26,43 +26,102 @@ public abstract class Killable : MonoBehaviour
     [SerializeField]
     private float health;
 
-    
-	
-	// Update is called once per frame
-	void Update ()
+    [SerializeField]
+    private float blinckingTime = 0.25f;
+    private float timeElapsedSinceLastBlinkSwap;
+    private bool isBlincking;
+    protected SpriteRenderer spriteRenderer;
+
+    public virtual void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        isBlincking = false;
+        timeElapsedSinceLastBlinkSwap = 0;
+
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         if (currentInvulnerabilityTime > 0)
+        {
             currentInvulnerabilityTime -= Time.deltaTime;
-	}
+            timeElapsedSinceLastBlinkSwap += Time.deltaTime;
+
+            if(timeElapsedSinceLastBlinkSwap >= blinckingTime)
+            {
+                timeElapsedSinceLastBlinkSwap = 0;
+                if (isBlincking)
+                {
+                    spriteRenderer.enabled = false;
+                    isBlincking = false;
+                }
+                else
+                {
+                    spriteRenderer.enabled = true;
+                    isBlincking = true;
+                }
+            }
+            
+        }
+        else
+        {
+            spriteRenderer.enabled = true;
+            timeElapsedSinceLastBlinkSwap = 0;
+        }
+
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (!isInvincible())
         {
-            bool playerDmg = (gameObject.tag == "Player" && collision.gameObject.tag == "EnemyBullet");
-            bool enemyDmg = (gameObject.tag == "Enemy" && collision.gameObject.tag == "PlayerBullet");
+            bool playerDmg = gameObject.CompareTag("Player") && (collision.gameObject.CompareTag("EnemyBullet") || collision.gameObject.CompareTag("Enemy"));
+            bool enemyDmg = gameObject.CompareTag("Enemy") && collision.gameObject.CompareTag("PlayerBullet");
 
             if(playerDmg || enemyDmg)
             {
                 Bullet collidedBullet = collision.gameObject.GetComponent<Bullet>();
 
-                collidedBullet.Hit();
-                if (collidedBullet.GetDamages() == -1)
-                    health = 0;
-                else
-                    health -= collidedBullet.GetDamages();
-
-                OnHit(collidedBullet.isOnBeat);
-
-                if (health <= 0)
-                    Die(collidedBullet.isOnBeat);
-                else // is alive
+                if(collidedBullet != null)
                 {
-                    StartInvulnerabilityFrames();
-                    /*if(m_sound.Length > 0)
-                        AkSoundEngine.PostEvent(m_sound, gameObject);*/
+                    collidedBullet.Hit();
+                    if (collidedBullet.GetDamages() == -1)
+                        health = 0;
+                    else
+                        health -= collidedBullet.GetDamages();
+
+                    OnHit(collidedBullet.isOnBeat);
+
+                    if (health <= 0)
+                        Die(collidedBullet.isOnBeat);
+                    else // is alive
+                    {
+                        StartInvulnerabilityFrames();
+                        /*if(m_sound.Length > 0)
+                            AkSoundEngine.PostEvent(m_sound, gameObject);*/
+                    }
                 }
+                // On est dans le cas où un ennemy collide avec le player
+                else
+                {
+                    health--;
+                    collision.gameObject.GetComponent<Enemy>().HitPlayer();
+
+                    if (health <= 0)
+                        Die(false);
+                    else // is alive
+                    {
+                        StartInvulnerabilityFrames();
+                        /*if(m_sound.Length > 0)
+                            AkSoundEngine.PostEvent(m_sound, gameObject);*/
+                    }
+
+                }
+
+                
+
             }
         }
     }
@@ -113,7 +172,6 @@ public abstract class Killable : MonoBehaviour
         if (currentInvulnerabilityTime > 0)
             return;
         health = 0;
-        StartInvulnerabilityFrames();
     }
 
     public abstract void OnDeath(bool onBeat);

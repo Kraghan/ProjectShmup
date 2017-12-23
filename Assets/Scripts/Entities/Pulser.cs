@@ -82,7 +82,6 @@ public class Pulser : MonoBehaviour
             {
                 float opacity = ((opacityStart <= opacityEnd) ? ((1-percent) * opacityEnd + opacityStart) : (percent * opacityStart + opacityEnd));
                 spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, opacity);
-                Debug.Log(opacity);
             }
         }
     }
