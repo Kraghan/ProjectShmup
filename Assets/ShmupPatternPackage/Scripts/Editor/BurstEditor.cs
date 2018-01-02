@@ -35,6 +35,8 @@ namespace ShmupPatternPackage
         private string arrow_7 = "▼";
         private string arrow_8 = "↘";
 
+        private float newShootCount;
+
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
@@ -70,11 +72,12 @@ namespace ShmupPatternPackage
             Shoot shoot = ((Burst)target).shoots[index];
                 if (shoot == null)
                     shoot = new Shoot();
-            //Shoot shoot;
-            bool willBeDeleted = false;
 
-            // Initialization
-            float left = rect.x;
+                //Shoot shoot;
+                bool willBeDeleted = false;
+
+                // Initialization
+                float left = rect.x;
                 float fullWidth = rect.width;
                 float top = rect.y;
                 float fullHeight = rect.height;
@@ -581,9 +584,7 @@ namespace ShmupPatternPackage
             EditorGUILayout.Space();
             EditorGUILayout.Space();
             EditorGUILayout.Space();
-            EditorGUILayout.Space();
-            EditorGUILayout.Space();
-            EditorGUILayout.Space();
+
 
             // Generic Speed
             displayGenericParameters = EditorGUI.Foldout(new Rect(position.x + 12, position.y + 88, position.width, EditorGUIUtility.singleLineHeight), displayGenericParameters, "Global parameters");
@@ -694,6 +695,20 @@ namespace ShmupPatternPackage
                 }
                 dcfsTop += buttonSize + buttonMargin;
                 #endregion
+
+                EditorGUI.LabelField(new Rect(position.x + 4 + (directionCircleSize*3) + 4, position.y + 142 + 88, 100, EditorGUIUtility.singleLineHeight), "Shoot amount:");
+                newShootCount = (int)EditorGUI.FloatField(new Rect(102 + position.x + 4 + (directionCircleSize*3) + 4, position.y + 142 + 88, 100, EditorGUIUtility.singleLineHeight), newShootCount);
+                if (newShootCount < 0)
+                    newShootCount = 0;
+                if (GUI.Button(new Rect(position.x + 4 + (directionCircleSize * 3) + 4, position.y + 142 + 88 + EditorGUIUtility.singleLineHeight, 180, EditorGUIUtility.singleLineHeight), "Set shoot count"))
+                {
+                    if (newShootCount >= 0 && newShootCount != ((Burst)target).shoots.Count)
+                    {
+                        ((Burst)target).shoots = new List<Shoot>();
+                        for (int i = 0; i < newShootCount; i++)
+                            ((Burst)target).shoots.Add(new Shoot());
+                    }
+                }
 
                 EditorGUILayout.Space();
                 EditorGUILayout.Space();

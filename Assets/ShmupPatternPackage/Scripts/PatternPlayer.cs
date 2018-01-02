@@ -15,16 +15,14 @@ namespace ShmupPatternPackage
         {
             if (pattern == null)
                 Debug.LogError("Pattern not set !");
-            /*
-            pattern = (Pattern)ScriptableObject.CreateInstance(typeof(Pattern));
-            pattern.CopyProperties(pattern);*/
             pattern.PatternSetup();
         }
 
         // Update is called once per frame
         void Update()
         {
-            pattern.PatternUpdate(gameObject);
+            float targetDirection = 0;
+            pattern.PatternUpdate(gameObject, targetDirection);
         }
     }
 }

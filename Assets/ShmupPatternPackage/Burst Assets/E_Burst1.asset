@@ -11,29 +11,485 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bbca7e400d83f4e9d0e1acbbfcc82e, type: 3}
   m_Name: E_Burst1
   m_EditorClassIdentifier: 
-  spread: 45
+  spread: 288
   shoots:
   - largerDisplayInEditor: 0
-    speed: 140
-    acceleration: -10
-    direction: 11
+    speed: 100
+    acceleration: 0
+    direction: 3
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 140
-    acceleration: -10
-    direction: 22
+    speed: 100
+    acceleration: 0
+    direction: 7
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 140
-    acceleration: -10
-    direction: 349
+    speed: 100
+    acceleration: 0
+    direction: 10
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 140
-    acceleration: -10
-    direction: 338
+    speed: 100
+    acceleration: 0
+    direction: 14
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 17
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 21
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 25
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 28
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 32
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 35
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 39
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 43
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 46
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 50
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 53
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 57
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 61
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 64
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 68
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 71
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 75
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 79
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 82
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 86
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 89
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 93
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 97
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 100
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 104
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 107
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 111
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 115
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 118
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 122
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 125
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 129
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 133
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 136
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 140
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 143
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 357
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 353
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 350
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 346
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 343
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 339
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 335
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 332
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 328
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 325
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 321
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 317
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 314
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 310
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 307
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 303
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 299
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 296
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 292
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 289
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 285
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 281
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 278
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 274
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 271
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 267
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 263
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 260
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 256
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 253
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 249
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 245
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 242
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 238
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 235
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 231
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 227
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 224
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 220
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 100
+    acceleration: 0
+    direction: 217
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
