@@ -14,31 +14,31 @@ MonoBehaviour:
   spread: 90
   shoots:
   - largerDisplayInEditor: 0
-    speed: 70
+    speed: 400
     acceleration: 5
     direction: 22
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 70
+    speed: 400
     acceleration: 5
     direction: 45
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 70
+    speed: 400
     acceleration: 5
     direction: 0
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 70
+    speed: 400
     acceleration: 5
     direction: 338
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 70
+    speed: 400
     acceleration: 5
     direction: 315
     rotation: 0

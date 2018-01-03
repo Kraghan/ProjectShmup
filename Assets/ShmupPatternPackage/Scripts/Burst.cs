@@ -16,11 +16,15 @@ namespace ShmupPatternPackage
         #endregion
 
         #region Methods
-        public void Fire(float burstDirection, float targetDirection, GameObject bulletPrefab, Vector3 patternPosition, Transform bulletRepository)
+        public void Fire(PatternSource _source, float burstDirection, float targetDirection, GameObject bulletPrefab, Vector3 patternPosition, Transform bulletRepository)
         {
             foreach (Shoot shoot in shoots)
             {
                 GameObject bulletGO = Instantiate(bulletPrefab, patternPosition, Quaternion.identity, bulletRepository);
+                if (_source == PatternSource.Enemy)
+                    bulletGO.tag = "EnemyBullet";
+                else if (_source == PatternSource.Player)
+                    bulletGO.tag = "PlayerBullet";
                 Bullet bullet = bulletGO.SecureGetComponent<Bullet>();
                 bullet.Fire(shoot.speed, shoot.acceleration, (shoot.direction + burstDirection + targetDirection) % 360, shoot.rotation);
             }

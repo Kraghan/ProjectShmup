@@ -9,27 +9,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e0745bfedd57ff459a43d870d8cfad6, type: 3}
-  m_Name: E_Pattern2
+  m_Name: E_Pattern4
   m_EditorClassIdentifier: 
   selectedRepetitionsMode: 1
-  duration: 1.8
-  cycles: 30
+  duration: 1.4
+  cycles: 50
   bursts:
-  - timing: 0.3
-    burst: {fileID: 11400000, guid: 14b408db84f24a04a9e5ac7fd1e9dbb1, type: 2}
+  - timing: 0
+    burst: {fileID: 11400000, guid: 27289a865fd2ec4428d76d130003d005, type: 2}
     bullet: {fileID: 1062305414702394, guid: 790f783e76dcee84aa21f9d88ecd6c42, type: 2}
     direction: 180
     aimMode: 0
     targetted: 0
-  - timing: 1
-    burst: {fileID: 11400000, guid: 5fb52918ea58b174cbed7480bd28473a, type: 2}
-    bullet: {fileID: 1062305414702394, guid: 4106d776fe9e2a643be111c2a220ae9c, type: 2}
+  - timing: 0.7
+    burst: {fileID: 11400000, guid: 27289a865fd2ec4428d76d130003d005, type: 2}
+    bullet: {fileID: 1062305414702394, guid: 790f783e76dcee84aa21f9d88ecd6c42, type: 2}
     direction: 225
     aimMode: 0
     targetted: 0
-  - timing: 1
-    burst: {fileID: 11400000, guid: 5fb52918ea58b174cbed7480bd28473a, type: 2}
-    bullet: {fileID: 1062305414702394, guid: 4106d776fe9e2a643be111c2a220ae9c, type: 2}
-    direction: 135
+  - timing: 0.7
+    burst: {fileID: 11400000, guid: 27289a865fd2ec4428d76d130003d005, type: 2}
+    bullet: {fileID: 1062305414702394, guid: 790f783e76dcee84aa21f9d88ecd6c42, type: 2}
+    direction: 155
     aimMode: 0
     targetted: 0

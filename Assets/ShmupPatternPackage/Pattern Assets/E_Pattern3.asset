@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0745bfedd57ff459a43d870d8cfad6, type: 3}
+  m_Name: E_Pattern3
+  m_EditorClassIdentifier: 
+  selectedRepetitionsMode: 1
+  duration: 0.2
+  cycles: 50
+  bursts:
+  - timing: 0.1
+    burst: {fileID: 11400000, guid: 9da540fc5616b8048b4fe53a782360ef, type: 2}
+    bullet: {fileID: 1062305414702394, guid: e3192c1864d78534da3b257b0ab7d1a2, type: 2}
+    direction: 0
+    aimMode: 1
+    targetted: 0
+  - timing: 0.1
+    burst: {fileID: 11400000, guid: 939b68d959ee4424cbb2672239b73c6f, type: 2}
+    bullet: {fileID: 1062305414702394, guid: e3192c1864d78534da3b257b0ab7d1a2, type: 2}
+    direction: 0
+    aimMode: 1
+    targetted: 0
+  - timing: 0.1
+    burst: {fileID: 11400000, guid: f5eaede3d3b53a1489fc988ff0ed9032, type: 2}
+    bullet: {fileID: 1062305414702394, guid: e3192c1864d78534da3b257b0ab7d1a2, type: 2}
+    direction: 0
+    aimMode: 1
+    targetted: 0
+  - timing: 0.2
+    burst: {fileID: 11400000, guid: 6df26846855d8f8439e13b9042c18fcc, type: 2}
+    bullet: {fileID: 1062305414702394, guid: 790f783e76dcee84aa21f9d88ecd6c42, type: 2}
+    direction: 0
+    aimMode: 1
+    targetted: 0
+  - timing: 0.2
+    burst: {fileID: 11400000, guid: 6b3f9471f186891468c6e3375573354b, type: 2}
+    bullet: {fileID: 1062305414702394, guid: 790f783e76dcee84aa21f9d88ecd6c42, type: 2}
+    direction: 0
+    aimMode: 1
+    targetted: 0
+  - timing: 0.2
+    burst: {fileID: 11400000, guid: 39d0f5eb6704e784db59bf646d2d018a, type: 2}
+    bullet: {fileID: 1062305414702394, guid: 790f783e76dcee84aa21f9d88ecd6c42, type: 2}
+    direction: 0
+    aimMode: 1
+    targetted: 0
