@@ -10,6 +10,8 @@ public class TitleScreen : MonoBehaviour
     [SerializeField]
     private TutorialMenu tutorialMenu;
     [SerializeField]
+    private LeaderboardMenu leaderboardMenu;
+    [SerializeField]
     private OptionsMenu optionsMenu;
     [SerializeField]
     private CreditsMenu creditsMenu;
@@ -33,6 +35,8 @@ public class TitleScreen : MonoBehaviour
             Debug.LogWarning("TitleScreen - mainMenu has not been assigned.");
         if (tutorialMenu == null)
             Debug.LogWarning("TitleScreen - tutorialMenu has not been assigned.");
+        if (leaderboardMenu == null)
+            Debug.LogWarning("TitleScreen - leaderboardMenu has not been assigned.");
         if (optionsMenu == null)
             Debug.LogWarning("TitleScreen - optionsMenu has not been assigned.");
         if (creditsMenu == null)
@@ -81,6 +85,12 @@ public class TitleScreen : MonoBehaviour
         tutorialMenu.gameObject.SetActive(true);
     }
 
+    public void GoTo_Leaderboard()
+    {
+        DeactivateMenuSections();
+        leaderboardMenu.gameObject.SetActive(true);
+    }
+
     public void GoTo_Options()
     {
         DeactivateMenuSections();
@@ -97,6 +107,7 @@ public class TitleScreen : MonoBehaviour
     {
         mainMenu.gameObject.SetActive(false);
         tutorialMenu.gameObject.SetActive(false);
+        leaderboardMenu.gameObject.SetActive(false);
         optionsMenu.gameObject.SetActive(false);
         creditsMenu.gameObject.SetActive(false);
     }

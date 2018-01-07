@@ -4,8 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PauseScreen
   - TitleScreen
+  - PauseScreen
+  - Enemy
+  - EnemyBullet
+  - PlayerBullet
+  - PickUp
+  - BulletRepository
+  - EnemyRepository
   layers:
   - Default
   - TransparentFX
@@ -15,15 +21,15 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - CamBackground
+  - Entities
+  - Enemies
+  - Player
+  - PlayerBullet
+  - EnemiesBullet
+  - Solid
+  - Decoration
+  - CamForeground
   - 
   - 
   - 
@@ -42,4 +48,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 314496343
+    locked: 0
+  - name: Environment
+    uniqueID: 2545547113
+    locked: 0
+  - name: Enemies
+    uniqueID: 898927649
+    locked: 0
+  - name: Player
+    uniqueID: 2174804939
+    locked: 0
+  - name: Environment_FG
+    uniqueID: 4018439431
+    locked: 0
+  - name: Entities
+    uniqueID: 3015285089
+    locked: 0
+  - name: Foreground
+    uniqueID: 3308450647
     locked: 0
