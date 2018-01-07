@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/Scenes/Pattern Editing Scene.unity.meta
 guid: 5930ff70f7be984418eeef44233c72b3
 timeCreated: 1513779740
+=======
+guid: fbdef07596b69d74c95d4f3b7f033d7a
+timeCreated: 1513778602
+>>>>>>> Stashed changes:Assets/StreamingAssets/Audio/Mac/Init.bnk.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

@@ -27,15 +27,10 @@ public class Enemy : Killable
     private Killable killable;
     
     // Use this for initialization
-    void Start()
+    public override void Start()
     {
+        base.Start();
         killable = GetComponent<Killable>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void HitPlayer()

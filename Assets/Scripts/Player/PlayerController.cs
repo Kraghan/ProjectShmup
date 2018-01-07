@@ -53,7 +53,6 @@ public class PlayerController : MonoBehaviour
             Debug.LogError("PlayerController - m_goodShot is not assigned ! You can't shoot on the beat ! Please assign a prefab that contains a PatterPlayer to be able to shoot.");
         if (m_badShot == null)
             Debug.LogError("PlayerController - m_badShot is not assigned ! You can't shoot off the beat ! Please assign a prefab that contains a PatterPlayer to be able to shoot.");
-        killable.StartInvulnerabilityFrames();
     }
 	
 	void Update () {
