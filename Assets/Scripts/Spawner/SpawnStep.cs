@@ -8,7 +8,7 @@ public class SpawnStep : MonoBehaviour {
     #region Attributes
 
     [SerializeField]
-    private Enemy enemy;
+    private GameObject enemy;
 
     [SerializeField]
     private WaypointCircuit pattern;
