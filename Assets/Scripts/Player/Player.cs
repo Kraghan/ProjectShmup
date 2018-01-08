@@ -16,19 +16,18 @@ public class Player : Killable
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
         bulletPool = GameObject.FindGameObjectWithTag("BulletRepository");
+        if (bulletPool)
+        {
+            for (int i = bulletPool.transform.childCount - 1; i >= 0; --i)
+            {
+                Destroy(bulletPool.transform.GetChild(i).gameObject);
+            }
+        }
         enemyPool = GameObject.FindGameObjectWithTag("EnemyRepository");
     }
 
     public override void OnDeath(bool onBeat)
     {
-        if(bulletPool)
-        {
-            for(int i = bulletPool.transform.childCount - 1; i >= 0; --i)
-            {
-                Destroy(bulletPool.transform.GetChild(i).gameObject);
-            }
-        }
-
         /*if(enemyPool)
         {
             Pattern[] patterns = GetComponentsInChildren<Pattern>();

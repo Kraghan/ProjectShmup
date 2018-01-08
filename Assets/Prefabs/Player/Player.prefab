@@ -73,7 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4418033986611528}
   - component: {fileID: 212313501150035978}
-  - component: {fileID: 95546512914716904}
+  - component: {fileID: 111239704252199600}
   m_Layer: 11
   m_Name: Renderer
   m_TagString: Untagged
@@ -171,22 +171,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!111 &111239704252199600
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1680371893508456}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d94fb904457b1a4c8b815d78a298600, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!111 &111105551911724878
 Animation:
   m_ObjectHideFlags: 1
@@ -198,6 +182,20 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 1575fe84bc3c2a4419c397df4110444f, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 1575fe84bc3c2a4419c397df4110444f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!111 &111239704252199600
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1680371893508456}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
