@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject m_badShot;
     [SerializeField]
+    private GameObject m_bomb;
+    [SerializeField]
     Transform m_shotPool;
     [SerializeField]
     IntVariable m_combosCounter;
@@ -58,6 +60,10 @@ public class PlayerController : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             Fire();
+        }
+        if(Input.GetButtonDown("Bomb"))
+        {
+            Bomb();
         }
 	}
     #endregion
@@ -101,6 +107,17 @@ public class PlayerController : MonoBehaviour
             m_combosCounter.value = 0;
             newProj = Instantiate(m_badShot, transform.position, transform.rotation);
         }
+
+        newProj.transform.SetParent(m_shotPool);
+    }
+
+    void Bomb()
+    {
+        GameObject newProj;
+        
+        //AkSoundEngine.PostEvent("Bullet_fail", gameObject);
+        m_combosCounter.value = 0;
+        newProj = Instantiate(m_bomb, transform.position, transform.rotation);
 
         newProj.transform.SetParent(m_shotPool);
     }

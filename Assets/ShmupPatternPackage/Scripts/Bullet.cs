@@ -33,6 +33,8 @@ namespace ShmupPatternPackage
         private float rotation;
 
         private Rigidbody2D rgbd2D;
+        private float outOfBoundsOffset = 50;
+
         #endregion
 
         #region MonoBehaviour main methods
@@ -69,9 +71,9 @@ namespace ShmupPatternPackage
             // Initialization
             Vector2 positionOnScreen = Camera.main.WorldToScreenPoint(transform.position);
             // Process
-            if (positionOnScreen.x > Screen.width || 0 > positionOnScreen.x)
+            if (positionOnScreen.x > Screen.width + outOfBoundsOffset || -outOfBoundsOffset > positionOnScreen.x)
                 Destroy(gameObject);
-            if (positionOnScreen.y > Screen.height || 0 > positionOnScreen.y)
+            if (positionOnScreen.y > Screen.height + outOfBoundsOffset || -outOfBoundsOffset > positionOnScreen.y)
                 Destroy(gameObject);
         }
 

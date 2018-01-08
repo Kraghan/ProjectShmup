@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 199329716808260378}
   - component: {fileID: 198586898886390646}
   m_Layer: 12
-  m_Name: Player_bomb_death
+  m_Name: Bomb_Player_Death
   m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
