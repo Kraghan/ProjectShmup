@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e0745bfedd57ff459a43d870d8cfad6, type: 3}
-  m_Name: P_Pattern2
+  m_Name: P_Pattern_Strong
   m_EditorClassIdentifier: 
   selectedRepetitionsMode: 1
   duration: 0
@@ -17,6 +17,6 @@ MonoBehaviour:
   bursts:
   - timing: 0
     burst: {fileID: 11400000, guid: 8525b35130f2a2b4fb7136e8dd09adbb, type: 2}
-    bullet: {fileID: 1413998544695282, guid: bbe2cb8a05ad713469b838827ca8ffdf, type: 2}
+    bullet: {fileID: 1413998544695282, guid: fe6914fbd2cfacb499b9df60cac94f1c, type: 2}
     direction: 0
     targetted: 0
