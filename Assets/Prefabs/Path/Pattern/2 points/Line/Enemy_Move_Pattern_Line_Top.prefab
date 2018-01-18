@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbddf516c135fda4093e54fbbef43b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedToReachThatPoint: 5
+  speedToReachThatPoint: 4
   timeToStop: 0
 --- !u!114 &114429817153727724
 MonoBehaviour:

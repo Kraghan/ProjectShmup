@@ -15,7 +15,7 @@ MonoBehaviour:
   duration: 1.8
   cycles: -1
   bursts:
-  - timing: 0.3
+  - timing: 0.5
     burst: {fileID: 11400000, guid: f89cb9e64df3bb94ca759c1c9ad3d591, type: 2}
     bullet: {fileID: 1062305414702394, guid: e3192c1864d78534da3b257b0ab7d1a2, type: 2}
     direction: 180
