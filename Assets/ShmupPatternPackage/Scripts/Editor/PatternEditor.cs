@@ -99,8 +99,21 @@ namespace ShmupPatternPackage
                     burstTiming.direction -= 45;
                 Utility.Cap(ref burstTiming.direction, 0, 360);
 
-            // Draw Direction Circle
-            Texture2D burstPreview_directionCircleTexture = (Texture2D)EditorGUIUtility.Load("Assets/ShmupPatternPackage/EditorSprites/Radar.png");
+                // Aim Mode
+                EditorGUI.LabelField(new Rect(burstPreview_dcfsLeft + 10 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, rect.y + (EditorGUIUtility.singleLineHeight * 3) + 2, 100, EditorGUIUtility.singleLineHeight), "Aim Mode");
+                burstTiming.aimMode = (AimMode)EditorGUI.EnumPopup(new Rect(102 + burstPreview_dcfsLeft + 10 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, rect.y + (EditorGUIUtility.singleLineHeight * 3) + 2, 120, EditorGUIUtility.singleLineHeight), burstTiming.aimMode);
+                switch (burstTiming.aimMode)
+                {
+                    case AimMode.WorldSpace:
+                        EditorGUI.LabelField(new Rect(burstPreview_dcfsLeft + 10 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, rect.y + (EditorGUIUtility.singleLineHeight * 4) + 2, 300, EditorGUIUtility.singleLineHeight), "The right on the radar is the right in the world.");
+                        break;
+                    case AimMode.Targetted:
+                        EditorGUI.LabelField(new Rect(burstPreview_dcfsLeft + 10 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, rect.y + (EditorGUIUtility.singleLineHeight * 4) + 2, 300, EditorGUIUtility.singleLineHeight), "The right on the radar is a straight line to the target.");
+                        break;
+                }
+
+                // Draw Direction Circle
+                Texture2D burstPreview_directionCircleTexture = (Texture2D)EditorGUIUtility.Load("Assets/ShmupPatternPackage/EditorSprites/Radar.png");
                 GUI.DrawTexture(directionCircleIndicator, burstPreview_directionCircleTexture);
 
             // Draw Bullet Lines
@@ -128,8 +141,8 @@ namespace ShmupPatternPackage
                     }
                 }
 
-            // Draw Spread Lines
-            Handles.BeginGUI();
+                // Draw Spread Lines
+                Handles.BeginGUI();
                 Handles.color = Color.yellow;
                 float burstDir_angleRadian = burstTiming.direction * Mathf.PI / 180.0f;
                 float burstDir_destinationX = Mathf.Cos(burstDir_angleRadian) * (burstPreview_directionCircleSize / 2);
@@ -161,10 +174,8 @@ namespace ShmupPatternPackage
                 spreadangle_1 = (int)spreadangle_1;
                 spreadangle_2 = (int)spreadangle_2;
 
-            // End Burst Preview
-
-            burstTiming.burst = burst;
-
+                // End Burst Preview
+                burstTiming.burst = burst;
                 ((Pattern)target).bursts[index] = burstTiming;
             };
 
