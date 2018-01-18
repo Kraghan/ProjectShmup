@@ -204,4 +204,21 @@ public class PlayerController : MonoBehaviour
         CheckTriggerHit(collision);
     }
     #endregion
+
+    #region Getters
+    public float GetHorizontalSpeed()
+    {
+        return horizontalSpeed;
+    }
+
+    public float GetVerticalSpeed()
+    {
+        return verticalSpeed;
+    }
+
+    public float GetFocusSpeedMultiplicator()
+    {
+        return focusSpeedMultiplicator;
+    }
+    #endregion
 }
