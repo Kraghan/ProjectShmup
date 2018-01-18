@@ -68,6 +68,15 @@ public class PlayerController : MonoBehaviour
 	void Update () {
         ManageSpeed();
 
+        if(Input.GetButtonDown("Cancel"))
+        {
+            PauseScreen pauseScreen = GameObject.FindGameObjectWithTag("PauseScreen").GetComponent<PauseScreen>();
+            pauseScreen.BackgroundDisplay(true);
+            pauseScreen.DeactivateMenuSections();
+            pauseScreen.GoTo_PauseMenu();
+            Time.timeScale = 0;
+        }
+
         if(Input.GetButtonDown("Fire1"))
         {
             Fire();

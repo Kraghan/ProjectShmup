@@ -29,7 +29,15 @@ public class PauseMenu : MonoBehaviour
     #region Inputs
     public void ButtonConfirm_Play()
     {
-        SceneManager.LoadScene(1);
+        pauseScreen.DeactivateMenuSections();
+        pauseScreen.BackgroundDisplay(false);
+        Time.timeScale = 1;
+    }
+
+    public void ButtonConfirm_RestartLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void ButtonConfirm_Tutorial()
@@ -44,6 +52,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ButtonConfirm_TitleScreen()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
     

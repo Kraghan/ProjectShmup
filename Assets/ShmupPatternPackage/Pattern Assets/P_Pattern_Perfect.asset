@@ -19,4 +19,5 @@ MonoBehaviour:
     burst: {fileID: 11400000, guid: 8525b35130f2a2b4fb7136e8dd09adbb, type: 2}
     bullet: {fileID: 1413998544695282, guid: 20083b9a0227a1445b7ffb46afbde519, type: 2}
     direction: 0
+    aimMode: 0
     targetted: 0
