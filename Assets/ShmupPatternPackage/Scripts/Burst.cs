@@ -25,6 +25,10 @@ namespace ShmupPatternPackage
                     bulletGO.tag = "EnemyBullet";
                 else if (_source == PatternSource.Player)
                     bulletGO.tag = "PlayerBullet";
+                if (_source == PatternSource.Enemy)
+                    bulletGO.layer = 13;
+                else if (_source == PatternSource.Player)
+                    bulletGO.layer = 12;
                 Bullet bullet = bulletGO.SecureGetComponent<Bullet>();
                 bullet.Fire(shoot.speed, shoot.acceleration, (shoot.direction + burstDirection + targetDirection) % 360, shoot.rotation);
             }

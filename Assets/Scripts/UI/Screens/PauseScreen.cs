@@ -20,6 +20,10 @@ public class PauseScreen : MonoBehaviour
     private AudioSource se_cancel;
     [SerializeField]
     private AudioSource se_move;
+
+    [Header("Graphics")]
+    [SerializeField]
+    private GameObject background;
     #endregion
 
     #region MonoBehaviour main methods
@@ -118,5 +122,12 @@ public class PauseScreen : MonoBehaviour
             se_move.Play();
     }
     #endregion
+    #endregion
+
+    #region Graphics
+    public void BackgroundDisplay(bool _displayed)
+    {
+        background.SetActive(_displayed);
+    }
     #endregion
 }
