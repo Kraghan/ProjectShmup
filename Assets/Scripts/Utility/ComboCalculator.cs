@@ -47,7 +47,7 @@ public class ComboCalculator : MonoBehaviour {
             }
 
             if (hitNumberToUpCombo[(int)comboVariable.value] <= hitTmp)
-                comboVariable.value++;
+                comboVariable.value ++;
         }
 	}
     #endregion

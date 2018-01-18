@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
 
     [Header("Shoot")]
     [SerializeField]
+    private float m_shootCooldown;
+    private float m_shootTimeElapsed;
+    [SerializeField]
     private float m_errorWindowPerfect;
     [SerializeField]
     private float m_errorWindowGreat;
@@ -66,11 +69,13 @@ public class PlayerController : MonoBehaviour
     }
 	
 	void Update () {
+        m_shootTimeElapsed += Time.deltaTime;
         ManageSpeed();
-
-        if(Input.GetButtonDown("Fire1"))
+        
+        if(m_shootTimeElapsed >= m_shootCooldown && Input.GetButtonDown("Fire1"))
         {
             Fire();
+            m_shootTimeElapsed -= m_shootCooldown;
         }
         if(Input.GetButtonDown("Bomb"))
         {

@@ -12,6 +12,7 @@ TagManager:
   - PickUp
   - BulletRepository
   - EnemyRepository
+  - Pools
   layers:
   - Default
   - TransparentFX

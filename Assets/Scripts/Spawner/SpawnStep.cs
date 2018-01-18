@@ -30,6 +30,7 @@ public class SpawnStep : MonoBehaviour {
     #endregion
 
     #region Monobehaviour
+
     // Use this for initialization
     void Start () {
         if (enemy == null)
@@ -61,8 +62,8 @@ public class SpawnStep : MonoBehaviour {
         for (int i = 0; i < numberOfSpawn; ++i)
         {
             GameObject newEnemy = Instantiate(enemy.gameObject, enemyPoolContainer.transform);
-            newEnemy.SetActive(false);
             enemies[i] = newEnemy;
+            newEnemy.SetActive(false);
         }
         
     }
