@@ -22,7 +22,7 @@ TagManager:
   - UI
   - 
   - 
-  - CamBackground
+  - 
   - Entities
   - Enemies
   - Player
@@ -30,8 +30,8 @@ TagManager:
   - EnemiesBullet
   - Solid
   - Decoration
-  - CamForeground
   - 
+  - PostProcessing
   - 
   - 
   - 
