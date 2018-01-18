@@ -17,6 +17,8 @@ namespace ShmupPatternPackage
         [SerializeField]
         public float direction;
         [SerializeField]
+        public AimMode aimMode = AimMode.WorldSpace;
+        [SerializeField]
         public bool targetted;
 
         private bool done = false;
