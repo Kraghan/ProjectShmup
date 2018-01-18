@@ -58,9 +58,9 @@ public class PlayerSpawner : MonoBehaviour
         timeElapsed = 0;
         currentPlayer = Instantiate(player.gameObject, transform.parent);
         currentPlayer.transform.position = transform.position;
-        lifeVariable.value--;
         if (!firstRespawn)
         {
+            lifeVariable.value--;
             currentPlayer.GetComponent<Player>().StartInvulnerabilityFrames();
         }
         else

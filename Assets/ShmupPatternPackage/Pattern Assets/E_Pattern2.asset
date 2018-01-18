@@ -19,14 +19,17 @@ MonoBehaviour:
     burst: {fileID: 11400000, guid: 14b408db84f24a04a9e5ac7fd1e9dbb1, type: 2}
     bullet: {fileID: 1062305414702394, guid: 790f783e76dcee84aa21f9d88ecd6c42, type: 2}
     direction: 180
+    aimMode: 0
     targetted: 0
   - timing: 1
     burst: {fileID: 11400000, guid: 5fb52918ea58b174cbed7480bd28473a, type: 2}
     bullet: {fileID: 1062305414702394, guid: 4106d776fe9e2a643be111c2a220ae9c, type: 2}
     direction: 225
+    aimMode: 0
     targetted: 0
   - timing: 1
     burst: {fileID: 11400000, guid: 5fb52918ea58b174cbed7480bd28473a, type: 2}
     bullet: {fileID: 1062305414702394, guid: 4106d776fe9e2a643be111c2a220ae9c, type: 2}
     direction: 135
+    aimMode: 0
     targetted: 0
