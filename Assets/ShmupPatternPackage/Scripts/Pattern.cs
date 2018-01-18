@@ -10,6 +10,12 @@ namespace ShmupPatternPackage
         Finite
     }
 
+    public enum AimMode
+    {
+        WorldSpace,
+        Targetted
+    }
+
     [CreateAssetMenu(fileName = "New Pattern", menuName = "ShmupPatternPackage/Pattern", order = 1)]
     [System.Serializable]
     public class Pattern : ScriptableObject
@@ -42,7 +48,7 @@ namespace ShmupPatternPackage
             currentCycles = cycles;
         }
 
-        public void PatternUpdate(GameObject go)
+        public void PatternUpdate(GameObject go, PatternSource _source, float _targetDirection)
         {
             time += Time.deltaTime;
             Utility.Cap(ref time, 0, duration);
@@ -52,12 +58,12 @@ namespace ShmupPatternPackage
                 {
                     if (burstTiming.bullet != null)
                     {
-                        burstTiming.burst.Fire(burstTiming.direction, burstTiming.bullet, go.transform.position, bulletRepository.transform);
+                        burstTiming.burst.Fire(_source, burstTiming.direction, ((burstTiming.aimMode == AimMode.Targetted) ? _targetDirection : 0), burstTiming.bullet, go.transform.position, bulletRepository.transform);
                         burstTiming.Done();
                     }
                 }
             }
-            if (time == duration)
+            if (time >= duration)
             {
                 if (currentCycles > 0)
                     currentCycles--;
