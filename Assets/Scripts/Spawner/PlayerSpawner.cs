@@ -56,7 +56,7 @@ public class PlayerSpawner : MonoBehaviour
     public void createPlayer()
     {
         timeElapsed = 0;
-        currentPlayer = Instantiate(player.gameObject, transform.parent);
+        currentPlayer = Instantiate(player.gameObject, transform);
         currentPlayer.transform.position = transform.position;
         lifeVariable.value--;
         if (!firstRespawn)
