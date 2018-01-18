@@ -40,14 +40,6 @@ public class LevelInitializerEditor : Editor {
 
                 GameObject camera = Instantiate(((LevelInitializer)target).camera.gameObject);
 
-                if(((LevelInitializer)target).UI != null)
-                {
-                    GameObject obj = Instantiate(((LevelInitializer)target).UI.gameObject);
-                    obj.transform.parent = camera.transform;
-                }
-                else
-                    Debug.LogWarning("You don't set the 'UI' prefab");
-
                 if (((LevelInitializer)target).playerSpawner != null)
                 {
                     GameObject obj = Instantiate(((LevelInitializer)target).playerSpawner.gameObject);

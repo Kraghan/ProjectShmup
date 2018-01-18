@@ -14,8 +14,5 @@ public class LevelInitializer : MonoBehaviour
     public MusicManager musicManager;
 
     [SerializeField]
-    public Canvas UI;
-
-    [SerializeField]
     public PlayerSpawner playerSpawner;
 }
