@@ -11,18 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bbca7e400d83f4e9d0e1acbbfcc82e, type: 3}
   m_Name: E_Burst3
   m_EditorClassIdentifier: 
-  spread: 90
+  spread: 25
   shoots:
   - largerDisplayInEditor: 0
     speed: 70
     acceleration: 5
-    direction: 22
-    rotation: 0
-    offset: {x: 0, y: 0, z: 0}
-  - largerDisplayInEditor: 0
-    speed: 70
-    acceleration: 5
-    direction: 45
+    direction: 12
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
@@ -34,12 +28,6 @@ MonoBehaviour:
   - largerDisplayInEditor: 0
     speed: 70
     acceleration: 5
-    direction: 338
-    rotation: 0
-    offset: {x: 0, y: 0, z: 0}
-  - largerDisplayInEditor: 0
-    speed: 70
-    acceleration: 5
-    direction: 315
+    direction: 348
     rotation: 0
     offset: {x: 0, y: 0, z: 0}

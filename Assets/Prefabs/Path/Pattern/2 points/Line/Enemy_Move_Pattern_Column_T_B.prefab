@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbddf516c135fda4093e54fbbef43b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedToReachThatPoint: 5
+  speedToReachThatPoint: 3
   timeToStop: 0
 --- !u!114 &114457573918245326
 MonoBehaviour:
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbddf516c135fda4093e54fbbef43b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedToReachThatPoint: 5
+  speedToReachThatPoint: 3
   timeToStop: 0
 --- !u!114 &114864477706000426
 MonoBehaviour:
