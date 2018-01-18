@@ -21,9 +21,17 @@ public class PlayerController : MonoBehaviour
 
     [Header("Shoot")]
     [SerializeField]
-    private float m_errorWindow;
+    private float m_errorWindowPerfect;
+    [SerializeField]
+    private float m_errorWindowGreat;
+    [SerializeField]
+    private float m_errorWindowGood;
     [SerializeField]
     private GameObject m_goodShot;
+    [SerializeField]
+    private GameObject m_greatShot;
+    [SerializeField]
+    private GameObject m_perfectShot;
     [SerializeField]
     private GameObject m_badShot;
     [SerializeField]
@@ -99,12 +107,26 @@ public class PlayerController : MonoBehaviour
     {
         GameObject newProj;
 
-        if(BPM_Manager.IsOnBeat(m_errorWindow))
+        if(BPM_Manager.IsOnBeat(m_errorWindowPerfect))
+        {
+            AkSoundEngine.PostEvent("Bullet", gameObject);
+            newProj = Instantiate(m_perfectShot, transform.position, transform.rotation);
+
+            //m_animator.SetTrigger("GoodShot");
+        }
+        else if (BPM_Manager.IsOnBeat(m_errorWindowGreat))
+        {
+            AkSoundEngine.PostEvent("Bullet", gameObject);
+            newProj = Instantiate(m_greatShot, transform.position, transform.rotation);
+
+            //m_animator.SetTrigger("GoodShot");
+        }
+        else if (BPM_Manager.IsOnBeat(m_errorWindowGood))
         {
             AkSoundEngine.PostEvent("Bullet", gameObject);
             newProj = Instantiate(m_goodShot, transform.position, transform.rotation);
 
-            m_animator.SetTrigger("GoodShot");
+            //m_animator.SetTrigger("GoodShot");
         }
         else
         {

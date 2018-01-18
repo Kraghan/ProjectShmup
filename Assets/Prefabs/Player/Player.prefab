@@ -242,8 +242,14 @@ MonoBehaviour:
   verticalSpeed: 500
   borderOffset: {x: 20, y: 20}
   focusSpeedMultiplicator: 0.5
-  m_errorWindow: 0.1
-  m_goodShot: {fileID: 1736637555861202, guid: fd7fafcacee2b524289deb7b65e73f6f, type: 2}
+  m_errorWindowPerfect: 0.01
+  m_errorWindowGreat: 0.05
+  m_errorWindowGood: 0.1
+  m_goodShot: {fileID: 1736637555861202, guid: 52aa4fd908e2741429af3d78ef61b30b, type: 2}
+  m_greatShot: {fileID: 1736637555861202, guid: 09deb03dd8d1b924f8787e3200d2e626,
+    type: 2}
+  m_perfectShot: {fileID: 1736637555861202, guid: fd7fafcacee2b524289deb7b65e73f6f,
+    type: 2}
   m_badShot: {fileID: 1736637555861202, guid: 8f9b04b7dcaeef848a90d2ea51ca63ef, type: 2}
   m_bomb: {fileID: 1785629485754282, guid: fecd860f3a5b8d64cb5eceda5a8b47d8, type: 2}
   m_shotPool: {fileID: 0}
