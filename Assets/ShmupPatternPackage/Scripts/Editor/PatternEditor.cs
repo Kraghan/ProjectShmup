@@ -141,8 +141,8 @@ namespace ShmupPatternPackage
                     }
                 }
 
-            // Draw Spread Lines
-            Handles.BeginGUI();
+                // Draw Spread Lines
+                Handles.BeginGUI();
                 Handles.color = Color.yellow;
                 float burstDir_angleRadian = burstTiming.direction * Mathf.PI / 180.0f;
                 float burstDir_destinationX = Mathf.Cos(burstDir_angleRadian) * (burstPreview_directionCircleSize / 2);
@@ -174,10 +174,8 @@ namespace ShmupPatternPackage
                 spreadangle_1 = (int)spreadangle_1;
                 spreadangle_2 = (int)spreadangle_2;
 
-            // End Burst Preview
-
-            burstTiming.burst = burst;
-
+                // End Burst Preview
+                burstTiming.burst = burst;
                 ((Pattern)target).bursts[index] = burstTiming;
             };
 
