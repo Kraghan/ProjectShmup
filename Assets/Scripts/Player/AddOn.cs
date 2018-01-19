@@ -6,7 +6,9 @@ public class AddOn : MonoBehaviour
 {
     #region Attributes
     [SerializeField]
-    pri
+    private float addonSpeed = 1.6f;
+    [SerializeField]
+    private Vector3 offset;
     private Rigidbody2D rgbd2D;
     private float horizontalSpeed;
     private float focusSpeedMultiplicator;
@@ -60,9 +62,15 @@ public class AddOn : MonoBehaviour
             ReassignPos();
         bool focus = (Input.GetButton("Focus"));
 
-        Vector2 positionOnScreen = Camera.main.WorldToScreenPoint(transform.position);
-
-        rgbd2D.velocity = new Vector2(Time.deltaTime * horizontalSpeed * (focus ? focusSpeedMultiplicator : 1) * Input.GetAxis("Horizontal"), rgbd2D.velocity.y);
-        rgbd2D.velocity = new Vector2(rgbd2D.velocity.x, Time.deltaTime * verticalSpeed * (focus ? focusSpeedMultiplicator : 1) * Input.GetAxis("Vertical"));
+        if (player != null)
+        {
+            Vector3 targetPos = player.transform.position + offset;
+            float horizontalInput = targetPos.x - transform.position.x;
+            float verticalInput = targetPos.y - transform.position.y;
+            Utility.FloatCap(ref horizontalInput, -1, 1);
+            Utility.FloatCap(ref verticalInput, -1, 1);
+            rgbd2D.velocity = addonSpeed * new Vector2(Time.deltaTime * horizontalSpeed * (focus ? focusSpeedMultiplicator : 1) * horizontalInput, rgbd2D.velocity.y);
+            rgbd2D.velocity = addonSpeed * new Vector2(rgbd2D.velocity.x, Time.deltaTime * verticalSpeed * (focus ? focusSpeedMultiplicator : 1) * verticalInput);
+        }
     }
 }

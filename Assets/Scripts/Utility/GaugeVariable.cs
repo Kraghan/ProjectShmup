@@ -29,7 +29,7 @@ public class GaugeVariable : MonoBehaviour
     {
         if (max == null || value == null || (modifierAmount == null && modifierEnabled))
             Debug.LogError("Please set the FloatVariables of the gauge \"" + name + "\".");
-        Utility.Cap(ref value.value, 0, max.value);
+        Utility.FloatCap(ref value.value, 0, max.value);
     }
 
     // Update is called once per frame
@@ -38,7 +38,7 @@ public class GaugeVariable : MonoBehaviour
         if (!modifierEnabled)
             return;
         value.value += modifierAmount.value * Time.deltaTime;
-        Utility.Cap(ref value.value, 0, max.value);
+        Utility.FloatCap(ref value.value, 0, max.value);
     }
     #endregion
 
@@ -47,7 +47,7 @@ public class GaugeVariable : MonoBehaviour
     public bool IsEmpty() { return ((value.value == 0) ? true : false); }
     public void SetFull() { value.value = max.value; }
     public void SetEmpty() { value.value = 0; }
-    public void AddValue(float amount) { float newValue = value.value + amount; value.value = Utility.Cap(ref newValue, 0, max.value); }
+    public void AddValue(float amount) { float newValue = value.value + amount; value.value = Utility.FloatCap(ref newValue, 0, max.value); }
     #endregion
 
     #region Getters
@@ -67,12 +67,12 @@ public class GaugeVariable : MonoBehaviour
     #region Setters
     public void SetGaugeName(string _gaugeName) { gaugeName = _gaugeName; }
 
-    public void SetMax(float _max) { max.value = _max; Utility.Cap(ref value.value, 0, max.value); }
-    public void SetValue(float _value) { Utility.Cap(ref _value, 0, max.value); value.value = _value; }
+    public void SetMax(float _max) { max.value = _max; Utility.FloatCap(ref value.value, 0, max.value); }
+    public void SetValue(float _value) { Utility.FloatCap(ref _value, 0, max.value); value.value = _value; }
     public void SetModifierAmount(float _modifierAmount) { modifierAmount.value = _modifierAmount; }
 
-    public void SetMaxFV(FloatVariable _max) { max = _max; Utility.Cap(ref value.value, 0, max.value); }
-    public void SetValueFV(FloatVariable _value) { Utility.Cap(ref _value.value, 0, max.value); value = _value; }
+    public void SetMaxFV(FloatVariable _max) { max = _max; Utility.FloatCap(ref value.value, 0, max.value); }
+    public void SetValueFV(FloatVariable _value) { Utility.FloatCap(ref _value.value, 0, max.value); value = _value; }
     public void SetModifierAmountFV(FloatVariable _modifierAmount) { modifierAmount = _modifierAmount; }
 
     public void SetModifierEnabled(bool _modifierEnabled) {

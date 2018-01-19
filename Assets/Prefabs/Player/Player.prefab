@@ -167,6 +167,7 @@ MonoBehaviour:
   horizontalSpeed: 500
   verticalSpeed: 500
   borderOffset: {x: 20, y: 20}
+  rawInputPercent: 0.9
   focusSpeedMultiplicator: 0.5
   m_errorWindowPerfect: 0.01
   m_errorWindowGreat: 0.05

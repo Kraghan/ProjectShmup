@@ -15,7 +15,9 @@ public class PlayerController : MonoBehaviour
     private float verticalSpeed;
     [SerializeField]
     private Vector2 borderOffset;
-
+    [Range(0f, 1f)]
+    [SerializeField]
+    private float rawInputPercent;
     [SerializeField]
     private float focusSpeedMultiplicator;
 
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour
     Transform m_shotPool;
     [SerializeField]
     IntVariable m_combosCounter;
+
 
     private Killable killable;
     private Player player;
@@ -95,8 +98,16 @@ public class PlayerController : MonoBehaviour
 
         Vector2 positionOnScreen = Camera.main.WorldToScreenPoint(transform.position);
 
-        rgbd2D.velocity = new Vector2(Time.deltaTime * horizontalSpeed * (focus ? focusSpeedMultiplicator : 1) * Input.GetAxis("Horizontal"), rgbd2D.velocity.y);
-        rgbd2D.velocity = new Vector2(rgbd2D.velocity.x, Time.deltaTime * verticalSpeed * (focus ? focusSpeedMultiplicator : 1) * Input.GetAxis("Vertical"));
+        float inputHorizontal = Input.GetAxisRaw("Horizontal");
+        float inputVertical = Input.GetAxisRaw("Vertical");
+        
+        inputVertical *= rawInputPercent;
+        inputHorizontal *= rawInputPercent;
+        inputVertical += ((1 - rawInputPercent) * Input.GetAxis("Vertical"));
+        inputHorizontal += ((1 - rawInputPercent) * Input.GetAxis("Horizontal"));
+
+        rgbd2D.velocity = new Vector2(Time.deltaTime * horizontalSpeed * (focus ? focusSpeedMultiplicator : 1) * inputHorizontal, rgbd2D.velocity.y);
+        rgbd2D.velocity = new Vector2(rgbd2D.velocity.x, Time.deltaTime * verticalSpeed * (focus ? focusSpeedMultiplicator : 1) * inputVertical);
 
         if (positionOnScreen.x + borderOffset.x > Screen.width && rgbd2D.velocity.x > 0 || 0 > positionOnScreen.x - borderOffset.x && rgbd2D.velocity.x < 0)
             rgbd2D.velocity = new Vector2(0, rgbd2D.velocity.y);

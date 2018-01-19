@@ -306,7 +306,7 @@ namespace ShmupPatternPackage
                 // Draw FloatField
                 Rect shootDirectionRect2 = new Rect(dcLeft, dsTop, dsFullWidth, lineHeight);
                     shoot.direction = (int)(EditorGUI.FloatField(shootDirectionRect2, shoot.direction));
-                    Utility.Cap(ref shoot.direction, 0, 360);
+                    Utility.FloatCap(ref shoot.direction, 0, 360);
                     dsTop += lineHeight + 2;
 
                 // Reduce space
@@ -424,7 +424,7 @@ namespace ShmupPatternPackage
                 ((Burst)target).spread += 45;
             if (GUI.Button(new Rect(burstPreview_dcfsLeft + 10 + 86 + 164 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, position.y + 3 * EditorGUIUtility.singleLineHeight + 2, 40, EditorGUIUtility.singleLineHeight), "-45°"))
                 ((Burst)target).spread -= 45;
-            Utility.Cap(ref ((Burst)target).spread, 0, 360);
+            Utility.FloatCap(ref ((Burst)target).spread, 0, 360);
 
             // Modify Shoots by spread
             if (GUI.Button(new Rect(burstPreview_dcfsLeft + 10 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, position.y + 4 * EditorGUIUtility.singleLineHeight + 8, 180, EditorGUIUtility.singleLineHeight), "Align all shoots on spread"))
