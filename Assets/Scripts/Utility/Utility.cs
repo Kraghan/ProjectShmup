@@ -16,9 +16,9 @@ public static class Utility {
     public static int CapMin(ref int value, int min) { value = ((value < min) ? min : value); return value; }
 
     // Float caps
-    public static float Cap(ref float value, float min, float max) { value = ((value < min) ? min : ((value > max) ? max : value)); return value; }
-    public static float CapMax(ref float value, float max) { value = ((value > max) ? max : value); return value; }
-    public static float CapMin(ref float value, float min) { value = ((value < min) ? min : value); return value; }
+    public static float FloatCap(ref float value, float min, float max) { value = ((value < min) ? min : ((value > max) ? max : value)); return value; }
+    public static float FloatCapMax(ref float value, float max) { value = ((value > max) ? max : value); return value; }
+    public static float FloatCapMin(ref float value, float min) { value = ((value < min) ? min : value); return value; }
 
     // Range checkers
     public static bool IsInRange(float value, float min, float max) { return (value >= min && value <= max); }

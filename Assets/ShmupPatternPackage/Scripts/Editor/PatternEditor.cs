@@ -97,7 +97,7 @@ namespace ShmupPatternPackage
                     burstTiming.direction += 45;
                 if (GUI.Button(new Rect(burstPreview_dcfsLeft + 10 + 86 + 164 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, rect.y + EditorGUIUtility.singleLineHeight + 2, 40, EditorGUIUtility.singleLineHeight), "-45°"))
                     burstTiming.direction -= 45;
-                Utility.Cap(ref burstTiming.direction, 0, 360);
+                Utility.FloatCap(ref burstTiming.direction, 0, 360);
 
                 // Aim Mode
                 EditorGUI.LabelField(new Rect(burstPreview_dcfsLeft + 10 + burstPreview_directionCircleSize + burstPreview_directionCircleMargin, rect.y + (EditorGUIUtility.singleLineHeight * 3) + 2, 100, EditorGUIUtility.singleLineHeight), "Aim Mode");

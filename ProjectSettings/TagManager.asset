@@ -13,6 +13,7 @@ TagManager:
   - BulletRepository
   - EnemyRepository
   - CenterScreenTrigger
+  - AddonManager
   layers:
   - Default
   - TransparentFX
