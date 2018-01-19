@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LeaderboardMenu : MonoBehaviour
 {
@@ -43,6 +44,11 @@ public class LeaderboardMenu : MonoBehaviour
     public void Refresh()
     {
         GetTop10();
+    }
+
+    public void GoToTitleScreen()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void GetTop10()
