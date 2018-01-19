@@ -21,6 +21,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float focusSpeedMultiplicator;
 
+    [Header("Layer")]
+    [SerializeField]
+    private IntVariable currentLayer;
+    private bool isRecording = false;
+    [SerializeField]
+    private float maxRecordTimeForShoot = 0.01f;
+    [SerializeField]
+    private float minRecordTimeForLaser = 0.1f;
+    private float recordTime = 0;
+
     [Header("Shoot")]
     [SerializeField]
     private float m_errorWindowPerfect;
@@ -80,15 +90,44 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 0;
         }
 
-        if(Input.GetButtonDown("Fire1"))
+        if(currentLayer.value == 4)
         {
-            Fire();
+            if (Input.GetButtonDown("Fire1"))
+            {
+                isRecording = true;
+            }
+            if (isRecording && Input.GetButton("Fire1"))
+            {
+                recordTime += Time.deltaTime;
+            }
+            if (Input.GetButtonUp("Fire1"))
+            {
+                if(recordTime <= maxRecordTimeForShoot)
+                {
+                    Fire();
+                }
+                else
+                {
+                    FireLaser();
+                }
+                isRecording = false;
+                recordTime = 0;
+            }
         }
-        if(Input.GetButtonDown("Bomb"))
+        else
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Fire();
+            }
+        }
+
+        if (Input.GetButtonDown("Bomb"))
         {
             Bomb();
         }
-	}
+
+    }
     #endregion
 
     #region Methods
@@ -157,6 +196,25 @@ public class PlayerController : MonoBehaviour
         }
 
         newProj.transform.SetParent(m_shotPool);
+    }
+
+    void FireLaser()
+    {
+        GameObject newProj;
+
+        if ( (recordTime >= minRecordTimeForLaser) && (BPM_Manager.IsOnBeat(m_errorWindowPerfect) || BPM_Manager.IsOnBeat(m_errorWindowGreat) || BPM_Manager.IsOnBeat(m_errorWindowGood)))
+        {
+            //AkSoundEngine.PostEvent("Laser", gameObject);
+            newProj = Instantiate(m_perfectShot, transform.position, transform.rotation);
+            newProj.transform.SetParent(m_shotPool);
+        }
+        else
+        {
+            //AkSoundEngine.PostEvent("Laser_fail", gameObject);
+            //newProj = Instantiate(m_badShot, transform.position, transform.rotation);
+        }
+
+        
     }
 
     void Bomb()

@@ -172,6 +172,9 @@ MonoBehaviour:
   borderOffset: {x: 20, y: 20}
   rawInputPercent: 0.9
   focusSpeedMultiplicator: 0.5
+  currentLayer: {fileID: 11400000, guid: 3533afd5f35c491489b5faaec258677f, type: 2}
+  maxRecordTimeForShoot: 0.01
+  minRecordTimeForLaser: 0.1
   m_errorWindowPerfect: 0.01
   m_errorWindowGreat: 0.05
   m_errorWindowGood: 0.1

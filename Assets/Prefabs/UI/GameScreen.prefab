@@ -169,7 +169,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4143534497345204}
   - component: {fileID: 20876759056112446}
-  - component: {fileID: 114150434471189862}
   m_Layer: 0
   m_Name: Camera Foreground
   m_TagString: Untagged
@@ -521,18 +520,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114150434471189862
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1686154620001404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 1309fbfdfd65bf64cac056cb1e4c9bfe, type: 2}
 --- !u!114 &114295450808958284
 MonoBehaviour:
   m_ObjectHideFlags: 1
