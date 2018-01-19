@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 60671670104438404}
   - component: {fileID: 114672366818746608}
   - component: {fileID: 70181867011597278}
+  - component: {fileID: 95903558266187796}
   m_Layer: 10
   m_Name: Enemy1_Belette
   m_TagString: Enemy
@@ -606,6 +607,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 11.72, y: 7}
   m_Direction: 1
+--- !u!95 &95903558266187796
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1437600440487434}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 728aa5a892f32cb488773f319fba5a39, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114219666420989712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -660,6 +678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e84548fbbe239f43a72ffd53a18bb32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: 0
   pattern: {fileID: 11400000, guid: 90ceb105e2aea684fb6ee4b41b803320, type: 2}
 --- !u!114 &114672366818746608
 MonoBehaviour:

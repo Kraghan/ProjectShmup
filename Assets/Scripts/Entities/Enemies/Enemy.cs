@@ -24,11 +24,14 @@ public class Enemy : Killable
     [SerializeField]
     private string m_sound;
 
+    Animator m_animator;
+
     private Killable killable;
     
     // Use this for initialization
     public override void Start()
     {
+        m_animator = GetComponent<Animator>();
         base.Start();
         killable = GetComponent<Killable>();
     }
@@ -59,5 +62,6 @@ public class Enemy : Killable
             m_combosCounter.value = 0;
 
         scoreVariable.value += scoreOnHit * comboVariable.value;
+        m_animator.SetTrigger("Hit");
     }
 }
