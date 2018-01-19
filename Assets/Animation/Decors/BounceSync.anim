@@ -22,20 +22,20 @@ AnimationClip:
       - serializedVersion: 2
         time: 0
         value: 1
-        inSlope: -2.7976744
-        outSlope: -2.7976744
+        inSlope: -1.2826495
+        outSlope: -1.2826495
         tangentMode: 0
       - serializedVersion: 2
         time: 1
         value: 0
-        inSlope: -0.0034601896
-        outSlope: -0.0034601896
-        tangentMode: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: weight
-    path: 
+    path: 2
     classID: 114
     script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_PPtrCurves: []
@@ -74,20 +74,20 @@ AnimationClip:
       - serializedVersion: 2
         time: 0
         value: 1
-        inSlope: -2.7976744
-        outSlope: -2.7976744
+        inSlope: -1.2826495
+        outSlope: -1.2826495
         tangentMode: 0
       - serializedVersion: 2
         time: 1
         value: 0
-        inSlope: -0.0034601896
-        outSlope: -0.0034601896
-        tangentMode: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: weight
-    path: 
+    path: 2
     classID: 114
     script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_EulerEditorCurves: []
