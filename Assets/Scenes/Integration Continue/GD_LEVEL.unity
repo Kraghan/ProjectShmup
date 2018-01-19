@@ -3522,6 +3522,89 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &206693113
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2019414395}
+    m_Modifications:
+    - target: {fileID: 4784152399256030, guid: 9749f7a9084a28c4682387e334183ba9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784152399256030, guid: 9749f7a9084a28c4682387e334183ba9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784152399256030, guid: 9749f7a9084a28c4682387e334183ba9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784152399256030, guid: 9749f7a9084a28c4682387e334183ba9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784152399256030, guid: 9749f7a9084a28c4682387e334183ba9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784152399256030, guid: 9749f7a9084a28c4682387e334183ba9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784152399256030, guid: 9749f7a9084a28c4682387e334183ba9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784152399256030, guid: 9749f7a9084a28c4682387e334183ba9, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114239582465841066, guid: 9749f7a9084a28c4682387e334183ba9,
+        type: 2}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 1437600440487434, guid: 10b46c7ef4d28d14589cebc3f59a2751,
+        type: 2}
+    - target: {fileID: 114239582465841066, guid: 9749f7a9084a28c4682387e334183ba9,
+        type: 2}
+      propertyPath: pattern
+      value: 
+      objectReference: {fileID: 114714028187788128, guid: 88c8895211fae0640942469ffeaacd03,
+        type: 2}
+    - target: {fileID: 114239582465841066, guid: 9749f7a9084a28c4682387e334183ba9,
+        type: 2}
+      propertyPath: enemyPool
+      value: 
+      objectReference: {fileID: 539600268}
+    - target: {fileID: 1473672717586176, guid: 9749f7a9084a28c4682387e334183ba9, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 114239582465841066, guid: 9749f7a9084a28c4682387e334183ba9,
+        type: 2}
+      propertyPath: numberOfSpawn
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114239582465841066, guid: 9749f7a9084a28c4682387e334183ba9,
+        type: 2}
+      propertyPath: timeBetweenSpawn
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473672717586176, guid: 9749f7a9084a28c4682387e334183ba9, type: 2}
+      propertyPath: m_Name
+      value: Spawner5_8VerticalCurveInverted
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9749f7a9084a28c4682387e334183ba9, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &206693114 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4784152399256030, guid: 9749f7a9084a28c4682387e334183ba9,
+    type: 2}
+  m_PrefabInternal: {fileID: 206693113}
 --- !u!1001 &208406478
 Prefab:
   m_ObjectHideFlags: 0
@@ -17365,7 +17448,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4623726285819962, guid: 0dd467f7241c08e4cb452dda76a178c2, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114996535903013090, guid: 0dd467f7241c08e4cb452dda76a178c2,
         type: 2}
@@ -19380,11 +19463,11 @@ Prefab:
     - target: {fileID: 114239582465841066, guid: 9749f7a9084a28c4682387e334183ba9,
         type: 2}
       propertyPath: timeBetweenSpawn
-      value: 0.4
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1473672717586176, guid: 9749f7a9084a28c4682387e334183ba9, type: 2}
       propertyPath: m_Name
-      value: Spawner4_5LineVertical
+      value: Spawner4_8VerticalCurve
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9749f7a9084a28c4682387e334183ba9, type: 2}
@@ -34172,6 +34255,7 @@ Transform:
   - {fileID: 1689952720}
   - {fileID: 2064719699}
   - {fileID: 1087519001}
+  - {fileID: 206693114}
   - {fileID: 1768458630}
   m_Father: {fileID: 0}
   m_RootOrder: 9

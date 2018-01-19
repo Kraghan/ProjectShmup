@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4437900163485492}
   - component: {fileID: 114201398026113614}
   m_Layer: 0
-  m_Name: Waypoint (3)
+  m_Name: Waypoint 004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4488815053085892}
   - component: {fileID: 114614380625066074}
   m_Layer: 0
-  m_Name: Waypoint
+  m_Name: Waypoint 001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4310627743929992}
   - component: {fileID: 114285863460152952}
   m_Layer: 0
-  m_Name: Waypoint (4)
+  m_Name: Waypoint 003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 4622285364377760}
   - component: {fileID: 114714028187788128}
   m_Layer: 0
-  m_Name: Column_T_B + Curve_B_T
+  m_Name: Column_B_T + Curve_T_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 4723723976007988}
   - component: {fileID: 114596379941519502}
   m_Layer: 0
-  m_Name: Waypoint (5)
+  m_Name: Waypoint 002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 4529068452233588}
   - component: {fileID: 114830854878066852}
   m_Layer: 0
-  m_Name: Waypoint (2)
+  m_Name: Waypoint 005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 4797403011799116}
   - component: {fileID: 114091655702588686}
   m_Layer: 0
-  m_Name: Waypoint (1)
+  m_Name: Waypoint 000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,7 +134,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4622285364377760}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4437900163485492
 Transform:
@@ -147,7 +147,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4622285364377760}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4488815053085892
 Transform:
@@ -160,7 +160,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4622285364377760}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4529068452233588
 Transform:
@@ -173,7 +173,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4622285364377760}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4622285364377760
 Transform:
@@ -185,12 +185,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4488815053085892}
   - {fileID: 4797403011799116}
-  - {fileID: 4529068452233588}
-  - {fileID: 4437900163485492}
-  - {fileID: 4310627743929992}
+  - {fileID: 4488815053085892}
   - {fileID: 4723723976007988}
+  - {fileID: 4310627743929992}
+  - {fileID: 4437900163485492}
+  - {fileID: 4529068452233588}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -205,7 +205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4622285364377760}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4797403011799116
 Transform:
@@ -218,7 +218,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4622285364377760}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114091655702588686
 MonoBehaviour:
@@ -299,12 +299,12 @@ MonoBehaviour:
   waypointList:
     circuit: {fileID: 114714028187788128}
     items:
-    - {fileID: 4488815053085892}
     - {fileID: 4797403011799116}
-    - {fileID: 4529068452233588}
-    - {fileID: 4437900163485492}
-    - {fileID: 4310627743929992}
+    - {fileID: 4488815053085892}
     - {fileID: 4723723976007988}
+    - {fileID: 4310627743929992}
+    - {fileID: 4437900163485492}
+    - {fileID: 4529068452233588}
   smoothRoute: 1
   editorVisualisationSubsteps: 100
 --- !u!114 &114830854878066852
