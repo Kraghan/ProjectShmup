@@ -50,5 +50,16 @@ public class ComboCalculator : MonoBehaviour {
                 comboVariable.value ++;
         }
 	}
+
+    public int GetHitLevel(int combo)
+    {
+        int res = 0;
+        for(int i = 0; i < combo; ++i)
+        {
+            res += hitNumberToUpCombo[i];
+        }
+
+        return res;
+    }
     #endregion
 }

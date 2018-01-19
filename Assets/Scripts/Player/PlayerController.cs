@@ -42,12 +42,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     Transform m_shotPool;
     [SerializeField]
-    IntVariable m_combosCounter;
+    IntVariable m_hitCounter;
+    [SerializeField]
+    FloatVariable m_combosCounter;
+    ComboCalculator m_calculator;
 
     private Killable killable;
     private Player player;
     private Rigidbody2D rgbd2D;
     private Animator m_animator;
+    private float m_numberOfFailConsecutive;
     #endregion
 
     #region MonoBehaviour main methods
@@ -58,6 +62,7 @@ public class PlayerController : MonoBehaviour
         rgbd2D = GetComponent<Rigidbody2D>();
         killable = GetComponent<Killable>();
         m_animator = GetComponentInChildren<Animator>();
+        m_numberOfFailConsecutive = 0;
 
         m_combosCounter.value = 0;
         if (m_shotPool == null)
@@ -66,6 +71,9 @@ public class PlayerController : MonoBehaviour
             Debug.LogError("PlayerController - m_goodShot is not assigned ! You can't shoot on the beat ! Please assign a prefab that contains a PatterPlayer to be able to shoot.");
         if (m_badShot == null)
             Debug.LogError("PlayerController - m_badShot is not assigned ! You can't shoot off the beat ! Please assign a prefab that contains a PatterPlayer to be able to shoot.");
+
+        GameObject tmp = GameObject.FindGameObjectWithTag("GameManager");
+        m_calculator = tmp.GetComponent<ComboCalculator>();
     }
 	
 	void Update () {
@@ -117,12 +125,18 @@ public class PlayerController : MonoBehaviour
             AkSoundEngine.PostEvent("Bullet", gameObject);
             newProj = Instantiate(m_perfectShot, transform.position, transform.rotation);
 
+            m_hitCounter.value ++;
+            m_numberOfFailConsecutive = 0;
+
             //m_animator.SetTrigger("GoodShot");
         }
         else if (BPM_Manager.IsOnBeat(m_errorWindowGreat))
         {
             AkSoundEngine.PostEvent("Bullet", gameObject);
             newProj = Instantiate(m_greatShot, transform.position, transform.rotation);
+
+            m_hitCounter.value++;
+            m_numberOfFailConsecutive = 0;
 
             //m_animator.SetTrigger("GoodShot");
         }
@@ -131,6 +145,9 @@ public class PlayerController : MonoBehaviour
             AkSoundEngine.PostEvent("Bullet", gameObject);
             newProj = Instantiate(m_goodShot, transform.position, transform.rotation);
 
+            m_hitCounter.value++;
+            m_numberOfFailConsecutive = 0;
+
             //m_animator.SetTrigger("GoodShot");
         }
         else
@@ -138,7 +155,16 @@ public class PlayerController : MonoBehaviour
             AkSoundEngine.PostEvent("Bullet_fail", gameObject);
             newProj = Instantiate(m_badShot, transform.position, transform.rotation);
 
-            m_combosCounter.value = 0;
+            m_numberOfFailConsecutive++;
+
+            if(m_numberOfFailConsecutive == 2)
+            {
+                m_combosCounter.value--;
+                m_numberOfFailConsecutive = 0;
+                if (m_combosCounter.value < 0)
+                    m_combosCounter.value = 0;
+                m_hitCounter.value = m_calculator.GetHitLevel((int)m_combosCounter.value);
+            }
         }
 
         newProj.transform.SetParent(m_shotPool);

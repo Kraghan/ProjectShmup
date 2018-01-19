@@ -53,11 +53,6 @@ public class Enemy : Killable
 
     public override void OnHit(bool onBeat)
     {
-        if (onBeat)
-            m_combosCounter.value++;
-        else
-            m_combosCounter.value = 0;
-
-        scoreVariable.value += scoreOnHit * comboVariable.value;
+        scoreVariable.value += scoreOnHit * Mathf.Pow(2, comboVariable.value - 1);
     }
 }

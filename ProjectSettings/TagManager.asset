@@ -13,6 +13,7 @@ TagManager:
   - BulletRepository
   - EnemyRepository
   - Pools
+  - GameManager
   layers:
   - Default
   - TransparentFX

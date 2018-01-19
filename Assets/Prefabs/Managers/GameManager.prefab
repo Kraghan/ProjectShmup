@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114189280928518102}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comboVariable: {fileID: 11400000, guid: 6988fbebcb1d8184ca1de02fc9b41c0e, type: 2}
   hitCountVariable: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
-  hitNumberToUpCombo: 0300000001000000010000000100000002000000
+  hitNumberToUpCombo: 0000000004000000080000001000000020000000
 --- !u!114 &114399895452063410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,3 +98,4 @@ MonoBehaviour:
   lifeVariable: {fileID: 11400000, guid: 04c5e69a304e09a409f70586114675c2, type: 2}
   startNumberOfLife: 3
   comboVariable: {fileID: 11400000, guid: 6988fbebcb1d8184ca1de02fc9b41c0e, type: 2}
+  hitVariable: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
