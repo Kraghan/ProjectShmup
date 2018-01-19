@@ -1,30 +1,29 @@
 Event	ID	Name			Wwise Object Path	Notes
+	620878633	Music_Gameplay			\Default Work Unit\Interactive Music\Music_Gameplay	
 	1256513485	Bullet			\Default Work Unit\SFX\Player\Bullet	
-	2265137985	Music_Combo_1			\Default Work Unit\Interactive Music\Music_Combo_1	
-	2265137986	Music_Combo_2			\Default Work Unit\Interactive Music\Music_Combo_2	
 	2381265108	Bullet_fail			\Default Work Unit\SFX\Player\Bullet_fail	
+	3079098793	Acouphene			\Default Work Unit\SFX\UI\Acouphene	
 	3739956136	Enemy_destroy			\Default Work Unit\SFX\Enemy\Enemy_destroy	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	629596301	Music_Gameplay_1			\Default Work Unit\Music_Gameplay_1	
-	629596302	Music_Gameplay_2			\Default Work Unit\Music_Gameplay_2	
 
 State	ID	Name	State Group			Notes
 	748895195	None	Music_Gameplay_1			
 	2265137985	Music_Combo_1	Music_Gameplay_1			
 	2265137986	Music_Combo_2	Music_Gameplay_1			
+	2265137987	Music_Combo_3	Music_Gameplay_1			
 	2716051480	Music_Transition	Music_Gameplay_1			
-	748895195	None	Music_Gameplay_2			
-	2265137987	Music_Combo_3	Music_Gameplay_2			
-	4062433335	Music_Combo_Full	Music_Gameplay_2			
+	4062433335	Music_Combo_Full	Music_Gameplay_1			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	118406290	Transition	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Windows\SFX\Transition_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Transition\Transition\Transition		661644
-	148512618	Enemy_destroy	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Windows\SFX\enemy_destroy_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_destroy		220644
-	382734253	Bullet	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Windows\SFX\bullet_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Bullet		176544
-	430791381	Bullet_fail	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Windows\SFX\bullet_fail_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Bullet_fail		176576
-	901294601	Layer_4	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Windows\SFX\Layer_4_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_2\Music_Combo_Full\Layer_4\Layer_4		2646144
-	964646042	Layer_1	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Windows\SFX\Layer_1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Music_Combo_1\Layer_1\Layer_1		1323144
-	979264747	Layer_2	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Windows\SFX\Layer_2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Music_Combo_2\Layer_2\Layer_2		1323144
-	1059455366	Layer_3	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Windows\SFX\Layer_3_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_2\Music_Combo_3\Layer_3\Layer_3		1323144
+	118406290	Transition	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Transition_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Transition\Transition\Transition		661644
+	148512618	Enemy_destroy	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\enemy_destroy_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_destroy		220644
+	267635455	Layer_2	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Layer_2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Music_Combo_2\Layer_2\Layer_2		2646144
+	332337109	Layer_3	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Layer_3_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Music_Combo_3\Layer_3\Layer_3		2646144
+	382734253	Bullet	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\bullet_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Bullet		176544
+	430791381	Bullet_fail	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\bullet_fail_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Bullet_fail		176576
+	559094703	Acouphene	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Acouphene_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Acouphene		661644
+	901294601	Layer_4	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Layer_4_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Music_Combo_Full\Layer_4\Layer_4		2646144
+	1002566936	Layer_1	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Layer_1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Music_Combo_1\Layer_1\Layer_1		2646144
 

@@ -727,6 +727,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114831316259241838, guid: 7f9bb2602c5af454fbe2cb79a620f7e3,
+        type: 2}
+      propertyPath: m_state
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f9bb2602c5af454fbe2cb79a620f7e3, type: 2}
   m_IsPrefabParent: 0
@@ -740,12 +745,12 @@ Prefab:
     - target: {fileID: 224895387775100224, guid: 29a4773762767494ca1aaea3f319dabe,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 480
+      value: 478
       objectReference: {fileID: 0}
     - target: {fileID: 224895387775100224, guid: 29a4773762767494ca1aaea3f319dabe,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 284.5
+      value: 285
       objectReference: {fileID: 0}
     - target: {fileID: 224895387775100224, guid: 29a4773762767494ca1aaea3f319dabe,
         type: 2}
@@ -1503,8 +1508,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: ae8d9d44
   useOtherObject: 0
-  valueGuid: e661e5f73edf844b87d70db2ff9700fb
-  bankName: Test1
+  valueGuid: 2b13923d56892e469c1fd7231d70fa3d
+  bankName: Main1
   loadAsynchronous: 0
   decodeBank: 0
   saveDecodedBank: 0

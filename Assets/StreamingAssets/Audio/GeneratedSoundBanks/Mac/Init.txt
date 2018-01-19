@@ -1,19 +1,18 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	629596301	Music_Gameplay_1			\Default Work Unit\Music_Gameplay_1	
-	629596302	Music_Gameplay_2			\Default Work Unit\Music_Gameplay_2	
 
 State	ID	Name	State Group			Notes
 	748895195	None	Music_Gameplay_1			
 	2265137985	Music_Combo_1	Music_Gameplay_1			
 	2265137986	Music_Combo_2	Music_Gameplay_1			
+	2265137987	Music_Combo_3	Music_Gameplay_1			
 	2716051480	Music_Transition	Music_Gameplay_1			
-	748895195	None	Music_Gameplay_2			
-	2265137987	Music_Combo_3	Music_Gameplay_2			
-	4062433335	Music_Combo_Full	Music_Gameplay_2			
+	4062433335	Music_Combo_Full	Music_Gameplay_1			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Reflect Acoustic Textures\Textures\Brick	
 	513139656	Mountain			\Factory Reflect Acoustic Textures\Textures\Mountain	
+	544404537	LPF_Music			\Default Work Unit\LPF_Music	
 	841620460	Concrete			\Factory Reflect Acoustic Textures\Textures\Concrete	
 	1755085759	Wood_Deep			\Factory Reflect Acoustic Textures\Textures\Wood_Deep	
 	1873957695	Anechoic			\Factory Reflect Acoustic Textures\Textures\Anechoic	
@@ -29,5 +28,6 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
+	3127962312	Music Bus			\Default Work Unit\Master Audio Bus\Music Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
