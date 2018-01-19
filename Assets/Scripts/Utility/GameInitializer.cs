@@ -18,6 +18,8 @@ public class GameInitializer : MonoBehaviour {
     IntVariable bombVariable;
     [SerializeField]
     int startNumberOfBomb;
+    [SerializeField]
+    IntVariable layerVariable;
 
     #endregion
 
@@ -29,6 +31,7 @@ public class GameInitializer : MonoBehaviour {
         lifeVariable.value = startNumberOfLife;
         hitVariable.value = 0;
         bombVariable.value = startNumberOfBomb;
+        layerVariable.value = 1;
     }
     #endregion
 }

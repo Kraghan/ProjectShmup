@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cfbd54da7ef424f848413a91b735c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_comboToPassNextLevel: 00000000000000000000000000000000
+  m_comboToPassNextLevel: 01000000020000000300000004000000
   m_layerVar: {fileID: 11400000, guid: 3533afd5f35c491489b5faaec258677f, type: 2}
   m_comboVar: {fileID: 11400000, guid: 6988fbebcb1d8184ca1de02fc9b41c0e, type: 2}
 --- !u!114 &114710377067963804
@@ -116,3 +116,4 @@ MonoBehaviour:
   hitVariable: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
   bombVariable: {fileID: 11400000, guid: 13a7d7987d9950d45974f5831cca9cd9, type: 2}
   startNumberOfBomb: 3
+  layerVariable: {fileID: 11400000, guid: 3533afd5f35c491489b5faaec258677f, type: 2}
