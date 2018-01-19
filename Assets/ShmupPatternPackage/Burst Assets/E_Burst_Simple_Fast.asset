@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00bbca7e400d83f4e9d0e1acbbfcc82e, type: 3}
-  m_Name: P_Burst1
+  m_Name: E_Burst_Simple_Fast
   m_EditorClassIdentifier: 
   spread: 0
   shoots:
-  - largerDisplayInEditor: 1
-    speed: 1500
-    acceleration: 0
+  - largerDisplayInEditor: 0
+    speed: 140
+    acceleration: 5
     direction: 0
     rotation: 0
     offset: {x: 0, y: 0, z: 0}

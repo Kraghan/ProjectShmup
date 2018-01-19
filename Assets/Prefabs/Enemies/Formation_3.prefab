@@ -1539,7 +1539,7 @@ MonoBehaviour:
   deathAnimation: 2
   deathAnimationPrefabToInstantiate: {fileID: 1804348000379606, guid: bef11b4605ff9d84abcc45b3ca289880,
     type: 2}
-  health: 8
+  health: 16
   blinckingTime: 0.25
   comboVariable: {fileID: 11400000, guid: 6988fbebcb1d8184ca1de02fc9b41c0e, type: 2}
   scoreVariable: {fileID: 11400000, guid: e7917fdd94d198547a00de3f9330aefe, type: 2}
@@ -1563,7 +1563,7 @@ MonoBehaviour:
   deathAnimation: 2
   deathAnimationPrefabToInstantiate: {fileID: 1804348000379606, guid: bef11b4605ff9d84abcc45b3ca289880,
     type: 2}
-  health: 8
+  health: 16
   blinckingTime: 0.25
   comboVariable: {fileID: 11400000, guid: 6988fbebcb1d8184ca1de02fc9b41c0e, type: 2}
   scoreVariable: {fileID: 11400000, guid: e7917fdd94d198547a00de3f9330aefe, type: 2}
@@ -1602,7 +1602,7 @@ MonoBehaviour:
   deathAnimation: 2
   deathAnimationPrefabToInstantiate: {fileID: 1804348000379606, guid: bef11b4605ff9d84abcc45b3ca289880,
     type: 2}
-  health: 8
+  health: 16
   blinckingTime: 0.25
   comboVariable: {fileID: 11400000, guid: 6988fbebcb1d8184ca1de02fc9b41c0e, type: 2}
   scoreVariable: {fileID: 11400000, guid: e7917fdd94d198547a00de3f9330aefe, type: 2}

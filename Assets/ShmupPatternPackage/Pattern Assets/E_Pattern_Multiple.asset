@@ -9,15 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e0745bfedd57ff459a43d870d8cfad6, type: 3}
-  m_Name: P_Pattern_Strong
+  m_Name: E_Pattern_Multiple
   m_EditorClassIdentifier: 
-  selectedRepetitionsMode: 1
-  duration: 0
-  cycles: 1
+  selectedRepetitionsMode: 0
+  duration: 2
+  cycles: -1
   bursts:
   - timing: 0
-    burst: {fileID: 11400000, guid: 8525b35130f2a2b4fb7136e8dd09adbb, type: 2}
-    bullet: {fileID: 1413998544695282, guid: fe6914fbd2cfacb499b9df60cac94f1c, type: 2}
-    direction: 0
+    burst: {fileID: 11400000, guid: 5fb52918ea58b174cbed7480bd28473a, type: 2}
+    bullet: {fileID: 1062305414702394, guid: 4106d776fe9e2a643be111c2a220ae9c, type: 2}
+    direction: 180
     aimMode: 0
     targetted: 0

@@ -11,23 +11,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bbca7e400d83f4e9d0e1acbbfcc82e, type: 3}
   m_Name: P_Burst_Perfect
   m_EditorClassIdentifier: 
-  spread: 5
+  spread: 10
   shoots:
   - largerDisplayInEditor: 0
-    speed: 1500
+    speed: 2000
     acceleration: 0
-    direction: 2
+    direction: 5
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 1500
+    speed: 2000
     acceleration: 0
     direction: 0
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 1500
+    speed: 2000
     acceleration: 0
-    direction: 358
+    direction: 355
     rotation: 0
     offset: {x: 0, y: 0, z: 0}

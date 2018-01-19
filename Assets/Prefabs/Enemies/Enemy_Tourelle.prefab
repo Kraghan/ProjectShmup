@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4234921627343562}
   - component: {fileID: 114596322893909506}
   m_Layer: 0
-  m_Name: PP_E_Pattern1
+  m_Name: PP_E_Pattern3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -640,7 +640,7 @@ MonoBehaviour:
   deathAnimation: 2
   deathAnimationPrefabToInstantiate: {fileID: 1804348000379606, guid: bef11b4605ff9d84abcc45b3ca289880,
     type: 2}
-  health: 16
+  health: 40
   blinckingTime: 0.25
   comboVariable: {fileID: 11400000, guid: 6988fbebcb1d8184ca1de02fc9b41c0e, type: 2}
   scoreVariable: {fileID: 11400000, guid: e7917fdd94d198547a00de3f9330aefe, type: 2}
@@ -660,7 +660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e84548fbbe239f43a72ffd53a18bb32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pattern: {fileID: 11400000, guid: 90ceb105e2aea684fb6ee4b41b803320, type: 2}
+  source: 0
+  pattern: {fileID: 11400000, guid: b662f13568b3506458ec7158e249552b, type: 2}
 --- !u!114 &114672366818746608
 MonoBehaviour:
   m_ObjectHideFlags: 1
