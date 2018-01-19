@@ -83,6 +83,7 @@ public class SpawnStep : MonoBehaviour {
             newEnemy.GetComponent<WaypointDeplacement>().SetPattern(pattern);
 
             newEnemy.SetActive(true);
+            newEnemy.tag = "Enemy";
 
             timeElapsed -= timeBetweenSpawn;
             numberOfSpawn--;
