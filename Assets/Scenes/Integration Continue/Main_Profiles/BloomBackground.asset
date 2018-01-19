@@ -36,7 +36,7 @@ MonoBehaviour:
     value: 1
   softKnee:
     overrideState: 1
-    value: 0.5
+    value: 0.4
   diffusion:
     overrideState: 1
     value: 7

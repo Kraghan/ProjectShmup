@@ -16,7 +16,6 @@ public class MusicManager : MonoBehaviour
 	void Start ()
 	{
 		BPM_Manager.SyncedAction += OnBeat;
-		Play();
 	}
 
 	public void Play()
