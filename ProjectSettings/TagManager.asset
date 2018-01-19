@@ -16,6 +16,9 @@ TagManager:
   - AddonManager
   - Pools
   - GameManager
+  - Background
+  - Midground
+  - Foreground
   layers:
   - Default
   - TransparentFX
