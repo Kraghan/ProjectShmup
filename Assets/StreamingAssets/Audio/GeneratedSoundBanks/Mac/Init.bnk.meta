@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream:Assets/StreamingAssets/Audio/GeneratedSoundBanks/Mac/Init.bnk.meta
 guid: d21c26409658bd64c8613e751efa92a4
-timeCreated: 1513779853
-=======
-guid: fd8b47c08f19475478f5de415b3adb6d
-timeCreated: 1513778602
->>>>>>> Stashed changes:Assets/StreamingAssets/Audio/Mac/Init.txt.meta
+timeCreated: 1516370135
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

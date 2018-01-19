@@ -6,12 +6,10 @@ public class MusicManager : MonoBehaviour
 {
 	int m_mesureBeat;
 	int m_mesure;
-	bool m_isPlaying, m_initPlay;
+	bool m_isPlaying;
 
-	[SerializeField]
-	string m_nameBaseLoop;
-	[SerializeField]
-	string m_nameBaseKick;
+	[SerializeField, Range(1,4)]
+	int m_state = 0;
 
 	void Start ()
 	{
@@ -20,38 +18,43 @@ public class MusicManager : MonoBehaviour
 
 	public void Play()
 	{
-		m_initPlay = true;
+		m_isPlaying = true;
 	}
 	
 	void OnBeat()
 	{
 		if(m_isPlaying)
 		{
-			m_mesureBeat++;
-
-			if(m_mesureBeat == 4)
+			if(m_mesureBeat == 0)
 			{
-				m_mesureBeat = 0;
-				m_mesure++;
-
 				if(m_mesure % 4 == 0)
 				{
-					AkSoundEngine.PostEvent(m_nameBaseLoop, gameObject);
-					AkSoundEngine.PostEvent(m_nameBaseKick, gameObject);
-					AkSoundEngine.PostEvent("Bass_mute", gameObject);
-					AkSoundEngine.PostEvent("Bass_Unmute", gameObject);
+					switch (m_state)
+					{
+						case 1:
+							AkSoundEngine.PostEvent("Music_Combo_1", gameObject);
+							AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_1");
+							break;
+						case 2:
+							AkSoundEngine.PostEvent("Music_Combo_1", gameObject);
+							AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_2");
+							break;
+						case 3:
+							AkSoundEngine.PostEvent("Music_Combo_2", gameObject);
+							AkSoundEngine.SetState("Music_Gameplay_2", "Music_Combo_3");
+							break;
+						case 4:
+							AkSoundEngine.PostEvent("Music_Combo_2", gameObject);
+							AkSoundEngine.SetState("Music_Gameplay_2", "Music_Combo_Full");
+							break;
+					}
 				}
+
+				m_mesureBeat = 0;
+				m_mesure++;
 			}
-		}
 
-		if(m_initPlay)
-		{
-			AkSoundEngine.PostEvent(m_nameBaseLoop, gameObject);
-			AkSoundEngine.PostEvent(m_nameBaseKick, gameObject);
-			AkSoundEngine.PostEvent("Bass_mute", gameObject);
-
-			m_isPlaying = true;
-			m_initPlay = false;
+			m_mesureBeat++;
 		}
 	}
 }
