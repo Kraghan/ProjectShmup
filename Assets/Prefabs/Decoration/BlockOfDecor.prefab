@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114296229524128902}
   - component: {fileID: 114100850597039802}
   - component: {fileID: 111030654837501814}
+  - component: {fileID: 114141864282717392}
   m_Layer: 17
   m_Name: BlockOfDecor
   m_TagString: Untagged
@@ -597,6 +598,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114141864282717392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168144394903596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf7dacdaf4779343833fc88234e4a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerVar: {fileID: 11400000, guid: 3533afd5f35c491489b5faaec258677f, type: 2}
+  visibleValue: {r: 1, g: 1, b: 1, a: 1}
+  invisibleValue: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 0.078431375}
+  timeToFade: 0.001
 --- !u!114 &114188737280930946
 MonoBehaviour:
   m_ObjectHideFlags: 1
