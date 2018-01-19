@@ -14,6 +14,10 @@ public class GameInitializer : MonoBehaviour {
     FloatVariable comboVariable;
     [SerializeField]
     IntVariable hitVariable;
+    [SerializeField]
+    IntVariable bombVariable;
+    [SerializeField]
+    int startNumberOfBomb;
 
     #endregion
 
@@ -24,6 +28,7 @@ public class GameInitializer : MonoBehaviour {
         comboVariable.value = 1;
         lifeVariable.value = startNumberOfLife;
         hitVariable.value = 0;
-	}
+        bombVariable.value = startNumberOfBomb;
+    }
     #endregion
 }

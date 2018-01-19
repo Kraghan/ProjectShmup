@@ -271,6 +271,7 @@ MonoBehaviour:
     type: 2}
   m_badShot: {fileID: 1736637555861202, guid: 8f9b04b7dcaeef848a90d2ea51ca63ef, type: 2}
   m_bomb: {fileID: 1785629485754282, guid: fecd860f3a5b8d64cb5eceda5a8b47d8, type: 2}
+  m_bombVariable: {fileID: 11400000, guid: 13a7d7987d9950d45974f5831cca9cd9, type: 2}
   m_shotPool: {fileID: 0}
   m_hitCounter: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
   m_combosCounter: {fileID: 11400000, guid: 6988fbebcb1d8184ca1de02fc9b41c0e, type: 2}

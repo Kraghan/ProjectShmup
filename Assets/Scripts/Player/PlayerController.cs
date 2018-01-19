@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject m_bomb;
     [SerializeField]
+    private IntVariable m_bombVariable;
+    [SerializeField]
     Transform m_shotPool;
     [SerializeField]
     IntVariable m_hitCounter;
@@ -172,6 +174,9 @@ public class PlayerController : MonoBehaviour
 
     void Bomb()
     {
+        if (m_bombVariable.value <= 0)
+            return;
+
         GameObject newProj;
         
         //AkSoundEngine.PostEvent("Bullet_fail", gameObject);
@@ -179,6 +184,7 @@ public class PlayerController : MonoBehaviour
         newProj = Instantiate(m_bomb, transform.position, transform.rotation);
 
         newProj.transform.SetParent(m_shotPool);
+        m_bombVariable.value--;
     }
 
     #region ColliderHit
