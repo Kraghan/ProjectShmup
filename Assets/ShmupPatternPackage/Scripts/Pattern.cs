@@ -51,7 +51,7 @@ namespace ShmupPatternPackage
         public void PatternUpdate(GameObject go, PatternSource _source, float _targetDirection)
         {
             time += Time.deltaTime;
-            Utility.Cap(ref time, 0, duration);
+            Utility.FloatCap(ref time, 0, duration);
             foreach (BurstTiming burstTiming in bursts)
             {
                 if (burstTiming.timing <= time && !burstTiming.IsDone())

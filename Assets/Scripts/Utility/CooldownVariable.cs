@@ -30,7 +30,7 @@ public class CooldownVariable : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Utility.Cap(ref value.value, 0, max.value);
+        Utility.FloatCap(ref value.value, 0, max.value);
     }
 
     // Update is called once per frame
@@ -39,7 +39,7 @@ public class CooldownVariable : MonoBehaviour
         if (!active)
             return;
         value.value += ((increase) ? Time.deltaTime : -Time.deltaTime);
-        Utility.Cap(ref value.value, 0, max.value);
+        Utility.FloatCap(ref value.value, 0, max.value);
         if (IsUp() && restartCD)
             RestartCooldown();
     }
@@ -65,8 +65,8 @@ public class CooldownVariable : MonoBehaviour
 
     #region Setters
     public void SetCdName(string _cooldownName) { cooldownName = _cooldownName; }
-    public void SetMax(float _max) { max.value = _max; Utility.Cap(ref value.value, 0, max.value); }
-    public void SetValue(float _value) { Utility.Cap(ref _value, 0, max.value); value.value = _value; }
+    public void SetMax(float _max) { max.value = _max; Utility.FloatCap(ref value.value, 0, max.value); }
+    public void SetValue(float _value) { Utility.FloatCap(ref _value, 0, max.value); value.value = _value; }
     public void SetIncrease(bool _increase) { increase = _increase; }
     public void SetActive(bool _active) { active = _active; }
     #endregion

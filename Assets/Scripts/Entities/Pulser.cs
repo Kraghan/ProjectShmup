@@ -56,7 +56,7 @@ public class Pulser : MonoBehaviour
         // Pulser timing
         if (currentTime > 0)
             currentTime -= Time.deltaTime;
-        Utility.Cap(ref currentTime, 0, timingPulse);
+        Utility.FloatCap(ref currentTime, 0, timingPulse);
         if (currentTime == 0)
             Pulse();
         float percent = currentTime / timingPulse;
