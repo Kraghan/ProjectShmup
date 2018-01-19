@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedToReachThatPoint: 7
-  timeToStop: 0.5
+  timeToStop: 0.2
 --- !u!114 &114596379941519502
 MonoBehaviour:
   m_ObjectHideFlags: 1
