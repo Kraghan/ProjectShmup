@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 114192164133758690}
   - component: {fileID: 114399895452063410}
   - component: {fileID: 114189280928518102}
+  - component: {fileID: 114682576056776776}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,7 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comboVariable: {fileID: 11400000, guid: 6988fbebcb1d8184ca1de02fc9b41c0e, type: 2}
   hitCountVariable: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
-  hitNumberToUpCombo: 0300000001000000010000000100000002000000
+  hitNumberToUpCombo: 0000000004000000080000001000000020000000
 --- !u!114 &114399895452063410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -83,6 +84,20 @@ MonoBehaviour:
   lifeVariable: {fileID: 11400000, guid: 04c5e69a304e09a409f70586114675c2, type: 2}
   maxLifeVariable: {fileID: 11400000, guid: 0bffa2034c2922b47a2d63ad95e11aae, type: 2}
   scoreTreshold: 10000
+--- !u!114 &114682576056776776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062419022626362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cfbd54da7ef424f848413a91b735c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_comboToPassNextLevel: 00000000000000000000000000000000
+  m_layerVar: {fileID: 11400000, guid: 3533afd5f35c491489b5faaec258677f, type: 2}
+  m_comboVar: {fileID: 11400000, guid: 6988fbebcb1d8184ca1de02fc9b41c0e, type: 2}
 --- !u!114 &114710377067963804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,3 +113,6 @@ MonoBehaviour:
   lifeVariable: {fileID: 11400000, guid: 04c5e69a304e09a409f70586114675c2, type: 2}
   startNumberOfLife: 3
   comboVariable: {fileID: 11400000, guid: 6988fbebcb1d8184ca1de02fc9b41c0e, type: 2}
+  hitVariable: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
+  bombVariable: {fileID: 11400000, guid: 13a7d7987d9950d45974f5831cca9cd9, type: 2}
+  startNumberOfBomb: 3

@@ -55,7 +55,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4418033986611528}
   - component: {fileID: 212313501150035978}
-  - component: {fileID: 95487899279008904}
+  - component: {fileID: 111239704252199600}
+  - component: {fileID: 95082472689183094}
   m_Layer: 11
   m_Name: Renderer
   m_TagString: Untagged
@@ -98,8 +99,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1680371893508456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.63, y: 0.81, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 4124941454275436}
   m_RootOrder: 0
@@ -172,6 +173,7 @@ MonoBehaviour:
   borderOffset: {x: 20, y: 20}
   rawInputPercent: 0.9
   focusSpeedMultiplicator: 0.5
+  m_shootCooldown: 0.46875
   m_errorWindowPerfect: 0.01
   m_errorWindowGreat: 0.05
   m_errorWindowGood: 0.1
@@ -182,8 +184,10 @@ MonoBehaviour:
     type: 2}
   m_badShot: {fileID: 1736637555861202, guid: 8f9b04b7dcaeef848a90d2ea51ca63ef, type: 2}
   m_bomb: {fileID: 1785629485754282, guid: fecd860f3a5b8d64cb5eceda5a8b47d8, type: 2}
+  m_bombVariable: {fileID: 11400000, guid: 13a7d7987d9950d45974f5831cca9cd9, type: 2}
   m_shotPool: {fileID: 0}
-  m_combosCounter: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
+  m_hitCounter: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
+  m_combosCounter: {fileID: 11400000, guid: 6988fbebcb1d8184ca1de02fc9b41c0e, type: 2}
 --- !u!114 &114919592762568002
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -47,8 +47,19 @@ public class ComboCalculator : MonoBehaviour {
             }
 
             if (hitNumberToUpCombo[(int)comboVariable.value] <= hitTmp)
-                comboVariable.value++;
+                comboVariable.value ++;
         }
 	}
+
+    public int GetHitLevel(int combo)
+    {
+        int res = 0;
+        for(int i = 0; i < combo; ++i)
+        {
+            res += hitNumberToUpCombo[i];
+        }
+
+        return res;
+    }
     #endregion
 }

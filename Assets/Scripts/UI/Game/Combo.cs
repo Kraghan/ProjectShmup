@@ -22,7 +22,7 @@ public class Combo : MonoBehaviour {
     void Update()
     {
         if (combo.value > 1)
-            text.text = "x" + combo.value.ToString("F0");
+            text.text = "x" + Mathf.Pow(2,combo.value - 1).ToString("F0");
         else
             text.text = "";
     }
