@@ -20,11 +20,11 @@ public abstract class Killable : MonoBehaviour
     private float currentInvulnerabilityTime;
     [Tooltip("Comportement to adopt when health = 0")]
     [SerializeField]
-    private DeathAnimation deathAnimation = DeathAnimation.NoAnimation;
+    protected DeathAnimation deathAnimation = DeathAnimation.NoAnimation;
     [SerializeField]
-    private GameObject deathAnimationPrefabToInstantiate;
+    protected GameObject deathAnimationPrefabToInstantiate;
     [SerializeField]
-    private float health;
+    protected float health;
 
     [SerializeField]
     private float blinckingTime = 0.25f;
@@ -141,7 +141,7 @@ public abstract class Killable : MonoBehaviour
         return health > 0;
     }
 
-    void Die(bool onBeat)
+    protected virtual void Die(bool onBeat)
     {
         switch(deathAnimation)
         {

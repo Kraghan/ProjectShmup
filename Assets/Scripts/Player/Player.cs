@@ -8,6 +8,8 @@ public class Player : Killable
     #region Attributes
     private GameObject bulletPool;
     private GameObject enemyPool;
+    private Animator animator;
+    private float initialLife;
     #endregion
 
     // Use this for initialization
@@ -16,14 +18,10 @@ public class Player : Killable
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
         bulletPool = GameObject.FindGameObjectWithTag("BulletRepository");
-        if (bulletPool)
-        {
-            for (int i = bulletPool.transform.childCount - 1; i >= 0; --i)
-            {
-                Destroy(bulletPool.transform.GetChild(i).gameObject);
-            }
-        }
         enemyPool = GameObject.FindGameObjectWithTag("EnemyRepository");
+        animator = GetComponentInChildren<Animator>();
+        initialLife = health;
+        Revive();
     }
 
     public override void OnDeath(bool onBeat)
@@ -41,6 +39,61 @@ public class Player : Killable
     public override void OnHit(bool onBeat)
     {
 
+    }
+
+    protected override void Die(bool onBeat)
+    {
+        animator.SetBool("IsAlive", false);
+        switch (deathAnimation)
+        {
+            case DeathAnimation.NoDeath:
+                break;
+            case DeathAnimation.NoAnimation:
+                DisablePlayer();
+                break;
+            case DeathAnimation.InstantiatePrefab:
+                if (deathAnimationPrefabToInstantiate != null)
+                {
+                    GameObject obj = Instantiate(deathAnimationPrefabToInstantiate, transform.position, Quaternion.identity, null);
+                    obj.transform.parent = transform.parent;
+                }
+                DisablePlayer();
+                break;
+            default:
+                DisablePlayer();
+                break;
+        }
+
+        OnDeath(onBeat);
+    }
+
+    public void DisablePlayer()
+    {
+
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<PlayerController>().enabled = false;
+        GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
+    }
+
+    public void EnablePlayer()
+    {
+        GetComponent<Collider2D>().enabled = true;
+        GetComponent<PlayerController>().enabled = true;
+    }
+
+    public void Revive()
+    {
+        if (bulletPool)
+        {
+            for (int i = bulletPool.transform.childCount - 1; i >= 0; --i)
+            {
+                Destroy(bulletPool.transform.GetChild(i).gameObject);
+            }
+        }
+
+        health = initialLife;
+        animator.SetBool("IsAlive", true);
+        EnablePlayer();
     }
 }
   

@@ -30,7 +30,7 @@ public class PlayerSpawner : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
 
-		if(currentPlayer == null)
+		if(currentPlayer == null || !currentPlayer.GetComponent<Player>().isAlive())
         {
             timeElapsed += Time.deltaTime;
             if (timeElapsed >= timeBeforeRespawn)
@@ -56,7 +56,10 @@ public class PlayerSpawner : MonoBehaviour
     public void createPlayer()
     {
         timeElapsed = 0;
-        currentPlayer = Instantiate(player.gameObject, transform);
+        if (currentPlayer == null)
+            currentPlayer = Instantiate(player.gameObject, transform);
+        else
+            currentPlayer.GetComponent<Player>().Revive();
         currentPlayer.transform.position = transform.position;
         if (!firstRespawn)
         {

@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
         if(m_shootTimeElapsed >= m_shootCooldown && Input.GetButtonDown("Fire1"))
         {
             Fire();
-            m_shootTimeElapsed -= m_shootCooldown;
+            m_shootTimeElapsed = 0;
         }
         if(Input.GetButtonDown("Bomb"))
         {
