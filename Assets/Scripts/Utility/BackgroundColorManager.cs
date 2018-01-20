@@ -54,8 +54,6 @@ public class BackgroundColorManager : MonoBehaviour {
             oldLayerValue = layerVar.value;   
         }
 
-        Debug.Log(valueToReach);
-
         if(layerVar.value == 1)
         {
             foreach(SpriteRenderer renderer in backgrounds)
