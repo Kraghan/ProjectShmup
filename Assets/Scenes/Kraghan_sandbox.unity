@@ -1202,11 +1202,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114192164133758690, guid: 0559c4fe50ecd3f418d0a83777de6307,
-        type: 2}
-      propertyPath: hitNumberToUpCombo.Array.data[0]
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0559c4fe50ecd3f418d0a83777de6307, type: 2}
   m_IsPrefabParent: 0
