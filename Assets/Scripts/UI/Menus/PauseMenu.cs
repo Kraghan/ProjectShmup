@@ -5,6 +5,8 @@ public class PauseMenu : MonoBehaviour
 {
     #region Attributes
     private PauseScreen pauseScreen;
+
+    private bool canBeExitedWithCancel = false;
     #endregion
 
     #region MonoBehaviour main methods
@@ -17,9 +19,11 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonUp("Cancel"))
+            canBeExitedWithCancel = true;
+        if (canBeExitedWithCancel && Input.GetButton("Cancel"))
             InputDown_Cancel();
-        if (Input.GetButtonDown("Submit"))
+        if (Input.GetButton("Submit"))
             InputDown_Confirm();
     }
     #endregion
@@ -32,6 +36,7 @@ public class PauseMenu : MonoBehaviour
         pauseScreen.DeactivateMenuSections();
         pauseScreen.BackgroundDisplay(false);
         Time.timeScale = 1;
+        canBeExitedWithCancel = false;
     }
 
     public void ButtonConfirm_RestartLevel()
@@ -73,6 +78,7 @@ public class PauseMenu : MonoBehaviour
     public void InputDown_Cancel()
     {
         pauseScreen.PlaySE_Cancel();
+        ButtonConfirm_Play();
     }
     #endregion
     #endregion

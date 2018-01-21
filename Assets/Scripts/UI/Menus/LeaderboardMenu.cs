@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LeaderboardMenu : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class LeaderboardMenu : MonoBehaviour
     private Text topTenText;
     [SerializeField]
     private Text submitScoreComment;
+    [SerializeField]
+    private FloatVariable scoreVar;
 
     private bool scoreSubmitted = false;
     private TitleScreen titleScreen;
@@ -45,6 +48,11 @@ public class LeaderboardMenu : MonoBehaviour
         GetTop10();
     }
 
+    public void GoToTitleScreen()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void GetTop10()
     {
         try
@@ -61,7 +69,7 @@ public class LeaderboardMenu : MonoBehaviour
     {
         submitScoreComment.text = "";
         topTenText.text = "";
-        float score = Random.Range(100, 200); // ADD SCORE HERE
+        float score = scoreVar.value;
         if (!scoreSubmitted)
         {
             if (usernameInputField.text != null && usernameInputField.text != "")

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerSpawner : MonoBehaviour
 {
@@ -39,20 +40,14 @@ public class PlayerSpawner : MonoBehaviour
                     createPlayer();
                 else
                 {
-                    // Todo : gameover
-
-                    #if UNITY_EDITOR
-                        UnityEditor.EditorApplication.isPlaying = false;
-                    #else
-                        Application.Quit();
-                    #endif
+                    SceneManager.LoadScene(1);
                 }
             }
         }
 	}
 #endregion
 
-#region Methods
+    #region Methods
     public void createPlayer()
     {
         timeElapsed = 0;

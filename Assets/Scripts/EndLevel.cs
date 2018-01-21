@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndLevel : MonoBehaviour {
 
@@ -26,7 +27,9 @@ public class EndLevel : MonoBehaviour {
         
         timeElapsed += Time.deltaTime;
         if (timeElapsed >= timeBeforeNextLevel)
-            Application.Quit();
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

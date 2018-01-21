@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 5bda09430350ea346b297442f32551c8
+timeCreated: 1516377272
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Emilys Candy
+  fontNames:
+  - Emilys Candy
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
