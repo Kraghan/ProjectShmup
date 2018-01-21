@@ -29,7 +29,11 @@ public class LeaderboardMenu : MonoBehaviour
     void Start()
     {
         titleScreen = TitleScreen.Find();
-        topTenLoader += LoadTopTen;
+        topTenLoader = LoadTopTen;
+        if(scoreText != null && scoreVar != null)
+        {
+            scoreText.text = "Score: " + scoreVar.value.ToString() + " points";
+        }
     }
 
     // Update is called once per frame
