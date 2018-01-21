@@ -544,7 +544,6 @@ MonoBehaviour:
   scoreOnKill: 100
   m_combosCounter: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
   dieOnPlayerHit: 1
-  m_sound: Enemy_1
 --- !u!212 &212856253548690200
 SpriteRenderer:
   m_ObjectHideFlags: 1
