@@ -21,7 +21,16 @@ public class AddOnManager : MonoBehaviour {
         if(layerPreviousFrame != currentLayer.value)
         {
             for (int i = 0; i < addonsLayer.Length; i++)
+            {
                 addonsLayer[i].SetActive(i <= (currentLayer.value - 1) ? true : false);
+                if (GameObject.FindGameObjectWithTag("Player") != null)
+                {
+                    Vector3 addOnStartPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+                    AddOn[] addOns = GameObject.FindObjectsOfType<AddOn>();
+                    foreach (AddOn addOn in addOns)
+                        addOn.gameObject.transform.position = addOnStartPos;
+                }
+            }
         }
         layerPreviousFrame = currentLayer.value;
 	}

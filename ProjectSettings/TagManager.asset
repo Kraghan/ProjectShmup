@@ -19,6 +19,7 @@ TagManager:
   - Background
   - Midground
   - Foreground
+  - AddOn
   layers:
   - Default
   - TransparentFX
