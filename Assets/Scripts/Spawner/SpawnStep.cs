@@ -23,7 +23,6 @@ public class SpawnStep : MonoBehaviour {
     private float timeBetweenSpawn = 0.5f;
     private float timeElapsed;
 
-    private GameObject enemyPoolContainer;
     private GameObject[] enemies;
 
     private bool triggered;
@@ -39,11 +38,10 @@ public class SpawnStep : MonoBehaviour {
             Debug.LogWarning("No patern set in spawner step !");
         if(enemyPool == null)
         {
-            GameObject g = GameObject.FindGameObjectWithTag("EnemyRepository");
-            if (g == null)
-                Debug.LogError("No object found with tag \"EnemyRepository\"");
-            else
-                enemyPool = g.transform;
+            GameObject pools = GameObject.FindGameObjectWithTag("Pools");
+
+            GameObject enemyPoolContainer = new GameObject("EnemyPool");
+            enemyPoolContainer.transform.parent = pools.transform;
         }
 
         timeElapsed = 0.0f;
@@ -52,16 +50,10 @@ public class SpawnStep : MonoBehaviour {
         pattern = Instantiate(pattern,Camera.main.transform);
         pattern.transform.position = new Vector3(pattern.transform.position.x, pattern.transform.position.y, 0);
 
-
-        GameObject pools = GameObject.FindGameObjectWithTag("Pools");
-
-        enemyPoolContainer = new GameObject("EnemyPool");
-        enemyPoolContainer.transform.parent = pools.transform;
-
         enemies = new GameObject[numberOfSpawn];
         for (int i = 0; i < numberOfSpawn; ++i)
         {
-            GameObject newEnemy = Instantiate(enemy.gameObject, enemyPoolContainer.transform);
+            GameObject newEnemy = Instantiate(enemy.gameObject, enemyPool);
             enemies[i] = newEnemy;
             newEnemy.SetActive(false);
         }
