@@ -3861,6 +3861,7 @@ MonoBehaviour:
   scoreText: {fileID: 1897877639}
   topTenText: {fileID: 758961107}
   submitScoreComment: {fileID: 2138728627}
+  scoreVar: {fileID: 11400000, guid: e7917fdd94d198547a00de3f9330aefe, type: 2}
 --- !u!224 &1354974622
 RectTransform:
   m_ObjectHideFlags: 0

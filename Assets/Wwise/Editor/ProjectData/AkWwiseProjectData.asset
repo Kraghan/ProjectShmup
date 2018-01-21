@@ -303,13 +303,6 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Wwise_ProjectSchmup
-  - /Wwise_ProjectSchmup/Events
-  - /Wwise_ProjectSchmup/Events/Default Work Unit
-  - /Wwise_ProjectSchmup/Events/Default Work Unit/Interactive Music
-  - /Wwise_ProjectSchmup/Events/Default Work Unit/Interactive Music/Main 1
-  - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX
-  - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/Enemy
-  - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/Player
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
