@@ -9,25 +9,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00bbca7e400d83f4e9d0e1acbbfcc82e, type: 3}
-  m_Name: P_Burst_Great
+  m_Name: E_Burst_Multiple
   m_EditorClassIdentifier: 
-  spread: 10
+  spread: 45
   shoots:
   - largerDisplayInEditor: 0
-    speed: 2000
-    acceleration: 0
-    direction: 5
+    speed: 140
+    acceleration: -10
+    direction: 11
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 2000
-    acceleration: 0
+    speed: 140
+    acceleration: -10
+    direction: 22
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 140
+    acceleration: -10
     direction: 0
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
   - largerDisplayInEditor: 0
-    speed: 2000
-    acceleration: 0
-    direction: 355
+    speed: 140
+    acceleration: -10
+    direction: 349
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 140
+    acceleration: -10
+    direction: 338
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
