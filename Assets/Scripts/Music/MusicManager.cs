@@ -4,41 +4,18 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-	int m_beat = 0;
+	int m_beat;
 	int m_loopLenght = 8;
 	bool m_isPlaying;
 
-	[SerializeField, Range(1,4)]
-	int m_state = 0;
-	int m_oldState = -1;
+	[SerializeField]
+	IntVariable m_state;
+	int m_currentState = -1;
+	int State {
+		set{
+			m_currentState = value;
 
-	void Start ()
-	{
-		BPM_Manager.SyncedAction += OnBeat;
-	}
-
-	public void Play()
-	{
-		m_isPlaying = true;
-		
-	}
-	
-	void OnBeat()
-	{
-		if(m_isPlaying)
-		{
-			if(m_beat == 0)
-			{
-				m_beat = 4 * m_loopLenght;
-
-				AkSoundEngine.PostEvent("Music_Gameplay", gameObject);
-			}
-
-			m_beat--;
-
-			if(m_oldState != m_state)
-			{
-				switch (m_state)
+			switch (m_currentState)
 				{
 					case 1:
 						AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_1");
@@ -53,11 +30,49 @@ public class MusicManager : MonoBehaviour
 						AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_Full");
 						break;
 				}
+		}
 
-				m_beat = 4 * m_loopLenght;
-				m_oldState = m_state;
+		get
+		{
+			return m_currentState;
+		}
+	}
+
+	void Start ()
+	{
+		BPM_Manager.SyncedAction += OnBeat;
+	}
+
+	public void Play()
+	{
+		m_isPlaying = true;
+
+		m_beat = 4*m_loopLenght;
+		State = m_state.value;
+	}
+	
+	void OnBeat()
+	{
+		if(m_isPlaying)
+		{
+			if (m_beat == 4*m_loopLenght)
+			{
+				m_beat = 1;
+
+				if(State == 1)
+				{
+					AkSoundEngine.PostEvent("Music_Gameplay", gameObject);
+					AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_1");
+				}
 			}
-				
+			else
+				m_beat++;
+
+			if(State != m_state.value)
+			{
+				m_beat++;
+				State = m_state.value;
+			}
 		}
 	}
 }

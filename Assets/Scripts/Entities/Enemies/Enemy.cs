@@ -44,6 +44,8 @@ public class Enemy : Killable
     {
         if(onBeat)
         {
+            AkSoundEngine.PostEvent("Enemy_destroy", gameObject);
+            // meme son pour l'instant
         }
         else
             AkSoundEngine.PostEvent("Enemy_destroy", gameObject);
