@@ -714,12 +714,12 @@ Prefab:
     - target: {fileID: 224895387775100224, guid: 29a4773762767494ca1aaea3f319dabe,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 478
+      value: 460.5
       objectReference: {fileID: 0}
     - target: {fileID: 224895387775100224, guid: 29a4773762767494ca1aaea3f319dabe,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 286
+      value: 339
       objectReference: {fileID: 0}
     - target: {fileID: 224895387775100224, guid: 29a4773762767494ca1aaea3f319dabe,
         type: 2}
@@ -1799,7 +1799,6 @@ GameObject:
   - component: {fileID: 2088373284}
   - component: {fileID: 2088373287}
   - component: {fileID: 2088373286}
-  - component: {fileID: 2088373285}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -1820,25 +1819,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2088373285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2088373283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80ee07fd12fff3240bb727fa1a3320fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  valueGuid: 2b13923d56892e469c1fd7231d70fa3d
-  bankName: Main1
-  loadAsynchronous: 0
-  decodeBank: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
 --- !u!114 &2088373286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1872,6 +1852,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e492378f414ab49b29df98f015df65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2115279141 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1806797530124224, guid: 7f9bb2602c5af454fbe2cb79a620f7e3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1100806571}
+--- !u!114 &2115279142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2115279141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80ee07fd12fff3240bb727fa1a3320fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  valueGuid: 2b13923d56892e469c1fd7231d70fa3d
+  bankName: Main1
+  loadAsynchronous: 0
+  decodeBank: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
 --- !u!1 &2125499589
 GameObject:
   m_ObjectHideFlags: 0
