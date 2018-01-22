@@ -950,60 +950,67 @@ Prefab:
       propertyPath: m_Name
       value: ParallaxBackground
       objectReference: {fileID: 0}
-    - target: {fileID: 114296229524128902, guid: 8f4ab132c163f87409e6f2a1b36c326a,
+    - target: {fileID: 212344267233016820, guid: 8f4ab132c163f87409e6f2a1b36c326a,
         type: 2}
-      propertyPath: weight
+      propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 111030654837501814, guid: 8f4ab132c163f87409e6f2a1b36c326a,
+    - target: {fileID: 212526207784287402, guid: 8f4ab132c163f87409e6f2a1b36c326a,
         type: 2}
-      propertyPath: m_PlayAutomatically
+      propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1656708182780612, guid: 8f4ab132c163f87409e6f2a1b36c326a, type: 2}
-      propertyPath: m_Layer
-      value: 0
+    - target: {fileID: 212330577369694900, guid: 8f4ab132c163f87409e6f2a1b36c326a,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1308624358627446, guid: 8f4ab132c163f87409e6f2a1b36c326a, type: 2}
-      propertyPath: m_Layer
-      value: 0
+    - target: {fileID: 212344267233016820, guid: 8f4ab132c163f87409e6f2a1b36c326a,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.18187715
       objectReference: {fileID: 0}
-    - target: {fileID: 1286757417771390, guid: 8f4ab132c163f87409e6f2a1b36c326a, type: 2}
-      propertyPath: m_Layer
-      value: 0
+    - target: {fileID: 212344267233016820, guid: 8f4ab132c163f87409e6f2a1b36c326a,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.18356399
       objectReference: {fileID: 0}
-    - target: {fileID: 1482250848459488, guid: 8f4ab132c163f87409e6f2a1b36c326a, type: 2}
-      propertyPath: m_Layer
-      value: 0
+    - target: {fileID: 212344267233016820, guid: 8f4ab132c163f87409e6f2a1b36c326a,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.42647058
       objectReference: {fileID: 0}
-    - target: {fileID: 1334547412009580, guid: 8f4ab132c163f87409e6f2a1b36c326a, type: 2}
-      propertyPath: m_Layer
-      value: 0
+    - target: {fileID: 212526207784287402, guid: 8f4ab132c163f87409e6f2a1b36c326a,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.18187715
       objectReference: {fileID: 0}
-    - target: {fileID: 1000206450400210, guid: 8f4ab132c163f87409e6f2a1b36c326a, type: 2}
-      propertyPath: m_Layer
-      value: 0
+    - target: {fileID: 212526207784287402, guid: 8f4ab132c163f87409e6f2a1b36c326a,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.18356399
       objectReference: {fileID: 0}
-    - target: {fileID: 1513211319002548, guid: 8f4ab132c163f87409e6f2a1b36c326a, type: 2}
-      propertyPath: m_Layer
-      value: 0
+    - target: {fileID: 212526207784287402, guid: 8f4ab132c163f87409e6f2a1b36c326a,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.42647058
       objectReference: {fileID: 0}
-    - target: {fileID: 1168144394903596, guid: 8f4ab132c163f87409e6f2a1b36c326a, type: 2}
-      propertyPath: m_Layer
-      value: 0
+    - target: {fileID: 212330577369694900, guid: 8f4ab132c163f87409e6f2a1b36c326a,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.18187715
       objectReference: {fileID: 0}
-    - target: {fileID: 1245570514587452, guid: 8f4ab132c163f87409e6f2a1b36c326a, type: 2}
-      propertyPath: m_Layer
-      value: 0
+    - target: {fileID: 212330577369694900, guid: 8f4ab132c163f87409e6f2a1b36c326a,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.18356399
       objectReference: {fileID: 0}
-    - target: {fileID: 1400021172707304, guid: 8f4ab132c163f87409e6f2a1b36c326a, type: 2}
-      propertyPath: m_Layer
-      value: 0
+    - target: {fileID: 212330577369694900, guid: 8f4ab132c163f87409e6f2a1b36c326a,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.42647058
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114296229524128902, guid: 8f4ab132c163f87409e6f2a1b36c326a, type: 2}
-    - {fileID: 114100850597039802, guid: 8f4ab132c163f87409e6f2a1b36c326a, type: 2}
-    - {fileID: 111030654837501814, guid: 8f4ab132c163f87409e6f2a1b36c326a, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f4ab132c163f87409e6f2a1b36c326a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1385297441 stripped
