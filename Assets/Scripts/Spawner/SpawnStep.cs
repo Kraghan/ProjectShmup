@@ -8,24 +8,21 @@ public class SpawnStep : MonoBehaviour {
     #region Attributes
 
     [SerializeField]
-    private GameObject enemy;
+    GameObject enemy;
 
     [SerializeField]
-    private WaypointCircuit pattern;
+    WaypointCircuit pattern;
 
     [SerializeField]
-    private Transform enemyPool;
+    int numberOfSpawn = 1;
 
     [SerializeField]
-    private int numberOfSpawn = 1;
+    float timeBetweenSpawn = 0.5f;
+    float timeElapsed;
 
-    [SerializeField]
-    private float timeBetweenSpawn = 0.5f;
-    private float timeElapsed;
+    GameObject[] enemies;
 
-    private GameObject[] enemies;
-
-    private bool triggered;
+    bool triggered;
     #endregion
 
     #region Monobehaviour
@@ -36,13 +33,6 @@ public class SpawnStep : MonoBehaviour {
             Debug.LogWarning("No enemy set in spawner step !");
         if (pattern == null)
             Debug.LogWarning("No patern set in spawner step !");
-        if(enemyPool == null)
-        {
-            GameObject pools = GameObject.FindGameObjectWithTag("Pools");
-
-            GameObject enemyPoolContainer = new GameObject("EnemyPool");
-            enemyPoolContainer.transform.parent = pools.transform;
-        }
 
         timeElapsed = 0.0f;
         triggered = false;
@@ -53,7 +43,7 @@ public class SpawnStep : MonoBehaviour {
         enemies = new GameObject[numberOfSpawn];
         for (int i = 0; i < numberOfSpawn; ++i)
         {
-            GameObject newEnemy = Instantiate(enemy.gameObject, enemyPool);
+            GameObject newEnemy = Instantiate(enemy.gameObject, Pools.Instance.Enemies);
             enemies[i] = newEnemy;
             newEnemy.SetActive(false);
         }
@@ -70,7 +60,7 @@ public class SpawnStep : MonoBehaviour {
         if(numberOfSpawn != 0 && timeElapsed >= timeBetweenSpawn)
         {
             GameObject newEnemy = enemies[numberOfSpawn-1];
-            newEnemy.transform.parent = enemyPool;
+            newEnemy.transform.parent = Pools.Instance.Enemies;
             newEnemy.transform.position = pattern.Waypoints[0].position;
             newEnemy.GetComponent<WaypointDeplacement>().SetPattern(pattern);
 
