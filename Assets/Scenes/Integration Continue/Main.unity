@@ -1632,8 +1632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6dce0143919494494c1b7bf18363ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullets: {fileID: 0}
-  Enemies: {fileID: 0}
+  Bullets: {fileID: 1035439533}
+  Enemies: {fileID: 2125499590}
 --- !u!1 &1869064383
 GameObject:
   m_ObjectHideFlags: 0
