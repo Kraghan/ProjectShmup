@@ -52,4 +52,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: 1
-  pattern: {fileID: 11400000, guid: 1d13a2a1a9deafc4d8e2a30fba6d4add, type: 2}
+  pattern: {fileID: 11400000, guid: dfc386fd43cae3d4bb90011642a03c02, type: 2}

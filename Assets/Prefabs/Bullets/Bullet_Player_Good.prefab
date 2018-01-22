@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4549138874115104}
   - component: {fileID: 212536435683893788}
-  - component: {fileID: 60728148441028674}
   - component: {fileID: 50955785519405760}
   - component: {fileID: 114722414453641728}
+  - component: {fileID: 61369063074658424}
   m_Layer: 12
   m_Name: Bullet_Player_Good
   m_TagString: PlayerBullet
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1413998544695282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.145, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalPosition: {x: 1.5229888, y: 5.497817, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60728148441028674
-PolygonCollider2D:
+--- !u!61 &61369063074658424
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -79,18 +79,15 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.26, y: 0.51}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.5, y: -0.000000021855694}
-      - {x: 0.00000004371139, y: -0.5}
-      - {x: 0.5, y: 0.0000000059624403}
+  serializedVersion: 2
+  m_Size: {x: 1.26, y: 0.51}
+  m_EdgeRadius: 0
 --- !u!114 &114722414453641728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba11c932bc31e1e4181584a1ad6766fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damages: 2
+  damages: 4
   destroyOnHit: 1
   destroyAnimation: 0
   destroyAnimationPrefabToInstantiate: {fileID: 0}
@@ -142,7 +139,7 @@ SpriteRenderer:
   m_SortingLayerID: -1279682207
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6d9e8839cb51ce34f83b179a0d30efc7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8433314266bc7574dbbfaa6c4ef5328f, type: 3}
   m_Color: {r: 0.9485294, g: 0.89080966, b: 0.11159169, a: 1}
   m_FlipX: 0
   m_FlipY: 0
