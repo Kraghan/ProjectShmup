@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0745bfedd57ff459a43d870d8cfad6, type: 3}
+  m_Name: PatternTestAim
+  m_EditorClassIdentifier: 
+  selectedRepetitionsMode: 0
+  duration: 1.8
+  cycles: -1
+  bursts:
+  - timing: 0.3
+    burst: {fileID: 11400000, guid: 5fb52918ea58b174cbed7480bd28473a, type: 2}
+    bullet: {fileID: 1062305414702394, guid: e3192c1864d78534da3b257b0ab7d1a2, type: 2}
+    direction: 0
+    aimMode: 1
+    targetted: 0

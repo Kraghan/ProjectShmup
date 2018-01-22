@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\</ProjectRoot>
+		<SourceFilesRoot>E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1764570879" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main1</ObjectPath>
+			<ShortName>Main1</ShortName>
+			<Path>Main1.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3079098793" Name="Acouphene" ObjectPath="\Events\Default Work Unit\SFX\UI\Acouphene"/>
+				<Event Id="1256513485" Name="Bullet" ObjectPath="\Events\Default Work Unit\SFX\Player\Bullet"/>
+				<Event Id="2381265108" Name="Bullet_fail" ObjectPath="\Events\Default Work Unit\SFX\Player\Bullet_fail"/>
+				<Event Id="3739956136" Name="Enemy_destroy" ObjectPath="\Events\Default Work Unit\SFX\Enemy\Enemy_destroy"/>
+				<Event Id="620878633" Name="Music_Gameplay" ObjectPath="\Events\Default Work Unit\Interactive Music\Music_Gameplay"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="118406290" Language="SFX">
+					<ShortName>Transition.wav</ShortName>
+					<Path>SFX\Transition_F17FB28C.wem</Path>
+				</File>
+				<File Id="148512618" Language="SFX">
+					<ShortName>enemy_destroy.wav</ShortName>
+					<Path>SFX\enemy_destroy_1C9C67B2.wem</Path>
+				</File>
+				<File Id="267635455" Language="SFX">
+					<ShortName>Layer_2.wav</ShortName>
+					<Path>SFX\Layer_2_F17FB28C.wem</Path>
+				</File>
+				<File Id="332337109" Language="SFX">
+					<ShortName>Layer_3.wav</ShortName>
+					<Path>SFX\Layer_3_F17FB28C.wem</Path>
+				</File>
+				<File Id="382734253" Language="SFX">
+					<ShortName>bullet_1.wav</ShortName>
+					<Path>SFX\bullet_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="430791381" Language="SFX">
+					<ShortName>bullet_fail_1.wav</ShortName>
+					<Path>SFX\bullet_fail_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="559094703" Language="SFX">
+					<ShortName>Acouphene.wav</ShortName>
+					<Path>SFX\Acouphene_1C9C67B2.wem</Path>
+				</File>
+				<File Id="901294601" Language="SFX">
+					<ShortName>Layer_4.wav</ShortName>
+					<Path>SFX\Layer_4_F17FB28C.wem</Path>
+				</File>
+				<File Id="1002566936" Language="SFX">
+					<ShortName>Layer_1.wav</ShortName>
+					<Path>SFX\Layer_1_F17FB28C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

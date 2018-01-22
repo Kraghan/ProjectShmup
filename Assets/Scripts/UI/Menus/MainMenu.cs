@@ -27,12 +27,17 @@ public class MainMenu : MonoBehaviour {
     #region Inputs
     public void ButtonConfirm_Play()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void ButtonConfirm_Tutorial()
     {
         titleScreen.GoTo_Tutorial();
+    }
+
+    public void ButtonConfirm_Leaderboard()
+    {
+        titleScreen.GoTo_Leaderboard();
     }
 
     public void ButtonConfirm_Options()

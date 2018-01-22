@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 32d04e52157002b4690aaee542a79065
+timeCreated: 1513440806
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - deathAnimationPrefabToInstantiate: {instanceID: 0}
+  - m_combosCounter: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
