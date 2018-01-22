@@ -855,7 +855,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114429817153727724, guid: 98bf128cfcf62e4498ab387c47bbfeaf, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0.5
 --- !u!114 &114029380095815672
@@ -871,7 +870,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: b008aa02c72bc8942a9c069d665e2ab2, type: 2}
   pattern: {fileID: 114429817153727724, guid: 033c7e043e0c2b14ba518a17972c6079, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 1.5
 --- !u!114 &114033324141358700
@@ -887,7 +885,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114429817153727724, guid: 98bf128cfcf62e4498ab387c47bbfeaf, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0
 --- !u!114 &114102654423219682
@@ -903,7 +900,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: b008aa02c72bc8942a9c069d665e2ab2, type: 2}
   pattern: {fileID: 114429817153727724, guid: 033c7e043e0c2b14ba518a17972c6079, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 3
 --- !u!114 &114127319564254982
@@ -919,7 +915,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114429817153727724, guid: 98bf128cfcf62e4498ab387c47bbfeaf, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0
 --- !u!114 &114153747377514362
@@ -935,7 +930,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: b008aa02c72bc8942a9c069d665e2ab2, type: 2}
   pattern: {fileID: 114429817153727724, guid: 98bf128cfcf62e4498ab387c47bbfeaf, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 1.25
 --- !u!114 &114187561000625292
@@ -951,7 +945,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: b008aa02c72bc8942a9c069d665e2ab2, type: 2}
   pattern: {fileID: 114518624655384912, guid: 1a557e72bfbdd584cb7c92c73bcce233, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0
 --- !u!114 &114202638176642836
@@ -967,7 +960,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114858703284324210, guid: 7f45eddacb0efc94a880266fe4b5c592, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0
 --- !u!114 &114234033552983698
@@ -983,7 +975,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114858703284324210, guid: 099d129fcac4a104c834087b00e744c8, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0
 --- !u!114 &114289755720877070
@@ -999,7 +990,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: 10b46c7ef4d28d14589cebc3f59a2751, type: 2}
   pattern: {fileID: 114214903985221988, guid: fb712ee7b0fc0b1439ffe9ce79f1b590, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 8
   timeBetweenSpawn: 0.3
 --- !u!114 &114292020280012446
@@ -1015,7 +1005,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: 10b46c7ef4d28d14589cebc3f59a2751, type: 2}
   pattern: {fileID: 114714028187788128, guid: 11855621fb5ba6145a46845c5f3d2d15, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 8
   timeBetweenSpawn: 0.3
 --- !u!114 &114306305402450454
@@ -1044,7 +1033,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: b008aa02c72bc8942a9c069d665e2ab2, type: 2}
   pattern: {fileID: 114518624655384912, guid: a6cf42219d18cd2459cb185bf616ac68, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 1.5
 --- !u!114 &114379039781529404
@@ -1060,7 +1048,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114518624655384912, guid: 27faf17e29f124541957054ced391a7a, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 1
 --- !u!114 &114405394947058854
@@ -1076,7 +1063,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114518624655384912, guid: 27faf17e29f124541957054ced391a7a, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0
 --- !u!114 &114409246581797670
@@ -1092,7 +1078,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114858703284324210, guid: 284e0ad3ba2ead44eb5510694bf8d860, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 1
 --- !u!114 &114423894935183424
@@ -1108,7 +1093,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: 10b46c7ef4d28d14589cebc3f59a2751, type: 2}
   pattern: {fileID: 114714028187788128, guid: 88c8895211fae0640942469ffeaacd03, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 8
   timeBetweenSpawn: 0.3
 --- !u!114 &114456690146260216
@@ -1124,7 +1108,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: 10b46c7ef4d28d14589cebc3f59a2751, type: 2}
   pattern: {fileID: 114714028187788128, guid: bcc3476f7c9464946982ea30807689b5, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 14
   timeBetweenSpawn: 0.2
 --- !u!114 &114459115991746192
@@ -1140,7 +1123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: b008aa02c72bc8942a9c069d665e2ab2, type: 2}
   pattern: {fileID: 114518624655384912, guid: 1a557e72bfbdd584cb7c92c73bcce233, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 1.5
 --- !u!114 &114465647429385840
@@ -1156,7 +1138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: 10b46c7ef4d28d14589cebc3f59a2751, type: 2}
   pattern: {fileID: 114029435284965208, guid: c3658a8f0655db448a55b82d6292ed3d, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 14
   timeBetweenSpawn: 0.2
 --- !u!114 &114504887872325890
@@ -1172,7 +1153,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: 10b46c7ef4d28d14589cebc3f59a2751, type: 2}
   pattern: {fileID: 114989420366723180, guid: 9e64f5c225ea0894f9cae91632c2d1c3, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 8
   timeBetweenSpawn: 0.3
 --- !u!114 &114558409445553972
@@ -1188,7 +1168,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114858703284324210, guid: 099d129fcac4a104c834087b00e744c8, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0
 --- !u!114 &114607724691190302
@@ -1204,7 +1183,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: 10b46c7ef4d28d14589cebc3f59a2751, type: 2}
   pattern: {fileID: 114214903985221988, guid: fb712ee7b0fc0b1439ffe9ce79f1b590, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 8
   timeBetweenSpawn: 0.3
 --- !u!114 &114617872592539132
@@ -1220,7 +1198,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114518624655384912, guid: 27faf17e29f124541957054ced391a7a, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0
 --- !u!114 &114716611194435154
@@ -1236,7 +1213,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114429817153727724, guid: 98bf128cfcf62e4498ab387c47bbfeaf, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0
 --- !u!114 &114771796026160164
@@ -1252,7 +1228,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114858703284324210, guid: 7f45eddacb0efc94a880266fe4b5c592, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 2
 --- !u!114 &114772186236922676
@@ -1268,7 +1243,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114858703284324210, guid: 284e0ad3ba2ead44eb5510694bf8d860, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0.5
 --- !u!114 &114802607123955676
@@ -1284,7 +1258,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114858703284324210, guid: 7f45eddacb0efc94a880266fe4b5c592, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0
 --- !u!114 &114868624943538200
@@ -1300,7 +1273,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: b008aa02c72bc8942a9c069d665e2ab2, type: 2}
   pattern: {fileID: 114590201540506032, guid: 55802075fcce89f40928784c8db4f90a, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0
 --- !u!114 &114884046592691306
@@ -1316,7 +1288,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114858703284324210, guid: 7f45eddacb0efc94a880266fe4b5c592, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0
 --- !u!114 &114947520435448694
@@ -1332,7 +1303,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: b008aa02c72bc8942a9c069d665e2ab2, type: 2}
   pattern: {fileID: 114429817153727724, guid: 033c7e043e0c2b14ba518a17972c6079, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0
 --- !u!114 &114954304606514220
@@ -1348,7 +1318,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1437600440487434, guid: b008aa02c72bc8942a9c069d665e2ab2, type: 2}
   pattern: {fileID: 114590201540506032, guid: 237ce3ab7c987c64398542203eaeae0e, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0
 --- !u!114 &114993544515922294
@@ -1364,6 +1333,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1214083967944458, guid: 759ccb26baa61ed48ac9dc56110a8eb8, type: 2}
   pattern: {fileID: 114518624655384912, guid: 27faf17e29f124541957054ced391a7a, type: 2}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0

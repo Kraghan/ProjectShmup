@@ -79,6 +79,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
   pattern: {fileID: 0}
-  enemyPool: {fileID: 0}
   numberOfSpawn: 1
   timeBetweenSpawn: 0.5
