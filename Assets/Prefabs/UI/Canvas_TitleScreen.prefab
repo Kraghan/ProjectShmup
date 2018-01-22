@@ -7643,8 +7643,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\t- Programmers -\nJordan\nYou\xE9 Graillot\nRobin\n\n\t- UX Designer -\nMathieu
-    Bouchet\n\n\t- Sound Designer -\nMarc Ricacha"
+  m_Text: "\t- Programmers -\nJordan\nYou\xE9 Graillot\nRobin Pinto\n\n\t- UX Designer
+    -\nMathieu Bouchet\n\n\t- Sound Designer -\nMarc Enciso"
 --- !u!114 &114902038473096358
 MonoBehaviour:
   m_ObjectHideFlags: 1

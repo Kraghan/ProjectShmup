@@ -300,8 +300,6 @@ MonoBehaviour:
       Guid: 79799fb1272d3b49b93a3bb64cbe3d53
   ExpandedItems:
   - /Wwise_ProjectSchmup
-  - /Wwise_ProjectSchmup/Banks
-  - /Wwise_ProjectSchmup/Banks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
