@@ -10,6 +10,8 @@ public class Player : Killable
     private GameObject enemyPool;
     private Animator animator;
     private float initialLife;
+    [SerializeField]
+    private IntVariable hitVar;
     #endregion
 
     // Use this for initialization
@@ -43,6 +45,7 @@ public class Player : Killable
 
     protected override void Die(bool onBeat)
     {
+        hitVar.value = 0;
         animator.SetBool("IsAlive", false);
         switch (deathAnimation)
         {

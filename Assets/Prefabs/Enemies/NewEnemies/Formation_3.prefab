@@ -384,7 +384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invulnerabilityTime: 0
   deathAnimation: 2
-  deathAnimationPrefabToInstantiate: {fileID: 1804348000379606, guid: bef11b4605ff9d84abcc45b3ca289880,
+  deathAnimationPrefabToInstantiate: {fileID: 1705410022420878, guid: 9a07b0cd46605e8419d4cca968d51384,
     type: 2}
   health: 16
   blinckingTime: 0.25
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invulnerabilityTime: 0
   deathAnimation: 2
-  deathAnimationPrefabToInstantiate: {fileID: 1804348000379606, guid: bef11b4605ff9d84abcc45b3ca289880,
+  deathAnimationPrefabToInstantiate: {fileID: 1705410022420878, guid: 9a07b0cd46605e8419d4cca968d51384,
     type: 2}
   health: 16
   blinckingTime: 0.25
@@ -528,7 +528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invulnerabilityTime: 0
   deathAnimation: 2
-  deathAnimationPrefabToInstantiate: {fileID: 1804348000379606, guid: bef11b4605ff9d84abcc45b3ca289880,
+  deathAnimationPrefabToInstantiate: {fileID: 1705410022420878, guid: 9a07b0cd46605e8419d4cca968d51384,
     type: 2}
   health: 16
   blinckingTime: 0.25
