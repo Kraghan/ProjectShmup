@@ -15,6 +15,7 @@ public class BackgroundColorManager : MonoBehaviour {
     float timeToFade;
     float timeElapsed;
     int oldLayerValue;
+    bool completed;
 
     List<SpriteRenderer> backgrounds;
     List<SpriteRenderer> midgrounds;
@@ -40,31 +41,38 @@ public class BackgroundColorManager : MonoBehaviour {
                 renderers[i].color = invisibleValue;
             }
             if (renderers[i].gameObject.CompareTag("Foreground"))
+            {
                 foregrounds.Add(renderers[i]);
+                renderers[i].color = visibleValue;
+            }
         }
         timeElapsed = 0;
+        completed = true;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        Color valueToReach = Color.Lerp(invisibleValue, visibleValue, timeToFade);
-        if (layerVar.value != oldLayerValue)
+        
+        if (completed && layerVar.value != oldLayerValue)
         {
-            oldLayerValue = layerVar.value;   
+            oldLayerValue = layerVar.value;
+            completed = false;
+            timeElapsed = 0;
         }
 
-        if(layerVar.value == 1)
+        timeElapsed += Time.deltaTime;
+        float factor = timeElapsed / timeToFade;
+
+        if (layerVar.value == 1)
         {
+            bool layerCompleted = true;
             foreach(SpriteRenderer renderer in backgrounds)
             {
                 if(renderer.color != invisibleValue)
                 {
-                    renderer.color -= valueToReach;
-                    if(renderer.color.a < invisibleValue.a)
-                    {
-                        renderer.color = invisibleValue;
-                    }
+                    renderer.color = Color.Lerp(visibleValue,invisibleValue,factor);
+                    layerCompleted = false;
                 }
             }
 
@@ -72,26 +80,25 @@ public class BackgroundColorManager : MonoBehaviour {
             {
                 if (renderer.color != invisibleValue)
                 {
-                    renderer.color -= valueToReach;
-                    if (renderer.color.a < invisibleValue.a)
-                    {
-                        renderer.color = invisibleValue;
-                    }
+                    renderer.color = Color.Lerp(visibleValue, invisibleValue, factor);
+                    layerCompleted = false;
                 }
             }
 
+            if (layerCompleted)
+            {
+                completed = true;
+            }
         }
         else if (layerVar.value == 2)
         {
+            bool layerCompleted = true;
             foreach (SpriteRenderer renderer in backgrounds)
             {
                 if (renderer.color != invisibleValue)
                 {
-                    renderer.color -= valueToReach;
-                    if (renderer.color.a < invisibleValue.a)
-                    {
-                        renderer.color = invisibleValue;
-                    }
+                    renderer.color = Color.Lerp(visibleValue, invisibleValue, factor);
+                    layerCompleted = false;
                 }
             }
 
@@ -99,25 +106,25 @@ public class BackgroundColorManager : MonoBehaviour {
             {
                 if (renderer.color != visibleValue)
                 {
-                    renderer.color += valueToReach;
-                    if (renderer.color.a > visibleValue.a)
-                    {
-                        renderer.color = visibleValue;
-                    }
+                    renderer.color = Color.Lerp(invisibleValue, visibleValue, factor);
+                    layerCompleted = false;
                 }
+            }
+
+            if (layerCompleted)
+            {
+                completed = true;
             }
         }
         else if (layerVar.value == 3 || layerVar.value == 4)
         {
+            bool layerCompleted = true;
             foreach (SpriteRenderer renderer in backgrounds)
             {
                 if (renderer.color != visibleValue)
                 {
-                    renderer.color += valueToReach;
-                    if (renderer.color.a > visibleValue.a)
-                    {
-                        renderer.color = visibleValue;
-                    }
+                    renderer.color = Color.Lerp(invisibleValue, visibleValue, factor);
+                    layerCompleted = false;
                 }
             }
 
@@ -125,12 +132,14 @@ public class BackgroundColorManager : MonoBehaviour {
             {
                 if (renderer.color != visibleValue)
                 {
-                    renderer.color += valueToReach;
-                    if (renderer.color.a > visibleValue.a)
-                    {
-                        renderer.color = visibleValue;
-                    }
+                    renderer.color = Color.Lerp(invisibleValue, visibleValue, factor);
+                    layerCompleted = false;
                 }
+            }
+
+            if(layerCompleted)
+            {
+                completed = true;
             }
         }
     }
