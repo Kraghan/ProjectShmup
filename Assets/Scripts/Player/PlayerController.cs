@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     private float verticalSpeed;
     [SerializeField]
     private Vector2 borderOffset;
+    [SerializeField]
+    private float topBorderOffset;
     [Range(0f, 1f)]
     [SerializeField]
     private float rawInputPercent;
@@ -22,6 +24,8 @@ public class PlayerController : MonoBehaviour
     private float focusSpeedMultiplicator;
 
     [Header("Shoot")]
+    [SerializeField]
+    private Transform m_shootOrigin;
     [SerializeField]
     private float m_shootCooldown;
     private float m_shootTimeElapsed;
@@ -126,8 +130,8 @@ public class PlayerController : MonoBehaviour
 
         if (positionOnScreen.x + borderOffset.x > Screen.width && rgbd2D.velocity.x > 0 || 0 > positionOnScreen.x - borderOffset.x && rgbd2D.velocity.x < 0)
             rgbd2D.velocity = new Vector2(0, rgbd2D.velocity.y);
-
-        if (positionOnScreen.y + borderOffset.y > Screen.height && rgbd2D.velocity.y > 0 || 0 > positionOnScreen.y - borderOffset.y && rgbd2D.velocity.y < 0)
+        float percentage = Screen.height / 100 * topBorderOffset;
+        if (positionOnScreen.y + borderOffset.y > Screen.height - percentage && rgbd2D.velocity.y > 0 || 0 > positionOnScreen.y - borderOffset.y && rgbd2D.velocity.y < 0)
             rgbd2D.velocity = new Vector2(rgbd2D.velocity.x, 0);
     }
 
@@ -145,7 +149,7 @@ public class PlayerController : MonoBehaviour
         if(BPM_Manager.IsOnBeat(m_errorWindowPerfect))
         {
             AkSoundEngine.PostEvent("Bullet", gameObject);
-            newProj = Instantiate(m_perfectShot, transform.position, transform.rotation);
+            newProj = Instantiate(m_perfectShot, m_shootOrigin.position, m_shootOrigin.rotation);
 
             m_hitCounter.value ++;
             m_numberOfFailConsecutive = 0;
@@ -155,7 +159,7 @@ public class PlayerController : MonoBehaviour
         else if (BPM_Manager.IsOnBeat(m_errorWindowGreat))
         {
             AkSoundEngine.PostEvent("Bullet", gameObject);
-            newProj = Instantiate(m_greatShot, transform.position, transform.rotation);
+            newProj = Instantiate(m_greatShot, m_shootOrigin.position, m_shootOrigin.rotation);
 
             m_hitCounter.value++;
             m_numberOfFailConsecutive = 0;
@@ -165,7 +169,7 @@ public class PlayerController : MonoBehaviour
         else if (BPM_Manager.IsOnBeat(m_errorWindowGood))
         {
             AkSoundEngine.PostEvent("Bullet", gameObject);
-            newProj = Instantiate(m_goodShot, transform.position, transform.rotation);
+            newProj = Instantiate(m_goodShot, m_shootOrigin.position, m_shootOrigin.rotation);
 
             m_hitCounter.value++;
             m_numberOfFailConsecutive = 0;
@@ -175,7 +179,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             AkSoundEngine.PostEvent("Bullet_fail", gameObject);
-            newProj = Instantiate(m_badShot, transform.position, transform.rotation);
+            newProj = Instantiate(m_badShot, m_shootOrigin.position, m_shootOrigin.rotation);
 
             m_numberOfFailConsecutive++;
 
@@ -202,9 +206,9 @@ public class PlayerController : MonoBehaviour
         //AkSoundEngine.PostEvent("Bullet_fail", gameObject);
         m_combosCounter.value = 0;
         m_hitCounter.value = 0;
-        newProj = Instantiate(m_bomb, transform.position, transform.rotation);
+        newProj = Instantiate(m_bomb, transform.position, m_shootOrigin.rotation);
 
-        newProj.transform.SetParent(m_shotPool);
+        newProj.transform.SetParent(transform.parent.parent);
         m_bombVariable.value--;
     }
 
