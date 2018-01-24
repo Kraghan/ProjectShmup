@@ -193,8 +193,8 @@ MonoBehaviour:
   m_shootOrigin: {fileID: 4418033986611528}
   m_shootCooldown: 0.234375
   m_errorWindowPerfect: 0.05
-  m_errorWindowGreat: 0.1
-  m_errorWindowGood: 0
+  m_errorWindowGreat: 0.08
+  m_errorWindowGood: 0.13
   m_goodShot: {fileID: 1736637555861202, guid: 52aa4fd908e2741429af3d78ef61b30b, type: 2}
   m_greatShot: {fileID: 1736637555861202, guid: 09deb03dd8d1b924f8787e3200d2e626,
     type: 2}
