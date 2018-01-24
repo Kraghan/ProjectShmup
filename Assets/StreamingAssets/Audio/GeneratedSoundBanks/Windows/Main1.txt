@@ -1,9 +1,17 @@
 Event	ID	Name			Wwise Object Path	Notes
 	620878633	Music_Gameplay			\Default Work Unit\Interactive Music\Music_Gameplay	
 	1256513485	Bullet			\Default Work Unit\SFX\Player\Bullet	
-	2381265108	Bullet_fail			\Default Work Unit\SFX\Player\Bullet_fail	
+	1432588725	Select			\Default Work Unit\SFX\UI\Select	
+	1521187885	StartGame			\Default Work Unit\SFX\UI\StartGame	
+	1598298728	Music_Menu			\Default Work Unit\Interactive Music\Music_Menu	
+	2161713971	Player_Respawn			\Default Work Unit\SFX\Player\Player_Respawn	
+	2226114503	Player_Dead			\Default Work Unit\SFX\Player\Player_Dead	
+	2313913900	Player_Shoot_Perfect			\Default Work Unit\SFX\Player\Player_Shoot_Perfect	
+	2381265108	Bullet_Fail			\Default Work Unit\SFX\Player\Bullet_Fail	
+	2602963958	UpDown			\Default Work Unit\SFX\UI\UpDown	
 	3079098793	Acouphene			\Default Work Unit\SFX\UI\Acouphene	
-	3739956136	Enemy_destroy			\Default Work Unit\SFX\Enemy\Enemy_destroy	
+	3537469747	Metronome			\Default Work Unit\SFX\UI\Metronome	
+	3739956136	Enemy_Destroy			\Default Work Unit\SFX\Enemy\Enemy_Destroy	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	629596301	Music_Gameplay_1			\Default Work Unit\Music_Gameplay_1	
@@ -16,14 +24,29 @@ State	ID	Name	State Group			Notes
 	2716051480	Music_Transition	Music_Gameplay_1			
 	4062433335	Music_Combo_Full	Music_Gameplay_1			
 
+Effect plug-ins	ID	Name	Type				Notes
+	1706684651	Plate_Medium	Wwise RoomVerb			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	118406290	Transition	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Transition_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Transition\Transition\Transition		661644
-	148512618	Enemy_destroy	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\enemy_destroy_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_destroy		220644
+	148512618	Enemy_Destroy	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\enemy_destroy_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Destroy		220644
+	232765109	UpDown	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\UI_HH_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UpDown		40004
+	257305601	Metronome	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Metronome_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Metronome		325284
 	267635455	Layer_2	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Layer_2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Music_Combo_2\Layer_2\Layer_2		2646144
 	332337109	Layer_3	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Layer_3_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Music_Combo_3\Layer_3\Layer_3		2646144
+	334906959	Player_Shoot_Perfect_5	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Player_Shoot_Perfect_5_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot_Perfect\Player_Shoot_Perfect_5		138780
 	382734253	Bullet	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\bullet_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Bullet		176544
-	430791381	Bullet_fail	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\bullet_fail_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Bullet_fail		176576
+	405422816	Player_Shoot_Perfect_2	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Player_Shoot_Perfect_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot_Perfect\Player_Shoot_Perfect_2		118820
+	458634667	Player_Shoot_Perfect_4	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Player_Shoot_Perfect_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot_Perfect\Player_Shoot_Perfect_4		114124
+	497188029	Menu Music	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Menu Music_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Menu\Music_Menu\Menu Music		7938176
+	532444169	StartGame	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\UI_StartGame_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\StartGame		480232
+	548337954	Player_Respawn	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Player_respawn_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Respawn		654408
 	559094703	Acouphene	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Acouphene_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Acouphene		661644
+	578392085	Select	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\UI _BD_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Select		68436
+	687011090	Player_Shoot_Perfect_3	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Player_Shoot_Perfect_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot_Perfect\Player_Shoot_Perfect_3		132668
+	783535912	Bullet_Fail	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Bullet_Fail_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Bullet_Fail		115288
+	787986957	Player_Dead	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Player_Death_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Dead		514804
+	815126406	Player_Shoot_Perfect_1	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Player_Shoot_Perfect_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot_Perfect\Player_Shoot_Perfect_1		110084
 	901294601	Layer_4	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Layer_4_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Music_Combo_Full\Layer_4\Layer_4		2646144
 	1002566936	Layer_1	E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Windows\SFX\Layer_1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Music_Combo_1\Layer_1\Layer_1		2646144
 

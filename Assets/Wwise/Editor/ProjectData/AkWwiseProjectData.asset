@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{9C753FF6-5968-4AA4-B319-418A1F50D202}'
-    m_lastTimePsrt1: -1264488576
-    m_lastTimePart2: -1999282343
+    m_lastTimePsrt1: -2106948096
+    m_lastTimePart2: -1999281348
     List:
     - Name: Acouphene
       Path: Default Work Unit\SFX\UI\Acouphene
@@ -47,8 +47,8 @@ MonoBehaviour:
       ID: 1256513485
       Guid: c4a4d0410c50a54f9dc0a2e5c1d4d26f
       maxAttenuation: 0
-    - Name: Bullet_fail
-      Path: Default Work Unit\SFX\Player\Bullet_fail
+    - Name: Bullet_Fail
+      Path: Default Work Unit\SFX\Player\Bullet_Fail
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -56,13 +56,13 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Player
         ObjectType: 4
-      - ElementName: Bullet_fail
+      - ElementName: Bullet_Fail
         ObjectType: 3
       ID: -1913702188
       Guid: 2969b22364cef84fbccedd9f78677985
       maxAttenuation: 0
-    - Name: Enemy_destroy
-      Path: Default Work Unit\SFX\Enemy\Enemy_destroy
+    - Name: Enemy_Destroy
+      Path: Default Work Unit\SFX\Enemy\Enemy_Destroy
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -70,10 +70,24 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Enemy
         ObjectType: 4
-      - ElementName: Enemy_destroy
+      - ElementName: Enemy_Destroy
         ObjectType: 3
       ID: -555011160
       Guid: b3b85b8dbac0b546839f81352f468e8f
+      maxAttenuation: 0
+    - Name: Metronome
+      Path: Default Work Unit\SFX\UI\Metronome
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Metronome
+        ObjectType: 3
+      ID: -757497549
+      Guid: 2e0f0ecaa2a05449a0154483c05cd879
       maxAttenuation: 0
     - Name: Music_Gameplay
       Path: Default Work Unit\Interactive Music\Music_Gameplay
@@ -86,6 +100,102 @@ MonoBehaviour:
         ObjectType: 3
       ID: 620878633
       Guid: 229dd324aa381b4c9f2661d77900c9fb
+      maxAttenuation: 0
+    - Name: Music_Menu
+      Path: Default Work Unit\Interactive Music\Music_Menu
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Interactive Music
+        ObjectType: 4
+      - ElementName: Music_Menu
+        ObjectType: 3
+      ID: 1598298728
+      Guid: 1feaf42a15272f41bb48c2f53d93e428
+      maxAttenuation: 0
+    - Name: Player_Dead
+      Path: Default Work Unit\SFX\Player\Player_Dead
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: Player_Dead
+        ObjectType: 3
+      ID: -2068852793
+      Guid: 72fc4dd38e10734c98e2c845a49072f8
+      maxAttenuation: 0
+    - Name: Player_Respawn
+      Path: Default Work Unit\SFX\Player\Player_Respawn
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: Player_Respawn
+        ObjectType: 3
+      ID: -2133253325
+      Guid: c43c7c580c176f41aa723e070d06198e
+      maxAttenuation: 0
+    - Name: Player_Shoot_Perfect
+      Path: Default Work Unit\SFX\Player\Player_Shoot_Perfect
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: Player_Shoot_Perfect
+        ObjectType: 3
+      ID: -1981053396
+      Guid: 9133034eaf3c2d46bdabba188b136344
+      maxAttenuation: 0
+    - Name: Select
+      Path: Default Work Unit\SFX\UI\Select
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Select
+        ObjectType: 3
+      ID: 1432588725
+      Guid: b7505d8b5354ce4e842f99eb393bc994
+      maxAttenuation: 0
+    - Name: StartGame
+      Path: Default Work Unit\SFX\UI\StartGame
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: StartGame
+        ObjectType: 3
+      ID: 1521187885
+      Guid: 5756195e843a6648a01994417b038486
+      maxAttenuation: 0
+    - Name: UpDown
+      Path: Default Work Unit\SFX\UI\UpDown
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: UpDown
+        ObjectType: 3
+      ID: -1692003338
+      Guid: 03def7adf3c53b42850643ede0e3c706
       maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -149,8 +259,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{96C14579-6E85-47EE-8A66-6174EFA288CB}'
-    m_lastTimePsrt1: -1264488576
-    m_lastTimePart2: -1999282343
+    m_lastTimePsrt1: -2106948096
+    m_lastTimePart2: -1999281348
     List:
     - Name: Main1
       Path: Default Work Unit\Main1
@@ -307,6 +417,8 @@ MonoBehaviour:
   - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/Enemy
   - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/Player
   - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/UI
+  - /Wwise_ProjectSchmup/SoundBanks
+  - /Wwise_ProjectSchmup/SoundBanks/Default Work Unit
   - /Wwise_ProjectSchmup/States
   - /Wwise_ProjectSchmup/States/Default Work Unit
   - /Wwise_ProjectSchmup/States/Default Work Unit/Music_Gameplay_1

@@ -37,11 +37,13 @@ public class PauseMenu : MonoBehaviour
         pauseScreen.BackgroundDisplay(false);
         Time.timeScale = 1;
         canBeExitedWithCancel = false;
+        AkSoundEngine.SetRTPCValue("LPF_Music", 0);
     }
 
     public void ButtonConfirm_RestartLevel()
     {
         Time.timeScale = 1;
+        AkSoundEngine.SetRTPCValue("LPF_Music", 0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -58,6 +60,7 @@ public class PauseMenu : MonoBehaviour
     public void ButtonConfirm_TitleScreen()
     {
         Time.timeScale = 1;
+        AkSoundEngine.SetRTPCValue("LPF_Music", 0);
         SceneManager.LoadScene(0);
     }
     
