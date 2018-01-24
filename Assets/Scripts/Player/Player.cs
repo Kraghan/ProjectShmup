@@ -47,6 +47,7 @@ public class Player : Killable
     {
         hitVar.value = 0;
         animator.SetBool("IsAlive", false);
+        AkSoundEngine.PostEvent("Player_Dead", gameObject);
         switch (deathAnimation)
         {
             case DeathAnimation.NoDeath:
@@ -59,6 +60,7 @@ public class Player : Killable
                 {
                     GameObject obj = Instantiate(deathAnimationPrefabToInstantiate, transform.position, Quaternion.identity, null);
                     obj.transform.parent = transform.parent;
+                    AkSoundEngine.PostEvent("Acouphene", gameObject);
                 }
                 DisablePlayer();
                 break;
@@ -97,6 +99,7 @@ public class Player : Killable
         health = initialLife;
         animator.SetBool("IsAlive", true);
         EnablePlayer();
+        AkSoundEngine.PostEvent("Player_Respawn", gameObject);
     }
 }
   

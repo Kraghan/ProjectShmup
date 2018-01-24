@@ -92,6 +92,8 @@ public class PlayerController : MonoBehaviour
             pauseScreen.DeactivateMenuSections();
             pauseScreen.GoTo_PauseMenu();
             Time.timeScale = 0;
+
+            AkSoundEngine.SetRTPCValue("LPF_Music", 70);
         }
 
         if(m_shootTimeElapsed >= m_shootCooldown && Input.GetButtonDown("Fire1") && Time.timeScale != 0)
@@ -144,7 +146,7 @@ public class PlayerController : MonoBehaviour
 
         if(BPM_Manager.IsOnBeat(m_errorWindowPerfect))
         {
-            AkSoundEngine.PostEvent("Bullet", gameObject);
+            AkSoundEngine.PostEvent("Player_Shoot_Perfect", gameObject);
             newProj = Instantiate(m_perfectShot, transform.position, transform.rotation);
 
             m_hitCounter.value ++;
@@ -199,7 +201,7 @@ public class PlayerController : MonoBehaviour
 
         GameObject newProj;
         
-        //AkSoundEngine.PostEvent("Bullet_fail", gameObject);
+        AkSoundEngine.PostEvent("Acouphene", gameObject);
         m_combosCounter.value = 0;
         newProj = Instantiate(m_bomb, transform.position, transform.rotation);
 

@@ -18,7 +18,7 @@ public class MusicManager : MonoBehaviour
 			if(m_currentState == 2 && value == 3)
 			{
 				AkSoundEngine.SetState("Music_Gameplay_1", "Music_Transition");
-				m_nextTransitionCD = 8;
+				m_nextTransitionCD = 8 - (m_beat % 8);
 			}
 			else
 				m_nextTransitionCD = 0;

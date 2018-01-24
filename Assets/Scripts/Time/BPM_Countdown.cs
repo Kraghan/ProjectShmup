@@ -20,6 +20,9 @@ public class BPM_Countdown : BPM_Events
 		{
 			m_OnBeat.Invoke();
 
+			if(m_count == 4)
+				AkSoundEngine.PostEvent("Metronome", gameObject);
+
 			m_count--;
 			m_syncText.text = m_count.ToString();
 
