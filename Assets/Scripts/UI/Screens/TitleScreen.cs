@@ -82,6 +82,7 @@ public class TitleScreen : MonoBehaviour
     public void GoTo_Tutorial()
     {
         DeactivateMenuSections();
+        tutorialMenu.ResetSlides();
         tutorialMenu.gameObject.SetActive(true);
     }
 

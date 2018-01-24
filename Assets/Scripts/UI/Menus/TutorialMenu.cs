@@ -5,6 +5,10 @@ public class TutorialMenu : MonoBehaviour
     #region Attributes
     [SerializeField]
     private MenuScreen menuScreen;
+    [SerializeField]
+    private GameObject[] slides;
+
+    private int selectedSlideID = 0;
 
     private TitleScreen titleScreen;
     private PauseScreen pauseScreen;
@@ -36,6 +40,50 @@ public class TutorialMenu : MonoBehaviour
     #endregion
 
     #region Methods
+    public void PreviousSlide()
+    {
+        selectedSlideID--;
+        if(selectedSlideID < 0)
+        {
+            selectedSlideID = 0;
+            InputDown_Cancel();
+        }
+        else
+        {
+            DisplayOnlySlide(selectedSlideID);
+        }
+    }
+
+    public void NextSlide()
+    {
+        selectedSlideID++;
+        if(selectedSlideID >= slides.Length)
+        {
+            selectedSlideID = slides.Length - 1;
+            InputDown_Cancel();
+        }
+        else
+        {
+            DisplayOnlySlide(selectedSlideID);
+        }
+    }
+
+    public void ResetSlides()
+    {
+        selectedSlideID = 0;
+        DisplayOnlySlide(selectedSlideID);
+    }
+
+    private void DisplayOnlySlide(int slide)
+    {
+        for(int i = 0; i < slides.Length; i++)
+        {
+            if (i == slide)
+                slides[i].SetActive(true);
+            else
+                slides[i].SetActive(false);
+        }
+    }
 
     #region Inputs
     public void InputDown_Confirm()
