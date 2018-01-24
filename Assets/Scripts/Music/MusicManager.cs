@@ -12,14 +12,16 @@ public class MusicManager : MonoBehaviour
 
 	[SerializeField]
 	IntVariable m_state;
-	int m_currentState = -1;
+	int m_currentState = 1;
 	int State {
 		set{
 			if(m_currentState == 2 && value == 3)
 			{
 				AkSoundEngine.SetState("Music_Gameplay_1", "Music_Transition");
-				m_nextTransitionCD = 4;
+				m_nextTransitionCD = 8;
 			}
+			else
+				m_nextTransitionCD = 0;
 
 			m_currentState = value;
 		}
@@ -40,53 +42,51 @@ public class MusicManager : MonoBehaviour
 		m_isPlaying = true;
 
 		m_beat = 4*m_loopLenght;
-		State = m_state.value;
+
+		AkSoundEngine.PostEvent("Music_Gameplay", gameObject);
+		AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_1");
 	}
 	
 	void OnBeat()
 	{
 		if(m_isPlaying)
 		{
-			if(State != m_state.value)
-			{
-				m_beat++;
-				State = m_state.value;
-			}
-
-			if(m_nextTransitionCD == 0)
-			{
-				switch (m_currentState)
-				{
-					case 1:
-						AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_1");
-						break;
-					case 2:
-						AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_2");
-						break;
-					case 3:
-						AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_3");
-						break;
-					case 4:
-						AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_Full");
-						break;
-				}
-			}
-			else
-				m_nextTransitionCD--;
-
 			// Relaunch main beat
 			if (m_beat == 4*m_loopLenght)
 			{
 				m_beat = 1;
-
-				if(State == 1)
-				{
-					AkSoundEngine.PostEvent("Music_Gameplay", gameObject);
-					AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_1");
-				}
 			}
 			else
-				m_beat++;
+			{
+				if(State != m_state.value)
+				State = m_state.value;
+
+				if(m_nextTransitionCD > 0)
+					m_nextTransitionCD--;
+				else if(m_nextTransitionCD == 0)
+				{
+					switch (m_currentState)
+					{
+						case 1:
+							AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_1");
+							break;
+						case 2:
+							AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_2");
+							break;
+						case 3:
+							AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_3");
+							break;
+						case 4:
+							AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_Full");
+							break;
+					}
+
+					// m_beat = 4*m_loopLenght;
+					m_nextTransitionCD = -1;
+				}
+			}
+
+			m_beat++;
 		}
 	}
 }
