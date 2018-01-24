@@ -227,6 +227,11 @@ public class LeaderboardMenu : MonoBehaviour
         }
     }
 
+    public void Button_Replay()
+    {
+        SceneManager.LoadScene(2);
+    }
+
     #region Inputs
     public void InputDown_Confirm()
     {

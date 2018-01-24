@@ -35,6 +35,6 @@ public class EndLevel : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         triggered = true;
-        textBoxForMessage.text = "End of the level reached ! Thanks for playing";
+        textBoxForMessage.gameObject.SetActive(true);
     }
 }
