@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0ed35e12b3e3746ad71ef1f3a7f193, type: 3}
   m_Name: Layer
   m_EditorClassIdentifier: 
-  description: Combo layer mode (1 2 3 ou 4)
-  value: 1
+  description: z
+  value: 3
