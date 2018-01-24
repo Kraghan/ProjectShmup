@@ -51,6 +51,8 @@ public class TitleScreen : MonoBehaviour
         if (se_move == null)
             Debug.LogWarning("TitleScreen - se_move has not been assigned.");
         GoTo_MainMenu();
+
+        AkSoundEngine.PostEvent("Music_Menu", gameObject);
     }
 	
 	// Update is called once per frame
@@ -82,6 +84,7 @@ public class TitleScreen : MonoBehaviour
     public void GoTo_Tutorial()
     {
         DeactivateMenuSections();
+        tutorialMenu.ResetSlides();
         tutorialMenu.gameObject.SetActive(true);
     }
 

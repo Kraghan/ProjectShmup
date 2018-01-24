@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spread: 0
   shoots:
-  - largerDisplayInEditor: 0
+  - largerDisplayInEditor: 1
     speed: 140
     acceleration: 5
     direction: 0

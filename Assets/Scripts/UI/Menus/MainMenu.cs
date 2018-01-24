@@ -27,6 +27,9 @@ public class MainMenu : MonoBehaviour {
     #region Inputs
     public void ButtonConfirm_Play()
     {
+        AkSoundEngine.StopAll();
+        AkSoundEngine.PostEvent("StartGame", gameObject);
+        
         SceneManager.LoadScene(2);
     }
 

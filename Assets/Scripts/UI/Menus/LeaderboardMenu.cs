@@ -7,14 +7,20 @@ using UnityEngine.SceneManagement;
 public class LeaderboardMenu : MonoBehaviour
 {
     #region Attributes
-    public static event System.Action<GameJolt.API.Objects.Score[]> topTenLoader;
+    public static event System.Action<GameJolt.API.Objects.Score[]> topLoader;
 
     [SerializeField]
     private InputField usernameInputField;
     [SerializeField]
     private Text scoreText;
     [SerializeField]
-    private Text topTenText;
+    private Text col_1_score;
+    [SerializeField]
+    private Text col_1_name;
+    [SerializeField]
+    private Text col_2_score;
+    [SerializeField]
+    private Text col_2_name;
     [SerializeField]
     private Text submitScoreComment;
     [SerializeField]
@@ -29,7 +35,7 @@ public class LeaderboardMenu : MonoBehaviour
     void Start()
     {
         titleScreen = TitleScreen.Find();
-        topTenLoader = LoadTopTen;
+        topLoader = LoadTop;
         if(scoreText != null && scoreVar != null)
         {
             scoreText.text = "Score: " + scoreVar.value.ToString() + " points";
@@ -49,7 +55,7 @@ public class LeaderboardMenu : MonoBehaviour
     #region Methods
     public void Refresh()
     {
-        GetTop10();
+        GetTop();
     }
 
     public void GoToTitleScreen()
@@ -57,11 +63,11 @@ public class LeaderboardMenu : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void GetTop10()
+    public void GetTop()
     {
         try
         {
-            GameJolt.API.Scores.Get(topTenLoader, 0, 10, false);
+            GameJolt.API.Scores.Get(topLoader, 0, 16, false);
         }
         catch (System.Exception e)
         {
@@ -72,13 +78,16 @@ public class LeaderboardMenu : MonoBehaviour
     public void Click_Button_SubmitScore()
     {
         submitScoreComment.text = "";
-        topTenText.text = "";
+        col_1_score.text = "";
+        col_1_name.text = "";
+        col_2_score.text = "";
+        col_2_name.text = "";
         float score = scoreVar.value;
         if (!scoreSubmitted)
         {
             if (usernameInputField.text != null && usernameInputField.text != "")
             {
-                if (usernameInputField.text.Length <= 14)
+                if (usernameInputField.text.Length < 17)
                 {
                     bool isOkay = SaveScoreOnline(usernameInputField.text, (int)score);
                     if (!isOkay)
@@ -93,7 +102,7 @@ public class LeaderboardMenu : MonoBehaviour
                     bool isOkay2 = false;
                     try
                     {
-                        GetTop10();
+                        GetTop();
                         isOkay2 = true;
                     }
                     catch (System.Exception e)
@@ -102,7 +111,7 @@ public class LeaderboardMenu : MonoBehaviour
                     }
                     if (!isOkay2)
                     {
-                        topTenText.text = "Leaderboard can't be loaded. Please verify your internet connection.";
+                        submitScoreComment.text = "Leaderboard can't be loaded. Please verify your internet connection.";
                     }
                     else
                     {
@@ -110,7 +119,7 @@ public class LeaderboardMenu : MonoBehaviour
                     }
                 }
                 else
-                    submitScoreComment.text = "Please enter less than 14 characters !";
+                    submitScoreComment.text = "Please enter less than 17 characters !";
             }
             else
                 submitScoreComment.text = "Enter your name(s) first !";
@@ -144,36 +153,83 @@ public class LeaderboardMenu : MonoBehaviour
         return isOkay;
     }
 
-    public void LoadTopTen(GameJolt.API.Objects.Score[] scores)
+    public void LoadTop(GameJolt.API.Objects.Score[] scores)
     {
+        col_1_score.text = "";
+        col_1_name.text = "";
+        col_2_score.text = "";
+        col_2_name.text = "";
         try
         {
-            topTenText.text = "";
             int maxI = 0;
-            for (int i = 0; i < scores.Length && i < 10; i++)
+            for (int i = 0; i < scores.Length && i < 8; i++)
             {
-                topTenText.text += ScoreDisplayer(i + 1, scores[i]);
+                if(i == 8 - 1)
+                {
+                    col_1_score.text += scores[i].Value.ToString();
+                    col_1_name.text += scores[i].PlayerName.ToString();
+                }
+                else
+                {
+                    col_1_score.text += scores[i].Value.ToString() + "\n";
+                    col_1_name.text += scores[i].PlayerName.ToString() + "\n";
+                }
                 maxI = i;
             }
-            for (int j = (maxI + 1); j < 10; j++)
+            for (int j = (maxI + 1); j < 8; j++)
             {
                 int rang = j + 1;
-                topTenText.text += "#" + rang + " - X - X\n";
+                if(j == 8 - 1)
+                {
+                    col_1_score.text += "   ";
+                    col_1_name.text += "   ";
+                }
+                else
+                {
+                    col_1_score.text += "   " + "\n";
+                    col_1_name.text += "   " + "\n";
+                }
+                
+            }
+            maxI = 8;
+            for (int i = 8; i < scores.Length && i < 16; i++)
+            {
+                if (i == 16 - 1)
+                {
+                    col_2_score.text += scores[i].Value.ToString();
+                    col_2_name.text += scores[i].PlayerName.ToString();
+                }
+                else
+                {
+                    col_2_score.text += scores[i].Value.ToString() + "\n";
+                    col_2_name.text += scores[i].PlayerName.ToString() + "\n";
+                }
+                maxI = i;
+            }
+            for (int j = (maxI + 1); j < 16; j++)
+            {
+                int rang = j + 1;
+                if (j == 16 - 1)
+                {
+                    col_2_score.text += "   ";
+                    col_2_name.text += "   ";
+                }
+                else
+                {
+                    col_2_score.text += "   " + "\n";
+                    col_2_name.text += "   " + "\n";
+                }
             }
         }
         catch (System.Exception exc)
         {
-            topTenText.text = "Leaderboard can't be loaded. Please verify your internet connection.";
+            submitScoreComment.text = "Leaderboard can't be loaded. Please verify your internet connection.";
         }
     }
 
-    public string ScoreDisplayer(int rank, GameJolt.API.Objects.Score score)
+    public void Button_Replay()
     {
-        string displayer = "";
-        displayer += "#" + rank.ToString() + " - ";
-        displayer += score.Value.ToString() + " - ";
-        displayer += score.PlayerName + "\n";
-        return displayer;
+        SceneManager.LoadScene(2);
     }
 
     #region Inputs

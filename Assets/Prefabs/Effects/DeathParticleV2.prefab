@@ -19,9 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4830108251705284}
-  - component: {fileID: 95879838347217988}
   - component: {fileID: 212866128509469636}
   - component: {fileID: 114887507859169386}
+  - component: {fileID: 95332470807316506}
   m_Layer: 10
   m_Name: DeathParticleV2
   m_TagString: Enemy
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95879838347217988
+--- !u!95 &95332470807316506
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -51,7 +51,7 @@ Animator:
   m_GameObject: {fileID: 1705410022420878}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fc25b4d0cbfb15848a02f0517c7e2126, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6e0a884bc70b54343af5c2c4d35ea8fa, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

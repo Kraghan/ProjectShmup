@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spread: 0
   shoots:
-  - largerDisplayInEditor: 0
-    speed: 70
-    acceleration: 5
+  - largerDisplayInEditor: 1
+    speed: 150
+    acceleration: 0
     direction: 0
     rotation: 0
     offset: {x: 0, y: 0, z: 0}

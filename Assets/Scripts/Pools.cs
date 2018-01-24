@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pools : GameJolt.API.Core.MonoSingleton<Pools>
+public class Pools : MonoBehaviour
 {
 	public Transform Bullets, Enemies;
 }

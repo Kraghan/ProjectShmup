@@ -101,8 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damages: 2
   destroyOnHit: 1
-  destroyAnimation: 0
-  destroyAnimationPrefabToInstantiate: {fileID: 0}
+  destroyAnimation: 1
+  destroyAnimationPrefabToInstantiate: {fileID: 1808581393139808, guid: 8f893753377705a4b93a420018cead77,
+    type: 2}
   destroyInXSeconds: 20
   isOnBeat: 0
 --- !u!212 &212536435683893788

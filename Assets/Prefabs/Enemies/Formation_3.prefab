@@ -142,7 +142,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1214083967944458}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5630302, y: 7.571397, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4647468136403040}
@@ -320,9 +320,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invulnerabilityTime: 0
   deathAnimation: 2
-  deathAnimationPrefabToInstantiate: {fileID: 1804348000379606, guid: bef11b4605ff9d84abcc45b3ca289880,
+  deathAnimationPrefabToInstantiate: {fileID: 1705410022420878, guid: 9a07b0cd46605e8419d4cca968d51384,
     type: 2}
-  health: 16
+  health: 2
   blinckingTime: 0.25
   comboVariable: {fileID: 11400000, guid: 6988fbebcb1d8184ca1de02fc9b41c0e, type: 2}
   scoreVariable: {fileID: 11400000, guid: e7917fdd94d198547a00de3f9330aefe, type: 2}
@@ -343,9 +343,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invulnerabilityTime: 0
   deathAnimation: 2
-  deathAnimationPrefabToInstantiate: {fileID: 1804348000379606, guid: bef11b4605ff9d84abcc45b3ca289880,
+  deathAnimationPrefabToInstantiate: {fileID: 1705410022420878, guid: 9a07b0cd46605e8419d4cca968d51384,
     type: 2}
-  health: 16
+  health: 2
   blinckingTime: 0.25
   comboVariable: {fileID: 11400000, guid: 6988fbebcb1d8184ca1de02fc9b41c0e, type: 2}
   scoreVariable: {fileID: 11400000, guid: e7917fdd94d198547a00de3f9330aefe, type: 2}
@@ -411,9 +411,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invulnerabilityTime: 0
   deathAnimation: 2
-  deathAnimationPrefabToInstantiate: {fileID: 1804348000379606, guid: bef11b4605ff9d84abcc45b3ca289880,
+  deathAnimationPrefabToInstantiate: {fileID: 1705410022420878, guid: 9a07b0cd46605e8419d4cca968d51384,
     type: 2}
-  health: 16
+  health: 2
   blinckingTime: 0.25
   comboVariable: {fileID: 11400000, guid: 6988fbebcb1d8184ca1de02fc9b41c0e, type: 2}
   scoreVariable: {fileID: 11400000, guid: e7917fdd94d198547a00de3f9330aefe, type: 2}

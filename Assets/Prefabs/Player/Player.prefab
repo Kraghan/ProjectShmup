@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1660832071300586}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children:
   - {fileID: 4418033986611528}
@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1313739988381034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4124941454275436}
@@ -133,12 +133,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.539499}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.4951397
 --- !u!95 &95108702542199788
 Animator:
   serializedVersion: 3
@@ -187,12 +187,14 @@ MonoBehaviour:
   horizontalSpeed: 500
   verticalSpeed: 500
   borderOffset: {x: 20, y: 20}
+  topBorderOffset: 12
   rawInputPercent: 0.9
   focusSpeedMultiplicator: 0.5
+  m_shootOrigin: {fileID: 4418033986611528}
   m_shootCooldown: 0.234375
-  m_errorWindowPerfect: 0.04
+  m_errorWindowPerfect: 0.05
   m_errorWindowGreat: 0.08
-  m_errorWindowGood: 0
+  m_errorWindowGood: 0.13
   m_goodShot: {fileID: 1736637555861202, guid: 52aa4fd908e2741429af3d78ef61b30b, type: 2}
   m_greatShot: {fileID: 1736637555861202, guid: 09deb03dd8d1b924f8787e3200d2e626,
     type: 2}
@@ -221,6 +223,7 @@ MonoBehaviour:
     type: 2}
   health: 1
   blinckingTime: 0.075
+  hitVar: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
 --- !u!212 &212196027364621162
 SpriteRenderer:
   m_ObjectHideFlags: 1
