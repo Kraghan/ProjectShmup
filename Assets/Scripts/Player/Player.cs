@@ -10,6 +10,8 @@ public class Player : Killable
     private GameObject enemyPool;
     private Animator animator;
     private float initialLife;
+    [SerializeField]
+    private IntVariable hitVar;
     #endregion
 
     // Use this for initialization
@@ -43,7 +45,9 @@ public class Player : Killable
 
     protected override void Die(bool onBeat)
     {
+        hitVar.value = 0;
         animator.SetBool("IsAlive", false);
+        AkSoundEngine.PostEvent("Player_Dead", gameObject);
         switch (deathAnimation)
         {
             case DeathAnimation.NoDeath:
@@ -56,6 +60,9 @@ public class Player : Killable
                 {
                     GameObject obj = Instantiate(deathAnimationPrefabToInstantiate, transform.position, Quaternion.identity, null);
                     obj.transform.parent = transform.parent;
+                    AkSoundEngine.PostEvent("Acouphene", gameObject);
+                    AkSoundEngine.SetRTPCValue("LPF_Music", 70);
+                    Invoke("ResetAcouphene", 4);
                 }
                 DisablePlayer();
                 break;
@@ -65,6 +72,11 @@ public class Player : Killable
         }
 
         OnDeath(onBeat);
+    }
+
+    void ResetAcouphene()
+    {
+        AkSoundEngine.SetRTPCValue("LPF_Music", 0);
     }
 
     public void DisablePlayer()
@@ -81,6 +93,7 @@ public class Player : Killable
         GetComponent<PlayerController>().enabled = true;
     }
 
+    bool firstTime = true;
     public void Revive()
     {
         if (bulletPool)
@@ -94,6 +107,11 @@ public class Player : Killable
         health = initialLife;
         animator.SetBool("IsAlive", true);
         EnablePlayer();
+        if(!firstTime)
+        {
+            AkSoundEngine.PostEvent("Player_Respawn", gameObject);
+        }
+        firstTime = false;
     }
 }
   

@@ -55,6 +55,6 @@ public class Enemy : Killable
     public override void OnHit(bool onBeat)
     {
         scoreVariable.value += scoreOnHit * Mathf.Pow(2, comboVariable.value - 1);
-        //m_animator.SetTrigger("Hit");
+        m_animator.SetTrigger("Hit");
     }
 }

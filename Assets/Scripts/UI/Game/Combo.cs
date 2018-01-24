@@ -7,24 +7,28 @@ public class Combo : MonoBehaviour {
     #region Attributes
     [SerializeField]
     private FloatVariable combo;
-
-    private Text text;
+    [SerializeField]
+    private Sprite[] sprites = new Sprite[4];
+    private Image image;
     #endregion
 
     #region Monobehaviour
     // Use this for initialization
     void Start()
     {
-        text = GetComponent<Text>();
+        image = GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (combo.value > 1)
-            text.text = "x" + Mathf.Pow(2,combo.value - 1).ToString("F0");
+        {
+            image.enabled = true;
+            image.sprite = sprites[(int)combo.value - 2];
+        }
         else
-            text.text = "";
+            image.enabled = false;
     }
     #endregion
 }

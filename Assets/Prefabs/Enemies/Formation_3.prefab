@@ -142,7 +142,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1214083967944458}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5630302, y: 7.571397, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4647468136403040}
@@ -320,7 +320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invulnerabilityTime: 0
   deathAnimation: 2
-  deathAnimationPrefabToInstantiate: {fileID: 1804348000379606, guid: bef11b4605ff9d84abcc45b3ca289880,
+  deathAnimationPrefabToInstantiate: {fileID: 1705410022420878, guid: 9a07b0cd46605e8419d4cca968d51384,
     type: 2}
   health: 16
   blinckingTime: 0.25
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invulnerabilityTime: 0
   deathAnimation: 2
-  deathAnimationPrefabToInstantiate: {fileID: 1804348000379606, guid: bef11b4605ff9d84abcc45b3ca289880,
+  deathAnimationPrefabToInstantiate: {fileID: 1705410022420878, guid: 9a07b0cd46605e8419d4cca968d51384,
     type: 2}
   health: 16
   blinckingTime: 0.25
@@ -411,7 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invulnerabilityTime: 0
   deathAnimation: 2
-  deathAnimationPrefabToInstantiate: {fileID: 1804348000379606, guid: bef11b4605ff9d84abcc45b3ca289880,
+  deathAnimationPrefabToInstantiate: {fileID: 1705410022420878, guid: 9a07b0cd46605e8419d4cca968d51384,
     type: 2}
   health: 16
   blinckingTime: 0.25
