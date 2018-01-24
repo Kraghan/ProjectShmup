@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Layer
   m_EditorClassIdentifier: 
   description: Combo layer mode (1 2 3 ou 4)
-  value: 3
+  value: 1
