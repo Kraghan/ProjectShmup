@@ -275,8 +275,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{31D7A65A-AAC5-43F6-8CDF-DA62B95961AA}'
-    m_lastTimePsrt1: 375184384
-    m_lastTimePart2: -1999282352
+    m_lastTimePsrt1: -31440501
+    m_lastTimePart2: -1999281323
     List:
     - Name: LPF_Music
       Path: Default Work Unit\LPF_Music
@@ -410,18 +410,6 @@ MonoBehaviour:
       Guid: 79799fb1272d3b49b93a3bb64cbe3d53
   ExpandedItems:
   - /Wwise_ProjectSchmup
-  - /Wwise_ProjectSchmup/Events
-  - /Wwise_ProjectSchmup/Events/Default Work Unit
-  - /Wwise_ProjectSchmup/Events/Default Work Unit/Interactive Music
-  - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX
-  - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/Enemy
-  - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/Player
-  - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/UI
-  - /Wwise_ProjectSchmup/SoundBanks
-  - /Wwise_ProjectSchmup/SoundBanks/Default Work Unit
-  - /Wwise_ProjectSchmup/States
-  - /Wwise_ProjectSchmup/States/Default Work Unit
-  - /Wwise_ProjectSchmup/States/Default Work Unit/Music_Gameplay_1
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
