@@ -13,15 +13,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spread: 10
   shoots:
-  - largerDisplayInEditor: 1
+  - largerDisplayInEditor: 0
     speed: 2000
     acceleration: 0
-    direction: 2
+    direction: 4
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
-  - largerDisplayInEditor: 1
+  - largerDisplayInEditor: 0
     speed: 2000
     acceleration: 0
-    direction: 358
+    direction: 356
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 2000
+    acceleration: 0
+    direction: 0
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
