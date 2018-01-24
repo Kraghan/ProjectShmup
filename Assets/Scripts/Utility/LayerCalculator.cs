@@ -17,7 +17,8 @@ public class LayerCalculator : MonoBehaviour {
             m_layerVar.value = m_comboToPassNextLevel.Length - 1;
         else
         {
-            for(int i = 0; i < m_comboToPassNextLevel.Length; ++i)
+            m_layerVar.value = 1;
+            for (int i = 0; i < m_comboToPassNextLevel.Length; ++i)
             {
                 if (m_comboToPassNextLevel[i] <= m_comboVar.value)
                     m_layerVar.value = i + 1;

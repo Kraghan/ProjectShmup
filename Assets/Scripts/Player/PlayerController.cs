@@ -201,6 +201,7 @@ public class PlayerController : MonoBehaviour
         
         //AkSoundEngine.PostEvent("Bullet_fail", gameObject);
         m_combosCounter.value = 0;
+        m_hitCounter.value = 0;
         newProj = Instantiate(m_bomb, transform.position, transform.rotation);
 
         newProj.transform.SetParent(m_shotPool);
