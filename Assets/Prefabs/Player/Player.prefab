@@ -71,7 +71,7 @@ Transform:
   m_GameObject: {fileID: 1660832071300586}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 4418033986611528}
   - {fileID: 4410562619195192}
@@ -190,9 +190,9 @@ MonoBehaviour:
   rawInputPercent: 0.9
   focusSpeedMultiplicator: 0.5
   m_shootCooldown: 0.234375
-  m_errorWindowPerfect: 0.1
-  m_errorWindowGreat: 0.13
-  m_errorWindowGood: 0
+  m_errorWindowPerfect: 0.05
+  m_errorWindowGreat: 0.08
+  m_errorWindowGood: 0.13
   m_goodShot: {fileID: 1736637555861202, guid: 52aa4fd908e2741429af3d78ef61b30b, type: 2}
   m_greatShot: {fileID: 1736637555861202, guid: 09deb03dd8d1b924f8787e3200d2e626,
     type: 2}

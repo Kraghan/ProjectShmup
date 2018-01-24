@@ -16,6 +16,12 @@ MonoBehaviour:
   - largerDisplayInEditor: 0
     speed: 2000
     acceleration: 0
-    direction: 0
+    direction: 3
+    rotation: 0
+    offset: {x: 0, y: 0, z: 0}
+  - largerDisplayInEditor: 0
+    speed: 2000
+    acceleration: 0
+    direction: 357
     rotation: 0
     offset: {x: 0, y: 0, z: 0}
