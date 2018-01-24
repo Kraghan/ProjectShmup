@@ -10,6 +10,8 @@ public class MusicManager : MonoBehaviour
 
 	int m_nextTransitionCD = -1;
 
+	static bool launched = false;
+
 	[SerializeField]
 	IntVariable m_state;
 	int m_currentState = 1;
@@ -43,7 +45,11 @@ public class MusicManager : MonoBehaviour
 
 		m_beat = 4*m_loopLenght;
 
-		AkSoundEngine.PostEvent("Music_Gameplay", gameObject);
+		if(!launched)
+		{
+			AkSoundEngine.PostEvent("Music_Gameplay", gameObject);
+			launched = true;
+		}
 		AkSoundEngine.SetState("Music_Gameplay_1", "Music_Combo_1");
 	}
 	
