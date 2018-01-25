@@ -458,16 +458,10 @@ MonoBehaviour:
   - /Wwise_ProjectSchmup
   - /Wwise_ProjectSchmup/Events
   - /Wwise_ProjectSchmup/Events/Default Work Unit
-  - /Wwise_ProjectSchmup/Events/Default Work Unit/Interactive Music
   - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX
   - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/Enemy
   - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/Player
   - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/UI
-  - /Wwise_ProjectSchmup/SoundBanks
-  - /Wwise_ProjectSchmup/SoundBanks/Default Work Unit
-  - /Wwise_ProjectSchmup/States
-  - /Wwise_ProjectSchmup/States/Default Work Unit
-  - /Wwise_ProjectSchmup/States/Default Work Unit/Music_Gameplay_1
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

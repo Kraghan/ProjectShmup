@@ -27,9 +27,17 @@ public class TitleScreen : MonoBehaviour
     private AudioSource se_move;
     #endregion
 
+    public static bool m_isMusicMenuPlaying = false;
+
     #region MonoBehaviour main methods
     // Use this for initialization
     void Start () {
+        if(!m_isMusicMenuPlaying)
+        {
+            AkSoundEngine.PostEvent("Music_Menu", gameObject);
+            m_isMusicMenuPlaying = true;
+        }
+
         // Menus sections checks
         if (mainMenu == null)
             Debug.LogWarning("TitleScreen - mainMenu has not been assigned.");
@@ -51,8 +59,6 @@ public class TitleScreen : MonoBehaviour
         if (se_move == null)
             Debug.LogWarning("TitleScreen - se_move has not been assigned.");
         GoTo_MainMenu();
-
-        AkSoundEngine.PostEvent("Music_Menu", gameObject);
     }
 	
 	// Update is called once per frame

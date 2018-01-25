@@ -74,6 +74,7 @@ public class PauseScreen : MonoBehaviour
     public void GoTo_PauseMenu()
     {
         DeactivateMenuSections();
+        AkSoundEngine.SetRTPCValue("LPF_Music", 70);
         pauseMenu.gameObject.SetActive(true);
     }
 
@@ -94,6 +95,7 @@ public class PauseScreen : MonoBehaviour
         pauseMenu.gameObject.SetActive(false);
         tutorialMenu.gameObject.SetActive(false);
         optionsMenu.gameObject.SetActive(false);
+        AkSoundEngine.SetRTPCValue("LPF_Music", 0);
     }
     #endregion
 

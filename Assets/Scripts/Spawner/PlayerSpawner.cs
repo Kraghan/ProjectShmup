@@ -40,8 +40,6 @@ public class PlayerSpawner : MonoBehaviour
                     createPlayer();
                 else
                 {
-                    AkSoundEngine.StopAll();
-                    AkSoundEngine.PostEvent("GameOver", gameObject);
                     SceneManager.LoadScene(1);
                 }
             }
@@ -61,6 +59,7 @@ public class PlayerSpawner : MonoBehaviour
         if (!firstRespawn)
         {
             lifeVariable.value--;
+            
             currentPlayer.GetComponent<Player>().StartInvulnerabilityFrames();
         }
         else
