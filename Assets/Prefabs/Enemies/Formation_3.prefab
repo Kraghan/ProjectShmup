@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4647468136403040}
-  - component: {fileID: 114773656325290412}
   - component: {fileID: 50012358384356018}
   - component: {fileID: 212682001640419862}
   - component: {fileID: 114975905412794288}
@@ -42,7 +41,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4372311339848920}
-  - component: {fileID: 114818595229268984}
   - component: {fileID: 50051775529892176}
   - component: {fileID: 212175696333436980}
   - component: {fileID: 114642511039657708}
@@ -66,6 +64,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4850245339805036}
   - component: {fileID: 114618066807129146}
+  - component: {fileID: 114374279025818806}
   m_Layer: 0
   m_Name: Formation_3
   m_TagString: Untagged
@@ -81,7 +80,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4377847358928296}
-  - component: {fileID: 114997033491352038}
   - component: {fileID: 50008839610404970}
   - component: {fileID: 212512137151183918}
   - component: {fileID: 114805284120237824}
@@ -330,6 +328,55 @@ MonoBehaviour:
   scoreOnKill: 100
   m_combosCounter: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
   dieOnPlayerHit: 1
+--- !u!114 &114374279025818806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1214083967944458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab91771357fd73e438b5a325f029edb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnBeat:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 95034244939681014}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: BPM
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 95938613036367420}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: BPM
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 95885311465345274}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: BPM
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114487890648531638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -421,25 +468,6 @@ MonoBehaviour:
   scoreOnKill: 100
   m_combosCounter: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
   dieOnPlayerHit: 1
---- !u!114 &114773656325290412
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1099675964583280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13c62b21f05875345b26c82f3a6cfd9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pulseMode: 0
-  timingPulse: 1
-  scaleIncrease: 1.2
-  circleMaxSize: 30
-  increase: 1
-  modifyOpacity: 0
-  opacityStart: 0
-  opacityEnd: 0
 --- !u!114 &114775856618736978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -470,25 +498,6 @@ MonoBehaviour:
   reachRadius: 0.2
   wc: {fileID: 0}
   destroyAtTheEnd: 1
---- !u!114 &114818595229268984
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1132026689266644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13c62b21f05875345b26c82f3a6cfd9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pulseMode: 0
-  timingPulse: 1
-  scaleIncrease: 1.2
-  circleMaxSize: 30
-  increase: 1
-  modifyOpacity: 0
-  opacityStart: 0
-  opacityEnd: 0
 --- !u!114 &114867097630677986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -519,25 +528,6 @@ MonoBehaviour:
   reachRadius: 0.2
   wc: {fileID: 0}
   destroyAtTheEnd: 1
---- !u!114 &114997033491352038
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1906745485915808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13c62b21f05875345b26c82f3a6cfd9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pulseMode: 0
-  timingPulse: 1
-  scaleIncrease: 1.2
-  circleMaxSize: 30
-  increase: 1
-  modifyOpacity: 0
-  opacityStart: 0
-  opacityEnd: 0
 --- !u!212 &212175696333436980
 SpriteRenderer:
   m_ObjectHideFlags: 1

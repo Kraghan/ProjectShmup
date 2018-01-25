@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 58497827333253602}
   - component: {fileID: 114629492789589048}
   - component: {fileID: 95588041581914280}
+  - component: {fileID: 114593485978764742}
   m_Layer: 9
   m_Name: Add On Down
   m_TagString: AddOn
@@ -126,6 +127,7 @@ GameObject:
   - component: {fileID: 58519859357956698}
   - component: {fileID: 114789133455021744}
   - component: {fileID: 95971072945966184}
+  - component: {fileID: 114836851855513126}
   m_Layer: 9
   m_Name: Add On Left
   m_TagString: AddOn
@@ -147,6 +149,7 @@ GameObject:
   - component: {fileID: 58776322713985892}
   - component: {fileID: 114841848530103024}
   - component: {fileID: 95515738910244082}
+  - component: {fileID: 114782888774780596}
   m_Layer: 9
   m_Name: Add On Up
   m_TagString: AddOn
@@ -190,7 +193,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1753690407305080}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.5, y: 0, z: 20}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children:
   - {fileID: 4817322537553952}
@@ -538,6 +541,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: 1
   pattern: {fileID: 11400000, guid: 15262490ac9ec6944a2ef9e09b319904, type: 2}
+--- !u!114 &114593485978764742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1473216129644538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab91771357fd73e438b5a325f029edb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnBeat:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 95588041581914280}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: BPM
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114629492789589048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -564,6 +594,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addonSpeed: 1.6
   offset: {x: -1.6, y: 0, z: 0}
+--- !u!114 &114782888774780596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1717503232137526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab91771357fd73e438b5a325f029edb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnBeat:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 95515738910244082}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: BPM
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114784394749865744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -594,6 +651,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addonSpeed: 1.6
   offset: {x: -1.6, y: 0, z: 0}
+--- !u!114 &114836851855513126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1685969811940918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab91771357fd73e438b5a325f029edb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnBeat:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 95971072945966184}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: BPM
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114841848530103024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -734,7 +818,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 5.21, y: 2.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
