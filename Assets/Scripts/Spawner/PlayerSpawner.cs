@@ -40,6 +40,8 @@ public class PlayerSpawner : MonoBehaviour
                     createPlayer();
                 else
                 {
+                    AkSoundEngine.StopAll();
+                    AkSoundEngine.PostEvent("GameOver", gameObject);
                     SceneManager.LoadScene(1);
                 }
             }

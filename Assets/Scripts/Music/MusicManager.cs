@@ -10,7 +10,7 @@ public class MusicManager : MonoBehaviour
 
 	int m_nextTransitionCD = -1;
 
-	static bool launched = false;
+	bool launched = false;
 
 	[SerializeField]
 	IntVariable m_state;
