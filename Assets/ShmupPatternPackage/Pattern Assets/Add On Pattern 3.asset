@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0745bfedd57ff459a43d870d8cfad6, type: 3}
+  m_Name: Add On Pattern 3
+  m_EditorClassIdentifier: 
+  selectedRepetitionsMode: 0
+  duration: 0.46875
+  cycles: -1
+  bursts:
+  - timing: 0
+    burst: {fileID: 11400000, guid: b319309198a4112478dd0513c937407b, type: 2}
+    bullet: {fileID: 1062305414702394, guid: e5079245c34540a4b8275262467a4fcf, type: 2}
+    direction: 0
+    aimMode: 0
+    targetted: 0
