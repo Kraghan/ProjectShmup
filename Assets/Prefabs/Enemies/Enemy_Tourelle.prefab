@@ -19,13 +19,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4014431814903694}
-  - component: {fileID: 114219666420989712}
   - component: {fileID: 50535383386330696}
   - component: {fileID: 114260407865485438}
   - component: {fileID: 212111028846615586}
   - component: {fileID: 114672366818746608}
   - component: {fileID: 70181867011597278}
   - component: {fileID: 95747603384115510}
+  - component: {fileID: 114814885463788692}
   m_Layer: 10
   m_Name: Enemy_Tourelle
   m_TagString: Enemy
@@ -111,22 +111,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.47712326, y: 0.07280986}
   m_Size: {x: 4.149799, y: 4.149799}
   m_Direction: 1
---- !u!95 &95747603384115510
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1437600440487434}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 11.72, y: 7}
-  m_Direction: 1
 --- !u!95 &95061328859125716
 Animator:
   serializedVersion: 3
@@ -144,25 +128,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114219666420989712
-MonoBehaviour:
+--- !u!95 &95747603384115510
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1437600440487434}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13c62b21f05875345b26c82f3a6cfd9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pulseMode: 0
-  timingPulse: 1
-  scaleIncrease: 1.2
-  circleMaxSize: 30
-  increase: 1
-  modifyOpacity: 0
-  opacityStart: 0
-  opacityEnd: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 60be43aacb84fc44e95c99cc61aadcda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114260407865485438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,6 +196,33 @@ MonoBehaviour:
   reachRadius: 0.2
   wc: {fileID: 0}
   destroyAtTheEnd: 1
+--- !u!114 &114814885463788692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1437600440487434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab91771357fd73e438b5a325f029edb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnBeat:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 95747603384115510}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: BPM
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!212 &212111028846615586
 SpriteRenderer:
   m_ObjectHideFlags: 1

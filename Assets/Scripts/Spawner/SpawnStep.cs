@@ -84,7 +84,8 @@ public class SpawnStep : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        triggered = true;
+        if(collision.gameObject.CompareTag("SpawnerTrigger"))
+            triggered = true;
     }
     #endregion
 

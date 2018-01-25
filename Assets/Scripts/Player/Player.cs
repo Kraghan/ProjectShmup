@@ -12,6 +12,8 @@ public class Player : Killable
     private float initialLife;
     [SerializeField]
     private IntVariable hitVar;
+    [SerializeField]
+    FloatVariable lifeVariable;
     #endregion
 
     // Use this for initialization
@@ -48,6 +50,7 @@ public class Player : Killable
         hitVar.value = 0;
         animator.SetBool("IsAlive", false);
         AkSoundEngine.PostEvent("Player_Dead", gameObject);
+
         switch (deathAnimation)
         {
             case DeathAnimation.NoDeath:
@@ -60,9 +63,16 @@ public class Player : Killable
                 {
                     GameObject obj = Instantiate(deathAnimationPrefabToInstantiate, transform.position, Quaternion.identity, null);
                     obj.transform.parent = transform.parent;
+
+                    if(lifeVariable.value == 0)
+                    {
+                        AkSoundEngine.StopAll();
+                        AkSoundEngine.PostEvent("GameOver", gameObject);
+                    }
+
                     AkSoundEngine.PostEvent("Acouphene", gameObject);
                     AkSoundEngine.SetRTPCValue("LPF_Music", 70);
-                    Invoke("ResetAcouphene", 4);
+                    Invoke("ResetAcouphene", 2);
                 }
                 DisablePlayer();
                 break;

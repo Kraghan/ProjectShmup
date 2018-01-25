@@ -28,6 +28,7 @@ public class MainMenu : MonoBehaviour {
     public void ButtonConfirm_Play()
     {
         AkSoundEngine.StopAll();
+        TitleScreen.m_isMusicMenuPlaying = false;
         AkSoundEngine.PostEvent("StartGame", gameObject);
         
         SceneManager.LoadScene(2);

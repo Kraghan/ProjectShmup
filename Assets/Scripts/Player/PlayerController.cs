@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
 
         if(BPM_Manager.IsOnBeat(m_errorWindowPerfect))
         {
-            AkSoundEngine.PostEvent("Bullet", gameObject);
+            AkSoundEngine.PostEvent("Player_Shoot_Perfect", gameObject);
             newProj = Instantiate(m_perfectShot, m_shootOrigin.position, m_shootOrigin.rotation);
 
             m_hitCounter.value ++;
@@ -158,7 +158,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (BPM_Manager.IsOnBeat(m_errorWindowGreat))
         {
-            AkSoundEngine.PostEvent("Bullet", gameObject);
+            AkSoundEngine.PostEvent("Player_Shoot_Good", gameObject);
             newProj = Instantiate(m_greatShot, m_shootOrigin.position, m_shootOrigin.rotation);
 
             m_hitCounter.value++;
@@ -168,7 +168,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (BPM_Manager.IsOnBeat(m_errorWindowGood))
         {
-            AkSoundEngine.PostEvent("Bullet", gameObject);
+            // AkSoundEngine.PostEvent("Bullet", gameObject);
             newProj = Instantiate(m_goodShot, m_shootOrigin.position, m_shootOrigin.rotation);
 
             m_hitCounter.value++;
@@ -203,13 +203,21 @@ public class PlayerController : MonoBehaviour
 
         GameObject newProj;
         
-        //AkSoundEngine.PostEvent("Bullet_fail", gameObject);
+        AkSoundEngine.PostEvent("Acouphene", gameObject);
+        AkSoundEngine.SetRTPCValue("LPF_Music", 70);
+        Invoke("ResetAcouphene", 2);
+
         m_combosCounter.value = 0;
         m_hitCounter.value = 0;
         newProj = Instantiate(m_bomb, transform.position, m_shootOrigin.rotation);
 
         newProj.transform.SetParent(transform.parent.parent);
         m_bombVariable.value--;
+    }
+
+    void ResetAcouphene()
+    {
+        AkSoundEngine.SetRTPCValue("LPF_Music", 0);
     }
 
     #region ColliderHit

@@ -10,6 +10,7 @@ public class Combo : MonoBehaviour {
     [SerializeField]
     private Sprite[] sprites = new Sprite[4];
     private Image image;
+    private Animator animator;
     #endregion
 
     #region Monobehaviour
@@ -17,11 +18,13 @@ public class Combo : MonoBehaviour {
     void Start()
     {
         image = GetComponent<Image>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        animator.SetInteger("Combo", (int)combo.value);
         if (combo.value > 1)
         {
             image.enabled = true;
