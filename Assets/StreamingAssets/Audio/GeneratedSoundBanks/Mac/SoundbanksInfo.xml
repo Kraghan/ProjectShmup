@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\</ProjectRoot>
-		<SourceFilesRoot>E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>/Users/marcenciso/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/ProjectSchmup/Wwise_ProjectSchmup/</ProjectRoot>
+		<SourceFilesRoot>/Users/marcenciso/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/ProjectSchmup/Wwise_ProjectSchmup/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/marcenciso/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/ProjectSchmup/Wwise_ProjectSchmup/GeneratedSoundBanks/Mac/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\Unity\ENJMIN\SHMUP\Wwise_ProjectSchmup\GeneratedSoundBanks\Mac\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/marcenciso/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/ProjectSchmup/Wwise_ProjectSchmup/GeneratedSoundBanks/Mac/</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -22,103 +22,113 @@
 			<Path>Main1.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3079098793" Name="Acouphene" ObjectPath="\Events\Default Work Unit\SFX\UI\Acouphene"/>
-				<Event Id="1256513485" Name="Bullet" ObjectPath="\Events\Default Work Unit\SFX\Player\Bullet"/>
 				<Event Id="2381265108" Name="Bullet_Fail" ObjectPath="\Events\Default Work Unit\SFX\Player\Bullet_Fail"/>
 				<Event Id="3739956136" Name="Enemy_Destroy" ObjectPath="\Events\Default Work Unit\SFX\Enemy\Enemy_Destroy"/>
+				<Event Id="4158285989" Name="GameOver" ObjectPath="\Events\Default Work Unit\SFX\UI\GameOver"/>
+				<Event Id="636467407" Name="LayerUp" ObjectPath="\Events\Default Work Unit\SFX\UI\LayerUp"/>
 				<Event Id="3537469747" Name="Metronome" ObjectPath="\Events\Default Work Unit\SFX\UI\Metronome"/>
 				<Event Id="620878633" Name="Music_Gameplay" ObjectPath="\Events\Default Work Unit\Interactive Music\Music_Gameplay"/>
 				<Event Id="1598298728" Name="Music_Menu" ObjectPath="\Events\Default Work Unit\Interactive Music\Music_Menu"/>
 				<Event Id="2226114503" Name="Player_Dead" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Dead"/>
 				<Event Id="2161713971" Name="Player_Respawn" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Respawn"/>
+				<Event Id="3145074758" Name="Player_Shoot_Good" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Shoot_Good"/>
 				<Event Id="2313913900" Name="Player_Shoot_Perfect" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Shoot_Perfect"/>
 				<Event Id="1432588725" Name="Select" ObjectPath="\Events\Default Work Unit\SFX\UI\Select"/>
 				<Event Id="1521187885" Name="StartGame" ObjectPath="\Events\Default Work Unit\SFX\UI\StartGame"/>
 				<Event Id="2602963958" Name="UpDown" ObjectPath="\Events\Default Work Unit\SFX\UI\UpDown"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="6711701" Language="SFX">
+					<ShortName>Game_Over.wav</ShortName>
+					<Path>SFX/Game_Over_1C9C67B2.wem</Path>
+				</File>
+				<File Id="7744428" Language="SFX">
+					<ShortName>Player_Shoot_Perfect_3.wav</ShortName>
+					<Path>SFX/Player_Shoot_Perfect_3_1C9C67B2.wem</Path>
+				</File>
 				<File Id="118406290" Language="SFX">
 					<ShortName>Transition.wav</ShortName>
-					<Path>SFX\Transition_F17FB28C.wem</Path>
+					<Path>SFX/Transition_F17FB28C.wem</Path>
 				</File>
 				<File Id="148512618" Language="SFX">
 					<ShortName>enemy_destroy.wav</ShortName>
-					<Path>SFX\enemy_destroy_1C9C67B2.wem</Path>
+					<Path>SFX/enemy_destroy_1C9C67B2.wem</Path>
 				</File>
 				<File Id="232765109" Language="SFX">
 					<ShortName>UI_HH_1.wav</ShortName>
-					<Path>SFX\UI_HH_1_1C9C67B2.wem</Path>
+					<Path>SFX/UI_HH_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="257305601" Language="SFX">
 					<ShortName>Metronome.wav</ShortName>
-					<Path>SFX\Metronome_1C9C67B2.wem</Path>
+					<Path>SFX/Metronome_1C9C67B2.wem</Path>
 				</File>
 				<File Id="267635455" Language="SFX">
 					<ShortName>Layer_2.wav</ShortName>
-					<Path>SFX\Layer_2_F17FB28C.wem</Path>
-				</File>
-				<File Id="332337109" Language="SFX">
-					<ShortName>Layer_3.wav</ShortName>
-					<Path>SFX\Layer_3_F17FB28C.wem</Path>
-				</File>
-				<File Id="334906959" Language="SFX">
-					<ShortName>Player_Shoot_Perfect_5.wav</ShortName>
-					<Path>SFX\Player_Shoot_Perfect_5_1C9C67B2.wem</Path>
+					<Path>SFX/Layer_2_F17FB28C.wem</Path>
 				</File>
 				<File Id="382734253" Language="SFX">
 					<ShortName>bullet_1.wav</ShortName>
-					<Path>SFX\bullet_1_1C9C67B2.wem</Path>
-				</File>
-				<File Id="405422816" Language="SFX">
-					<ShortName>Player_Shoot_Perfect_2.wav</ShortName>
-					<Path>SFX\Player_Shoot_Perfect_2_1C9C67B2.wem</Path>
-				</File>
-				<File Id="458634667" Language="SFX">
-					<ShortName>Player_Shoot_Perfect_4.wav</ShortName>
-					<Path>SFX\Player_Shoot_Perfect_4_1C9C67B2.wem</Path>
+					<Path>SFX/bullet_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="497188029" Language="SFX">
 					<ShortName>Menu Music.wav</ShortName>
-					<Path>SFX\Menu Music_F17FB28C.wem</Path>
+					<Path>SFX/Menu Music_F17FB28C.wem</Path>
 				</File>
 				<File Id="532444169" Language="SFX">
 					<ShortName>UI_StartGame.wav</ShortName>
-					<Path>SFX\UI_StartGame_1C9C67B2.wem</Path>
+					<Path>SFX/UI_StartGame_1C9C67B2.wem</Path>
 				</File>
 				<File Id="548337954" Language="SFX">
 					<ShortName>Player_respawn.wav</ShortName>
-					<Path>SFX\Player_respawn_1C9C67B2.wem</Path>
+					<Path>SFX/Player_respawn_1C9C67B2.wem</Path>
 				</File>
 				<File Id="559094703" Language="SFX">
 					<ShortName>Acouphene.wav</ShortName>
-					<Path>SFX\Acouphene_1C9C67B2.wem</Path>
+					<Path>SFX/Acouphene_1C9C67B2.wem</Path>
+				</File>
+				<File Id="561615713" Language="SFX">
+					<ShortName>Player_Shoot_Perfect_4.wav</ShortName>
+					<Path>SFX/Player_Shoot_Perfect_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="561999014" Language="SFX">
+					<ShortName>Player_Shoot_Perfect_5.wav</ShortName>
+					<Path>SFX/Player_Shoot_Perfect_5_1C9C67B2.wem</Path>
 				</File>
 				<File Id="578392085" Language="SFX">
 					<ShortName>UI _BD_1.wav</ShortName>
-					<Path>SFX\UI _BD_1_1C9C67B2.wem</Path>
+					<Path>SFX/UI _BD_1_1C9C67B2.wem</Path>
 				</File>
-				<File Id="687011090" Language="SFX">
-					<ShortName>Player_Shoot_Perfect_3.wav</ShortName>
-					<Path>SFX\Player_Shoot_Perfect_3_1C9C67B2.wem</Path>
+				<File Id="765627764" Language="SFX">
+					<ShortName>Player_Shoot_Perfect_1.wav</ShortName>
+					<Path>SFX/Player_Shoot_Perfect_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="783535912" Language="SFX">
 					<ShortName>Bullet_Fail_2.wav</ShortName>
-					<Path>SFX\Bullet_Fail_2_1C9C67B2.wem</Path>
+					<Path>SFX/Bullet_Fail_2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="787986957" Language="SFX">
 					<ShortName>Player_Death_1.wav</ShortName>
-					<Path>SFX\Player_Death_1_1C9C67B2.wem</Path>
+					<Path>SFX/Player_Death_1_1C9C67B2.wem</Path>
 				</File>
-				<File Id="815126406" Language="SFX">
-					<ShortName>Player_Shoot_Perfect_1.wav</ShortName>
-					<Path>SFX\Player_Shoot_Perfect_1_1C9C67B2.wem</Path>
+				<File Id="791350984" Language="SFX">
+					<ShortName>LayerUp2.wav</ShortName>
+					<Path>SFX/LayerUp2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="814011950" Language="SFX">
+					<ShortName>Layer_3.wav</ShortName>
+					<Path>SFX/Layer_3_F17FB28C.wem</Path>
 				</File>
 				<File Id="901294601" Language="SFX">
 					<ShortName>Layer_4.wav</ShortName>
-					<Path>SFX\Layer_4_F17FB28C.wem</Path>
+					<Path>SFX/Layer_4_F17FB28C.wem</Path>
+				</File>
+				<File Id="944035703" Language="SFX">
+					<ShortName>Player_Shoot_Perfect_2.wav</ShortName>
+					<Path>SFX/Player_Shoot_Perfect_2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1002566936" Language="SFX">
 					<ShortName>Layer_1.wav</ShortName>
-					<Path>SFX\Layer_1_F17FB28C.wem</Path>
+					<Path>SFX/Layer_1_F17FB28C.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
