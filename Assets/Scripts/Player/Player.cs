@@ -62,7 +62,7 @@ public class Player : Killable
                     obj.transform.parent = transform.parent;
                     AkSoundEngine.PostEvent("Acouphene", gameObject);
                     AkSoundEngine.SetRTPCValue("LPF_Music", 70);
-                    Invoke("ResetAcouphene", 4);
+                    Invoke("ResetAcouphene", 2);
                 }
                 DisablePlayer();
                 break;

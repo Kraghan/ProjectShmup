@@ -203,13 +203,21 @@ public class PlayerController : MonoBehaviour
 
         GameObject newProj;
         
-        //AkSoundEngine.PostEvent("Bullet_fail", gameObject);
+        AkSoundEngine.PostEvent("Acouphene", gameObject);
+        AkSoundEngine.SetRTPCValue("LPF_Music", 70);
+        Invoke("ResetAcouphene", 2);
+
         m_combosCounter.value = 0;
         m_hitCounter.value = 0;
         newProj = Instantiate(m_bomb, transform.position, m_shootOrigin.rotation);
 
         newProj.transform.SetParent(transform.parent.parent);
         m_bombVariable.value--;
+    }
+
+    void ResetAcouphene()
+    {
+        AkSoundEngine.SetRTPCValue("LPF_Music", 0);
     }
 
     #region ColliderHit

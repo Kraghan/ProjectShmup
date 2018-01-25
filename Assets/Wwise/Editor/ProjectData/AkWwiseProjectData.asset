@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{9C753FF6-5968-4AA4-B319-418A1F50D202}'
-    m_lastTimePsrt1: -2106948096
-    m_lastTimePart2: -1999281348
+    m_lastTimePsrt1: -1380080256
+    m_lastTimePart2: -1999281138
     List:
     - Name: Acouphene
       Path: Default Work Unit\SFX\UI\Acouphene
@@ -32,20 +32,6 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1215868503
       Guid: cf57e2125f116540a4f90a239c18b860
-      maxAttenuation: 0
-    - Name: Bullet
-      Path: Default Work Unit\SFX\Player\Bullet
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: SFX
-        ObjectType: 4
-      - ElementName: Player
-        ObjectType: 4
-      - ElementName: Bullet
-        ObjectType: 3
-      ID: 1256513485
-      Guid: c4a4d0410c50a54f9dc0a2e5c1d4d26f
       maxAttenuation: 0
     - Name: Bullet_Fail
       Path: Default Work Unit\SFX\Player\Bullet_Fail
@@ -74,6 +60,34 @@ MonoBehaviour:
         ObjectType: 3
       ID: -555011160
       Guid: b3b85b8dbac0b546839f81352f468e8f
+      maxAttenuation: 0
+    - Name: GameOver
+      Path: Default Work Unit\SFX\UI\GameOver
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: GameOver
+        ObjectType: 3
+      ID: -136681307
+      Guid: 66c6d8f3b9be8548992f0684894ff299
+      maxAttenuation: 0
+    - Name: LayerUp
+      Path: Default Work Unit\SFX\UI\LayerUp
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: LayerUp
+        ObjectType: 3
+      ID: 636467407
+      Guid: 3fb0da64b640b14fb119f54b4129535e
       maxAttenuation: 0
     - Name: Metronome
       Path: Default Work Unit\SFX\UI\Metronome
@@ -141,6 +155,20 @@ MonoBehaviour:
       ID: -2133253325
       Guid: c43c7c580c176f41aa723e070d06198e
       maxAttenuation: 0
+    - Name: Player_Shoot_Good
+      Path: Default Work Unit\SFX\Player\Player_Shoot_Good
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: Player_Shoot_Good
+        ObjectType: 3
+      ID: -1149892538
+      Guid: c4a4d0410c50a54f9dc0a2e5c1d4d26f
+      maxAttenuation: 0
     - Name: Player_Shoot_Perfect
       Path: Default Work Unit\SFX\Player\Player_Shoot_Perfect
       PathAndIcons:
@@ -201,8 +229,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{09A74D33-9CA1-45FB-8C28-EC82AB30B043}'
-    m_lastTimePsrt1: 870347904
-    m_lastTimePart2: -1999282347
+    m_lastTimePsrt1: -1755112960
+    m_lastTimePart2: -1999281139
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -259,8 +287,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{96C14579-6E85-47EE-8A66-6174EFA288CB}'
-    m_lastTimePsrt1: -2106948096
-    m_lastTimePart2: -1999281348
+    m_lastTimePsrt1: -1380080256
+    m_lastTimePart2: -1999281138
     List:
     - Name: Main1
       Path: Default Work Unit\Main1
@@ -275,8 +303,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{31D7A65A-AAC5-43F6-8CDF-DA62B95961AA}'
-    m_lastTimePsrt1: -31440501
-    m_lastTimePart2: -1999281323
+    m_lastTimePsrt1: -1755112960
+    m_lastTimePart2: -1999281139
     List:
     - Name: LPF_Music
       Path: Default Work Unit\LPF_Music
@@ -287,6 +315,24 @@ MonoBehaviour:
         ObjectType: 13
       ID: 544404537
       Guid: c6d5496dc335a84e9e1476f9bc77ca7c
+    - Name: Volume_Music
+      Path: Default Work Unit\Volume_Music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Volume_Music
+        ObjectType: 13
+      ID: -403629637
+      Guid: 3b8ee9b6eef2ee49822e82786147126e
+    - Name: Volume_SFX
+      Path: Default Work Unit\Volume_SFX
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Volume_SFX
+        ObjectType: 13
+      ID: -621085577
+      Guid: 90f8dab235717f4aae2e78507ca00294
   - PhysicalPath: Game Parameters\Factory SoundSeed Air Game Syncs.wwu
     ParentPhysicalPath: 
     Guid: '{3B167755-FB42-458B-98BF-96F557AFB3B9}'
@@ -410,6 +456,18 @@ MonoBehaviour:
       Guid: 79799fb1272d3b49b93a3bb64cbe3d53
   ExpandedItems:
   - /Wwise_ProjectSchmup
+  - /Wwise_ProjectSchmup/Events
+  - /Wwise_ProjectSchmup/Events/Default Work Unit
+  - /Wwise_ProjectSchmup/Events/Default Work Unit/Interactive Music
+  - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX
+  - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/Enemy
+  - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/Player
+  - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/UI
+  - /Wwise_ProjectSchmup/SoundBanks
+  - /Wwise_ProjectSchmup/SoundBanks/Default Work Unit
+  - /Wwise_ProjectSchmup/States
+  - /Wwise_ProjectSchmup/States/Default Work Unit
+  - /Wwise_ProjectSchmup/States/Default Work Unit/Music_Gameplay_1
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
