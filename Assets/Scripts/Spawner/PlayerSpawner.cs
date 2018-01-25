@@ -59,6 +59,7 @@ public class PlayerSpawner : MonoBehaviour
         if (!firstRespawn)
         {
             lifeVariable.value--;
+            
             currentPlayer.GetComponent<Player>().StartInvulnerabilityFrames();
         }
         else

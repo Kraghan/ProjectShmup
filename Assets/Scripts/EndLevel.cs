@@ -11,30 +11,32 @@ public class EndLevel : MonoBehaviour {
     Text textBoxForMessage;
     [SerializeField]
     float timeBeforeNextLevel = 3;
-    float timeElapsed;
-
 
     private void Start()
     {
         triggered = false;
-        timeElapsed = 0;
     }
 
     private void Update()
     {
         if (!triggered)
             return;
-        
-        timeElapsed += Time.deltaTime;
-        if (timeElapsed >= timeBeforeNextLevel)
-        {
-            SceneManager.LoadScene(1);
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(!triggered)
+        {
+            textBoxForMessage.gameObject.SetActive(true);
+            AkSoundEngine.StopAll();
+            AkSoundEngine.PostEvent("GameOver", gameObject);
+            Invoke("GotoBoard", timeBeforeNextLevel);
+        }
         triggered = true;
-        textBoxForMessage.gameObject.SetActive(true);
+    }
+
+    void GotoBoard()
+    {
+        SceneManager.LoadScene(1);
     }
 }

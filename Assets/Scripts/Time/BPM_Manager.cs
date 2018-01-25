@@ -23,13 +23,13 @@ public class BPM_Manager : MonoBehaviour
 	[SerializeField, Range(100,200)]
 	int m_BPM = 128;
 
-	static float m_beatDuration;
-	static float m_timeLastBeat = 0;
-	static float m_timeSinceLastBeat = 0;
+	static double m_beatDuration;
+	static double m_timeLastBeat = 0;
+	static double m_timeSinceLastBeat = 0;
 
 	void Start ()
 	{
-		m_beatDuration = 60f / m_BPM;
+		m_beatDuration = 60d / m_BPM;
 
 		m_timeLastBeat = Time.time;
 	}
