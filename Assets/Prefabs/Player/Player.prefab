@@ -224,6 +224,7 @@ MonoBehaviour:
   health: 1
   blinckingTime: 0.075
   hitVar: {fileID: 11400000, guid: ca7781b3b34c8574d95ec41a00810948, type: 2}
+  lifeVariable: {fileID: 11400000, guid: 04c5e69a304e09a409f70586114675c2, type: 2}
 --- !u!212 &212196027364621162
 SpriteRenderer:
   m_ObjectHideFlags: 1
