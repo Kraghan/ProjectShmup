@@ -20,6 +20,7 @@ TagManager:
   - Midground
   - Foreground
   - AddOn
+  - SpawnerTrigger
   layers:
   - Default
   - TransparentFX
