@@ -43,6 +43,7 @@ public class PauseMenu : MonoBehaviour
     public void ButtonConfirm_RestartLevel()
     {
         Time.timeScale = 1;
+        AkSoundEngine.StopAll();
         AkSoundEngine.SetRTPCValue("LPF_Music", 0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
