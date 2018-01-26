@@ -29,6 +29,7 @@ public class EndLevel : MonoBehaviour {
         {
             textBoxForMessage.gameObject.SetActive(true);
             AkSoundEngine.StopAll();
+            TitleScreen.m_isMusicMenuPlaying = false;
             AkSoundEngine.PostEvent("GameOver", gameObject);
             Invoke("GotoBoard", timeBeforeNextLevel);
         }
