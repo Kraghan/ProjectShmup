@@ -15,21 +15,12 @@ public class MusicManager : MonoBehaviour
 	int m_currentState = 1;
 	int State {
 		set{
-			// if(m_currentState == 2 && value == 3)
-			// {
-			// 	AkSoundEngine.SetState("Music_Gameplay_1", "Music_Transition");
-			// 	m_nextTransitionCD = 8 - (m_beat % 8);
-			// }
-			// else
-			{
-				m_nextTransitionCD = 0;
+			m_nextTransitionCD = 0;
 
-				if (m_currentState < value)
-				{
-					AkSoundEngine.PostEvent("LayerUp", gameObject);
-					m_nextTransitionCD = 0;
-				}
-			}
+			if (m_currentState < value)
+				AkSoundEngine.PostEvent("LayerUp", gameObject);
+			else if(m_currentState > value)
+				AkSoundEngine.PostEvent("LayerDown", gameObject);
 				
 			m_currentState = value;
 		}
