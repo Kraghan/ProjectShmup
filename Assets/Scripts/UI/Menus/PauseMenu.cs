@@ -44,6 +44,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         AkSoundEngine.StopAll();
+        TitleScreen.m_isMusicMenuPlaying = false;
         AkSoundEngine.SetRTPCValue("LPF_Music", 0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

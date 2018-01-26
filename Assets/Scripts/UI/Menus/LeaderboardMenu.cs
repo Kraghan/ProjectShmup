@@ -230,6 +230,7 @@ public class LeaderboardMenu : MonoBehaviour
     public void Button_Replay()
     {
         AkSoundEngine.StopAll();
+        TitleScreen.m_isMusicMenuPlaying = false;
         SceneManager.LoadScene(2);
     }
 
