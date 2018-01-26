@@ -63,6 +63,8 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         AkSoundEngine.SetRTPCValue("LPF_Music", 0);
+        AkSoundEngine.StopAll();
+        TitleScreen.m_isMusicMenuPlaying = false;
         SceneManager.LoadScene(0);
     }
     
