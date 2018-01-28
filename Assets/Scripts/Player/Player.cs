@@ -67,6 +67,7 @@ public class Player : Killable
                     if(lifeVariable.value == 0)
                     {
                         AkSoundEngine.StopAll();
+                        TitleScreen.m_isMusicMenuPlaying = false;
                         AkSoundEngine.PostEvent("GameOver", gameObject);
                     }
 

@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{9C753FF6-5968-4AA4-B319-418A1F50D202}'
-    m_lastTimePsrt1: -1380080256
-    m_lastTimePart2: -1999281138
+    m_lastTimePsrt1: 101100800
+    m_lastTimePart2: -1999280948
     List:
     - Name: Acouphene
       Path: Default Work Unit\SFX\UI\Acouphene
@@ -74,6 +74,20 @@ MonoBehaviour:
         ObjectType: 3
       ID: -136681307
       Guid: 66c6d8f3b9be8548992f0684894ff299
+      maxAttenuation: 0
+    - Name: Layerdown
+      Path: Default Work Unit\SFX\UI\Layerdown
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Layerdown
+        ObjectType: 3
+      ID: 653959668
+      Guid: 870f5e9a7a97b94a96b81a64a052dbd1
       maxAttenuation: 0
     - Name: LayerUp
       Path: Default Work Unit\SFX\UI\LayerUp
@@ -287,8 +301,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{96C14579-6E85-47EE-8A66-6174EFA288CB}'
-    m_lastTimePsrt1: -1380080256
-    m_lastTimePart2: -1999281138
+    m_lastTimePsrt1: 351100800
+    m_lastTimePart2: -1999280948
     List:
     - Name: Main1
       Path: Default Work Unit\Main1
@@ -458,10 +472,16 @@ MonoBehaviour:
   - /Wwise_ProjectSchmup
   - /Wwise_ProjectSchmup/Events
   - /Wwise_ProjectSchmup/Events/Default Work Unit
+  - /Wwise_ProjectSchmup/Events/Default Work Unit/Interactive Music
   - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX
   - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/Enemy
   - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/Player
   - /Wwise_ProjectSchmup/Events/Default Work Unit/SFX/UI
+  - /Wwise_ProjectSchmup/SoundBanks
+  - /Wwise_ProjectSchmup/SoundBanks/Default Work Unit
+  - /Wwise_ProjectSchmup/States
+  - /Wwise_ProjectSchmup/States/Default Work Unit
+  - /Wwise_ProjectSchmup/States/Default Work Unit/Music_Gameplay_1
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

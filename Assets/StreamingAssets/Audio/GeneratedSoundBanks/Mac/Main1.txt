@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	620878633	Music_Gameplay			\Default Work Unit\Interactive Music\Music_Gameplay	
 	636467407	LayerUp			\Default Work Unit\SFX\UI\LayerUp	
+	653959668	Layerdown			\Default Work Unit\SFX\UI\Layerdown	
 	1432588725	Select			\Default Work Unit\SFX\UI\Select	
 	1521187885	StartGame			\Default Work Unit\SFX\UI\StartGame	
 	1598298728	Music_Menu			\Default Work Unit\Interactive Music\Music_Menu	
@@ -33,24 +34,33 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	6711701	Gameover	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Game_Over_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Gameover		776624
 	7744428	Player_Shoot_Perfect_3	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Player_Shoot_Perfect_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot_Perfect\Player_Shoot_Perfect_3		355916
 	118406290	Transition	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Transition_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Transition\Transition\Transition		661644
-	148512618	Enemy_Destroy	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\enemy_destroy_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Destroy		220644
 	232765109	UpDown	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\UI_HH_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UpDown		40004
+	254050510	perc-i-3	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\perc-i-3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Destroy\perc-i-3		330944
 	257305601	Metronome	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Metronome_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Metronome		325284
 	267635455	Layer_2	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Layer_2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Music_Combo_2\Layer_2\Layer_2		2646144
+	316183817	flute-i-1	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\flute-i-1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Destroy\flute-i-1		268732
+	320792549	Menu_Music_sfx	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Menu_Music_sfx_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Menu\Music_Menu\Menu_Music_sfx		7938176
 	382734253	Player_Shoot_Good	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\bullet_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot_Good		176544
-	497188029	Menu Music	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Menu Music_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Menu\Music_Menu\Menu Music		7938176
+	446266339	enemy_destroy	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\enemy_destroy_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Destroy\enemy_destroy		220644
 	532444169	StartGame	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\UI_StartGame_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\StartGame		480232
 	548337954	Player_Respawn	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Player_respawn_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Respawn		654408
 	559094703	Acouphene	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Acouphene_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Acouphene		661644
 	561615713	Player_Shoot_Perfect_4	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Player_Shoot_Perfect_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot_Perfect\Player_Shoot_Perfect_4		335508
 	561999014	Player_Shoot_Perfect_5	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Player_Shoot_Perfect_5_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot_Perfect\Player_Shoot_Perfect_5		348736
 	578392085	Select	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\UI _BD_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Select		68436
+	616202954	perc-i-1	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\perc-i-1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Destroy\perc-i-1		238100
+	729832131	flute-i-2	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\flute-i-2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Destroy\flute-i-2		263628
+	761097695	perc-i-4	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\perc-i-4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Destroy\perc-i-4		248260
 	765627764	Player_Shoot_Perfect_1	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Player_Shoot_Perfect_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot_Perfect\Player_Shoot_Perfect_1		416784
 	783535912	Bullet_Fail	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Bullet_Fail_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Bullet_Fail		115288
 	787986957	Player_Dead	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Player_Death_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Dead		514804
 	791350984	LayerUp	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\LayerUp2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\LayerUp		813068
 	814011950	Layer_3	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Layer_3_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Music_Combo_3\Layer_3\Layer_3		2646144
+	846215523	perc-i-2	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\perc-i-2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Destroy\perc-i-2		250064
+	877980693	LayerDown	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\LayerDown_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\LayerDown		413348
 	901294601	Layer_4	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Layer_4_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Music_Combo_Full\Layer_4\Layer_4		2646144
+	925174280	flute-i-4	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\flute-i-4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Destroy\flute-i-4		288068
 	944035703	Player_Shoot_Perfect_2	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Player_Shoot_Perfect_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot_Perfect\Player_Shoot_Perfect_2		385516
+	962729499	flute-i-3	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\flute-i-3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Destroy\flute-i-3		282952
 	1002566936	Layer_1	Y:\Desktop\ProjectSchmup\Wwise_ProjectSchmup\.cache\Mac\SFX\Layer_1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Gameplay_1\Music_Combo_1\Layer_1\Layer_1		2646144
 
