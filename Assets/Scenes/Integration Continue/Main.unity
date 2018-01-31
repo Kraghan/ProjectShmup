@@ -283,6 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d64cb9078a18b428d57ec1e6cd2991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_selectSound: 1
+  m_submitSound: 1
 --- !u!1 &251983244
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d64cb9078a18b428d57ec1e6cd2991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_selectSound: 1
+  m_submitSound: 1
 --- !u!1 &461614933
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d64cb9078a18b428d57ec1e6cd2991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_selectSound: 1
+  m_submitSound: 1
 --- !u!1 &827709352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,6 +1828,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d64cb9078a18b428d57ec1e6cd2991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_selectSound: 1
+  m_submitSound: 1
 --- !u!1 &1211238123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1942,7 +1950,7 @@ MonoBehaviour:
   scoreVariable: {fileID: 11400000, guid: e7917fdd94d198547a00de3f9330aefe, type: 2}
   lifeVariable: {fileID: 11400000, guid: 04c5e69a304e09a409f70586114675c2, type: 2}
   maxLifeVariable: {fileID: 11400000, guid: 0bffa2034c2922b47a2d63ad95e11aae, type: 2}
-  scoreTreshold: 10000
+  scoreTreshold: 50000
 --- !u!114 &1358576044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1994,6 +2002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d64cb9078a18b428d57ec1e6cd2991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_selectSound: 1
+  m_submitSound: 1
 --- !u!1001 &1373617665
 Prefab:
   m_ObjectHideFlags: 0
@@ -2487,6 +2497,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d64cb9078a18b428d57ec1e6cd2991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_selectSound: 1
+  m_submitSound: 1
 --- !u!1 &1518796844
 GameObject:
   m_ObjectHideFlags: 0
@@ -2753,6 +2765,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d64cb9078a18b428d57ec1e6cd2991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_selectSound: 1
+  m_submitSound: 1
 --- !u!4 &1773308013 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4677365893198768, guid: dfaec76e2a9d15d40b26a5a821cd09a5,
@@ -2955,6 +2969,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d64cb9078a18b428d57ec1e6cd2991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_selectSound: 1
+  m_submitSound: 1
 --- !u!1 &2115279141
 GameObject:
   m_ObjectHideFlags: 0

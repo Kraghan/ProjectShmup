@@ -11,6 +11,18 @@ public class EndLevel : MonoBehaviour {
     Text textBoxForMessage;
     [SerializeField]
     float timeBeforeNextLevel = 3;
+    [Header("Score")]
+    [SerializeField]
+    FloatVariable scoreVar;
+    [SerializeField]
+    IntVariable bombVar;
+    [SerializeField]
+    FloatVariable lifeVar;
+    [SerializeField]
+    float bombBonus;
+    [SerializeField]
+    float lifeBonus;
+
 
     private void Start()
     {
@@ -28,6 +40,7 @@ public class EndLevel : MonoBehaviour {
         if(!triggered)
         {
             textBoxForMessage.gameObject.SetActive(true);
+            scoreVar.value += bombVar.value * bombBonus + lifeBonus * lifeVar.value;
             AkSoundEngine.StopAll();
             TitleScreen.m_isMusicMenuPlaying = false;
             AkSoundEngine.PostEvent("GameOver", gameObject);
