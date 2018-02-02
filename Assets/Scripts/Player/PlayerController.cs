@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
         m_shootTimeElapsed += Time.deltaTime;
         ManageSpeed();
 
-        if(Input.GetButtonDown("Cancel"))
+        if(Input.GetButtonDown("Pause"))
         {
             PauseScreen pauseScreen = GameObject.FindGameObjectWithTag("PauseScreen").GetComponent<PauseScreen>();
             pauseScreen.BackgroundDisplay(true);
@@ -119,7 +119,12 @@ public class PlayerController : MonoBehaviour
 
         float inputHorizontal = Input.GetAxisRaw("Horizontal");
         float inputVertical = Input.GetAxisRaw("Vertical");
-        
+
+        if (Mathf.Abs(inputHorizontal) < 0.2f)
+            inputHorizontal = 0;
+        if (Mathf.Abs(inputVertical) < 0.2f)
+            inputVertical = 0;
+
         inputVertical *= rawInputPercent;
         inputHorizontal *= rawInputPercent;
         inputVertical += ((1 - rawInputPercent) * Input.GetAxis("Vertical"));
