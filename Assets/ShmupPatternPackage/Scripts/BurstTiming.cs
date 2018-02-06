@@ -22,9 +22,25 @@ namespace ShmupPatternPackage
         public bool targetted;
 
         private bool done = false;
+        public Pool pool;
         #endregion
 
         #region Methods
+        public void Initialize()
+        {
+            GameObject poolObject = GameObject.Find("Pool - " +bullet.name.Replace("(Clone)", ""));
+            if (poolObject == null)
+            {
+                poolObject = new GameObject("Pool - " + bullet.name.Replace("(Clone)", ""));
+                pool = poolObject.AddComponent<Pool>();
+                pool.Initialize(bullet);
+            }
+            else
+                pool = poolObject.GetComponent<Pool>();
+
+            done = false;
+        }
+
         public void Done()
         {
             done = true;

@@ -19,9 +19,9 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonUp("Cancel"))
+        if (Input.GetButtonUp("Pause"))
             canBeExitedWithCancel = true;
-        if (canBeExitedWithCancel && Input.GetButton("Cancel"))
+        if (canBeExitedWithCancel && Input.GetButton("Pause"))
             InputDown_Cancel();
         if (Input.GetButton("Submit"))
             InputDown_Confirm();

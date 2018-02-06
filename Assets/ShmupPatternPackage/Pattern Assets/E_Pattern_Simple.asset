@@ -21,3 +21,4 @@ MonoBehaviour:
     direction: 180
     aimMode: 0
     targetted: 0
+    pool: {fileID: 0}

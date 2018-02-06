@@ -33,6 +33,8 @@ namespace ShmupPatternPackage
         private float rotation;
 
         private Rigidbody2D rgbd2D;
+
+        private Pool m_pool;
         #endregion
 
         #region MonoBehaviour main methods
@@ -41,6 +43,9 @@ namespace ShmupPatternPackage
         {
             rgbd2D = GetComponent<Rigidbody2D>();
             isOnBeat = BPM_Manager.IsOnBeat(0.1f);
+
+            GameObject tmp = GameObject.Find("Pool - " + gameObject.name.Replace("(Clone)",""));
+            m_pool = tmp.GetComponent<Pool>();
         }
 
         // Update is called once per frame
@@ -107,7 +112,8 @@ namespace ShmupPatternPackage
             switch (destroyAnimation)
             {
                 case DestroyAnimation.NoAnimation:
-                    Destroy(gameObject);
+                    //Destroy(gameObject);
+                    m_pool.Release(gameObject);
                     break;
                 case DestroyAnimation.InstantiatePrefab:
                     if (destroyAnimationPrefabToInstantiate != null)
@@ -115,10 +121,12 @@ namespace ShmupPatternPackage
                         GameObject obj = Instantiate(destroyAnimationPrefabToInstantiate, transform.position, Quaternion.identity, null);
                         obj.transform.parent = transform.parent;
                     }
-                    Destroy(gameObject);
+                    m_pool.Release(gameObject);
+                    //Destroy(gameObject);
                     break;
                 default:
-                    Destroy(gameObject);
+                    m_pool.Release(gameObject);
+                    //Destroy(gameObject);
                     break;
             }
         }

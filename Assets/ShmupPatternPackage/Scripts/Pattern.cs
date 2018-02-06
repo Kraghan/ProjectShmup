@@ -43,7 +43,7 @@ namespace ShmupPatternPackage
         {
             bulletRepository = GameObject.FindGameObjectWithTag("BulletRepository").transform;
             foreach (BurstTiming burstTiming in bursts)
-                burstTiming.Reset();
+                burstTiming.Initialize();
             time = 0;
             currentCycles = cycles;
         }
@@ -58,7 +58,7 @@ namespace ShmupPatternPackage
                 {
                     if (burstTiming.bullet != null)
                     {
-                        burstTiming.burst.Fire(_source, burstTiming.direction, ((burstTiming.aimMode == AimMode.Targetted) ? _targetDirection : 0), burstTiming.bullet, go.transform.position, bulletRepository.transform);
+                        burstTiming.burst.Fire(_source, burstTiming.direction, ((burstTiming.aimMode == AimMode.Targetted) ? _targetDirection : 0), burstTiming.pool, go.transform.position, bulletRepository.transform);
                         burstTiming.Done();
                     }
                 }

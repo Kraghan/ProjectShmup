@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Threading;
 
 public class BPM_Manager : MonoBehaviour
 {
@@ -29,25 +30,18 @@ public class BPM_Manager : MonoBehaviour
 
 	void Start ()
 	{
-		m_beatDuration = 60d / m_BPM;
+		m_beatDuration = 60d / m_BPM * 10000000;
 
-		m_timeLastBeat = Time.time;
-	}
-	
-	void Update ()
-	{
-		m_timeSinceLastBeat = Time.time - m_timeLastBeat;
+		m_timeLastBeat = System.DateTime.Now.Ticks;
 
-		// Beat
-		if(m_timeSinceLastBeat > m_beatDuration)
-		{
-			m_timeLastBeat = Time.time - (m_timeSinceLastBeat - m_beatDuration);
-			m_syncList.Invoke();
-		}
+		_thread = new Thread(ThreadedWork);
+        _thread.Start();
 	}
 
 	public static bool IsOnBeat(float error)
 	{
+		error *= 10000000;
+
 		if(m_timeSinceLastBeat < error)
 			return true;
 		else if(m_timeSinceLastBeat > (m_beatDuration - error))
@@ -56,4 +50,35 @@ public class BPM_Manager : MonoBehaviour
 			return false;
 	}
 
+	void Update()
+	{
+		// Beat
+		if(m_timeSinceLastBeat > m_beatDuration)
+		{
+			m_timeLastBeat = System.DateTime.Now.Ticks - (m_timeSinceLastBeat - m_beatDuration);
+			m_syncList.Invoke();
+		}
+	}
+
+	bool _threadRunning;
+    Thread _thread;
+    void ThreadedWork()
+    {
+        _threadRunning = true;
+        bool workDone = false;
+
+        while(_threadRunning && !workDone)
+            m_timeSinceLastBeat = System.DateTime.Now.Ticks - m_timeLastBeat;
+
+        _threadRunning = false;
+    }
+
+    void OnDisable()
+    {
+        if(_threadRunning)
+        {
+            _threadRunning = false;
+            _thread.Join();
+        }
+    }
 }
